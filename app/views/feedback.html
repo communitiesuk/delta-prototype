@@ -7,9 +7,9 @@
 
   {{ govukPhaseBanner({
     tag: {
-      text: "Alpha"
+      text: "We are improving Delta"
     },
-    html: 'This is a analytics service for Delta administrators – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+    html: '– <a class="govuk-link" href="#">learn more and get involved</a>.'
   }) }}
 {% endblock %}
 
@@ -20,225 +20,36 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Delta search dashboard 1.0
-    </h1>
-    <p class="govuk-body-l">The search dashboard provides a summary of user initiated searches within the Delta platform.</p>
-    <p class="govuk-body">The search data table below shows total searches to date for this month and for the previous two months. Use the drop-down filter to view data for a specific part of the Delta platform.</p>
-    <p class="govuk-body"><a href="#querydata">Full search query data</a> is available for download.</p>
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-!-padding-top-7">
-  <div class="govuk-grid-column-full">
-
-
-
-{% from "govuk/components/select/macro.njk" import govukSelect %}
-
-{{ govukSelect({
-  id: "sort",
-  name: "sort",
-  label: {
-    text: "Display search data for"
-  },
-  items: [
-    {
-      value: "published",
-      text: "Delta (all areas)",
-      selected: true
-    },
-    {
-      value: "Channel Collections",
-      text: "Channel - Collections"
-    },
-    {
-      value: "Channel Grants",
-      text: "Channel - Grants"
-    },    
-    {
-      value: "Channel Local Government Finance",
-      text: "Channel - Local Government Finance"
-    },
-    {
-      value: "Search 001",
-      text: "Search #001 - Data Store"
-    },
-    {
-      value: "Search 002",
-      text: "Search #002 - Collection Requests"
-    }, 
-    {
-      value: "Search 003",
-      text: "Search #003 - Forms"
-    }    
-
-  ]
-}) }}    
-
-
-<table class="govuk-table govuk-!-margin-bottom-4">
-  <caption class="govuk-table__caption govuk-table__caption--m">Search data <span class="govuk-body-s ux-text-secondary govuk-!-margin-left-2">(Last updated 12:19, 13 December 2023)</span></caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header"></th>
-      <th scope="col" class="govuk-table__header">This month to date<br><span class="govuk-body-s">(December, 13 days)</span></th>
-      <th scope="col" class="govuk-table__header">Last month<br><span class="govuk-body-s">(November, 30 days)</span></th>
-      <th scope="col" class="govuk-table__header">Previous month<br><span class="govuk-body-s">(October, 31 days)</span></th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Searches</th>
-      <td class="govuk-table__cell">600</td>
-      <td class="govuk-table__cell">2,132</td>
-      <td class="govuk-table__cell">1,982</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Average results per search</th>
-      <td class="govuk-table__cell">5.1</td>
-      <td class="govuk-table__cell">4.8</td>
-      <td class="govuk-table__cell">6.1</td>
-    </tr>    
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Average searches per session</th>
-      <td class="govuk-table__cell">0.20</td>
-      <td class="govuk-table__cell">0.21</td>
-      <td class="govuk-table__cell">0.06</td>
-    </tr>    
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Median searches per session</th>
-      <td class="govuk-table__cell">0.15</td>
-      <td class="govuk-table__cell">0.19</td>
-      <td class="govuk-table__cell">0.1.3</td>
-    </tr>        
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Searches returning 0 results</th>
-      <td class="govuk-table__cell">100 <span class="govuk-body-s ux-text-secondary">(17%)</span></td>
-      <td class="govuk-table__cell">321 <span class="govuk-body-s ux-text-secondary">(15%)</span></td>
-      <td class="govuk-table__cell">234 <span class="govuk-body-s ux-text-secondary">(12%)</span></td>
-    </tr>
-    <!-- location specific -->
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><span class="govuk-caption-m">Search #001</span><a href="#">Data store</a></th>
-      <td class="govuk-table__cell">60 <span class="govuk-body-s ux-text-secondary">(10%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 10%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">171 <span class="govuk-body-s ux-text-secondary">(8%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 8%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">159 <span class="govuk-body-s ux-text-secondary">(8%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 8%; height: 1rem; margin-top: .3rem;"></div></td>
-    </tr>   
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><span class="govuk-caption-m">Search #002</span><a href="#">Collection Requests</a></th>
-      <td class="govuk-table__cell">150 <span class="govuk-body-s ux-text-secondary">(25%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 25%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">640 <span class="govuk-body-s ux-text-secondary">(30%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 30%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">238 <span class="govuk-body-s ux-text-secondary">(12%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 12%; height: 1rem; margin-top: .3rem;"></div></td>
-    </tr>   
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><span class="govuk-caption-m">Search #003</span><a href="#">Forms</a></th>
-      <td class="govuk-table__cell">210 <span class="govuk-body-s ux-text-secondary">(35%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 35%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">682 <span class="govuk-body-s ux-text-secondary">(32%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 32%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">476 <span class="govuk-body-s ux-text-secondary">(24%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 24%; height: 1rem; margin-top: .3rem;"></div></td>
-    </tr>               
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><span class="govuk-caption-m">Search #004</span><a href="#">Manage dataset</a></th>
-      <td class="govuk-table__cell">132 <span class="govuk-body-s ux-text-secondary">(22%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 22%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">149 <span class="govuk-body-s ux-text-secondary">(7%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 7%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">456 <span class="govuk-body-s ux-text-secondary">(23%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 23%; height: 1rem; margin-top: .3rem;"></div></td>
-    </tr>       
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><span class="govuk-caption-m">Search #019</span><a href="#">Associate organisatons</a></th>
-      <td class="govuk-table__cell">48 <span class="govuk-body-s ux-text-secondary">(8%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 8%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">64 <span class="govuk-body-s ux-text-secondary">(3%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 3%; height: 1rem; margin-top: .3rem;"></div></td>
-      <td class="govuk-table__cell">654 <span class="govuk-body-s ux-text-secondary">(33%)</span><div class="ux-bar" style="display: block; background-color: #1d70b8; width: 33%; height: 1rem; margin-top: .3rem;"></div></td>
-    </tr>                
-  </tbody>
-</table>
-
-
-
-  </div>
-</div>
-
-<div class="govuk-grid-row govuk-!-margin-top-4">
-  <div class="govuk-grid-column-two-thirds">
-
-    <!-- Glossary -->
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Glossary of terms used in search data table
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <ul class="govuk-list">
-          <li><strong>Searches</strong> &mdash; the total number of searches initiated by users across the entire Delta platform</li>
-          <li><strong>Average results per search</strong> &mdash; the average number of results (items) per search</li>
-          <li><strong>Average searches per session</strong> &mdash; the average number of searches per user per visit</li>
-          <li><strong>Searches returning 0 results</strong> &mdash; the total and percentage of total searches that returned no results.</li>
-        </ul>
-      </div>
-    </details>
-
-    <div id="querydata">
-
-      <h2 class="govuk-heading-l govuk-!-padding-top-7">Search query data</h2>
-
-      <p>The following data is being captured for each search.</p>
+    <div class="ux-reading-width">
+      <h1 class="govuk-heading-xl">
+        Help improve Delta
+      </h1>
+      <p class="govuk-body-l">We are in the process of improving the experience for all Delta users.</p>
+  
+      <h2 class="govuk-heading-s">What we are focusing on</h2>
+  
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>Timestamp</li>
-        <li>Session ID</li>
-        <li>Search ID</li>
-        <li>Text search</li>
-        <li>Filters</li>
-        <li>Result count</li>
-      </ul>  
-
-    <!-- Glossary -->
-    <details class="govuk-details govuk-!-padding-top-2">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Glossary of terms used in search query data
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        <ul class="govuk-list">
-          <li><strong>Timestamp</strong> &mdash; the date and time the search was done</li>
-          <li><strong>Session ID</strong> &mdash; can be thought of as a user visit. Logging the session ID allows us to see how many searches that user did on that visit</li>
-          <li><strong>Search ID</strong> &mdash; the reference for where that search is on the Delta platform</li>
-          <li><strong>Text search</strong> &mdash; the text entered by the user into the search box</li>
-          <li><strong>Filters</strong> &mdash; any additional filters applied to narrow the search results</li>
-          <li><strong>Result count</strong> &mdash; the number of results returned for that search</li>
-        </ul>
-      </div>
-    </details>      
-
-
-
-      {% from "govuk/components/button/macro.njk" import govukButton %}
-
-      {{ govukButton({
-        text: "Download search query data (.csv)"
-      }) }}
-
-      <p class="govuk-body-s">Data since 12 December 2023. 14,000 lines items. File size: 0.2MB</p>
-
+        <li>Product stabilty and speed</li>
+        <li>Simplification of submission processes</li>
+        <li>Better guidance</li>
+      </ul>   
+  
+      <h2 class="govuk-heading-s">
+        Share your thoughts
+      </h2>
+  
+      <p>Your input and ideas on how things could be improved would be greatly appreciated.</p>
+  
+      <p class="govuk-body">Email me, <a href="mailto:Laurence.Mallows@levellingup.gov.uk?subject=Delta feedback">Laurence.Mallows@levellingup.gov.uk</a>with any thoughts and ideas. Emails with the subject "Delta feedback" will be automatically forwarded to the design and devlopement teams.</p>
+  
+      <h2 class="govuk-heading-s">
+        Support
+      </h2>
+  
+      <p>For questions or support visit ...</p>
     </div>
-
-    <!-- <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible"> -->
-
-    <h2 class="govuk-heading-l govuk-!-padding-top-7">Search dashboard roadmap</h2>
-
-    <p>Version 1 of the search dashboard, created in December 2023, was devised to capture search data and serve as a prototype offering valuable insights for future improvements. Below are ideas for enhancements currently under exploration by the Delta team.</p>
-
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Expand previous month views (12 month view)</li>
-      <li>One click access to 0 results queries to replicate in testing</li>
-      <li>Replace .csv download with in-page reporting</li>
-      <li>Linking searches to user entry point</li>
-    </ul>
-
-    <h2 class="govuk-heading-m govuk-!-padding-top-4">Help us improve this dashboard</h2>
-
-    <p><a href="mailto:#">Email the team</a> with suggestions for how to enhance this dashboard.</p>    
 
 
   </div>
