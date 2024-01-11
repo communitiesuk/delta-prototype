@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/delta.html" %}
 
 {% set pageName="Detla UX & Service Design 3" %}
 
@@ -6,15 +6,17 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
-
     <h1 class="govuk-heading-xl">
-      {{ serviceName }}
+      UX Launchpad
     </h1>
+    
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/results-evidence">Results (evidence search)</a></li>
+      <li><a href="/evidence">Evidence</a></li>
+      <li><a href="/search">Search dashboard</a></li>
+      <li><a href="/ux-checklist">UX Checklist</a></li>
+    </ul>
 
-    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
-
 {% endblock %}

@@ -1,0 +1,309 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Results (evidence search)" %}
+
+
+
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Results (Grant evidence search)
+</h1>
+
+
+<div class="govuk-grid-row">
+  <!-- LEFT COLUMN -->
+  <div class="govuk-grid-column-one-third">
+
+
+    <h3 class="govuk-heading-s">Current</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Payment reference</li>
+      <li>Organisation ID</li>
+      <li>Vendor ID</li>
+      <li>Payment data</li>
+      <li>Dataset ID</li>
+      <li>Grant code</li>
+      <li>SAP reference</li>
+      <li>Evidence files</li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Potential enhancements</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Display results count</li>
+      <li>Alternate non-table view (aka list view)
+      <li>Add organisation name</li>
+      <li>Add dataset name</li>
+      <li>Display evidence file names (don't hide behind drop-down</li>
+      <li>Link to dataset (others?)</li>
+      <li>Data loading animation (to draw attention to data change)</li>
+      <li><del>Highlight search text in results text</del></li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Dev notes</h3>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Disable order by options if data not present (e.g. SAP reference)</li>
+    </ul>
+
+  </div>
+  <!-- RIGHT COLUMN -->
+  <div class="govuk-grid-column-two-thirds">
+
+
+    <!-- SEARCH & ORDERING -->
+
+    <div class="ux-results-filter">
+      <div class="ux-grid-row">
+        <div>
+          <input class="govuk-input" id="search" name="search" type="text">
+        </div>
+        <div>
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Search
+          </button>
+          <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+            Reset
+          </button>
+        </div>
+        <div>
+          <p><strong>99</strong> results</p>
+        </div>
+      </div>
+      <div class="ux-grid-row govuk-!-static-padding-top-2">
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+          {{ govukSelect({
+            id: "sort",
+            name: "sort",
+            label: {
+              text: "Order by"
+            },
+            items: [
+              {
+                value: "orgName",
+                text: "Organisation name ",
+                selected: true
+              },
+              {
+                value: "orgID",
+                text: "Organisation ID"
+              },
+              {
+                value: "paymentDate",
+                text: "Payment date"
+              },
+              {
+                value: "datasetName",
+                text: "Dataset name"
+              },
+              {
+                value: "datasetId",
+                text: "Datset ID"
+              },
+              {
+                value: "sapReference",
+                text: "SAP reference"
+              }
+
+
+            ]
+          }) }}
+        </div>
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+          {{ govukSelect({
+            id: "sort",
+            name: "sort",
+            label: {
+              text: "Sort by"
+            },
+            items: [
+              {
+                value: "lowTohigh",
+                text: "Ascending",
+                selected: true
+              },
+              {
+                value: "highToLow",
+                text: "Descending"
+              }
+
+
+            ]
+          }) }}
+        </div>
+        <div>
+          {% from "govuk/components/select/macro.njk" import govukSelect %}
+
+          {{ govukSelect({
+            id: "sort",
+            name: "sort",
+            label: {
+              text: "View as"
+            },
+            items: [
+              {
+                value: "viewResultsTable",
+                text: "Table (summary)",
+                selected: true
+              },
+              {
+                value: "viewResultsList",
+                text: "List (detail)"
+              }
+
+
+            ]
+          }) }}
+        </div>
+      </div>
+    </div>
+
+    <!-- DESIGN CONCEPT 1 -->
+    <div class="ux-result govuk-!-static-padding-top-6 govuk-!-static-padding-bottom-5">
+      <h4 class="govuk-heading-m">Adult Social Care Implementation - Dilnot and Deferred Payments (<span class="ux-hide">Grant code: </span>asc-dp)</h4>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li><strong>Organisation:</strong> Accord Housing Association Limited</li>
+            <li><strong>Organisation ID:</strong> LH3902</li>
+            <li><strong>Payment reference:</strong> 100146154</li>
+            <li><strong>Payment date: </strong>15 January 2024</li>
+            <li><strong>Dataset ID:</strong> <a href="#">swhe01</a></li>
+            <li><strong>Customer vendor: </strong></li>
+            <li><strong>DLUCH payment reference:</strong> -</li>
+            <li><strong>SAP reference:</strong></li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <h4 class="govuk-heading-s">Evidence files</h4>
+          <ul class="govuk-list govuk-list--number">
+            <li><a href="#">Evidence 001 <small>(.xls)</small></a></li>
+            <li><a href="#">Evidence 002 <small>(.xls)</small></a></li>
+            <li><a href="#">Evidence 003 <small>(.xls)</small></a></li>
+            <li><a href="#">Evidence 004 <small>(.xls)</small></a></li>
+            <li><a href="#">Evidence 004 <small>(.xls)</small></a></li>
+            <li><a href="#">Evidence 004 <small>(.xls)</small></a></li>
+          </ul>
+
+          {% from "govuk/components/button/macro.njk" import govukButton %}
+
+          {{ govukButton({
+            text: "Download all evidence"
+          }) }}
+
+          {{ govukButton({
+            text: "Add late evidence",
+            classes: "govuk-button--secondary"
+          }) }}
+
+
+        </div>
+      </div>
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+
+    <!-- DESIGN CONCEPT 2 -->
+    <div class="ux-result govuk-!-static-padding-bottom-5">
+      <h4 class="govuk-heading-m">Adult Social Care Implementation - Dilnot and Deferred Payments (<span class="ux-hide">Grant code: </span>asc-dp)</h4>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li><strong>Organisation:</strong> Accord Housing Association Limited</li>
+            <li><strong>Organisation ID:</strong> LH3902</li>
+            <li><strong>Payment reference:</strong> 100146154</li>
+            <li><strong>Payment date: </strong>15 January 2024</li>
+          </ul>
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <ul class="govuk-list govuk-list--spaced">
+            <li><strong>Dataset ID:</strong> <a href="#">swhe01</a></li>
+            <li><strong>Customer vendor: </strong</li>
+            <li><strong>DLUCH payment reference:</strong> -</li>
+            <li><strong>SAP reference:</strong></li>
+        </div>
+      </div>
+      <p><strong>Evidence files:</strong>
+        <a href="#">Evidence 001 <small>(.xls)</small></a>,
+        <a href="#">Evidence 002 <small>(.xls)</small></a>,
+        <a href="#">Evidence 003 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>
+      </p>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Download all evidence"
+      }) }}
+
+           
+      {{ govukButton({
+        text: "Add late evidence",
+        classes: "govuk-button--secondary"
+      }) }}
+
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+
+       <!-- DESIGN CONCEPT 3 -->
+    <div class="ux-result govuk-!-static-padding-bottom-5">
+      <h4 class="govuk-heading-m">Adult Social Care Implementation - Dilnot and Deferred Payments (<span class="ux-hide">Grant code: </span>asc-dp)</h4>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+          <dl class="ux-dl ux-columns-two govuk-body">
+            <dt>Organisation</dt>
+            <dd>Accord Housing Association Limited</dd>
+            <dt>Organisation ID</dt>
+            <dd>LH3902</dd>
+            <dt>Payment reference</dt>
+            <dd>100146154</dd>
+            <dt>Payment date</dt>
+            <dd>15 January 2024</dd>
+            <dt>Dataset ID</dt>
+            <dd><a href="#">swhe01</a></dd>
+            <dt>Customer vendor</dt>
+            <dd>-</dd>
+            <dt>DLUCH payment reference</dt>
+            <dd>-</dd>
+            <dt>SAP reference</dt>
+            <dd>-</dd>
+          </dl>
+        </div>
+      </div>
+      <p><strong>Evidence files:</strong>
+        <a href="#">Evidence 001 <small>(.xls)</small></a>,
+        <a href="#">Evidence 002 <small>(.xls)</small></a>,
+        <a href="#">Evidence 003 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>,
+        <a href="#">Evidence 004 <small>(.xls)</small></a>
+      </p>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Download all evidence"
+      }) }}
+
+      {{ govukButton({
+        text: "Add late evidence",
+        classes: "govuk-button--secondary"
+      }) }}
+
+
+      <hr class="govuk-section-break govuk-section-break--s govuk-section-break--visible">
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}

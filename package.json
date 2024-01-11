@@ -8,5 +8,20 @@
     "@govuk-prototype-kit/common-templates": "2.0.0",
     "govuk-frontend": "5.0.0",
     "govuk-prototype-kit": "13.16.0"
-  }
+  },
+  "name": "delta-prototype",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/communitiesuk/delta-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/communitiesuk/delta-prototype/issues"
+  },
+  "homepage": "https://github.com/communitiesuk/delta-prototype#readme",
+  "description": ""
 }

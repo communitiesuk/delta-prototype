@@ -1,0 +1,55 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="UX Checklist" %}
+
+
+
+
+
+{% block content %}
+
+
+
+<h1 class="govuk-heading-xl">
+  UX checklist
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <div class="ux-reading-width">
+      <h2 id="pageStructure" class="govuk-heading-l">Page structure</h2>
+  
+      <ul class="govuk-list govuk-list--spaced">
+        <li>Page width should be set to max-width 160Opx, but optimised for GOV.UK standard width of 1020px</li>
+        <li>Confirm all breadcrumbs work</li>
+        <li>Ensure sentences wrap at ~70 characters. Uses the css class ux-reading-width.</li>
+        <li>Only use red (danger) text to denote errors; don't use for warnings. Instead use the <a href="https://design-system.service.gov.uk/components/warning-text/">warning text component</a>.</li>
+        <li>The <a href="https://design-system.service.gov.uk/components/inset-text/">inset text component</a> should be used to differentiate text.</li>
+      </ul>
+  
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          Don't use red text for warnings, only errors.
+        </strong>
+      </div>    
+
+<div class="govuk-inset-text">
+  It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application.
+</div>      
+  
+      <p>This block of text is wrapping at 44em for optimal readability. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h3 class="govuk-heading-s">Navigation</h3>
+    <ul class="govuk-list">
+      <li><a href="#pageStructure">Page structure</a></li>
+    </ul>
+  </div>  
+</div>
+
+{% endblock %}
