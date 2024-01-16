@@ -5,6 +5,10 @@
 
 // Add extra styles here
 
+html {
+    scroll-behavior: smooth;
+}
+
 .govuk-width-container {
     max-width: 1600px;
     padding: 0 50px;
@@ -62,4 +66,16 @@
 
 .ux-reading-width {
 	max-width: 44em;
+}
+
+
+.ux-sticky-top {
+    position: sticky;
+    top: 0;
+}
+
+.govuk-list {
+    .govuk-list {
+        margin-left: 1rem;
+    }
 }
