@@ -15,11 +15,11 @@ html {
     margin: 0 auto;
 }
 
-.ux-text-secondary {
+.delta-text-secondary {
     color: #505a5f;
 }
 
-.ux-grid-row {
+.delta-grid-row {
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -28,7 +28,7 @@ html {
     };
 }
 
-.ux-results-filter {
+.delta-results-filter {
     padding: 1.2rem;
     background-color: #e7e7e7;    
     .govuk-form-group {
@@ -39,20 +39,20 @@ html {
     }
 }
 
-.ux-invisible {
+.delta-invisible {
     visibility: hidden;
 }
 
-.ux-hide {
+.delta-hide {
     display: none;
 }
 
-.ux-columns-two {
+.delta-columns-two {
     columns: 2;
     column-gap: 1.2rem;
 }
 
-.ux-dl {
+.delta-dl {
     margin-left: 0;
     dt {
         font-weight: 800!important;
@@ -64,12 +64,12 @@ html {
     }
 }
 
-.ux-reading-width {
+.delta-reading-width {
 	max-width: 44em;
 }
 
 
-.ux-sticky-top {
+.delta-sticky-top {
     position: sticky;
     top: 0;
 }

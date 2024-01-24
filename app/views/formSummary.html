@@ -1,0 +1,71 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Form: FormName" %}
+
+
+{% block beforeContent %}
+
+<p>Home > Setup > Forms > Form summary</p>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+  <h1 class="govuk-heading-xl">
+    Parrot Census (title)
+  </h1>
+<div class="govuk-grid-row">
+  <!-- Meta data -->
+  <div class="govuk-grid-column-one-third">
+      <dl class="delta-dl govuk-body">
+        <dt>Form name</dt>
+        <dd>ParrotCensus</dd>
+        <dt>Access group</dt>
+        <dd>form-designers</dd>        
+        <dt>Status</dt>
+        <dd>
+          <strong class="govuk-tag govuk-tag--green">Published</strong>
+          <strong class="govuk-tag govuk-tag--yellow">Draft</strong>
+          <strong class="govuk-tag govuk-tag--grey">Closed</strong>
+        </dd>
+        <dt>Updated</dt>
+        <dd>22/01/24</dd>
+        <dt>Update by</dt>
+        <dd>steve.molesworth@softwire.com</dd>            
+      </dl>
+  </div>
+  <!-- actions -->
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-s">Actions</h2>
+
+    <ul class="govuk-list govuk-list--spaced govuk-!-static-margin-bottom-5">
+      <li><a class="govuk-link" href="#">Associate grant selection</a></li>
+      <li><a class="govuk-link" href="#">Assign access group</a></li>
+      <li><a class="govuk-link" href="#">Download data migration template</a></li>
+      <li><a class="govuk-link" href="#">Associate schema definition files</a></li>
+    </ul>
+
+
+   
+    <div>
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Edit form
+      </button>
+    </div>
+
+
+
+    <div class="">
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+        Clone form
+      </button>
+    </div>
+
+
+
+  </div>  
+</div>
+
+{% endblock %}
