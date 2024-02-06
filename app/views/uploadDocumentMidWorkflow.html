@@ -110,9 +110,6 @@
   
      
     </div>
-
-    <!-- ============== Concept 1 ============== -->
-    <h2 class="govuk-heading-s designNote">Concept 2.1 - 'details expander'</h2>
       
     <h2 class="govuk-heading-l">Associated documents</h2>
 
@@ -154,7 +151,7 @@
       </summary>
       <div class="govuk-details__text">
 
-        <h3 class="govuk-heading-s">Attach existing document</h3>
+        <!-- <h3 class="govuk-heading-s">Attach existing document</h3> -->
 
         {% from "govuk/components/select/macro.njk" import govukSelect %}
     
@@ -162,7 +159,7 @@
           id: "sort",
           name: "selectDocument",
           label: {
-            text: "Select existng document"
+            text: "Select existing document"
           },
           items: [
           {
@@ -191,115 +188,12 @@
     
         <button class="govuk-button" disabled>Attach</button>
     
-        <h3 class="govuk-heading-s">Attach new document</h3>
-    
-        {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
-    
-        {{ govukFileUpload({
-          id: "file-upload-1",
-          name: "fileUpload1",
-          label: {
-            text: "Upload a file"
-          }
-        }) }}    
+       <p>Or upload a <a href="#">new document (new window)</a></p>
 
       </div>
     </details>
 
-    <!-- ============== Concept 2 ============== -->
-    <h2 class="govuk-heading-s designNote">Concept 2.2 - 'two columns'</h2>
-      
-    <h2 class="govuk-heading-l">Associated documents</h2>
-
-    <p class="delta-reading-width">Text explaining what associate documents are. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis, neque incidunt repudiandae assumenda, fugiat velit iusto exercitationem voluptate voluptates quod eveniet laboriosam voluptatem.</p>
-
-    <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Attached documents</caption>
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header govuk-!-width-one-half">Document</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Access</th>
-          <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Options</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#">DocumentName</a></th>
-          <td class="govuk-table__cell">Public</td>
-          <td class="govuk-table__cell"><a href="#">Remove</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#">DocumentWithLongerName</a></th>
-          <td class="govuk-table__cell">Public</td>
-          <td class="govuk-table__cell"><a href="#">Remove</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#">DocumentWithMuchLongerName</a></th>
-          <td class="govuk-table__cell">Secured (authentication required to download)</td>
-          <td class="govuk-table__cell"><a href="#">Remove</a></td>
-        </tr>
-      </tbody>
-    </table>
-
-
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-
-        <h3 class="govuk-heading-s">Attach existing document</h3>
-
-        {% from "govuk/components/select/macro.njk" import govukSelect %}
-    
-        {{ govukSelect({
-          id: "sort",
-          name: "selectDocument",
-          label: {
-            text: "Select existng document"
-          },
-          items: [
-          {
-            value: "null",
-            text: "None",
-            selected: true        
-          },      
-            {
-              value: "doc001",
-              text: "DocumentName001"
-            },
-            {
-              value: "doc002",
-              text: "DocumentName002"
-            },
-            {
-              value: "doc003",
-              text: "DocumentName003"
-            },
-            {
-              value: "doc004",
-              text: "DocumentName002"
-            }
-          ]
-        }) }}
-    
-        <button class="govuk-button" disabled>Attach</button>
-
-      </div>
-      <div class="govuk-grid-column-one-half">
-
-        <h3 class="govuk-heading-s">Attach new document</h3>
-    
-        {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
-    
-        {{ govukFileUpload({
-          id: "file-upload-1",
-          name: "fileUpload1",
-          label: {
-            text: "Upload a file"
-          }
-        }) }}    
-
-      </div>
-    </div>      
-
+  
 
  
 
