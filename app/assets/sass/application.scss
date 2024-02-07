@@ -16,6 +16,12 @@ html {
 .designNote {
     padding: 2rem;
     background-color: rgba(255, 255, 0, 0.262);
+
+    &:last-child {
+        margin-bottom: 0;
+        background-color: pink;
+    }
+
 }
 
 .govuk-width-container {
@@ -98,9 +104,17 @@ html {
 
 
 .delta-text-success {
-    color: $govuk-success-colour;;
+    color: $govuk-success-colour;
 }
 
 .delta-text-info {
     color: #1d70b8;
 }
+
+
+// Experiments ===============
+
+// h1, h2, h3, h4, h5, h6, li, p {
+//     background-color: pink;
+//     max-width: 40ch;
+// }

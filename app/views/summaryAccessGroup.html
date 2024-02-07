@@ -5,32 +5,117 @@
 
 {% block beforeContent %}
 
-<p>Home > Setup > Forms > Form summary</p>
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-l">Access group summary page (aka Access group created) design notes</h2>
+  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-841" target="_blank">DT-841</a></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>This is a new, dedicated page for an access group</li>
+    <li>Internally we refer to this as an 'access group summary' page - similar to <a href="/formSummary">form summary</a></li>
+    <li>The success panel is displayed when created</li>
+    <li>The success notification banner is displayed if the user has made and saved an edit</li>
+    <li>Using <a href="https://design-system.service.gov.uk/components/summary-list/">GDS component Summary List</a></li>
+  </ul>
+</div>
+
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Admin",
+      href: "#"
+    },
+    {
+      text: "Access groups",
+      href: "#"
+    },
+    {
+      text: "AccessGroupName",
+      href: "#"
+    }    
+  ]
+}) }}
+
 
 {% endblock %}
 
 
 {% block content %}
 
-<!-- ================= UX Design notes ================= -->
-<div class="designNote govuk-!-margin-bottom-4">
-  <h2 class="govuk-heading-l">Access group summary page (aka Access group created) design notes</h2>
-  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-841" target="_blank">DT-841</a></p>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Note</li>
-    <li>Note</li>
-    <li>Note</li>
-  </ul>
+
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Success
+  </h1>
+  <div class="govuk-panel__body">
+    Access group <strong>AccessGroupName</strong> created.
+  </div>
 </div>
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Or</p>
+</div>
+
+<!-- Success -->
+<div class="govuk-notification-banner delta-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__content">
+    <p class="xgovuk-notification-banner__heading">
+      <strong class="delta-text-success">Success:</strong> changes to access group saved.
+    </p>
+  </div>
+</div>
+
 
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      Template
+      Access group: AccessGroupName
     </h1>
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Display name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          DisplayName
+        </dd>
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Classification
+        </dt>
+        <dd class="govuk-summary-list__value">
+          ClassificationType
+        </dd>
+      </div>            
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Show in My Profile for external users
+        </dt>
+        <dd class="govuk-summary-list__value">
+          No
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Show in My Profile for DLUCH users
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+      </div>      
+    </dl>
+
+    <button class="govuk-button">Edit</button>
 
   </div>
 </div>

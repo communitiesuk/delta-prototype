@@ -5,7 +5,39 @@
 
 {% block beforeContent %}
 
-<p>Home > Setup > Forms > Parrot Census</p>
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-s">Design notes</h2>
+  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-825" target="_blank">DT-825</a></p>
+  <!-- <ul class="govuk-list govuk-list--bullet">
+    <li>Note</li>
+    <li>Note</li>
+    <li>Note</li>
+  </ul> -->
+</div>
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Setup",
+      href: "#"
+    },
+    {
+      text: "Forms",
+      href: "#"
+    },
+    {
+      text: "Parrot Census",
+      href: "#"
+    }    
+  ]
+}) }}
 
 {% endblock %}
 
