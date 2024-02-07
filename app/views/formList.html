@@ -1,0 +1,74 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Form: FormName" %}
+
+
+{% block beforeContent %}
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-s">Design notes</h2>
+  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-825" target="_blank">DT-825</a></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Changes to table:</li>
+    <li>Form name cell now a TH (table heading) and linking <em>not</em> to Form Editor but instead Form Summary</li>
+    <li>Delete last column containing drop-down with options</li>
+  </ul>
+</div>
+
+{% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+{{ govukBreadcrumbs({
+  items: [
+    {
+      text: "Home",
+      href: "#"
+    },
+    {
+      text: "Setup",
+      href: "#"
+    },
+    {
+      text: "Forms",
+      href: "#"
+    } 
+  ]
+}) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+  <h1 class="govuk-heading-xl">
+    Forms
+  </h1>
+
+  <button class="govuk-button">New form</button>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Title</th>
+        <th scope="col" class="govuk-table__header">Status</th>
+        <th scope="col" class="govuk-table__header">Updated on</th>
+        <th scope="col" class="govuk-table__header">Updated by</th>
+        <th scope="col" class="govuk-table__header">Access group</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/formSummary">FormName</a></th>
+        <td class="govuk-table__cell">xxx</td>
+        <td class="govuk-table__cell">xxx</td>
+        <td class="govuk-table__cell">xxx</td>
+        <td class="govuk-table__cell">xxx</td>
+      </tr>
+    </tbody>
+  </table>  
+
+
+
+{% endblock %}
