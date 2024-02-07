@@ -4,6 +4,7 @@
 
 
 $govuk-success-colour:	#00703c;
+$govuk-error-colour:	#d4351c;
 // 
 
 // Add extra styles here
@@ -103,9 +104,17 @@ html {
     background-color: $govuk-success-colour;
 }
 
+.delta-notification-banner--error {
+    border-color: $govuk-error-colour;
+    background-color: $govuk-error-colour;
+}
+
+.delta-text-error {
+    color: $govuk-success-colour;
+}
 
 .delta-text-success {
-    color: $govuk-success-colour;
+    color: $govuk-error-colour;
 }
 
 .delta-text-info {

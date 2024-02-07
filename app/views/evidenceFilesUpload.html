@@ -1,10 +1,18 @@
 {% extends "layouts/delta.html" %}
 
-{% set pageName="Template" %}
+{% set pageName="Outcome reporting after uploading evidence files" %}
 
 
 {% block beforeContent %}
 
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-s">Design notes: Outcome reporting after uploading evidence files</h2>
+  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-713" target="_blank">DT-713</a></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>We want to make it clear to the user which files have uploaded successfully and which haven't (providing a reason if the latter)</li>
+  </ul>
+</div>
 
 
 {% endblock %}
@@ -12,22 +20,74 @@
 
 {% block content %}
 
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Evidence files upload reporting
-    </h1>
-    
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
 
-    <!-- ================= UX Design notes ================= -->
-    <div class="designNote govuk-!-margin-bottom-4">
-      <h2 class="govuk-heading-s">Outcome reporting after uploading evidence files</h2>
-      <ul class="govuk-list govuk-list--bullet">        
-        <li>We want to make it clear to the user which files have uploaded successfully and which haven't (providing a reason if the latter)</li>
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Transactions",
+        href: "#"
+      },
+      {
+        text: "Upload evidence",
+        href: "#"
+      }
+    ]
+  }) }}
+
+
+  <h1 class="govuk-heading-xl">
+    Upload evidence for sg-2023-24
+  </h1>
+
+  <!-- file upload outcome messages ============== -->
+  <!-- SUCCESS -->
+  <div class="govuk-notification-banner delta-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Success
+      </h2>
+    </div>  
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        The following files were successfully uploaded:
+      </p>
+      <ul class="govuk-list">
+        <li><strong>Filename001</strong></li>
+        <li><strong>Filename002</strong></li>
+        <li><strong>Filename003</strong></li>
       </ul>
-    </div>    
-
+    </div>
   </div>
-</div>
+
+  <!-- Error-->
+  <div class="govuk-notification-banner delta-notification-banner--error" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Error
+      </h2>
+    </div>  
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        The following files failed to upload:
+      </p>
+      <ul class="govuk-list">
+        <li><strong>Filename004</strong> &mdash; file size too large</li>
+        <li><strong>Filename005</strong> &mdash; file name contains unsupported characters</li>
+        <li><strong>Filename006</strong> &mdash; upload timed out (connection issue)</li>
+      </ul>    
+    </div>
+  </div>
+
+
+<h2 class="govuk-heading-l">
+  Select one or more files to upload
+</h2>
+
+
 
 {% endblock %}
