@@ -1,0 +1,91 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Reference designs for notification banners and panels" %}
+
+
+{% block beforeContent %}
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-s">Reference designs for notification banners and panels</h2>
+  <p>Completion vs creation</p>
+  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-858">https://dluhcdigital.atlassian.net/browse/DT-858</a></p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Panels are displayed on completion of process. This if often a multi-step, complex process like creating a dataset. Panels are typically displayed on the entity summary page (acting in part like a header). Often summary content and next actions are listed beneath.</li>
+    <li>Notifications banners used to confirm the completion of an action - like uploading a document or associating an organisation. Unlike panels banners contain content that relates to previous screen (the last thing the user was doing).</li>
+    <li><a href="https://design-system.service.gov.uk/components/panel/">GDG Panel</a></li>
+    <li><a href="https://design-system.service.gov.uk/components/notification-banner/">GDS notification banner</a></li>
+  </ul>
+</div>
+
+<!-- ================= Panel ================= -->
+
+<h2 class="govuk-heading-l">Panel</h2>
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Standard panel structure is:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>H1: Success</li>
+    <li>Paragraph: Entity name (aka thing) in bold followed by 'created'.</li>
+  </ul>
+</div>  
+
+
+
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Success
+  </h1>
+  <div class="govuk-panel__body">
+    <strong>ThingName</strong> created.
+  </div>
+</div>
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+<!-- ================= Notification banners ================= -->
+
+<h2 class="govuk-heading-l">Notification banner</h2>
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Standard banner structure is:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Outcome in bold - e.g. 'success'</li>
+    <li>Followed by details of the action that just took place.</li>
+  </ul>  
+  <p>It is unlikely we will use info banner. It has been created in case it is required.</p>  
+
+</div>  
+
+<!-- Success -->
+<div class="govuk-notification-banner delta-notification-banner--success" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__content">
+    <p class="xgovuk-notification-banner__heading">
+      <strong class="delta-text-success">Success:</strong> organisation associated with instance.
+    </p>
+  </div>
+</div>
+
+<!-- info -->
+<div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__content">
+    <p class="xgovuk-notification-banner__heading">
+      <strong class="delta-text-info">Info:</strong> some message.
+    </p>
+  </div>
+</div>
+
+
+
+
+{% endblock %}
