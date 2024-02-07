@@ -33,7 +33,7 @@
   <p>Standard panel structure is:</p>
   <ul class="govuk-list govuk-list--bullet">
     <li>H1: Success</li>
-    <li>Paragraph: Entity name (aka thing) in bold followed by 'created'.</li>
+    <li>Paragraph: Entity tpe + <strong>Entity name</strong> + created.</li>
   </ul>
 </div>  
 
@@ -44,9 +44,21 @@
     Success
   </h1>
   <div class="govuk-panel__body">
-    <strong>ThingName</strong> created.
+    ThingType <strong>ThingName</strong> created.
   </div>
 </div>
+
+<p>Example</p>
+
+<div class="govuk-panel govuk-panel--confirmation">
+  <h1 class="govuk-panel__title">
+    Success
+  </h1>
+  <div class="govuk-panel__body">
+    Dataset <strong>Squirrel Census</strong> created.
+  </div>
+</div>
+
 
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
