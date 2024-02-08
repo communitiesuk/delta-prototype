@@ -12,15 +12,11 @@
 {% block content %}
 
 
+<h1 class="govuk-heading-xl">
+  UX ticket checklist
+</h1>
+<p class="govuk-body-l">Checklist for UX tickets under evaluation for moving from backlog into production.</p>
 
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      UX ticket checklist
-    </h1>
-    <p class="govuk-body-l">Checklist for evaluating moving a ticket from backlog into UX production.</p>
-    
 
 
     {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -28,9 +24,7 @@
 
 
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-half">
-
-
+      <div class="govuk-grid-column-one-third">
 
         {{ govukCheckboxes({
           name: "activity",
@@ -69,7 +63,7 @@
           items: [
             {
               value: "channelAdmin",
-              text: "Admin"
+              text: "Admin (DLUCH)"
             },
             {
               value: "channelCollections",
@@ -91,7 +85,7 @@
           name: "audience",
           fieldset: {
             legend: {
-              text: "Audiences (user groups)",
+              text: "Audiences (user groups impacted)",
               isPageHeading: true,
               classes: "govuk-fieldset__legend--s"
             }
@@ -116,7 +110,7 @@
         }) }}       
 
       </div>
-      <div class="govuk-grid-column-one-half">
+      <div class="govuk-grid-column-one-third">
 
         {{ govukRadios({
           name: "frequency",
@@ -144,16 +138,12 @@
           name: "developmentFeasibilityReview",
           fieldset: {
             legend: {
-              text: "Development feasibility review",
+              text: "Development feasibility review (quick evaluation)",
               isPageHeading: false,
               classes: "govuk-fieldset__legend--s"
             }
           },
           items: [
-            {
-              value: "feasibilityNotDone",
-              text: "Not done"
-            },
             {
               value: "feasibilityDoneApproved",
               text: "Done - approved"
@@ -196,12 +186,136 @@
         }) }}    
 
       </div>      
+      <div class="govuk-grid-column-one-third">
+        
+        <h2 class="govuk-heading-m">Related OKRs</h2>
+        <!-- <p>Updated: 8/2/24</p> -->
+
+        {{ govukCheckboxes({
+          name: "okrMeeTNeeds",
+          fieldset: {
+            legend: {
+              text: "1. Meet the needs of data collectors and data providers",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "1.1",
+              text: "1.1	Local authority users spend less time providing data"
+            },
+            {
+              value: "1.2",
+              text: "1.2	Increased customer satisfaction"
+            },
+            {
+              value: "1.3",
+              text: "1.3	All appropriate collected data to be available in CDS automatically and in a timely manner"
+            },
+            {
+              value: "1.2",
+              text: "1.4	Right data provided first time"
+            }                    
+          ]
+        }) }}           
+
+        {{ govukCheckboxes({
+          name: "okrSave",
+          fieldset: {
+            legend: {
+              text: "2. Save time and effort to collect and provide data, and save money",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "2.1",
+              text: "2.1	Reduction in cost per transaction"
+            },
+            {
+              value: "2.2",
+              text: "2.2	Users can complete their task without help and in a quicker timeframe"
+            },
+            {
+              value: "2.3",
+              text: "2.3	Complete, consistent, reliable, up to date"
+            }                
+          ]
+        }) }}            
+
+        {{ govukCheckboxes({
+          name: "okrReliability",
+          fieldset: {
+            legend: {
+              text: "3. Improve reliability of services",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "2.1",
+              text: "3.1 Payments running correctly"
+            },
+            {
+              value: "2.2",
+              text: "3.2 Unplanned downtime"
+            }               
+          ]
+        }) }}            
+        
+        <!-- <ul class="govuk-list">
+          <li><strong>1 Meet the needs of data collectors and data providers</strong>
+            <ul class="govuk-list">
+              <li>1.1	Local authority users spend less time providing data</li>
+              <li>1.2	Increased customer satisfaction</li>
+              <li>1.3	All appropriate collected data to be available in CDS automatically and in a timely manner</li>
+              <li>4</li>
+            </ul>    
+          </li>
+          <li><strong>2 Save time and effort to collect and provide data, and save money</strong>
+            <ul class="govuk-list">
+              <li>2.1	Reduction in cost per transaction</li>
+              <li>2.2	Users can complete their task without help and in a quicker timeframe</li>
+              <li>2.3	Complete, consistent, reliable, up to date</li>
+            </ul>    
+          </li>
+         <li><strong>3 Improve reliability of services</strong>
+            <ul class="govuk-list">
+              <li>3.1	Payments running correctly</li>
+              <li>3.2	Unplanned downtime</li>
+            </ul>  
+          </li> 
+        </ul> -->
+
+      </div>
     </div>
 
+  <!-- Associated content =====================  -->
 
-    
 
-  </div>
+
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+  <h2 class="govuk-heading-s">Change log</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>8/2/24 - Added options for related OKRs</li>
+    <li>8/2/24 - Added options for [audience] frequency of interaction</li>
+  </ul>
 </div>
+
+
 
 {% endblock %}
