@@ -5,6 +5,7 @@
 
 $govuk-success-colour:	#00703c;
 $govuk-error-colour:	#d4351c;
+$delta-info:        	#1d70b8;
 // 
 
 // Add extra styles here
@@ -121,6 +122,38 @@ color: $govuk-error-colour;
     color: #1d70b8;
 }
 
+// Animations ===============
+
+.delta-animation-loading {
+    background-color: #f3f2f1;
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+    animation: deltaLoading;
+    animation-duration: 1.5s;    
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    
+    .delta-animation-loading-indicator {
+        width: 10%;
+        height: 16px;
+        text-indent: -999px;
+        overflow: hidden;
+        background-color: $delta-info;
+        border-radius: 8px;
+    }
+
+    @keyframes deltaLoading {
+        0% {
+            padding-left: 0;
+        } 
+        100% {
+            padding-left: 100%;
+        }
+    }
+
+}
 
 // Experiments ===============
 

@@ -1,0 +1,40 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Animation: loading [content]" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Loading content animation</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-721" target="_blank">DT-721</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>To be displayed when content — like results data —  is being fetched.</li>
+    </ul>
+  </div>
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      It's loading, init
+    </h1>
+    
+    <div class="delta-animation-loading">
+      <div class="delta-animation-loading-indicator">Content is loading. Please wait.</div>
+    </div>
+
+  </div>
+</div>
+
+{% endblock %}
