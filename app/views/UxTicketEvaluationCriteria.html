@@ -1,0 +1,183 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="UX Ticket Evaluation Criteria" %}
+
+
+{% block beforeContent %}
+
+
+
+{% endblock %}
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      UX ticket checklist
+    </h1>
+    <p class="govuk-body-l">Checklist for evaluating moving of a ticket from backlog into production.</p>
+    
+
+
+    {% from "govuk/components/radios/macro.njk" import govukRadios %}
+    {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}    
+
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">
+
+
+
+        {{ govukCheckboxes({
+          name: "activity",
+          fieldset: {
+            legend: {
+              text: "UX activity type",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "uxActivityResearch",
+              text: "Research"
+            },
+            {
+              value: "uxActivityDesign",
+              text: "Design"
+            }     
+          ]
+        }) }}        
+    
+    
+        {{ govukRadios({
+          name: "channels",
+          fieldset: {
+            legend: {
+              text: "Delta channel work relates to",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "channelAdmin",
+              text: "Admin"
+            },
+            {
+              value: "channelCollections",
+              text: "Collections"
+            },
+            {
+              value: "channelExternal",
+              text: "External"
+            }        
+          ]
+        }) }} 
+     
+    
+        {{ govukCheckboxes({
+          name: "audience",
+          fieldset: {
+            legend: {
+              text: "Audiences (user groups)",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          hint: {
+            text: "Select all that apply."
+          },
+          items: [
+            {
+              value: "audienceAdmin",
+              text: "Admin"
+            },
+            {
+              value: "audienceInternal",
+              text: "Internal"
+            },
+            {
+              value: "audienceExternal",
+              text: "External"
+            }        
+          ]
+        }) }}     
+
+      </div>
+      <div class="govuk-grid-column-one-half">
+
+
+
+        {{ govukRadios({
+          name: "developmentFeasibilityReview",
+          fieldset: {
+            legend: {
+              text: "Development feasibility review",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "feasibilityNotDone",
+              text: "Not done"
+            },
+            {
+              value: "feasibilityDoneApproved",
+              text: "Done - approved"
+            },
+            {
+              value: "feasibilityDoneRejected",
+              text: "Done - rejected"
+            },        
+            {
+              value: "feasibilityNotRequired",
+              text: "Not required"
+            }        
+          ]
+        }) }}        
+        
+    
+        {{ govukRadios({
+          name: "estimateOfUxEffort",
+          fieldset: {
+            legend: {
+              text: "Estimation of UX effort",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "effortSmall",
+              text: "Small"
+            },
+            {
+              value: "effortMmedium",
+              text: "Medium"
+            },
+            {
+              value: "effortLarge",
+              text: "Large"
+            }
+          ]
+        }) }}    
+
+      </div>      
+    </div>
+
+
+    
+
+  </div>
+</div>
+
+{% endblock %}
