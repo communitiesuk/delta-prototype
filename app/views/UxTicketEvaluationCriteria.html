@@ -113,11 +113,31 @@
               text: "External"
             }        
           ]
-        }) }}     
+        }) }}       
 
       </div>
       <div class="govuk-grid-column-one-half">
 
+        {{ govukRadios({
+          name: "frequency",
+          fieldset: {
+            legend: {
+              text: "Audience frequency of interaction wih this issue",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "frequencyLow",
+              text: "Low"
+            },         
+            {
+              value: "frequencyHigh",
+              text: "High"
+            }        
+          ]
+        }) }}        
 
 
         {{ govukRadios({
