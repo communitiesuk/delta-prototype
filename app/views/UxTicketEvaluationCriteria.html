@@ -49,6 +49,63 @@
             }     
           ]
         }) }}        
+
+   
+        {{ govukRadios({
+          name: "estimateOfUxEffort",
+          fieldset: {
+            legend: {
+              text: "Estimation of UX effort",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "effortSmall",
+              text: "Small"
+            },
+            {
+              value: "effortMmedium",
+              text: "Medium"
+            },
+            {
+              value: "effortLarge",
+              text: "Large"
+            }
+          ]
+        }) }}          
+        
+
+        {{ govukRadios({
+          name: "developmentFeasibilityReview",
+          fieldset: {
+            legend: {
+              text: "Development feasibility review (quick evaluation)",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "feasibilityDoneApproved",
+              text: "Done - approved"
+            },
+            {
+              value: "feasibilityDoneRejected",
+              text: "Done - rejected"
+            },        
+            {
+              value: "feasibilityNotRequired",
+              text: "Not required"
+            }        
+          ]
+        }) }}        
+        
+
+      </div>
+      <div class="govuk-grid-column-one-third">
+        
     
     
         {{ govukRadios({
@@ -109,8 +166,6 @@
           ]
         }) }}       
 
-      </div>
-      <div class="govuk-grid-column-one-third">
 
         {{ govukRadios({
           name: "frequency",
@@ -134,56 +189,7 @@
         }) }}        
 
 
-        {{ govukRadios({
-          name: "developmentFeasibilityReview",
-          fieldset: {
-            legend: {
-              text: "Development feasibility review (quick evaluation)",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "feasibilityDoneApproved",
-              text: "Done - approved"
-            },
-            {
-              value: "feasibilityDoneRejected",
-              text: "Done - rejected"
-            },        
-            {
-              value: "feasibilityNotRequired",
-              text: "Not required"
-            }        
-          ]
-        }) }}        
-        
-    
-        {{ govukRadios({
-          name: "estimateOfUxEffort",
-          fieldset: {
-            legend: {
-              text: "Estimation of UX effort",
-              isPageHeading: false,
-              classes: "govuk-fieldset__legend--s"
-            }
-          },
-          items: [
-            {
-              value: "effortSmall",
-              text: "Small"
-            },
-            {
-              value: "effortMmedium",
-              text: "Medium"
-            },
-            {
-              value: "effortLarge",
-              text: "Large"
-            }
-          ]
-        }) }}    
+ 
 
       </div>      
       <div class="govuk-grid-column-one-third">
