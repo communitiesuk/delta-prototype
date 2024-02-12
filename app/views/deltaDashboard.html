@@ -1,0 +1,127 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Delta Dashboard (OKR)" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-808" target="_blank">DT-808</a></p>
+    <!-- <ul class="govuk-list govuk-list--bullet">
+      <li>Note</li>
+      <li>Note</li>
+      <li>Note</li>
+    </ul> -->
+  </div>
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Admin",
+        href: "#"
+      },
+      {
+        text: "Delta Usage dashboard",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Delta usage dashboard
+</h1>
+
+<div class="govuk-tabs" data-module="govuk-tabs">
+  <h2 class="govuk-tabs__title">
+    Contents
+  </h2>
+  <ul class="govuk-tabs__list">
+    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+      <a class="govuk-tabs__tab" href="#month-current">
+        Current month (February 2024)
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="month-001">
+       January 2024
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="month-002">
+        December 2023
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="month-003">
+        November 2023
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="month-archive">
+        Archive
+      </a>
+    </li>    
+  </ul>
+  <!-- Month-current ===================== -->
+  <div class="govuk-tabs__panel" id="current-month">
+    <h2 class="govuk-heading-l">Current month</h2>
+
+    <table class="govuk-table">
+      <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Date</th>
+          <th scope="col" class="govuk-table__header">Amount</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">First 6 weeks</th>
+          <td class="govuk-table__cell">£109.80 per week</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Next 33 weeks</th>
+          <td class="govuk-table__cell">£109.80 per week</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Total estimated pay</th>
+          <td class="govuk-table__cell">£4,282.20</td>
+        </tr>
+      </tbody>
+    </table>    
+    
+
+  </div>
+
+  <!-- Month-001 ===================== -->
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="month-001">
+    <h2 class="govuk-heading-l">January 2024</h2>
+
+  
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+  </div>
+</div>
+
+{% endblock %}
