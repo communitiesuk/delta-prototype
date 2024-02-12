@@ -10,7 +10,8 @@
     <h2 class="govuk-heading-s">Loading content animation</h2>
     <p><a href="https://dluhcdigital.atlassian.net/browse/DT-721" target="_blank">DT-721</a></p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>To be displayed when content — like results data —  is being fetched.</li>
+      <li>To be displayed when loading, being uploaded or processed</li>
+      <li>12/02/2024 : new copy for Uploading and Processing</li>
     </ul>
   </div>
 
@@ -26,12 +27,44 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      It's loading, init
-    </h1>
-    
-    <div class="delta-animation-loading">
-      <div class="delta-animation-loading-indicator">Content is loading. Please wait.</div>
+
+
+    <!-- uploading -->
+    <div class="govuk-!-margin-bottom-5">
+      <h3 class="govuk-heading-s">
+        Content loading
+      </h3>
+     
+      <div class="delta-animation-loading">
+        <div class="delta-animation-loading-indicator">Content loading. Please wait.</div>
+      </div>
+    </div>  
+
+
+    <!-- uploading -->
+    <div class="govuk-!-margin-bottom-5">
+      <h3 class="govuk-heading-s">
+        Uploading file
+      </h3>
+      <p>Please wait for the upload to finish. Depending on the size, it may take up to 3 minutes. Do not navigate away from this screen until the upload is complete.</p>
+      
+      <div class="delta-animation-loading">
+        <div class="delta-animation-loading-indicator">File uploading. Please wait.</div>
+      </div>
+    </div>    
+
+
+
+    <!-- processing -->
+    <div class="govuk-!-margin-bottom-5">
+      <h3 class="govuk-heading-s">
+        Processing file
+      </h3>
+      <p>Feel free to navigate away from this page. You'll be able to view the file in <a href="#">Upload History</a> once the processing is complete. This may take up to 10 minutes.</p>
+      
+      <div class="delta-animation-loading">
+        <div class="delta-animation-loading-indicator">File is being processed.</div>
+      </div>
     </div>
 
   </div>
