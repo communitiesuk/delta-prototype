@@ -79,29 +79,128 @@
   <div class="govuk-tabs__panel" id="current-month">
     <h2 class="govuk-heading-l">Current month</h2>
 
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Google Analytics</caption>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Active users</th>
+              <td class="govuk-table__cell">1,878</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Pages per visit</th>
+              <td class="govuk-table__cell">2.4</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Bounce rate</th>
+              <td class="govuk-table__cell">34%</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Session duration</th>
+              <td class="govuk-table__cell">45s</td>
+            </tr>                        
+          </tbody>
+        </table>                
+      </div>
+    </div>
+
     <table class="govuk-table">
-      <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+      <caption class="govuk-table__caption govuk-table__caption--m">Log file analysis <span class="delta-text-secondary">(internal reports)</span></caption>
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Date</th>
-          <th scope="col" class="govuk-table__header">Amount</th>
+          <th scope="col" class="govuk-table__header">Channel</th>
+          <th scope="col" class="govuk-table__header">Delta (all)</th>
+          <th scope="col" class="govuk-table__header">Collections</th>
+          <th scope="col" class="govuk-table__header">Grants</th>
+          <th scope="col" class="govuk-table__header">Local Government Finance</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">First 6 weeks</th>
-          <td class="govuk-table__cell">£109.80 per week</td>
+          <th scope="row" class="govuk-table__header">All</th>
+          <td class="govuk-table__cell">1,201</td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Next 33 weeks</th>
-          <td class="govuk-table__cell">£109.80 per week</td>
+          <th scope="row" class="govuk-table__header">Internal users</th>
+          <td class="govuk-table__cell">1,001 <span class="delta-text-secondary">(87%)</span></td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Total estimated pay</th>
-          <td class="govuk-table__cell">£4,282.20</td>
+          <th scope="row" class="govuk-table__header">External users</th>
+          <td class="govuk-table__cell">200 <span class="delta-text-secondary">(17%)</span></td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
+          <td class="govuk-table__cell">xxx</td>
         </tr>
       </tbody>
     </table>    
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <dl class="delta-dl govuk-body">
+          <dt>Help desk tickets opened</dt>
+          <dd>30</dd>
+          <dt>Help desk tickets closed</dt>
+          <dd>30</dd>                
+        </dl>        
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <dl class="delta-dl govuk-body">
+          <dt>Error rate <span class="delta-text-secondary">(errors per session)</span></dt>
+          <dd>0.23</dd>    
+          <dt>Unscheduled downtime</dt>
+          <dd>12 mins <span class="delta-text-secondary">(0.03%)</span></dd>              
+        </dl>        
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <dl class="delta-dl govuk-body">
+          <dt>User satisfaction score</dt>
+          <dd>4.2 <span class=""delta-text-secondary">(5 votes)</span></dd>               
+        </dl>        
+      </div>            
+    </div>
+
+    <!-- OUTCOMES ======================== -->
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">Outcomes</h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s">Collections</h4>
+        <dl class="delta-dl govuk-body">
+          <dt>Active forms</dt>
+          <dd>187</dd>
+          <dt>Submissions</dt>
+          <dd>1000 <span class="delta-text-secondary"></span>(600 forms (60%) vs 400 uploads (40%))</dd>                
+        </dl>        
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s">Grants</h4>
+        <dl class="delta-dl govuk-body">
+          <dt>Grants paid successfully</dt>
+          <dd>xxx <span class="delta-text-secondary">(0.03%)</span></dd>    
+          <dt>Unscheduled downtime</dt>
+          <dd>12 mins <span class="delta-text-secondary">(0.03%)</span></dd>              
+        </dl>        
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-s">Local Government Finance</h4>
+        <dl class="delta-dl govuk-body">
+          <dt>???</dt>
+          <dd>???</dd>               
+        </dl>        
+      </div>            
+    </div>    
+
+
+
+
+
     
 
   </div>
@@ -112,16 +211,10 @@
 
   
   </div>
+
+
+
 </div>
 
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-
-    
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-  </div>
-</div>
 
 {% endblock %}
