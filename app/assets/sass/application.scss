@@ -123,6 +123,20 @@ color: $govuk-error-colour;
     color: #1d70b8;
 }
 
+// Dashboard ===============
+
+.delta-dashboard-masthead {
+    background-color: $delta-info;
+    padding: 2rem 1rem;
+    * {
+        color: #fff;
+    }
+
+    .delta-text-secondary {
+        opacity: .5;
+    }
+}
+
 // Animations ===============
 
 .delta-animation-loading {
