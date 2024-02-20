@@ -6,6 +6,7 @@
   <h2 class="govuk-heading-s">Design notes</h2>
   <p><a href="https://dluhcdigital.atlassian.net/browse/DT-825" target="_blank">DT-825</a></p>
   <ul class="govuk-list govuk-list--bullet">
+    <li>20/02/2024 - Changes based on Jeremy's feedback; 'form title' caption added, bulk upload link, archive and delete buttons, clearer heading for Orbeon form data, audit trail (XML) link</li>
     <li>20/02/2024 - Added third column with Orbeon metedata</li>
     <li>20/02/2024 - Added new action "view form (new window) which should link to 'public' form (what data provider sees)</li>
     <li>20/02/2024 - Added "Associated grant" and link to grant in column 1</li>
@@ -36,6 +37,9 @@
 {% endblock %}
 {% block content %}
   <h1 class="govuk-heading-xl">
+    <span class="govuk-caption-xl">
+    Form title:
+  </span>
     Parrot Census
   </h1>
 <div class="govuk-grid-row">
@@ -66,27 +70,35 @@
   <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-s">Actions</h2>
     <ul class="govuk-list govuk-list--spaced govuk-!-static-margin-bottom-5">
-      <li><a class="govuk-link" href="#">View form (new tab)</a></li>
       <li><a class="govuk-link" href="#">Associate grant selection</a></li>
       <li><a class="govuk-link" href="#">Assign access group</a></li>
+      <li><a class="govuk-link" href="#">Associate schema definition files</a></li>      
       <li><a class="govuk-link" href="#">Download data migration template</a></li>
-      <li><a class="govuk-link" href="#">Associate schema definition files</a></li>
-      <li><a class="govuk-link" href="#">Audit trail</a></li>
+      <li><a class="govuk-link" href="#">Download bulk upload template</a></li>
+      <li><a class="govuk-link" href="#">Audit trail/previous versions (xml)</a></li>
+      <li><a class="govuk-link" href="#">View form (new tab)</a></li>
     </ul>
     <div>
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Edit form
-      </button>
+   
     </div>
     <div class="">
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-        Clone form
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Edit
+      </button>          
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+        Clone
       </button>
+      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+        Archive
+      </button>
+      <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+        Delete
+      </button>           
     </div>
   </div>
   <!-- Orbeon form data -->
   <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-s">Orbeon metadata</h2>
+    <h2 class="govuk-heading-s">Orbeon form metadata</h2>
     <dl class="delta-dl govuk-body">
       <dt>Sections</dt>
       <dd>53</dd>
