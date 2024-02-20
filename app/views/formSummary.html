@@ -1,23 +1,18 @@
 {% extends "layouts/delta.html" %}
-
 {% set pageName="Form: FormName" %}
-
-
 {% block beforeContent %}
-
 <!-- ================= UX Design notes ================= -->
 <div class="designNote govuk-!-margin-bottom-4">
   <h2 class="govuk-heading-s">Design notes</h2>
   <p><a href="https://dluhcdigital.atlassian.net/browse/DT-825" target="_blank">DT-825</a></p>
-  <!-- <ul class="govuk-list govuk-list--bullet">
-    <li>Note</li>
-    <li>Note</li>
-    <li>Note</li>
-  </ul> -->
+  <ul class="govuk-list govuk-list--bullet">
+    <li>20/02/2024 - Added third column with Orbeon metedata</li>
+    <li>20/02/2024 - Added new action "view form (new window) which should link to 'public' form (what data provider sees)</li>
+    <li>20/02/2024 - Added "Associated grant" and link to grant in column 1</li>
+    <li>20/02/2024 - Added "Version number" in column 1</li>
+  </ul>
 </div>
-
 {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-
 {{ govukBreadcrumbs({
   items: [
     {
@@ -35,16 +30,11 @@
     {
       text: "Parrot Census",
       href: "#"
-    }    
+    }
   ]
 }) }}
-
 {% endblock %}
-
-
 {% block content %}
-
-
   <h1 class="govuk-heading-xl">
     Parrot Census
   </h1>
@@ -56,49 +46,57 @@
         <dd>ParrotCensus</dd>
         <dt>Access group</dt>
         <dd>form-designers</dd>        
+        <dt>Associated grant</dt>
+        <dd><a href="#">Grant name</a></dd>        
         <dt>Status</dt>
         <dd>
           <strong class="govuk-tag govuk-tag--green">Published</strong>
           <strong class="govuk-tag govuk-tag--yellow">Draft</strong>
           <!-- <strong class="govuk-tag govuk-tag--grey">Closed</strong> -->
         </dd>
+        <dt>Version number</dt>
+        <dd>23</dd>        
         <dt>Updated</dt>
         <dd>22/01/24</dd>
         <dt>Update by</dt>
-        <dd>steve.molesworth@softwire.com</dd>            
+        <dd>steve.molesworth@softwire.com</dd>
       </dl>
   </div>
   <!-- actions -->
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-s">Actions</h2>
-
     <ul class="govuk-list govuk-list--spaced govuk-!-static-margin-bottom-5">
+      <li><a class="govuk-link" href="#">View form (new tab)</a></li>
       <li><a class="govuk-link" href="#">Associate grant selection</a></li>
       <li><a class="govuk-link" href="#">Assign access group</a></li>
       <li><a class="govuk-link" href="#">Download data migration template</a></li>
       <li><a class="govuk-link" href="#">Associate schema definition files</a></li>
       <li><a class="govuk-link" href="#">Audit trail</a></li>
     </ul>
-
-
-   
     <div>
       <button type="submit" class="govuk-button" data-module="govuk-button">
         Edit form
       </button>
     </div>
-
-
-
     <div class="">
       <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
         Clone form
       </button>
     </div>
-
-
-
-  </div>  
+  </div>
+  <!-- Orbeon form data -->
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-s">Orbeon metadata</h2>
+    <dl class="delta-dl govuk-body">
+      <dt>Sections</dt>
+      <dd>53</dd>
+      <dt>Repeats</dt>
+      <dd>0</dd>
+      <dt>Grids</dt>
+      <dd>163</dd>
+      <dt>Controls</dt>
+      <dd>1,117</dt>                                
+    </dl>
+  </div>
 </div>
-
 {% endblock %}
