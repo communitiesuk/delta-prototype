@@ -6,6 +6,7 @@
   <h2 class="govuk-heading-s">Design notes</h2>
   <p><a href="https://dluhcdigital.atlassian.net/browse/DT-825" target="_blank">DT-825</a></p>
   <ul class="govuk-list govuk-list--bullet">
+    <li>21/02/2024 - Swapped Form Name and Form Tile, "View form" -> "Test form", added instances (aka associations)</li>
     <li>20/02/2024 - Changes based on Jeremy's feedback; 'form title' caption added, bulk upload link, archive and delete buttons, clearer heading for Orbeon form data, audit trail (XML) link</li>
     <li>20/02/2024 - Added third column with Orbeon metedata</li>
     <li>20/02/2024 - Added new action "view form (new window) which should link to 'public' form (what data provider sees)</li>
@@ -38,77 +39,118 @@
 {% block content %}
   <h1 class="govuk-heading-xl">
     <span class="govuk-caption-xl">
-    Form title:
+    Form name:
   </span>
     Parrot Census
   </h1>
-<div class="govuk-grid-row">
-  <!-- Meta data -->
-  <div class="govuk-grid-column-one-third">
+  <div class="govuk-grid-row govuk-!-padding-bottom-7">
+    <!-- Meta data -->
+    <div class="govuk-grid-column-one-third">
+        <dl class="delta-dl govuk-body">
+          <dt>Form title</dt>
+          <dd>ParrotCensus</dd>
+          <dt>Access group</dt>
+          <dd>form-designers</dd>        
+          <dt>Associated grant</dt>
+          <dd><a href="#">Grant name</a></dd>        
+          <dt>Status</dt>
+          <dd>
+            <strong class="govuk-tag govuk-tag--green">Published</strong>
+            <strong class="govuk-tag govuk-tag--yellow">Draft</strong>
+            <!-- <strong class="govuk-tag govuk-tag--grey">Closed</strong> -->
+          </dd>
+          <dt>Version number</dt>
+          <dd>23</dd>        
+          <dt>Updated</dt>
+          <dd>22/01/24</dd>
+          <dt>Update by</dt>
+          <dd>steve.molesworth@softwire.com</dd>
+        </dl>
+    </div>
+    <!-- actions -->
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">Actions</h2>
+      <ul class="govuk-list govuk-list--spaced govuk-!-static-margin-bottom-5">
+        <li><a class="govuk-link" href="#">Associate grant selection</a></li>
+        <li><a class="govuk-link" href="#">Assign access group</a></li>
+        <li><a class="govuk-link" href="#">Associate schema definition files</a></li>      
+        <li><a class="govuk-link" href="#">Download data migration template</a></li>
+        <li><a class="govuk-link" href="#">Download bulk upload template</a></li>
+        <li><a class="govuk-link" href="#">Audit trail/previous versions (xml)</a></li>
+        <li><a class="govuk-link" href="#">Test form (new tab)</a></li>
+      </ul>
+      <div>
+    
+      </div>
+      <div class="">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Edit
+        </button>          
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
+          Clone
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+          Archive
+        </button>
+        <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
+          Delete
+        </button>           
+      </div>
+    </div>
+    <!-- Orbeon form data -->
+    <div class="govuk-grid-column-one-third">
+      <h2 class="govuk-heading-s">Orbeon form metadata</h2>
       <dl class="delta-dl govuk-body">
-        <dt>Form name</dt>
-        <dd>ParrotCensus</dd>
-        <dt>Access group</dt>
-        <dd>form-designers</dd>        
-        <dt>Associated grant</dt>
-        <dd><a href="#">Grant name</a></dd>        
-        <dt>Status</dt>
-        <dd>
-          <strong class="govuk-tag govuk-tag--green">Published</strong>
-          <strong class="govuk-tag govuk-tag--yellow">Draft</strong>
-          <!-- <strong class="govuk-tag govuk-tag--grey">Closed</strong> -->
-        </dd>
-        <dt>Version number</dt>
-        <dd>23</dd>        
-        <dt>Updated</dt>
-        <dd>22/01/24</dd>
-        <dt>Update by</dt>
-        <dd>steve.molesworth@softwire.com</dd>
+        <dt>Sections</dt>
+        <dd>53</dd>
+        <dt>Repeats</dt>
+        <dd>0</dd>
+        <dt>Grids</dt>
+        <dd>163</dd>
+        <dt>Controls</dt>
+        <dd>1,117</dt>                                
       </dl>
-  </div>
-  <!-- actions -->
-  <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-s">Actions</h2>
-    <ul class="govuk-list govuk-list--spaced govuk-!-static-margin-bottom-5">
-      <li><a class="govuk-link" href="#">Associate grant selection</a></li>
-      <li><a class="govuk-link" href="#">Assign access group</a></li>
-      <li><a class="govuk-link" href="#">Associate schema definition files</a></li>      
-      <li><a class="govuk-link" href="#">Download data migration template</a></li>
-      <li><a class="govuk-link" href="#">Download bulk upload template</a></li>
-      <li><a class="govuk-link" href="#">Audit trail/previous versions (xml)</a></li>
-      <li><a class="govuk-link" href="#">View form (new tab)</a></li>
-    </ul>
-    <div>
-   
-    </div>
-    <div class="">
-      <button type="submit" class="govuk-button" data-module="govuk-button">
-        Edit
-      </button>          
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" >
-        Clone
-      </button>
-      <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
-        Archive
-      </button>
-      <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
-        Delete
-      </button>           
     </div>
   </div>
-  <!-- Orbeon form data -->
-  <div class="govuk-grid-column-one-third">
-    <h2 class="govuk-heading-s">Orbeon form metadata</h2>
-    <dl class="delta-dl govuk-body">
-      <dt>Sections</dt>
-      <dd>53</dd>
-      <dt>Repeats</dt>
-      <dd>0</dd>
-      <dt>Grids</dt>
-      <dd>163</dd>
-      <dt>Controls</dt>
-      <dd>1,117</dt>                                
-    </dl>
+
+
+
+  <h2 class="govuk-heading-l">Instance associations</h2>
+
+  <!-- If not associated with any instance -->
+  {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+  {{ govukWarningText({
+    text: "Parrot Census as not been associated with an instance.",
+    iconFallbackText: "Warning"
+  }) }}  
+
+  <!-- If associated with any instance -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <p class="govuk-!-margin-bottom-0">Or...</p>
   </div>
-</div>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Instance ID</th>
+      <th scope="col" class="govuk-table__header">Name</th>
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">Submission period</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="#">sc1234</a></th>
+      <td class="govuk-table__cell">Squirrel Census 203</td>
+      <td class="govuk-table__cell">Self-certify</td>
+      <td class="govuk-table__cell">01/04/2023 - 31/03/2024</td>
+      <td class="govuk-table__cell">New</td>
+    </tr>
+  </tbody>
+</table>  
+
+
 {% endblock %}
