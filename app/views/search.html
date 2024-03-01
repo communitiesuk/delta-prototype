@@ -39,7 +39,8 @@
       id: "sort",
       name: "sort",
       label: {
-        text: "Display search data for"
+        text: "Display search data for",
+        classes: "govuk-fieldset__legend--s"
       },
       items: [
         {
@@ -80,10 +81,10 @@
     {% from "govuk/components/checkboxes/macro.njk" import govukCheckboxes %}
 
     {{ govukCheckboxes({
-      name: "Exclude searches with 0 filters",
+      name: "Exclude",
       fieldset: {
         legend: {
-          text: "Exclude searches with 0 filters?",
+          text: "Exclude ",
           isPageHeading: false,
           classes: "govuk-fieldset__legend--s"
         }
@@ -91,7 +92,7 @@
       items: [
         {
           value: "excludeZero",
-          text: "Exclude"
+          text: "Searches with 0 filters applied"
         }
       ]
     }) }}
@@ -106,19 +107,19 @@
         </legend>
         <div class="govuk-radios" data-module="govuk-radios">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+            <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="usersAll">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
               All
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+            <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="usersInternal">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
               Internal
             </label>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+            <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="usersExternal">
             <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
               External
             </label>
@@ -145,7 +146,7 @@
 
 
 <table class="govuk-table govuk-!-margin-bottom-4">
-  <caption class="govuk-table__caption govuk-table__caption--m">Search data <span class="govuk-body-s ux-text-secondary govuk-!-margin-left-2">(Last updated 12:19, 13 December 2023)</span></caption>
+  <caption class="govuk-table__caption govuk-table__caption--l">Search data <span class="govuk-body-s ux-text-secondary govuk-!-margin-left-2">(Last updated 12:19, 13 December 2023)</span></caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header"></th>
