@@ -50,6 +50,10 @@
                 {
                   value: "uxActivityDesign",
                   text: "Design"
+                },
+                {
+                  value: "uxActivityFix",
+                  text: "Bug / issue fix"
                 }     
               ]
             }) }}        
@@ -112,11 +116,11 @@
             
         
         
-            {{ govukRadios({
+            {{ govukCheckboxes({
               name: "channels",
               fieldset: {
                 legend: {
-                  text: "Delta channel work relates to",
+                  text: "Delta channels work relates to",
                   isPageHeading: false,
                   classes: "govuk-fieldset__legend--s"
                 }
@@ -337,6 +341,7 @@
 <div class="designNote govuk-!-margin-bottom-4">
   <h2 class="govuk-heading-s">Change log</h2>
   <ul class="govuk-list govuk-list--bullet">
+    <li>19/03/2024 - Added 'Bug / issue fix'under 'Activity' and changed 'Delta channels work relates to' to checkboxes (supporting multi select)</li>
     <li>20/02/2024 - Added notes area</li>
     <li>8/2/24 - Added options for related OKRs</li>
     <li>8/2/24 - Added options for [audience] frequency of interaction</li>
