@@ -1,0 +1,104 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Changelog" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-918" target="_blank">DT-918</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>22/03/2024 - initial design for feedback</li>
+    </ul>
+  </div>
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Changelog",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Delta changelog
+    </h1>
+    <p class="govuk-body-l">A record of the changes, updates, additions, and fixes implemented on the Delta website to enhance both its stability and usability.</p>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <!-- LOG ITEMS -->
+  <div class="govuk-grid-column-one-half">
+
+    <!-- LOG ITEM  START -->
+    <div class="govuk-!-margin-bottom-9" id="22032024">
+      <h2 class="govuk-heading-l">22/03/2024 - Version 1234</h2>
+      <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Changelog</strong> - added a chronological list of enhancements so all users of Delta can see the continuous improvement being delivered. <strong class="govuk-tag govuk-tag--green">User experience</strong></li>
+        <li><strong>Orbeon 7000 <em>RS Turbo</em></strong> - Orbeon is a third-party tool used to build forms for data collections. We updated this to v7000 to benefit from bug fixes and the new go-faster stripes. <strong class="govuk-tag govuk-tag--orange">Bug fix/patch</strong> <strong class="govuk-tag govuk-tag--green">User experience</strong></li>
+        <li><strong>Another item</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong class="govuk-tag govuk-tag--purple">Reporting</strong></li>
+      </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+    <!-- LOG ITEM  END -->
+
+    <!-- LOG ITEM  START -->
+    <div class="govuk-!-margin-bottom-9" id="22022024">
+      <h2 class="govuk-heading-l">22/02/2024 - Version 1233</h2>
+      <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Another item</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong class="govuk-tag govuk-tag--purple">Reporting</strong></li>
+        <li><strong>Another item</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong class="govuk-tag govuk-tag--purple">Reporting</strong></li>        
+        <li><strong>Another item</strong> - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <strong class="govuk-tag govuk-tag--purple">Reporting</strong></li>        
+      </ul>
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    </div>
+    <!-- LOG ITEM  END -->    
+
+
+
+
+
+  </div>
+  <!-- INDEX (Release dates) -->
+  <div class="govuk-grid-column-one-half">
+    <!-- DEV NOTE: MOST RECENT RELEASE AT TOP -->
+    <h3 class="govuk-heading-s">Releases</h3>
+    <ul class="govuk-list">
+      <li><a class="govuk-link" href="#22032024">22/03/2024 - Version 1234</a></li>
+      <li><a class="govuk-link" href="#22022024">22/02/2024 - Version 1233</a></li>
+      <li><a class="govuk-link" href="#22012024">22/01/2024 - Version 1232</a></li>
+    </ul>
+
+    <h3 class="govuk-heading-s">Change classification key</h3>
+      <p><strong class="govuk-tag govuk-tag--orange">Bug fix/patch</strong></p>
+      <p><strong class="govuk-tag govuk-tag--blue">Performance and stability</strong></p>
+      <p><strong class="govuk-tag govuk-tag--green">User experience</strong></p>
+      <p><strong class="govuk-tag govuk-tag--purple">Reporting</strong></p>    
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+
