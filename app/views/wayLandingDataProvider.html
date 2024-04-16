@@ -31,13 +31,59 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      Hi Michael
+      Hi Michael!
     </h1>
-    <p class="govuk-body-l">Welcome to Delta. You have <a href="#">1 open collection</a>. You can view previous collections in the <a href="#">Data Store</a>.</p>
+    <p class="govuk-body-l">You have <a href="#">1 open collection</a>. Previous collection submissions can be accessed in the <a href="#">Data Store</a>.</p>
 
     <h2 class="govuk-heading-l">
       Open collections
     </h2>
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 6 - better dates (collection window) and record status (pending certificaion / certifiied)</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View and submit data</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                jhjh-sdsdd-sdsdsd20023
+              </dd>
+            </div>             
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Collection window
+              </dt>
+              <dd class="govuk-summary-list__value">
+                16 February 2024 - 16 July 2024
+              </dd> 
+            </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li><a href="#">1 draft</a> (edit or submit)</li>
+                <li><a href="#">2 submitted</a> (pending certification)</li>
+                <li><a href="#">1 submitted</a> (certified)</li>
+              </ul>
+            </dd>
+          </div>                                                                                       
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end -->       
 
     <div class="designNote govuk-!-margin-bottom-4"><p>Option 5 - better record status stuff</p></div>
     <!-- Collection template start -->
@@ -69,13 +115,13 @@
             </div>                     
           <div class="govuk-summary-list__row">          
             <dt class="govuk-summary-list__key">
-              Records (3)
+              Records
             </dt>
             <dd class="govuk-summary-list__value">
-              <ul class="govuk-list govuk-list--bullet">
+              <ul class="govuk-list">
                 <!-- <li>No data (<a href="#">submit data</a>)</li> -->
-                <li><a href="#">1 saved record (not submitted, still editable)</a></li>
-                <li><a href="#">2 submitted records (can't edit)</a></li>
+                <li><a href="#">1 draft</a> (edit or submit)</li>
+                <li><a href="#">2 submitted</a> (closed)</li>
               </ul>
             </dd>
           </div>                                                                                       
@@ -457,28 +503,73 @@
     <h2 class="govuk-heading-l">Questions and actions</h2>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>How does this design need to change to support Summary vs Record collections.</li>
-      <li>How are records named? Auto? How meaningful?</li>
       <li>Does Collection ID add any value here?</li>
-      <li>Do we need status next to each record?</li>
       <li>Q: can data be edited after certification?</li>
+      <li><del>Do we need status next to each record?</del></li>
       <li>Record status clarification (saved, submitted (pending cert), submitted (certified)</li>
+      <li>'Saved' is a confusing term. Can be mistaken for 'completed'. 'Draft' might be a better choice. Or 'awaiting submission'.</li>
     </ul>
 
     <h2 class="govuk-heading-l">Need consensus...</h2>
-
-    <p>In the mind of Data Providers and Data Certifiers...</p>
-
+    <p><strong>In the mind of Data Providers and Data Certifiers...</strong></p>
     <ul class="govuk-list govuk-list--bullet">
-
       <li>A Collection is a request for data to be submitted by the Data Provider through the Delta platform</li>
       <li>A Collection has a window during which data can be submitted (a 'Collection Window')</li>
       <li>A Submission is the data provided for a collection</li>
       <li>A Submission consists of one or more Records</li>
-      <li><em>The term 'Instance' or 'Collection Instance' means nothing for Data Provider and should not be used in external documents or discussions</em></li>
-
+      <li><em>The term 'Instance' or 'Collection Instance' means nothing for Data Providers and should not be used in external documents or discussions</em></li>
     </ul>
 
+    <div class="govuk-!-margin-bottom-6">
+      <code class="">
+        * Collection<br>
+        ** Submission<br>
+        *** Record001<br>
+        *** Record002<br>
+        *** Record003<br>
+      </code>
+    </div>
+
+    <h3 class="govuk-heading-s">Demo collections (with records)</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Summary</li>
+      <li>Records (form, bulk, API)</li>
+    </ul>
+
+
+
+    <h2 class="govuk-heading-l">Records and Collections</h2>
+
+    <h3 class="govuk-heading-s">Bulk uploads</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How does bulk uploading work? User uploads a .csv file based on a Excel template? </li>
+      <li>Does each row become a record?</li>
+      <li>If so...
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Would a 1,000 row file become a 1,000 records? (That would be a lot to search through if looking to check/edit data)</li>
+          <li>How is each record named?</li>
+        </ul>
+      </li>      
+    </ul>
+
+    <h3 class="govuk-heading-s">API uploads</h3>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How does a Data Provider review what data has been provided?</li>      
+      <li>Is each item a record?</li>
+    </ul>
+
+    <h2 class="govuk-heading-s">Summary collections</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Only supports one record submission</li>
+      <li>Does this exclude API and bulk upload then? Because each line (entry) therein would become an individual record?</li>
+      <li>Might require different design to Record collections</li>
+    </ul>    
+
+    <h2 class="govuk-heading-s">Record collections</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>How many records typically? Millions?</li>     
+      <li>Does the submission method (form, bulk, api) require different designs?</li>
+    </ul>
 
   </div>
 </div>
