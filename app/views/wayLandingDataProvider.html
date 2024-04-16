@@ -1,0 +1,434 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Wayfinding / Landing (Data Provider)" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <!-- <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-XXX" target="_blank">DT-XXX</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Note</li>
+      <li>Note</li>
+      <li>Note</li>
+    </ul>
+  </div> -->
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Hi Michael
+    </h1>
+    <p class="govuk-body-l">Welcome to Delta. You have <a href="#">1 open collection</a>. You can view previous collections in the <a href="#">Data Store</a>.</p>
+
+    <h2 class="govuk-heading-l">
+      Open collections
+    </h2>
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 5 - more extraneous data removed from Records in Record List. 'V'iew and edit'. Better collection ID and deadline.</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View and edit</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                jhjh-sdsdd-sdsdsd20023
+              </dd>
+            </div>             
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Deadline
+              </dt>
+              <dd class="govuk-summary-list__value">
+                16 July 2024
+              </dd>
+            </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--bullet">
+                <li><a href="#"><strong>Record001</strong> (Waverley Borough Council)</a></li>
+                <li><a href="#"><strong>Record002</strong> (Waverley Borough Council)</a</li>
+              </ul>
+            </dd>
+          </div>                                                                                       
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end -->    
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 3 - removed extraneous data from Records in Record List</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <!-- ID and deadlines -->
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p><strong>ID:</strong> jhjh-sdsdd-sdsdsd20023</p>
+            <p><strong>Deadline:</strong> 16 July 2024</p>
+          </div>
+        </div>
+
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Record
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">Record001</a>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Organisation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Waverley Borough Council
+            </dd>
+          </div>                         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Updated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              10 April 2024
+            </dd>
+          </div>                                                              
+        </dl>
+
+        <!-- Record 002 -->
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Record
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">Record002</a>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Organisation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Waverley Borough Council
+            </dd>
+          </div>                         
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Updated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 April 2024
+            </dd>
+          </div>                                                              
+        </dl>              
+
+
+      </div>
+    </div>
+    <!-- Collection template end -->
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 2 - ID and Deadline moved above Record List</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <!-- ID and deadlines -->
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-full">
+            <p><strong>ID:</strong> jhjh-sdsdd-sdsdsd20023</p>
+            <p><strong>Deadline:</strong> 16 July 2024</p>
+          </div>
+        </div>
+
+
+        <dl class="govuk-summary-list govuk-!-margin-bottom-6">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Record
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">Record001</a>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Organisation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Waverley Borough Council
+            </dd>
+          </div>    
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitted by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Hugh.Emerson@softwire.com
+            </dd>
+          </div>                       
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Updated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              10 April 2024
+            </dd>
+          </div>   
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Ready to certify
+            </dd>
+          </div>                                                              
+        </dl>
+
+        <!-- Record 002 -->
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Record
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <a href="#">Record002</a>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Organisation
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Waverley Borough Council
+            </dd>
+          </div>    
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitted by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Hugh.Emerson@softwire.com
+            </dd>
+          </div>                       
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Updated
+            </dt>
+            <dd class="govuk-summary-list__value">
+              9 April 2024
+            </dd>
+          </div>   
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Status
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Certified
+            </dd>
+          </div>                                                              
+        </dl>              
+
+
+      </div>
+    </div>
+    <!-- Collection template end -->
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 1</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+          <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Deadline
+              </dt>
+              <dd class="govuk-summary-list__value">
+                16 July 2024
+              </dd>
+            </div>             
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                jhjh-sdsdd-sdsdsd20023
+              </dd>
+            </div> 
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Submission records
+              </dt>
+              <dd class="govuk-summary-list__value">
+                
+              <!-- Record 001 -->
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Record
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">Record001</a>
+                  </dd>
+                </div> 
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Organisation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Waverley Borough Council
+                  </dd>
+                </div>    
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Submitted by
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Hugh.Emerson@softwire.com
+                  </dd>
+                </div>                       
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Updated
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    10 April 2024
+                  </dd>
+                </div>   
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Status
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Ready to certify
+                  </dd>
+                </div>                                                              
+              </dl>
+
+              <!-- Record 002 -->
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Record
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="#">Record002</a>
+                  </dd>
+                </div> 
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Organisation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Waverley Borough Council
+                  </dd>
+                </div>    
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Submitted by
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Hugh.Emerson@softwire.com
+                  </dd>
+                </div>                       
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Updated
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    9 April 2024
+                  </dd>
+                </div>   
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Status
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Certified
+                  </dd>
+                </div>                                                              
+              </dl>              
+
+              </dd>
+            </div>              
+          </dl>
+      </div>
+    </div>
+    <!-- Collection template end -->
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <h2 class="govuk-heading-l">Questions and actions</h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Does Collection ID add any value here?</li>
+      <li>Do we need status next to each record?</li>
+      <li>Q: can data be edited after certification?</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Need consensus...</h2>
+
+    <p>In the mind of Data Providers and Data Certifiers...</p>
+
+    <ul class="govuk-list govuk-list--bullet">
+
+    </ul>
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+
