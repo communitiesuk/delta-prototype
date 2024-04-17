@@ -1,0 +1,112 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Wayfinding / Landing (Data Provider / Records based collection)" %}
+
+
+{% block beforeContent %}
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      }
+    ]
+  }) }}  
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Welcome, Susie!
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <p class="govuk-body-l">You have <a href="#">1 open collection</a>. Previous collection submissions can be accessed via the <a href="#">Data Store</a>.</p>
+    <h2 class="govuk-heading-l">
+      Open collections
+    </h2>
+
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View and submit data</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Description
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Meaningful, easy to read description of what this collection is for. Maybe include the period of data it covers.
+              <!-- Meta bar concept -->
+              <!-- <div class="govuk-!-margin-top-3 delta-text-secondary">
+                <small>Collection ID: CollectionIdHere1234 | Data certification required: yes| Submission option(s): form, bulk upload, api</small>
+              </div> -->
+
+            </dd>
+          </div>             
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Deadline
+            </dt>
+            <dd class="govuk-summary-list__value">
+              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
+            </dd> 
+          </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Submissions
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--spaced">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li>
+                  <div class="govuk-inset-text">
+                    Displaying 3 most recently edited records. <a href="#">View all 13 records in Data Store</a>.
+                  </div>
+                </li>
+                <li><a href="#">Record003</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>
+                <li><a href="#">Record002</a> <strong class="govuk-tag delta-tag">Pending certification</strong></li>
+                <li><a href="#">Record001</a> <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></li>                
+              </ul>
+            </dd>
+          </div>                                                                                                          
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end --> 
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-l">Your account</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li><strong>Role: </strong>Data Provider</li>
+      <li><strong>Organisation:</strong> Waverly Borough Council</li>
+      <li><strong>Time on Delta:</strong> 2 years 25 days</li>
+    </ul>
+    <p><a href="#">Edit your account</a></p>
+  </div>
+</div>
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Data provider with open records based collection.</p>
+</div>
+
+
+{% endblock %}
+
+
+
