@@ -1,0 +1,94 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Wayfinding / Landing (Data Provider / Records based collection)" %}
+
+
+{% block beforeContent %}
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      }, 
+            {
+        text: "Collections",
+        href: "#"
+      },
+            {
+        text: "Urban hedgehog census 2023",
+        href: "#"
+      }
+    ]
+  }) }}  
+
+
+
+{% endblock %}
+
+
+{% block content %}
+
+<h1 class="govuk-heading-xl">
+  Urban hedgehog census 2023
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+  <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li>Collection ID</li>
+      <li>Deadline (and time remaining)</li>
+      <li>Window</li>
+      <li>Data period</li>
+      <li>Description</li>
+      <li>Collection owner and contact info</li>
+      <li>Data submission option(s) - form, bulk upload, API</li>
+      <li>Data certification required?</li>
+      <li>View certification (if exists)</li>
+      <li>Link individuals
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Data provider / Org (inc. contact)</li>
+            <li>Data certifier / Org (inc. contact)</li>
+          </ul>
+      </li>
+      <li>Submission records (more detail than landing
+        <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>Record ID</li>
+          <li>Last edited</li>
+          <li>Last edited by (name, org, email</li>
+          <li>Status</li>
+          <li>Actions
+            <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+              <li>View</li>
+              <li>Edit</li>
+              <li>Delete?</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+  </ul>
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-l">xxx</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+      <li>xxx</li>
+    </ul>
+  </div>
+</div>
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Records-based collections landing page (aka Collection Entity)</p>
+  <p><a href="/wayLandingDataProvider-goals">Wayfinding - Data provider goals</a></p>
+  <p><a href="/wayLandingDataProvider-collectionRecords">Landing (home)</a></p>
+</div>
+
+
+{% endblock %}
+
+
+
