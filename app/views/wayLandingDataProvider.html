@@ -40,7 +40,12 @@
     </h2>
 
 
-    <div class="designNote govuk-!-margin-bottom-4"><p>Option 8 - exploring replacing record counts with list of record names/IDs. This would allow the user to click directly into a Record to view or edit, and allow them to avoid going via the cramped results in the Data Store. (Q: how are record IDs derived?). Added 'meta[data] bar concept.</p></div>
+    <div class="designNote govuk-!-margin-bottom-4">
+      <p>Option 8 - exploring replacing record counts with list of record names/IDs. This would allow the user to click directly into a Record to view or edit, and allow them to avoid going via the cramped results in the Data Store. (Q: how are record IDs derived?).</p>
+      <p>Added 'meta[data] bar concept.</p>
+      <p><del>Idea: we could merge all records into same area and add 'draft' tag to denote records not yet submitted.</del></p>
+      <p>Tag placement / alignment looks janky.</p>
+    </div>
     <!-- Collection template start -->
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -52,47 +57,38 @@
       </div>      
       <div class="govuk-summary-card__content">
         <dl class="govuk-summary-list">
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Description
-              </dt>
-              <dd class="govuk-summary-list__value">
-                Meaningful, easy to read description of what this collection is for. Maybe include the period of data it covers.
-                <!-- Meta bar concept -->
-                <div class="govuk-!-margin-top-3">
-                  <small>Data certification required | Data submission method(s): form, bulk upload, api</small>
-                </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Description
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Meaningful, easy to read description of what this collection is for. Maybe include the period of data it covers.
+              <!-- Meta bar concept -->
+              <div class="govuk-!-margin-top-3 delta-text-secondary">
+                <small>Data certification required | Data submission option(s): form, bulk upload, api</small>
+              </div>
 
-              </dd>
-            </div>             
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                Deadline
-              </dt>
-              <dd class="govuk-summary-list__value">
-                16 July 2024
-              </dd> 
-            </div>                     
-          <div class="govuk-summary-list__row">          
-            <dt class="govuk-summary-list__key">
-              Records draft
-            </dt>
-            <dd class="govuk-summary-list__value">
-              <ul class="govuk-list">
-                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
-                <li><a href="#">Record ID 003</a></li>
-              </ul>
             </dd>
-          </div> 
-          <div class="govuk-summary-list__row">          
+          </div>             
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Records submitted
+              Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              <ul class="govuk-list">
+              16 July 2024
+            </dd> 
+          </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--spaced">
                 <!-- <li>No data (<a href="#">submit data</a>)</li> -->
-                <li><a href="#">Record ID 002</a> <strong class="govuk-tag delta-tag">Pending&nbsp;certification</strong></li>
-                <li><a href="#">Record ID 001</a></li>
+                <li>Displaying 3 most recently edited records. <a href="#">View all 13 records</a> in Data Store.</li>
+                <li><a href="#">Record ID 003</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>
+                <li><a href="#">Record ID 002 fdjhh dsh dfdsfdsafas jhdsfsdfh ssdfsfsfhj sdsddsds</a> <strong class="govuk-tag delta-tag">Pending certification</strong></li>
+                <li><a href="#">Record ID 001</a> <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></li>                
               </ul>
             </dd>
           </div>                                                                                                          
@@ -628,7 +624,7 @@
       <li><del>Do we need status next to each record?</del></li>
       <li>Record status clarification (saved, submitted (pending cert), submitted (certified)</li>
       <li>'Saved' is a confusing term. Can be mistaken for 'completed'. 'Draft' might be a better choice. Or 'awaiting submission'.</li>
-      <li>Work with Susie to understand language used by Data Providers for submitting data and what is actually submitted (records).</li>      
+      <li>Work with Susie to understand language used by Data Providers for submitting data and what is actually submitted (records)?</li>      
     </ul>
 
     <h2 class="govuk-heading-l">Need consensus...</h2>
