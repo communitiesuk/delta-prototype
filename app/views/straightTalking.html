@@ -1,0 +1,92 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Straight Talking" %}
+
+
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Trying to order the disorder
+    </h1>
+    <p class="govuk-body-l">This really shouldn't be that hard&hellip;</p>
+    <ul class="govuk-list govuk-list--bullet govuk-body-l">
+      <li>Detla is a data collection and grants administration tool</li>
+      <li>Two channels:
+          <ul class="govuk-list govuk-list--number govuk-body-l">
+            <li>Data collections — mix of internal and external users</li>
+            <li>Grants - all internal users</li>
+          </ul>            
+      </li>
+      <li>Collections
+          <ul class="govuk-list govuk-list--number govuk-body-l">
+            <li>Collections are created by DLUHC teams (internal users)</li>
+            <li>Data is provided by external users</li>
+            <li>Provided data is called a 'submission'</li>
+            <li>Collection can be one of two types - Record based (lots of entries) or Summary based</li>
+            <li>If Records based...</li>
+          </ul>            
+      </li>      
+
+    </ul>
+    
+    <h2 class="govuk-heading-l">Need consensus...</h2>
+    <p><strong>In the mind of Data Providers and Data Certifiers...</strong></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>A Collection is a request for data to be submitted by the Data Provider through the Delta platform</li>
+      <li>A Collection has a window during which data can be submitted (a 'Collection Window')</li>
+      <li>A Submission is the data provided for a collection</li>
+      <li>A Submission consists of one or more Records</li>
+      <li><em>The term 'Instance' or 'Collection Instance' means nothing for Data Providers and should not be used in external documents or discussions</em></li>
+    </ul>
+
+    <p>Mental [hierarchical] model</p>
+
+    <div class="govuk-!-margin-bottom-3">
+      <code class="">
+        * Collection<br>
+        ** Submission<br>
+        *** Record001<br>
+        *** Record002<br>
+        *** Record003<br>
+      </code>
+    </div>
+
+    <p>vs</p>
+
+    <div class="govuk-!-margin-bottom-6">
+      <code class="">
+        * Collection<br>
+        ** Submission (Submission001, Submission002, Submission003)
+      </code>
+    </div>    
+
+    <hr>
+
+    <code>
+
+      -- Collection [Parent] (Data Set)<br>
+      ---- Form(s)<br>
+      ---- Collection Instance<br>
+      ------ Submission (org)<br>
+      -------- Data (records)<br>
+
+
+    </code>
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p><a href="/wayLandingDataProvider">Wayfinding - Data Provider</a></p>
+  </div>
+</div>
+
+{% endblock %}
+
+
+

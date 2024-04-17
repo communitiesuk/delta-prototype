@@ -31,9 +31,10 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      Hi Michael!
+      Happy Wednesday Michael!
     </h1>
-    <p class="govuk-body-l">You have <a href="#">1 open collection</a>. Previous collection submissions can be accessed in the <a href="#">Data Store</a>.</p>
+    <p class="govuk-body-l">As a <a href="#" title="links to their profile so they can see their org(s) and role(s).">Data Provider</a> you have <a href="#">1 open collection</a>.</p>
+    <p class="govuk-body-l">You can view previous collection submissions in the <a href="#">Data Store</a>.</p>
 
     <h2 class="govuk-heading-l">
       Open collections
@@ -42,9 +43,10 @@
 
     <div class="designNote govuk-!-margin-bottom-4">
       <p>Option 8 - exploring replacing record counts with list of record names/IDs. This would allow the user to click directly into a Record to view or edit, and allow them to avoid going via the cramped results in the Data Store. (Q: how are record IDs derived?).</p>
-      <p>Added 'meta[data] bar concept.</p>
+      <p>Added 'meta[data] bar concept. This will most likely not be displayed to Data Providers (for internal use only).</p>
       <p><del>Idea: we could merge all records into same area and add 'draft' tag to denote records not yet submitted.</del></p>
       <p>Tag placement / alignment looks janky.</p>
+      <p>Changed 'Record' to 'Submission'</p>
     </div>
     <!-- Collection template start -->
     <div class="govuk-summary-card">
@@ -65,7 +67,7 @@
               Meaningful, easy to read description of what this collection is for. Maybe include the period of data it covers.
               <!-- Meta bar concept -->
               <div class="govuk-!-margin-top-3 delta-text-secondary">
-                <small>Data certification required | Data submission option(s): form, bulk upload, api</small>
+                <small>CollectionIdHere1234 | Data certification required | Submission option(s): form, bulk upload, api</small>
               </div>
 
             </dd>
@@ -75,20 +77,20 @@
               Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              16 July 2024
+              16 July 2024 <span class="delta-text-secondary">(90 days remaining)</span>
             </dd> 
           </div>                     
           <div class="govuk-summary-list__row">          
             <dt class="govuk-summary-list__key">
-              Records
+              Submissions
             </dt>
             <dd class="govuk-summary-list__value">
               <ul class="govuk-list govuk-list--spaced">
                 <!-- <li>No data (<a href="#">submit data</a>)</li> -->
-                <li>Displaying 3 most recently edited records. <a href="#">View all 13 records</a> in Data Store.</li>
-                <li><a href="#">Record ID 003</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>
-                <li><a href="#">Record ID 002 fdjhh dsh dfdsfdsafas jhdsfsdfh ssdfsfsfhj sdsddsds</a> <strong class="govuk-tag delta-tag">Pending certification</strong></li>
-                <li><a href="#">Record ID 001</a> <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></li>                
+                <li>Displaying 3 most recently edited submissions. <a href="#">View all 13 submissions</a> in Data Store.</li>
+                <li><a href="#">Submission ID 003</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>
+                <li><a href="#">Submission ID 002 fdjhh dsh dfdsfdsafas jhdsfsdfh ssdfsfsfhj sdsddsds</a> <strong class="govuk-tag delta-tag">Pending certification</strong></li>
+                <li><a href="#">Submission ID 001</a> <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></li>                
               </ul>
             </dd>
           </div>                                                                                                          
@@ -281,7 +283,7 @@
             <dd class="govuk-summary-list__value">
               <ul class="govuk-list govuk-list--bullet">
                 <li><a href="#"><strong>Record001</strong> (Waverley Borough Council)</a></li>
-                <li><a href="#"><strong>Record002</strong> (Waverley Borough Council)</a</li>
+                <li><a href="#"><strong>Record002</strong> (Waverley Borough Council)</a></li>
               </ul>
             </dd>
           </div>                                                                                       
@@ -624,28 +626,13 @@
       <li><del>Do we need status next to each record?</del></li>
       <li>Record status clarification (saved, submitted (pending cert), submitted (certified)</li>
       <li>'Saved' is a confusing term. Can be mistaken for 'completed'. 'Draft' might be a better choice. Or 'awaiting submission'.</li>
-      <li>Work with Susie to understand language used by Data Providers for submitting data and what is actually submitted (records)?</li>      
+      <li>Work with Susie to understand language used by Data Providers for submitting data and what is actually submitted (records)?</li>   
+      <li>I'm starting to think 'Submission' is a better term than 'Record'. The potential issue is Collections having multiple 'submissions'. Or maybe not.</li>   
     </ul>
 
-    <h2 class="govuk-heading-l">Need consensus...</h2>
-    <p><strong>In the mind of Data Providers and Data Certifiers...</strong></p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>A Collection is a request for data to be submitted by the Data Provider through the Delta platform</li>
-      <li>A Collection has a window during which data can be submitted (a 'Collection Window')</li>
-      <li>A Submission is the data provided for a collection</li>
-      <li>A Submission consists of one or more Records</li>
-      <li><em>The term 'Instance' or 'Collection Instance' means nothing for Data Providers and should not be used in external documents or discussions</em></li>
-    </ul>
+    <p><a href="/straightTalking">Straight Talking</a></p>
 
-    <div class="govuk-!-margin-bottom-6">
-      <code class="">
-        * Collection<br>
-        ** Submission<br>
-        *** Record001<br>
-        *** Record002<br>
-        *** Record003<br>
-      </code>
-    </div>
+    
 
     <h3 class="govuk-heading-s">Demo collections (with records)</h3>
     <ul class="govuk-list govuk-list--bullet">
