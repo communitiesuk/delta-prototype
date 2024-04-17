@@ -39,7 +39,70 @@
       Open collections
     </h2>
 
-    <div class="designNote govuk-!-margin-bottom-4"><p>Option 6 - better dates (collection window) and record status (pending certificaion / certifiied)</p></div>
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 8 - exploring replacing record counts with list of record names/IDs. This would allow the user to click directly into a Record to view or edit, and allow them to avoid going via the cramped results in the Data Store. (Q: how are record IDs derived?). Added 'meta[data] bar concept.</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View and submit data</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Description
+              </dt>
+              <dd class="govuk-summary-list__value">
+                Meaningful, easy to read description of what this collection is for. Maybe include the period of data it covers.
+                <!-- Meta bar concept -->
+                <div class="govuk-!-margin-top-3">
+                  <small>Data certification required | Data submission method(s): form, bulk upload, api</small>
+                </div>
+
+              </dd>
+            </div>             
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Deadline
+              </dt>
+              <dd class="govuk-summary-list__value">
+                16 July 2024
+              </dd> 
+            </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records draft
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li><a href="#">Record ID 003</a></li>
+              </ul>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records submitted
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li><a href="#">Record ID 002</a> <strong class="govuk-tag delta-tag">Pending&nbsp;certification</strong></li>
+                <li><a href="#">Record ID 001</a></li>
+              </ul>
+            </dd>
+          </div>                                                                                                          
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end --> 
+
+    
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 7 - exploring better record counts</p></div>
     <!-- Collection template start -->
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
@@ -61,10 +124,66 @@
             </div>             
             <div class="govuk-summary-list__row">
               <dt class="govuk-summary-list__key">
-                Collection window
+                Deadline
               </dt>
               <dd class="govuk-summary-list__value">
-                16 February 2024 - 16 July 2024
+                16 July 2024 <strong class="govuk-tag govuk-tag--red">Closing soon</strong>
+              </dd> 
+            </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records draft
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li><a href="#">1</a></li>
+              </ul>
+            </dd>
+          </div> 
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Records submitted
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list">
+                <!-- <li>No data (<a href="#">submit data</a>)</li> -->
+                <li><a href="#">2 pending certification</a></li>
+                <li><a href="#">1 certified</a></li>
+              </ul>
+            </dd>
+          </div>                                                                                                          
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end --> 
+
+    <div class="designNote govuk-!-margin-bottom-4"><p>Option 6 - better record status (pending certification / certified), removed collection ID, added description</p></div>
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title">Collection name</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View and submit data</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                ID
+              </dt>
+              <dd class="govuk-summary-list__value">
+                jhjh-sdsdd-sdsdsd20023
+              </dd>
+            </div>             
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Deadline
+              </dt>
+              <dd class="govuk-summary-list__value">
+                16 July 2024 <strong class="govuk-tag govuk-tag--red">Closing soon</strong>
               </dd> 
             </div>                     
           <div class="govuk-summary-list__row">          
@@ -75,8 +194,8 @@
               <ul class="govuk-list">
                 <!-- <li>No data (<a href="#">submit data</a>)</li> -->
                 <li><a href="#">1 draft</a> (edit or submit)</li>
-                <li><a href="#">2 submitted</a> (pending certification)</li>
-                <li><a href="#">1 submitted</a> (certified)</li>
+                <li><a href="#">2 submitted (pending certification)</a></li>
+                <li><a href="#">1 submitted (certified)</a></li>
               </ul>
             </dd>
           </div>                                                                                       
@@ -503,11 +622,13 @@
     <h2 class="govuk-heading-l">Questions and actions</h2>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>Does Collection ID add any value here?</li>
+      <li>Q: Does Collection ID add any value here?</li>
+      <li>Q: What are the options for a collection description? Free text? How much?</li>
       <li>Q: can data be edited after certification?</li>
       <li><del>Do we need status next to each record?</del></li>
       <li>Record status clarification (saved, submitted (pending cert), submitted (certified)</li>
       <li>'Saved' is a confusing term. Can be mistaken for 'completed'. 'Draft' might be a better choice. Or 'awaiting submission'.</li>
+      <li>Work with Susie to understand language used by Data Providers for submitting data and what is actually submitted (records).</li>      
     </ul>
 
     <h2 class="govuk-heading-l">Need consensus...</h2>
@@ -543,6 +664,7 @@
     <h3 class="govuk-heading-s">Bulk uploads</h3>
     <ul class="govuk-list govuk-list--bullet">
       <li>How does bulk uploading work? User uploads a .csv file based on a Excel template? </li>
+      <li>What about XML? Where does that fit in?</li>
       <li>Does each row become a record?</li>
       <li>If so...
         <ul class="govuk-list govuk-list--bullet">
