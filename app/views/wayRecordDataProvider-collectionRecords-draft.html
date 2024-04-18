@@ -1,5 +1,5 @@
 {% extends "layouts/delta.html" %}
-{% set pageName="Wayfinding / Record / Records based collection)" %}
+{% set pageName="Wayfinding / Record (Draft)" %}
 {% block beforeContent %}
   {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
   {{ govukBreadcrumbs({
@@ -17,7 +17,7 @@
         href: "/wayCollectionDataProvider-collectionRecords"
       },
       {
-        text: "Cranleigh",
+        text: "Witley",
         href: "#"
       }
     ]
@@ -26,7 +26,7 @@
 {% block content %}
 <h1 class="govuk-heading-xl">
   <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Record</small><br>
-  Cranleigh
+  Witley
 </h1>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -52,7 +52,7 @@
           Status
         </dt>
         <dd class="govuk-summary-list__value">
-          Submitted
+          <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -76,7 +76,7 @@
           Certification
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong>
+          n/a
         </dd>
       </div>
     </dl>
@@ -84,29 +84,20 @@
     <!-- <h2 class="govuk-heading-l govuk-!-margin-top-7">
       Actions
     </h2> -->
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        Record locked due to certification. Contact the <a href="#">collection manager</a> to make changes or delete.
-      </strong>
-    </div>
-    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
       Edit record
     </button>
-    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
       Delete record
     </button>
+    <!-- Submit -->
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Submit record
+    </button>    
   </div>
   <div class="govuk-grid-column-one-third">
-    <div class="govuk-panel govuk-panel--confirmation">
-      <h1 class="govuk-panel__title">
-        Certified
-      </h1>
-      <div class="govuk-panel__body">
-        <small>By <strong>Emily Thompson</strong> of Certifiers-R-Us on 18 April 2024.</small>
-      </div>
-    </div>
+
+    
   </div>
 </div>
 <h2 class="govuk-heading-l govuk-!-margin-top-7">
@@ -131,9 +122,9 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Godalming</th>
-            <td class="govuk-table__cell">10,453</td>
-            <td class="govuk-table__cell">45</td>
+            <th scope="row" class="govuk-table__header">Witley</th>
+            <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">870</td>
           </tr>
         </tbody>
       </table>

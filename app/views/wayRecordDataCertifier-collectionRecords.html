@@ -17,7 +17,7 @@
         href: "/wayCollectionDataProvider-collectionRecords"
       },
       {
-        text: "UHC23WayPqwt543",
+        text: "Cranleigh",
         href: "#"
       }
     ]
@@ -26,11 +26,19 @@
 {% block content %}
 <h1 class="govuk-heading-xl">
   <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Record</small><br>
-  UHC23WayPqwt543
+  Cranleigh
 </h1>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-       <dl class="govuk-summary-list">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UHC23WayPqwt543
+        </dd>
+      </div>      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Collection (parent)
@@ -60,7 +68,7 @@
           Submitted by
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong>Bob Smith</strong>, Waverley County Council<br><a href="malto:data.provider@waverley.gov.uk">data.provider@waverley.gov.uk</a>
+          <strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -81,10 +89,10 @@
     <button type="submit" class="govuk-button" data-module="govuk-button">
       Certify (approve)
     </button>
-    <!-- <br>
-    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
-      Reject
-    </button> -->
+    <br>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Email record submitter
+    </button>      
   </div>
 </div>
     <h2 class="govuk-heading-l govuk-!-margin-top-7">

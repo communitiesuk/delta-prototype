@@ -33,9 +33,9 @@
           Deadline
         </dt>
         <dd class="govuk-summary-list__value">
-          16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small> <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
+          16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
         </dd>
-      </div>
+      </div>     
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Opened
@@ -44,6 +44,14 @@
           16 January 2024
         </dd>
       </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
+        </dd>
+      </div>       
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Type
@@ -140,10 +148,27 @@
     </button>
   </div>
 </div>
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Sort by
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="newest">Newest</option>
+    <option value="oldest">Oldest</option>
+    <option value="recordName">Record name A-Z</option>    
+    <option value="recordId">Record ID A-Z</option> 
+    <option value="collectionName">Collection name A-Z</option>       
+    <option value="certification">Certification</option>      
+    <option value="status" selected>Status</option>        
+  </select>
+</div>    
+
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Records</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Title</th>
       <th scope="col" class="govuk-table__header">ID</th>
       <th scope="col" class="govuk-table__header">Edited</th>
       <th scope="col" class="govuk-table__header">Author</th>
@@ -153,72 +178,82 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt332</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords-draft">Witley</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt332</td>
       <td class="govuk-table__cell">17/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataCertifier-collectionRecords">UHC23WayPqwt543</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataCertifier-collectionRecords">Cranleigh</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt543</td>
       <td class="govuk-table__cell">16/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Pending certification</strong></td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
+      <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Pending</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt123</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Godalming</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt123</td>
       <td class="govuk-table__cell">16/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt998</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Alford</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt998</td>
       <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt567</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Haslemere</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt567</td>
       <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt234</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Milford</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt234</td>
       <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt345</a></th>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Busbridge</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt345</td>
       <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="wayRecordDataProvider-collectionRecords">UHC23WayPqwt489</a></th>
+      <th scope="row" class="govuk-table__header"><a href="wayRecordDataProvider-collectionRecords">Guildford</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt489</td>
       <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt221</a></th>
-      <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Frensham</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt221</td>
+      <td class="govuk-table__cell">13/04/2024</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">UHC23WayPqwt356</a></th>
-      <td class="govuk-table__cell">15/04/2024</td>
-      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk</td>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecordDataProvider-collectionRecords">Loxwood</a></th>
+      <td class="govuk-table__cell">UHC23WayPqwt356</td>
+      <td class="govuk-table__cell">12/04/2024</td>
+      <td class="govuk-table__cell"><strong>Bob Smith</strong>, Waverley County Council</td>
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
       <td class="govuk-table__cell">Submitted</td>
     </tr>
