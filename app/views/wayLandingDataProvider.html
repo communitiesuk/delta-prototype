@@ -29,13 +29,15 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">You have <a href="#">2 open collections</a>. All collections can be accessed via the <a href="#">Collections Dashboard</a>.</p>
-    <h2 class="govuk-heading-l">
+    <p class="govuk-body-l">You have <a href="#openCollections">2 open collections</a>.</p>
+    <p class="govuk-body-l">All collections (open and closed) can be accessed via <a href="#">Collections</a>.</p>
+
+    <h2 class="govuk-heading-l" id="openCollections">
       Open collections
     </h2>
 
-    <!-- Collection template start -->
-    <div class="govuk-summary-card">
+    <!-- Collection summary start -->
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">Hedgehog Protection Officer survey 2023</h2>
         <ul class="govuk-summary-card__actions">
@@ -51,11 +53,6 @@
             </dt>
             <dd class="govuk-summary-list__value">
               Defra is currently endeavoring to assess the presence of hedgehog protection officers within local authorities and to gain insights into their respective workloads.
-              <!-- Meta bar concept -->
-              <!-- <div class="govuk-!-margin-top-3 delta-text-secondary">
-                <small>Collection ID: CollectionIdHere1234 | Data certification required: yes| Submission option(s): form</small>
-              </div> -->
-
             </dd>
           </div>             
           <div class="govuk-summary-list__row">
@@ -63,9 +60,17 @@
               Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
+              1 July 2024 <small><span class="delta-text-secondary">(80 days remaining)</span></small>
             </dd> 
-          </div>                     
+          </div>      
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Summary
+            </dd> 
+          </div>                             
           <div class="govuk-summary-list__row">          
             <dt class="govuk-summary-list__key">
               Submission record
@@ -79,9 +84,9 @@
         </dl>
       </div>
     </div>
-    <!-- Collection template end --> 
+    <!-- Collection summary end --> 
 
-    <!-- Collection template start -->
+    <!-- Collection records-based start -->
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">Urban hedgehog census 2023</h2>
@@ -107,10 +112,18 @@
             <dd class="govuk-summary-list__value">
               16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
             </dd> 
-          </div>                     
+          </div>        
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Type
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Records-based
+            </dd> 
+          </div>                           
           <div class="govuk-summary-list__row">          
             <dt class="govuk-summary-list__key">
-              Submission records
+              Submission record(s)
             </dt>
             <dd class="govuk-summary-list__value">
               <ul class="govuk-list govuk-list--spaced">
@@ -129,7 +142,7 @@
         </dl>
       </div>
     </div>
-    <!-- Collection template end --> 
+    <!-- Collection records-based end --> 
 
   </div>
   <div class="govuk-grid-column-one-third">
@@ -153,8 +166,6 @@
 
 <div class="designNote govuk-!-margin-bottom-4">
   <p>Data provider with open records based collection.</p>
-  <p><a href="/wayLandingDataProvider-goals">Wayfinding - Data provider goals</a></p>
-  <p><a href="/wayLandingDataProvider-collectionSummary">View Summary collections</a></p>
 </div>
 
 
