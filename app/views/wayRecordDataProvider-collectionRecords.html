@@ -1,0 +1,85 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="Wayfinding / Record / Records based collection)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProvider-collectionRecords"
+      },
+            {
+        text: "Collections",
+        href: "#"
+      },
+            {
+        text: "Urban hedgehog census 2023",
+        href: "/wayCollectionDataProvider-collectionRecords"
+      },
+      {
+        text: "UHC23WayPqwt543",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Record</small><br>
+  UHC23WayPqwt543
+</h1>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+       <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Parent collection
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="/wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Submitted
+        </dd>
+      </div>    
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submission date
+        </dt>
+        <dd class="govuk-summary-list__value">
+          15 April 2024
+        </dd>
+      </div>          
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Submitter
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong>Bob Smith</strong>, Rutland County Council<br>data.provider@rutland.gov.uk
+        </dd>
+      </div>       
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Certification
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong>
+        </dd>
+      </div>       
+    </dl>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p>Actions to go here</p>
+  </div>
+</div>
+<div class="designNote govuk-!-margin-bottom-4">
+  <p>Record (child of Collection)</p>
+  <p><a href="/wayLandingDataProvider-goals">Wayfinding - Data provider goals</a></p>
+  <p><a href="/wayLandingDataProvider-collectionRecords">Landing (home)</a></p>
+</div>
+{% endblock %}
