@@ -18,6 +18,7 @@ html {
 .designNote {
     padding: 2rem;
     background-color: rgba(255, 255, 0, 0.262);
+    display: none;
 
     &:last-child {
         margin-bottom: 0;

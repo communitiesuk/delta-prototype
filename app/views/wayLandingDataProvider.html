@@ -24,15 +24,62 @@
 {% block content %}
 
 <h1 class="govuk-heading-xl">
-  Welcome, Bob!
+  Happy <span id="todaysDay">Wednesday</span>, Bob!
 </h1>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">You have <a href="#">1 open collection</a>. Previous collection submissions can be accessed via the <a href="#">Data Store</a>.</p>
+    <p class="govuk-body-l">You have <a href="#">2 open collections</a>. All collections can be accessed via the <a href="#">Collections Dashboard</a>.</p>
     <h2 class="govuk-heading-l">
       Open collections
     </h2>
+
+    <!-- Collection template start -->
+    <div class="govuk-summary-card">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">Hedgehog Protection Officer survey 2023</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="#">View collection</a>
+          </li>
+        </ul>
+      </div>      
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Description
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Defra is currently endeavoring to assess the presence of hedgehog protection officers within local authorities and to gain insights into their respective workloads.
+              <!-- Meta bar concept -->
+              <!-- <div class="govuk-!-margin-top-3 delta-text-secondary">
+                <small>Collection ID: CollectionIdHere1234 | Data certification required: yes| Submission option(s): form</small>
+              </div> -->
+
+            </dd>
+          </div>             
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Deadline
+            </dt>
+            <dd class="govuk-summary-list__value">
+              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
+            </dd> 
+          </div>                     
+          <div class="govuk-summary-list__row">          
+            <dt class="govuk-summary-list__key">
+              Submission record
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <ul class="govuk-list govuk-list--spaced">
+                <li><a href="#">HPOS24Way</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>              
+              </ul>
+            </dd>
+          </div>                                                                                                          
+        </dl>
+      </div>
+    </div>
+    <!-- Collection template end --> 
 
     <!-- Collection template start -->
     <div class="govuk-summary-card">
@@ -90,7 +137,7 @@
     <ul class="govuk-list govuk-list--spaced">
       <li><strong>Role: </strong>Data Provider</li>
       <li><strong>Organisation:</strong> Waverley Borough Council</li>
-      <li><strong>Time on Delta:</strong> 2 years 25 days</li>
+      <li><strong>Days on Delta:</strong> 455</li>
     </ul>
     <p><a href="#">Edit your account</a></p>
 

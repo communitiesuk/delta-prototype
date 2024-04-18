@@ -18,6 +18,23 @@ window.GOVUKPrototypeKit.documentReady(() => {
     }
   });
 
+
+      window.onload = function() {
+        // Array of weekday names
+        var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        
+        // Get the current date
+        var today = new Date();
+        
+        // Get the day of the week (0-6)
+        var dayIndex = today.getDay();
+        
+        // Get the name of the day using the index
+        var currentDay = daysOfWeek[dayIndex];
+        
+        // Replace the content of the element with ID 'todaysDay' with the current day name
+        document.getElementById('todaysDay').innerHTML = currentDay;
+    };
   
 
 })
