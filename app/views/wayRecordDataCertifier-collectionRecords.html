@@ -17,7 +17,7 @@
         href: "/wayCollectionDataProvider-collectionRecords"
       },
       {
-        text: "UHC23WayPqwt123",
+        text: "UHC23WayPqwt543",
         href: "#"
       }
     ]
@@ -26,7 +26,7 @@
 {% block content %}
 <h1 class="govuk-heading-xl">
   <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Record</small><br>
-  UHC23WayPqwt123
+  UHC23WayPqwt543
 </h1>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -52,7 +52,7 @@
           Submission date
         </dt>
         <dd class="govuk-summary-list__value">
-          16 April 2024
+          15 April 2024
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -68,37 +68,23 @@
           Certification
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong>
+          <strong class="govuk-tag delta-tag">Pending certification</strong>
         </dd>
       </div>
     </dl>
-    <!-- Actions -->
-    <!-- <h2 class="govuk-heading-l govuk-!-margin-top-7">
-      Actions
-    </h2> -->
-    <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        Record locked due to certification. Contact the <a href="#">collection manager</a> to make changes or delete.
-      </strong>
-    </div>
-    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
-      Edit record
-    </button>
-    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
-      Delete record
-    </button>
   </div>
   <div class="govuk-grid-column-one-third">
-    <div class="govuk-panel govuk-panel--confirmation">
-      <h1 class="govuk-panel__title">
-        Certified
-      </h1>
-      <div class="govuk-panel__body">
-        <small>By <strong>Emily Thompson</strong> of Certifiers-R-Us on 18 April 2024.</small>
-      </div>
-    </div>
+    <!-- Actions -->
+    <h2 class="govuk-heading-l govuk-!-margin-top-7">
+      Data certifier
+    </h2>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Certify (approve)
+    </button>
+    <br>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+      Decline (reject)
+    </button>
   </div>
 </div>
 <h2 class="govuk-heading-l govuk-!-margin-top-7">
@@ -124,15 +110,15 @@
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Godalming</th>
-            <td class="govuk-table__cell">10,453</td>
-            <td class="govuk-table__cell">45</td>
+            <th scope="row" class="govuk-table__header">Cranleigh</th>
+            <td class="govuk-table__cell">12,112</td>
+            <td class="govuk-table__cell">32</td>
           </tr>
         </tbody>
       </table>
     </div>
 <div class="designNote govuk-!-margin-bottom-4">
-  <p>Record (child of Collection)</p>
+  <p>Record requirding certification (child of Collection)</p>
   <p><a href="/wayLandingDataProvider-goals">Wayfinding - Data provider goals</a></p>
   <p><a href="/wayLandingDataProvider-collectionRecords">Landing (home)</a></p>
 </div>

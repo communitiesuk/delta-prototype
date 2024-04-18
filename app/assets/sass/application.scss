@@ -146,6 +146,19 @@ color: $govuk-error-colour;
     }
 }
 
+// Delta certified ============
+
+.delta-certified {
+    padding: 2rem;
+    background-color: $govuk-success-colour;    
+    text-align: center;
+
+    h2, h3, p {
+        color: white;
+    }
+}
+
+
 // Animations ===============
 
 .delta-animation-loading {
