@@ -1,6 +1,6 @@
 {% extends "layouts/delta.html" %}
 
-{% set pageName="Wayfinding / Landing (Data Provider / Summary collection)" %}
+{% set pageName="Wayfinding / Landing (Data Certifier)" %}
 
 
 {% block beforeContent %}
@@ -14,7 +14,7 @@
         href: "#"
       }
     ]
-  }) }}    
+  }) }}
 
 
 {% endblock %}
@@ -30,37 +30,83 @@
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <p class="govuk-body-l">You have <a href="#">12 records requiring certification</a>.</p>
-    <h2 class="govuk-heading-l">
+    <p class="govuk-body-l">You have 12 records requiring certification.</p>
+    <!-- <h2 class="govuk-heading-l" id="certificationRequired">
       Records requiring certification
-    </h2>
+    </h2> -->
 
-    <!-- Collection
-    
-    - Collection Name 
-    - Collection ID
-    - Record
-    - Record submitted date
-    - Record submitted by (author)
-    - Status
-    
-    -->
+   
+    <!-- <img src="/public/images/icon-file.svg" alt="Record icon" height="35px"> -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="published">Newest</option>
+        <option value="updated" selected>Oldest</option>
+        <option value="views">Collection name A-Z</option>
+        <option value="comments">Record ID A-Z</option>
+      </select>
+    </div>    
+
+    <!-- Record start -->
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">UHC23WayPqwt543 </h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="/wayRecordDataCertifier-collectionRecords">View and certify</a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Collection
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Urban hedgehog census 2023
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date submitted
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 April 2024
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitted by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <!-- Record end -->
+
+
 
   </div>
   <div class="govuk-grid-column-one-third">
     <h2 class="govuk-heading-l">Your account</h2>
     <ul class="govuk-list govuk-list--spaced">
       <li><strong>Role: </strong>Data Certifier</li>
-      <li><strong>Organisation:</strong>Certifiers-R-Us</li>
+      <li><strong>Organisation:</strong> Certifiers-R-Us</li>
       <li><strong>Days on Delta:</strong> 78</li>
     </ul>
     <p><a href="#">Edit your account</a></p>
 
 
     <!-- Delta facts and figures -->
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">    
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <h3 class="govuk-heading-s">Did you know?</h3>
-    <p>Last month (March 2024) through Delta 3,437 individuals provided 181,306 records across 9,537 collections.</p>    
+    <p>Last month (March 2024) through Delta 3,437 individuals provided 181,306 records across 9,537 collections.</p>
     <p>The data provided by people like you is instrumental in policy design and the provision of services throughout England.</p>
     <p>We are always looking to improve our service. View a <a href="#">list of recent enhancements</a> and <a href="#">submit feedback</a>.</p>
 
