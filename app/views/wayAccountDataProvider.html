@@ -1,0 +1,75 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="Wayfinding / Account (Data Provider)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProvider"
+      },
+            {
+        text: "Account",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Your account
+</h1>
+    <!-- Access groups -->
+
+    <!-- <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="collectionName">Collection name</option>       
+        <option value="collectionGroup">Collection group</option>       
+        <option value="deadline">Deadline</option>      
+        <option value="records">Records</option>      
+        <option value="status" selected>Status</option>        
+      </select>
+    </div>     -->
+
+
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Access groups</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Title</th>
+            <th scope="col" class="govuk-table__header">Data provider status</th>
+            <th scope="col" class="govuk-table__header">Data certifier status</th>
+            <th scope="col" class="govuk-table__header">Collections</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+            <td class="govuk-table__cell">Active (<a href="/">remove</a>)</td>
+            <td class="govuk-table__cell"><a href="/">Request</a></td>
+            <td class="govuk-table__cell"><a href="/">2</a></td>
+          </tr>                 
+        </tbody>
+      </table>
+    </div>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Glossary
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </details>
+
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p><a href="/straightTalking#glossary">Glossary</a></p>
+</div>
+{% endblock %}

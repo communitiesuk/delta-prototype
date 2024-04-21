@@ -1,0 +1,175 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="Wayfinding / Collection group" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProvider"
+      },
+      {
+        text: "Collection groups",
+        href: "/wayCollectionGroups"
+      },  
+      {
+        text: "English Hedgehog Monitoring",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Collection group</small><br>
+  English Hedgehog Monitoring
+</h1>
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <img src="/public/images/masthead-hedgehog.jpg" alt="Hedgehog walking down a path like a boss" style="max-width: 100%; margin-bottom: 1rem;">
+
+    <p>The English Hedgehog Monitoring Group, part of Defra, plays a crucial role in wildlife conservation efforts across the English countryside. Comprising dedicated experts and researchers, our focus lies in studying and safeguarding the population of hedgehogs, an iconic species deeply ingrained in English culture. Through comprehensive monitoring programmes, we track hedgehog populations, analyse trends, and assess threats to their habitats. Utilising advanced techniques such as GPS tracking and genetic analysis, we gain insights into hedgehog behaviour, distribution, and health, aiding policymakers in formulating effective conservation strategies.</p>
+    <p>Beyond monitoring, we provide invaluable services to the English government by offering recommendations for habitat preservation and restoration projects. Collaborating with local communities, conservation organisations, and landowners, we implement measures to create hedgehog-friendly environments, including the establishment of wildlife corridors and the installation of hedgehog-friendly fencing. Additionally, we engage in public outreach and education initiatives to raise awareness about the importance of hedgehog conservation and inspire citizen participation in habitat conservation efforts. Through our dedication and expertise, the English Hedgehog Monitoring Group plays a vital role in ensuring the survival of these cherished creatures for generations to come.</p>
+
+    <p><small>Last updated 21 April 2024</small></p>
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <img src="/public/images/logoDefra.png" alt="Defra logo" style="max-width: 140px; margin-bottom: 1rem;">
+
+    <h2 class="govuk-heading-s">Links</h1>
+
+    <ul class="govuk-list">
+      <li><a href="#">Defra (new window)</a></li>
+      <li><a href="#">Defra / English Hedgehog Monitoring (new window)</a></li>
+    </ul>
+
+    <h3 class="govuk-heading-l">Collection owner</h3>
+    <p><strong>Samantha Bennett</strong><br>Policy Guidance, Defra<br>
+    <a href="maitto:Samantha.Bennett@gov.uk">Samantha.Bennett@gov.uk</a></p>    
+
+
+  </div>
+</div>
+
+
+<!-- Collections -->
+
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="collections">
+      Collections
+    </h>
+
+
+    <div class="govuk-form-group govuk-!-margin-top-3">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="collectionName">Collection name</option>       
+        <option value="collectionGroup">Collection group</option>       
+        <option value="deadline">Deadline</option>      
+        <option value="records">Records</option>      
+        <option value="status" selected>Status</option>        
+      </select>
+    </div>    
+
+
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Title</th>
+            <th scope="col" class="govuk-table__header">Collection group</th>
+            <th scope="col" class="govuk-table__header">Deadline</th>
+            <th scope="col" class="govuk-table__header">Records</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a></th>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">16 July 2024 </td>
+            <td class="govuk-table__cell">12</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Open</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">Hedgehog protection officer survey 2023</a></th>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">11 July 2024 </td>
+            <td class="govuk-table__cell">0</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Open</strong></td>
+          </tr>                   
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2022</a></th>
+            <td class="govuk-table__cell"><a href="//wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">16 July 2023 </td>
+            <td class="govuk-table__cell">12</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">Closed</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">Hedgehog protection officer survey 2022</a></th>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">11 July 2023 </td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">Closed</strong></td>
+          </tr>                
+        </tbody>
+      </table>
+      <!-- pagination -->
+<p>Displaying records 1 to 10 of 13.</p>
+<nav class="govuk-pagination" aria-label="Pagination">
+  <div class="govuk-pagination__prev">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+      </svg>
+      <span class="govuk-pagination__link-title">
+        Previous<span class="govuk-visually-hidden"> page</span>
+      </span>
+    </a>
+  </div>
+  <ul class="govuk-pagination__list">
+    <li class="govuk-pagination__item govuk-pagination__item--current">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+        1
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+        2
+      </a>
+    </li>
+    <li class="govuk-pagination__item">
+      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+        3
+      </a>
+    </li>
+  </ul>
+  <div class="govuk-pagination__next">
+    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+      <span class="govuk-pagination__link-title">
+        Next<span class="govuk-visually-hidden"> page</span>
+      </span>
+      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+      </svg>
+    </a>
+  </div>      
+
+
+    </div>
+
+
+
+
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p><a href="/straightTalking#glossary">Glossary</a></p>
+</div>
+{% endblock %}

@@ -26,12 +26,10 @@
         Sort by
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="newest">Newest</option>
-        <option value="oldest">Oldest</option>
-        <option value="recordName">Record name A-Z</option>    
-        <option value="recordId">Record ID A-Z</option> 
-        <option value="collectionName">Collection name A-Z</option>       
-        <option value="certification">Certification</option>      
+        <option value="collectionName">Collection name</option>       
+        <option value="collectionGroup">Collection group</option>       
+        <option value="deadline">Deadline</option>      
+        <option value="records">Records</option>      
         <option value="status" selected>Status</option>        
       </select>
     </div>    
@@ -45,26 +43,32 @@
             <th scope="col" class="govuk-table__header">Title</th>
             <th scope="col" class="govuk-table__header">Collection group</th>
             <th scope="col" class="govuk-table__header">Deadline</th>
-            <th scope="col" class="govuk-table__header">Record(s)</th>
+            <th scope="col" class="govuk-table__header">Records</th>
             <th scope="col" class="govuk-table__header">Status</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a></th>
-            <td class="govuk-table__cell"><a href="#">English Hedgehog Welfare</a></td>
-            <td class="govuk-table__cell">31/3/24</td>
-            <td class="govuk-table__cell">
-              
-<ul class="govuk-list">
-  <li><a href="/wayRecordDataProvider-collectionRecords-draft">1</a> <strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></li>
-  <li><a href="/wayRecordDataCertifier-collectionRecords">1</a> <strong class="govuk-tag delta-tag">Pending certification</strong></li>
-  <li><a href="/wayRecordDataProvider-collectionRecords">11</a> <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></li>                
-</ul>
-
-            </td>
-            <td class="govuk-table__cell"><strong class="govuk-tag">Open</strong></td>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">16 July 2024 </td>
+            <td class="govuk-table__cell">12</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Open</strong></td>
           </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">Hedgehog protection officer survey 2023</a></th>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></td>
+            <td class="govuk-table__cell">11 July 2024 </td>
+            <td class="govuk-table__cell">0</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Open</strong></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="">Pesky parrots census 2023</a></th>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup">English Parrot Monitoring</a></td>
+            <td class="govuk-table__cell">16 January 2024 </td>
+            <td class="govuk-table__cell">1</td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">Closed</strong></td>
+          </tr>                    
         </tbody>
       </table>
     </div>
