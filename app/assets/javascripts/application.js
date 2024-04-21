@@ -35,7 +35,24 @@ window.GOVUKPrototypeKit.documentReady(() => {
         // Replace the content of the element with ID 'todaysDay' with the current day name
         document.getElementById('todaysDay').innerHTML = currentDay;
     };
-  
+
+    // GOOD MORNING / GOOD AFTERNOON OR GOOD EVENING
+    function updateGreetings() {
+        var salutationDiv = document.getElementById('salutation');
+        var currentTime = new Date().getHours();
+
+        if (currentTime >= 5 && currentTime < 12) {
+            salutationDiv.textContent = "Good morning";
+        } else if (currentTime >= 12 && currentTime < 18) {
+            salutationDiv.textContent = "Good afternoon";
+        } else {
+            salutationDiv.textContent = "Good evening";
+        }
+    }
+
+    // Call the function when the page loads
+    window.onload = updateGreetings;    
+
 
 })
 

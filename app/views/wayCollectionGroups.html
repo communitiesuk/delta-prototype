@@ -1,5 +1,5 @@
 {% extends "layouts/delta.html" %}
-{% set pageName="Wayfinding / Account (Data Provider)" %}
+{% set pageName="Wayfinding / Collections (Data Provider)" %}
 {% block beforeContent %}
   {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
   {{ govukBreadcrumbs({
@@ -9,7 +9,7 @@
         href: "/wayLandingDataProvider"
       },
             {
-        text: "Your account",
+        text: "Collection Groups",
         href: "#"
       }
     ]
@@ -17,45 +17,36 @@
 {% endblock %}
 {% block content %}
 <h1 class="govuk-heading-xl">
-  <span id="salutation">Hi</span>, Bob
+  Collection groups
 </h1>
-    <!-- Access groups -->
+    <!-- Collections -->
 
-    <!-- <div class="govuk-form-group">
+    <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
         Sort by
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="collectionName">Collection name</option>       
-        <option value="collectionGroup">Collection group</option>       
-        <option value="deadline">Deadline</option>      
-        <option value="records">Records</option>      
+        <option value="collectionName">Group name</option>         
         <option value="status" selected>Status</option>        
       </select>
-    </div>     -->
+    </div>    
 
-
-    <p class="govuk-body-l">You have access to 10 Collection Groups (with a status of Data Provider for 5 and a Data Certifier for 3).</p>
 
     <div>
       <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Access groups</caption>
+        <caption class="govuk-table__caption govuk-table__caption--m">Collection groups</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header">Collection group</th>
-            <th scope="col" class="govuk-table__header">Data provider status</th>
-            <th scope="col" class="govuk-table__header">Data certifier status</th>
-            <th scope="col" class="govuk-table__header">Closed collections</th>
             <th scope="col" class="govuk-table__header">Open collections</th>
+            <th scope="col" class="govuk-table__header">Status</th>
           </tr>
         </thead>
         <tbody class="govuk-table__body">
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
-            <td class="govuk-table__cell"><a href="/">Request</a></td>
-            <td class="govuk-table__cell"><a href="/">18</a></td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow"><a href="/wayCollectionsDataProvider">2</a></strong></td>
+            <td class="govuk-table__cell"><a href="/wayCollectionsDataProvider">2</a></td>
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
           </tr>                 
         </tbody>
       </table>

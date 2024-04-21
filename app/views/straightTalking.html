@@ -1,48 +1,33 @@
 {% extends "layouts/delta.html" %}
-
 {% set pageName="Straight Talking" %}
-
-
-
-
 {% block content %}
-
-
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
-      Trying to order the disorder
+      Delta overview
     </h1>
-    <p class="govuk-body-l">This really shouldn't be that hard&hellip;</p>
-    <ul class="govuk-list govuk-list--bullet govuk-body-l">
-      <li>Detla is a data collection and grants administration tool</li>
-      <li>Two channels:
-          <ul class="govuk-list govuk-list--number govuk-body-l">
-            <li>Data collections — mix of internal and external users</li>
-            <li>Grants - all internal users</li>
-          </ul>            
-      </li>
-      <li>Terminology
-          <ul class="govuk-list govuk-list--bullet ">
-            <li><em>Collections</em>, created by DLUHC teams (internal users), are requests for data</li>
-            <li>Data is submitted in the form of <em>records</em> by external users</li>
-            <li>Collections have a <em>data period</em>. Example: for the question "How many hedgehogs did you see in 2023?" the data period would be 1 Jan 2023 to 31 Dec 2023.</li>
-            <li>Collection have a <em>data window</em>. This is the period of time the collection is open and records can be submitted.</li>
-            <li>Collections can be one of two types - <em>record-based</em> (lots of entries) or <em>summary-based</em> (one record)</li>
-            <li>Records can be submitted by 3 methods: form, bulk upload (from Excel template) or API (XML)</li>
-          </ul>            
-      </li>      
-
+    <p class="govuk-body-l">Detla is a data collection and grants administration tool. The platform comprises of two channels: </p>
+    <ul class="govuk-list govuk-body-l govuk-list--number">
+      <li><em>Collections</em> — mix of internal and external users (<em>Data Providers</em> and <em>Data Certifiers</em>)</li>
+      <li><em>Grants</em> - all internal users</li>
     </ul>
-
+    <h3 class="govuk-heading-m">
+      Labels overview
+    </h3>
+    <ul class="govuk-list govuk-list--bullet ">
+      <li><em>Collections</em>, created by DLUHC teams (internal users), are requests for data.</li>
+      <li>Data is submitted in the form of <em>records</em> by external users.</li>
+      <li>Collections have a <em>data period</em>. Example: for the question "How many hedgehogs did you see in 2023?" the data period would be 1 January 2023 to 31 December 2023.</li>
+      <li>Collections have a <em>data window</em>. This is the period of time the collection is open for records to be submitted.</li>
+      <li>Collections have two types - <em>record-based</em> (multiple records - e.g. traveler's survey) or <em>summary-based</em> (one record - e.g. annual return)</li>
+      <li>Records can be submitted by 3 methods: form, bulk upload (from Excel template) or API (XML)</li>
+    </ul>
+    <p><a href="#glossary">View full glossary</a></p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
     <!-- TASKS -->
-    <h2 class="govuk-heading-l">User tasks</h2>    
-
-    <h3 class="govuk-heading-s">Data providers</h3>    
+    <h2 class="govuk-heading-l">User tasks</h2>
+    <h3 class="govuk-heading-m">External users</h3>
+    <h4 class="govuk-heading-s">Data provider</h4>
     <ul class="govuk-list govuk-list--bullet">
       <li>Find collection I need to provide data for</li>
       <li>Understand what data is required for which period</li>
@@ -53,29 +38,20 @@
       <li>See which collections I have access to</li>
       <li>See if there are other collections I should have access to</li>
       <li>Manage my account</li>
-    </ul>    
-
-    <h3 class="govuk-heading-s">Data certifier</h3>    
+    </ul>
+    <h4 class="govuk-heading-s">Data certifier</h4>
     <ul class="govuk-list govuk-list--bullet">
       <li>See which data (records) I need to certify</li>
       <li>Certify a record</li>
       <li>Contact the record owner (submitter) if data is incorrect and/or I have questions</li>
-    </ul>      
-    
-
+    </ul>
   </div>
   <div class="govuk-grid-column-one-third">
-
-    
   </div>
 </div>
-
-
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
 <!-- SITEMAP TABLE -->
  <h2 class="govuk-heading-l">Sitemap simplified</h2>
-
 <ul class="govuk-list govuk-list--number">
   <li>Home
     <ul class="govuk-list govuk-list--number">
@@ -87,15 +63,15 @@
               <li><a href="/wayCollectionDataProvider-collectionRecords">Collection (entity)</a>
                 <ul class="govuk-list govuk-list--number">
                   <li><a href="/wayRecordDataProvider-collectionRecords">Record (entity)</a></li>
-                </ul>                
+                </ul>
               </li>
-            </ul>            
+            </ul>
           </li>
-          <li>Account</li>
+          <li><a href="/wayAccountDataProvider">Account</a></li>
           <li>Collection groups
             <ul class="govuk-list govuk-list--number">
               <li><a href="/wayCollectionGroup">Collection group (entity)</a></li>
-            </ul>            
+            </ul>
           </li>
           <li>Change log</li>
         </ul>
@@ -103,9 +79,7 @@
     </ul>
   </li>
 </ul>
-
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-
 <!-- GLOSSARY TABLE -->
 <table class="govuk-table" id="glossary">
   <caption class="govuk-table__caption govuk-table__caption--m">Glossary</caption>
@@ -129,72 +103,67 @@
       <td class="govuk-table__cell">Collection instance</td>
       <td class="govuk-table__cell">Collection <strong class="govuk-tag">New</strong></td>
       <td class="govuk-table__cell">For external users a collection is the request for data</td>
-    </tr>    
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Collection window</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">This is the time when the collection is open and the data can be submitted.</td>
-    </tr>       
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Data period</th>
       <td class="govuk-table__cell">???</td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">This is the period of time for which data is required. Example: 1 January for 31 March 2023.</td>
-    </tr>         
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Submission</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
-    </tr>   
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Record</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
-    </tr>  
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Access group</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
-    </tr>              
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Entity page</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">n/a</td>
       <td class="govuk-table__cell">New internal term to describe dedicated pages (each with URL) that act as overview and jumping off point for the 'thing'. External users: Collection and Record. Internal users: Collection Programme, Dataset, Form </td>
-    </tr>   
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Collection title</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">Need to make collection title meaningful, and allow user to differentiate between others within same Collection Programme (often best way to do this is by including the Collection Period in the title - example: Hedgehog census 2023)</td>
-    </tr>      
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Collection description</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">New</td>
-    </tr>    
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Collection ID</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">When to use?</td>
-    </tr>   
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Access group</th>
       <td class="govuk-table__cell">Collection group</td>
       <td class="govuk-table__cell">Collection group</td>
       <td class="govuk-table__cell"></td>
-    </tr>                
+    </tr>
   </tbody>
 </table>
-
-
 {% endblock %}
-
-
-
