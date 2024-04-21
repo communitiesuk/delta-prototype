@@ -24,61 +24,44 @@
             <li>Grants - all internal users</li>
           </ul>            
       </li>
-      <li>Collections
-          <ul class="govuk-list govuk-list--number govuk-body-l">
-            <li>Collections are created by DLUHC teams (internal users)</li>
-            <li>Data is provided by external users</li>
-            <li>Provided data is called a 'submission'</li>
-            <li>Collection can be one of two types - Record based (lots of entries) or Summary based</li>
-            <li>If Records based...</li>
+      <li>Terminology
+          <ul class="govuk-list govuk-list--bullet ">
+            <li><em>Collections</em>, created by DLUHC teams (internal users), are requests for data</li>
+            <li>Data is submitted in the form of <em>records</em> by external users</li>
+            <li>Collections have a <em>data period</em>. Example: for the question "How many hedgehogs did you see in 2023?" the data period would be 1 Jan 2023 to 31 Dec 2023.</li>
+            <li>Collection have a <em>data window</em>. This is the period of time the collection is open and records can be submitted.</li>
+            <li>Collections can be one of two types - <em>record-based</em> (lots of entries) or <em>summary-based</em> (one record)</li>
+            <li>Records can be submitted by 3 methods: form, bulk upload (from Excel template) or API (XML)</li>
           </ul>            
       </li>      
 
     </ul>
-    
-    <h2 class="govuk-heading-l">Need consensus...</h2>
-    <p><strong>In the mind of Data Providers and Data Certifiers...</strong></p>
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- TASKS -->
+    <h2 class="govuk-heading-l">User tasks</h2>    
+
+    <h3 class="govuk-heading-s">Data providers</h3>    
     <ul class="govuk-list govuk-list--bullet">
-      <li>A Collection is a request for data to be submitted by the Data Provider through the Delta platform</li>
-      <li>A Collection has a window during which data can be submitted (a 'Collection Window')</li>
-      <li>A Submission is the data provided for a collection</li>
-      <li>A Submission consists of one or more Records</li>
-      <li><em>The term 'Instance' or 'Collection Instance' means nothing for Data Providers and should not be used in external documents or discussions</em></li>
-    </ul>
+      <li>Find collection I need to provide data for</li>
+      <li>Understand what data is required for which period</li>
+      <li>Understand how long I have to submit data</li>
+      <li>Submit data</li>
+      <li>See responses I have previously made</li>
+      <li>Understand who else can / has submitted data for a collection</li>
+      <li>See which collections I have access to</li>
+      <li>See if there are other collections I should have access to</li>
+      <li>Manage my account</li>
+    </ul>    
 
-    <p>Mental [hierarchical] model</p>
-
-    <div class="govuk-!-margin-bottom-3">
-      <code class="">
-        * Collection<br>
-        ** Submission<br>
-        *** Record001<br>
-        *** Record002<br>
-        *** Record003<br>
-      </code>
-    </div>
-
-    <p>vs</p>
-
-    <div class="govuk-!-margin-bottom-6">
-      <code class="">
-        * Collection<br>
-        ** Submission (Submission001, Submission002, Submission003)
-      </code>
-    </div>    
-
-    <hr>
-
-    <code>
-
-      -- Collection Programme [Parent] (Data Set)<br>
-      ---- Form(s)<br>
-      ---- Collection [formerly called 'Collection Instance']<br>
-      ------ Submission (org)<br>
-      -------- Data (records)<br>
-
-
-    </code>
+    <h3 class="govuk-heading-s">Data certifier</h3>    
+    <ul class="govuk-list govuk-list--bullet">
+      <li>See which data (records) I need to certify</li>
+      <li>Certify a record</li>
+      <li>Contact the record owner (submitter) if data is incorrect and/or I have questions</li>
+    </ul>      
+    
 
   </div>
   <div class="govuk-grid-column-one-third">
@@ -136,8 +119,8 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection</th>
-      <td class="govuk-table__cell">Collection programme</td>
+      <th scope="row" class="govuk-table__header">Collection programme</th>
+      <td class="govuk-table__cell">Collection</td>
       <td class="govuk-table__cell">n/a</td>
       <td class="govuk-table__cell">Never use with external users - they don't think of collections this way. A Collection Programme (CP or Programme for short) is the parent that has following children: Datasets, Forms, Collections, and grandchildren (records).</td>
     </tr>
@@ -182,7 +165,25 @@
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">n/a</td>
       <td class="govuk-table__cell">New internal term to describe dedicated pages (each with URL) that act as overview and jumping off point for the 'thing'. External users: Collection and Record. Internal users: Collection Programme, Dataset, Form </td>
-    </tr>       
+    </tr>   
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection title</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">Need to make collection title meaningful, and allow user to differentiate between others within same Collection Programme (often best way to do this is by including the Collection Period in the title - example: Hedgehog census 2023)</td>
+    </tr>      
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection description</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">New</td>
+    </tr>    
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection ID</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">When to use?</td>
+    </tr>            
   </tbody>
 </table>
 
