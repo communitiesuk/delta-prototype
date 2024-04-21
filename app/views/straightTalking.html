@@ -71,9 +71,9 @@
 
     <code>
 
-      -- Collection [Parent] (Data Set)<br>
+      -- Collection Programme [Parent] (Data Set)<br>
       ---- Form(s)<br>
-      ---- Collection Instance<br>
+      ---- Collection [formerly called 'Collection Instance']<br>
       ------ Submission (org)<br>
       -------- Data (records)<br>
 
@@ -86,6 +86,106 @@
     
   </div>
 </div>
+
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- SITEMAP TABLE -->
+ <h2 class="govuk-heading-l">Sitemap simplified</h2>
+
+<ul class="govuk-list govuk-list--number">
+  <li>Home
+    <ul class="govuk-list govuk-list--number">
+      <li>Sign-in
+        <ul class="govuk-list govuk-list--number">
+          <li><a href="/wayLandingDataProvider.html">Landing</a></li>
+          <li><a href="/wayCollectionsDataProvider">Collections</a>
+            <ul class="govuk-list govuk-list--number">
+              <li><a href="/wayCollectionDataProvider-collectionRecords">Collection (entity)</a>
+                <ul class="govuk-list govuk-list--number">
+                  <li><a href="/wayRecordDataProvider-collectionRecords">Record (entity)</a></li>
+                </ul>                
+              </li>
+            </ul>            
+          </li>
+          <li>Account</li>
+          <li>Access groups
+            <ul class="govuk-list govuk-list--number">
+              <li>Access group (entity)</li>
+            </ul>            
+          </li>
+          <li>Change log</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- GLOSSARY TABLE -->
+<table class="govuk-table" id="glossary">
+  <caption class="govuk-table__caption govuk-table__caption--m">Glossary</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Term</th>
+      <th scope="col" class="govuk-table__header">Internal version</th>
+      <th scope="col" class="govuk-table__header">External version</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection</th>
+      <td class="govuk-table__cell">Collection programme</td>
+      <td class="govuk-table__cell">n/a</td>
+      <td class="govuk-table__cell">Never use with external users - they don't think of collections this way. A Collection Programme (CP or Programme for short) is the parent that has following children: Datasets, Forms, Collections, and grandchildren (records).</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection instance</th>
+      <td class="govuk-table__cell">Collection instance</td>
+      <td class="govuk-table__cell">Collection <strong class="govuk-tag">New</strong></td>
+      <td class="govuk-table__cell">For external users a collection is the request for data</td>
+    </tr>    
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection window</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">This is the time when the collection is open and the data can be submitted.</td>
+    </tr>       
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Data period</th>
+      <td class="govuk-table__cell">???</td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">This is the period of time for which data is required. Example: 1 January for 31 March 2023.</td>
+    </tr>         
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Submission</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>   
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Record</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>  
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Access group</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+    </tr>              
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Entity page</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">n/a</td>
+      <td class="govuk-table__cell">New internal term to describe dedicated pages (each with URL) that act as overview and jumping off point for the 'thing'. External users: Collection and Record. Internal users: Collection Programme, Dataset, Form </td>
+    </tr>       
+  </tbody>
+</table>
+
 
 {% endblock %}
 

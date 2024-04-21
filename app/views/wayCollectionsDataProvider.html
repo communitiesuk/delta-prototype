@@ -1,0 +1,83 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="Wayfinding / Collections (Data Provider)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProvider"
+      },
+            {
+        text: "Collections",
+        href: "#"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Collections
+</h1>
+    <!-- Collections -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="recordName">Record name A-Z</option>    
+        <option value="recordId">Record ID A-Z</option> 
+        <option value="collectionName">Collection name A-Z</option>       
+        <option value="certification">Certification</option>      
+        <option value="status" selected>Status</option>        
+      </select>
+    </div>    
+
+
+    <div>
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Collections</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Title</th>
+            <th scope="col" class="govuk-table__header">ID</th>
+            <th scope="col" class="govuk-table__header">Collection group</th>
+            <th scope="col" class="govuk-table__header">Window</th>
+            <th scope="col" class="govuk-table__header">Data period</th>
+            <th scope="col" class="govuk-table__header">Submitted record(s)</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a></th>
+            <td class="govuk-table__cell">UHC23</td>
+            <td class="govuk-table__cell"><a href="#">English Hedgehog Welfare</a></td>
+            <td class="govuk-table__cell">1/1/24 - 31/3/24</td>
+            <td class="govuk-table__cell">1/1/23 - 31/12/23</td>
+            <td class="govuk-table__cell"><a href="wayCollectionDataProvider-collectionRecords#submission">12</a></td>
+            <td class="govuk-table__cell"><strong class="govuk-tag">Open</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Glossary
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+    </details>
+
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p><a href="/straightTalking#glossary">Glossary</a></p>
+</div>
+{% endblock %}
