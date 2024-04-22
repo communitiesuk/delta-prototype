@@ -37,9 +37,9 @@
         </h2>
       </div>
       <div class="govuk-notification-banner__content">
-        <p class="govuk-notification-banner__heading">
-          You have <a href="#openCollections" class="govuk-notification-banner__link">2 open collections</a>.
-        </p>
+        <p class="govuk-notification-banner__heading" style="max-width: 100%;">
+          You have <a href="#openCollections" class="govuk-notification-banner__link">2 open collections</a> and <a href="#certificationRequired" class="govuk-notification-banner__link">1 record requiring certification</a>.
+        </p>        
       </div>
     </div>
 
@@ -140,6 +140,73 @@
       </div>
     </div>
     <!-- Collection summary end --> 
+
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+
+    <h2 class="govuk-heading-l" id="certificationRequired">
+      Records requiring certification
+    </h2>    
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="newest">Newest</option>
+        <option value="oldest" selected>Oldest</option>
+        <option value="recordName">Record name A-Z</option>        
+        <option value="collectionName">Collection name A-Z</option>
+      </select>
+    </div>    
+
+    <!-- Record start -->
+    <div class="govuk-summary-card govuk-!-margin-bottom-9">
+      <div class="govuk-summary-card__title-wrapper">
+        <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">Cranleigh</h2>
+        <ul class="govuk-summary-card__actions">
+          <li class="govuk-summary-card__action"> <a class="govuk-link" href="/wayRecordDataCertifier-collectionRecords">View and certify</a>
+          </li>
+        </ul>
+      </div>
+      <div class="govuk-summary-card__content">
+        <dl class="govuk-summary-list">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              ID
+            </dt>
+            <dd class="govuk-summary-list__value">
+              UHC23WayPqwt543
+            </dd>
+          </div>          
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Collection
+            </dt>
+            <dd class="govuk-summary-list__value">
+              Urban hedgehog census 2023
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Date submitted
+            </dt>
+            <dd class="govuk-summary-list__value">
+              15 April 2024
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              Submitted by
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong>Bob Smith</strong>, Waverley County Council
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <!-- Record end -->    
 
 
 

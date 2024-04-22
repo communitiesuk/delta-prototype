@@ -36,7 +36,18 @@
       </a>
       <div class="delta-account">
         <ul class="govuk-body">
-          <li><strong>Bob Smith</strong>, Waverley Borough Council &ndash; <a href="/wayAccountDataProvider">Edit</a></li>
+          <li><a href="/wayAccountDataProvider"><strong>Bob Smith</strong></a></li>
+          <li>
+            <div class="govuk-form-group">
+              <label class="govuk-label delta-hide" for="organisation">
+                Select organisation
+              </label>
+              <select class="govuk-select" id="organisation" name="organisation">
+                <option value="Waverley" selected>Waverley Borough Council</option>         
+                <option value="Arundel">Arundel Borough Council</option>        
+              </select>
+            </div>             
+          </li>
           <li><a href="#">Sign out</a></li>
         </ul>
       </div>

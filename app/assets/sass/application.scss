@@ -90,11 +90,16 @@ html {
             color: #fff!important;
             display: flex;
             flex-direction: row;
+            align-items: center;     
             gap: 1rem;
             margin: 0;
             padding: 0;
             li {
                 list-style-type: none;
+
+                .govuk-form-group {
+                    margin: 0!important;
+                }
             }
         }
     }
