@@ -19,8 +19,12 @@
 <h1 class="govuk-heading-xl">
   Collection groups
 </h1>
-    <!-- Collections -->
 
+<!-- Collections -->
+
+<!-- Filters -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
         Sort by
@@ -29,39 +33,64 @@
         <option value="collectionName">Group name</option>         
         <option value="status" selected>Status</option>        
       </select>
+    </div>     
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h5 class="govuk-fieldset__heading delta-hide">
+            Hide inactive collection groups
+          </h5>
+        </legend>
+        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="hide">
+              Hide inactive collection groups
+            </label>
+          </div>
+        </div>
+      </fieldset>
     </div>    
+  </div>
+</div>
 
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Collection groups</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Open collections</th>
+        <th scope="col" class="govuk-table__header">Status</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><a href="/wayCollectionsDataProvider">2</a></td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+      </tr>            
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><a href="/wayCollectionsDataProvider">1</a></td>
+        <td class="govuk-table__cell"><strong class="govuk-tag">Inactive</strong></td>
+      </tr>                   
+    </tbody>        
+  </table>
+</div>
 
-    <div>
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Collection groups</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Collection group</th>
-            <th scope="col" class="govuk-table__header">Open collections</th>
-            <th scope="col" class="govuk-table__header">Status</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-            <td class="govuk-table__cell"><a href="/wayCollectionsDataProvider">2</a></td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
-          </tr>                 
-        </tbody>
-      </table>
-    </div>
-
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Glossary
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Glossary
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</details>
 
 
 <div class="designNote govuk-!-margin-bottom-4">

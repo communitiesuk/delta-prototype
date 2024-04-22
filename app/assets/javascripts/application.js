@@ -18,8 +18,8 @@ window.GOVUKPrototypeKit.documentReady(() => {
     }
   });
 
-
-      window.onload = function() {
+    // DAY OF WEEK ===============
+    window.onload = function() {
         // Array of weekday names
         var daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
         
@@ -36,24 +36,9 @@ window.GOVUKPrototypeKit.documentReady(() => {
         document.getElementById('todaysDay').innerHTML = currentDay;
     };
 
-    // GOOD MORNING / GOOD AFTERNOON OR GOOD EVENING
-    function updateGreetings() {
-        var salutationDiv = document.getElementById('salutation');
-        var currentTime = new Date().getHours();
-
-        if (currentTime >= 5 && currentTime < 12) {
-            salutationDiv.textContent = "Good morning";
-        } else if (currentTime >= 12 && currentTime < 18) {
-            salutationDiv.textContent = "Good afternoon";
-        } else {
-            salutationDiv.textContent = "Good evening";
-        }
-    }
-
-    // Call the function when the page loads
-    window.onload = updateGreetings;    
-
 
 })
+
+
 
 

@@ -1,43 +1,44 @@
 {% extends "layouts/delta.html" %}
 {% set pageName="Straight Talking" %}
 {% block content %}
+<h1 class="govuk-heading-xl">
+  Delta overview
+</h1>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Delta overview
-    </h1>
     <p class="govuk-body-l">Detla is a data collection and grants administration tool. The platform comprises of two channels: </p>
     <ul class="govuk-list govuk-body-l govuk-list--number">
-      <li><em>Collections</em> — mix of internal and external users (<em>Data Providers</em> and <em>Data Certifiers</em>)</li>
-      <li><em>Grants</em> - all internal users</li>
+      <li><em>Collections</em> — used by a mix of internal and external users (<em>Data Providers</em> and <em>Data Certifiers</em>).</li>
+      <li><em>Grants</em> - used by internal users only.</li>
     </ul>
     <h3 class="govuk-heading-m">
-      Labels overview
+      Collections overview
     </h3>
-    <ul class="govuk-list govuk-list--bullet ">
+    <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
       <li><em>Collections</em>, created by DLUHC teams (internal users), are requests for data.</li>
       <li>Data is submitted in the form of <em>records</em> by external users.</li>
-      <li>Collections have a <em>data period</em>. Example: for the question "How many hedgehogs did you see in 2023?" the data period would be 1 January 2023 to 31 December 2023.</li>
+      <li>Collections have a <em>data period</em> which is the from and to date for which data is sought. Example: for the question "How many hedgehogs did you see in 2023?" the data period would be 1 January 2023 to 31 December 2023.</li>
       <li>Collections have a <em>data window</em>. This is the period of time the collection is open for records to be submitted.</li>
       <li>Collections have two types - <em>record-based</em> (multiple records - e.g. traveler's survey) or <em>summary-based</em> (one record - e.g. annual return)</li>
-      <li>Records can be submitted by 3 methods: form, bulk upload (from Excel template) or API (XML)</li>
+      <li>Records can be submitted by 3 methods: form, bulk upload (from Excel template) or API (XML). The options are set by the Collections Manager on a collection by collection basis.</li>
     </ul>
     <p><a href="#glossary">View full glossary</a></p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- TASKS -->
-    <h2 class="govuk-heading-l">User tasks</h2>
+    <h2 class="govuk-heading-l">Collections user tasks</h2>
     <h3 class="govuk-heading-m">External users</h3>
     <h4 class="govuk-heading-s">Data provider</h4>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Find collection I need to provide data for</li>
+      <li>Find the collection I need to provide data for</li>
       <li>Understand what data is required for which period</li>
       <li>Understand how long I have to submit data</li>
       <li>Submit data</li>
-      <li>See responses I have previously made</li>
+      <li>See responses I have previously made (check data)</li>
       <li>Understand who else can / has submitted data for a collection</li>
       <li>See which collections I have access to</li>
-      <li>See if there are other collections I should have access to</li>
-      <li>Manage my account</li>
+      <li>See if there are other collections I should have access to / join</li>
+      <li>Change my role (provider and certifier)</li>
+      <li>Manage my account (including change my organisation)</li>
     </ul>
     <h4 class="govuk-heading-s">Data certifier</h4>
     <ul class="govuk-list govuk-list--bullet">
@@ -47,38 +48,30 @@
     </ul>
   </div>
   <div class="govuk-grid-column-one-third">
+    <!-- SITEMAP TABLE -->
+    <h2 class="govuk-heading-m">Sitemap simplified</h2>
+    <ul class="govuk-list govuk-list--number">
+      <li><a href="/wayLandingDataProvider.html">Home (aka Landing)</a></li>
+      <li><a href="/wayCollectionsDataProvider">Collections</a>
+        <ul class="govuk-list govuk-list--number">
+          <li><a href="/wayCollectionDataProvider-collectionRecords">Collection (entity)</a>
+            <ul class="govuk-list govuk-list--number">
+              <li><a href="/wayRecordDataProvider-collectionRecords">Record (entity)</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="/wayAccountDataProvider">Account</a></li>
+      <li><a href="/wayCollectionGroups">Collection groups</a>
+        <ul class="govuk-list govuk-list--number">
+          <li><a href="/wayCollectionGroup">Collection group (entity)</a></li>
+        </ul>
+      </li>
+      <li>Change log</li>
+    </ul>   
   </div>
 </div>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
-<!-- SITEMAP TABLE -->
- <h2 class="govuk-heading-l">Sitemap simplified</h2>
-<ul class="govuk-list govuk-list--number">
-  <li>Home
-    <ul class="govuk-list govuk-list--number">
-      <li>Sign-in
-        <ul class="govuk-list govuk-list--number">
-          <li><a href="/wayLandingDataProvider.html">Landing</a></li>
-          <li><a href="/wayCollectionsDataProvider">Collections</a>
-            <ul class="govuk-list govuk-list--number">
-              <li><a href="/wayCollectionDataProvider-collectionRecords">Collection (entity)</a>
-                <ul class="govuk-list govuk-list--number">
-                  <li><a href="/wayRecordDataProvider-collectionRecords">Record (entity)</a></li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li><a href="/wayAccountDataProvider">Account</a></li>
-          <li>Collection groups
-            <ul class="govuk-list govuk-list--number">
-              <li><a href="/wayCollectionGroup">Collection group (entity)</a></li>
-            </ul>
-          </li>
-          <li>Change log</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 <!-- GLOSSARY TABLE -->
 <table class="govuk-table" id="glossary">
@@ -128,6 +121,18 @@
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
     </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Records-based [collection]</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">Multiple [record collection]</td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Summary [collection]</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">Single [record collection]</td>
+      <td class="govuk-table__cell"></td>
+    </tr>        
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Access group</th>
       <td class="govuk-table__cell"></td>

@@ -17,60 +17,50 @@
 {% endblock %}
 {% block content %}
 <h1 class="govuk-heading-xl">
-  <span id="salutation">Hi</span>, Bob
+  Your account
 </h1>
-    <!-- Access groups -->
-
-    <!-- <div class="govuk-form-group">
-      <label class="govuk-label" for="sort">
-        Sort by
-      </label>
-      <select class="govuk-select" id="sort" name="sort">
-        <option value="collectionName">Collection name</option>       
-        <option value="collectionGroup">Collection group</option>       
-        <option value="deadline">Deadline</option>      
-        <option value="records">Records</option>      
-        <option value="status" selected>Status</option>        
-      </select>
-    </div>     -->
 
 
-    <p class="govuk-body-l">You have access to 10 Collection Groups (with a status of Data Provider for 5 and a Data Certifier for 3).</p>
+<p class="govuk-body-l">You have access to 10 Collection Groups (5 as a Data Provider and 3 as a Data Certifier).</p>
 
-    <div>
-      <table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">Access groups</caption>
-        <thead class="govuk-table__head">
-          <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Collection group</th>
-            <th scope="col" class="govuk-table__header">Data provider status</th>
-            <th scope="col" class="govuk-table__header">Data certifier status</th>
-            <th scope="col" class="govuk-table__header">Closed collections</th>
-            <th scope="col" class="govuk-table__header">Open collections</th>
-          </tr>
-        </thead>
-        <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
-            <td class="govuk-table__cell"><a href="/">Request</a></td>
-            <td class="govuk-table__cell"><a href="/">18</a></td>
-            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow"><a href="/wayCollectionsDataProvider">2</a></strong></td>
-          </tr>                 
-        </tbody>
-      </table>
-    </div>
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Collection groups</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Group status</th>
+        <th scope="col" class="govuk-table__header">Data provider status</th>
+        <th scope="col" class="govuk-table__header">Data certifier status</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+        <td class="govuk-table__cell">n/a</td>
+      </tr>       
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><strong class="govuk-tag">Inactive</strong></td>
+        <td class="govuk-table__cell"><a href="/">Request</a></td>
+        <td class="govuk-table__cell"><a href="/">Request</a></td>
+      </tr>                  
+    </tbody>
+  </table>
+</div>
 
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Glossary
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-      </div>
-    </details>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Glossary
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </div>
+</details>
 
 
 <div class="designNote govuk-!-margin-bottom-4">
