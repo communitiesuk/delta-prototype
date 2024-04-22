@@ -17,15 +17,149 @@
 {% endblock %}
 {% block content %}
 <h1 class="govuk-heading-xl">
-  Your account
+  Hi Bob
 </h1>
 
 
-<p class="govuk-body-l">You have access to 10 Collection Groups (5 as a Data Provider and 3 as a Data Certifier).</p>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body-l">Welcome to your account on Delta. Here you can manage your <a href="#accountDetails">account details</a>, <a href="#organisationProfile">organisation profile</a> and <a href="#collectionGroups">collection groups</a>.</p>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="accountDetails">
+      Account details
+    </h2>
+
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Bob Smith
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Job title
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> job title</span></a>
+        </dd>
+      </div>      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Address
+        </dt>
+        <dd class="govuk-summary-list__value">
+          72 Guild Street<br>London<br>SE23 6FH
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Contact details
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <p class="govuk-body">07700 900457</p>
+          <p class="govuk-body">bob.smith@waverly.gov.uk</p>
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <ul class="govuk-summary-list__actions-list">
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> contact details</span></a>
+            </li>
+            <li class="govuk-summary-list__actions-list-item">
+              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+            </li>
+          </ul>
+        </dd>
+      </div>
+    </dl>
+  </div>  
+</div>
+
+<!-- SELECT ORGANISATION -->
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="organisationProfile">
+  Organisation profile
+</h2>
+<p class="govuk-body-l">Select an organisation profile to view available collection groups and manage your roles.</p>
+<div class="govuk-form-group govuk-!-margin-top-3">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+      <h2 class="govuk-fieldset__heading">
+        Select organisation
+      </h2>
+    </legend>
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="organisaton" name="organisaton" type="radio" value="Waverley" checked>
+        <label class="govuk-label govuk-radios__label" for="organisaton">
+          Waverley Borough Council
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="organisaton-2" name="organisaton" type="radio" value="Arundel">
+        <label class="govuk-label govuk-radios__label" for="organisaton-2">
+          Arundel Borough Council
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>  
+
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="collectionGroups">
+  Collection groups
+</h2>
+
+<!-- Filters -->
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="collectionGroupName">Group name</option>         
+        <option value="openCollections">Open collections</option>         
+        <option value="status" selected>Status</option>        
+      </select>
+    </div>     
+  </div>
+  <div class="govuk-grid-column-one-half">
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h5 class="govuk-fieldset__heading delta-hide">
+            Hide inactive collection groups
+          </h5>
+        </legend>
+        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="hide">
+              Hide inactive collection groups
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>    
+  </div>
+</div>
 
 <div>
   <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m">Collection groups</caption>
+    <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Group</th>
@@ -36,6 +170,13 @@
       </tr>
     </thead>
     <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a></th>
+        <td class="govuk-table__cell">17 July 202</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+        <td class="govuk-table__cell"><a href="/">Request</a></td>
+        <td class="govuk-table__cell"><a href="/">Request</a></td>
+      </tr>             
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
         <td class="govuk-table__cell">22 April 2020</td>

@@ -33,6 +33,74 @@ html {
     margin: 0 auto;
 }
 
+.delta-header {
+    background-color: black;
+    padding: 3px 0;
+    color: #fff;
+    border-bottom: 10px solid $delta-info;
+    font-family: "GDS Transport",arial,sans-serif;
+
+    .delta-header-logo-link {
+        color: #fff!important;
+        text-decoration: none;
+        padding-top: 3px;
+        border-bottom: 3px solid transparent;
+        &:hover {
+            border-bottom: 3px solid #fff;
+        }
+    }
+
+    .delta-wrapper {
+        max-width: 1600px;
+        margin: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .delta-header-logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;   
+        //background-color: red;
+        font-size: 1.5rem;        
+        gap: .8rem;
+
+        .delta-logotype {
+            font-weight: 900;
+            font-size: 1.8rem;    
+        }
+
+        .delta-product-name {
+            font-weight: 400;
+        }
+    }
+
+    .delta-account {
+        a {
+            color: #fff;
+        }
+        ul {
+            color: #fff!important;
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            margin: 0;
+            padding: 0;
+            li {
+                list-style-type: none;
+            }
+        }
+    }
+
+
+}
+
+
+
+
 .delta-text-secondary {
     color: #505a5f;
     font-weight: normal;
