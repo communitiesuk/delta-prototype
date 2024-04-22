@@ -25,7 +25,7 @@
     <p><a href="#glossary">View full glossary</a></p>
     <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
     <!-- TASKS -->
-    <h2 class="govuk-heading-l">Collections user tasks</h2>
+    <h2 class="govuk-heading-l" id="jobsToBeDone">Collections user tasks</h2>
     <h3 class="govuk-heading-m">External users</h3>
     <h4 class="govuk-heading-s">Data provider</h4>
     <ul class="govuk-list govuk-list--bullet">
@@ -48,6 +48,14 @@
     </ul>
   </div>
   <div class="govuk-grid-column-one-third">
+    <!-- IN PAGE NAV -->
+    <h2 class="govuk-heading-m">On this page</h2>
+    <ul class="govuk-list govuk-list--number">
+      <li><a href="#jobsToBeDone">Jobs to be done</a></li>      
+      <li><a href="#glossary">Glossary</a></li>
+      <li><a href="#changelog">Changelog</a></li>
+    </ul>
+
     <!-- SITEMAP TABLE -->
     <h2 class="govuk-heading-m">Sitemap simplified</h2>
     <ul class="govuk-list govuk-list--number">
@@ -75,7 +83,7 @@
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 <!-- GLOSSARY TABLE -->
 <table class="govuk-table" id="glossary">
-  <caption class="govuk-table__caption govuk-table__caption--m">Glossary</caption>
+  <caption class="govuk-table__caption govuk-table__caption--l">Glossary</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Term</th>
@@ -184,10 +192,11 @@
 <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
   <li>Show and tell (sneak peek) to devs</li>
   <li>Records: inline record preview removed</li>
-  <li>Landing page: Data Provider and Data Certifier pages merged (open collections and top, records requiring certification at bottom)</li>
+  <li>Landing page: Data Provider and Data Certifier pages merged (open collections at top, records requiring certification at bottom)</li>
   <li>Header: added organisation drop-down</li>
   <li>Account: replace organisation select (radio buttons) with organisation list (user now select org via header drop-down)</li>
   <li>Account: Collection Groups - tweaked based on Jemma feedback to allow user to be both Data Provider and Data Certifier</li>
+  <li>Collection: change button text from 'Create new record' to 'Create record'</li>
   <li>To do: Account: explore how to manage very long list of Collection Groups </li>
   <li>To do: add 'text filtering' to results tables (Collection Groups, Collections, Records)</li>
 </ul>
