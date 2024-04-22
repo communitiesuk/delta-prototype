@@ -14,6 +14,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.delta-full-height {
+    min-height: 100vh;
+}
+
 
 .designNote {
     padding: 2rem;
@@ -35,7 +39,7 @@ html {
 
 .delta-header {
     background-color: black;
-    padding: 3px 0;
+    padding: 3px 50px;
     color: #fff;
     border-bottom: 10px solid $delta-info;
     font-family: "GDS Transport",arial,sans-serif;
