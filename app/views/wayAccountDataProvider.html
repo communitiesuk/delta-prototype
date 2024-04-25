@@ -19,10 +19,13 @@
 <h1 class="govuk-heading-xl">
   Hi Bob
 </h1>
-    <p class="govuk-body-l">Welcome to your account on Delta. Here you can manage your <a href="#accountDetails">account details</a>, <a href="#organisationProfile">organisation memberships</a> and <a href="#collectionGroups">collection groups</a>.</p>
+
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-half">
+  <div class="govuk-grid-column-two-thirds">
+
+    <p class="govuk-body-l">Welcome to your account on Delta. Here you can manage your <a href="#accountDetails">account details</a>, <a href="#organisationProfile">organisation memberships</a> and <a href="#collectionGroups">collection groups</a>.</p>
+
     <h2 class="govuk-heading-l govuk-!-margin-top-9" id="accountDetails">
       Account details
     </h2>
@@ -52,17 +55,6 @@
       </div>      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Address
-        </dt>
-        <dd class="govuk-summary-list__value">
-          72 Guild Street<br>London<br>SE23 6FH
-        </dd>
-        <dd class="govuk-summary-list__actions">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> address</span></a>
-        </dd>
-      </div>
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
           Contact details
         </dt>
         <dd class="govuk-summary-list__value">
@@ -86,6 +78,8 @@
       Organisation memberships
     </h2>
 
+    <p>If you don't see an organisation listed that you believe you should be a member of, please <a href="mailto:">contact our support team</a> for assistance.</p>
+
     <dl class="govuk-summary-list" id="organisationProfile">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -104,6 +98,7 @@
         </dd>
       </div>      
     </dl>
+
 
 
   </div>  
@@ -157,35 +152,49 @@
     <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Group</th>
-        <th scope="col" class="govuk-table__header">Created</th>
-        <th scope="col" class="govuk-table__header">Group status</th>
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Group status</th>        
+        <th scope="col" class="govuk-table__header">Organisation</th>
         <th scope="col" class="govuk-table__header">Data provider status</th>
         <th scope="col" class="govuk-table__header">Data certifier status</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a></th>
-        <td class="govuk-table__cell">17 July 202</td>
-        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
-        <td class="govuk-table__cell"><a href="/">Add</a></td>
-        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a> 🔒</th>
+        <td class="govuk-table__cell">Open</td>        
+        <td class="govuk-table__cell">Arundel Borough Council</td>
+        <td class="govuk-table__cell"><a href="/">Apply</a></td>
+        <td class="govuk-table__cell"><a href="/">Apply</a></td>
       </tr>             
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-        <td class="govuk-table__cell">22 April 2020</td>
-        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong></td>
+        <td class="govuk-table__cell">Open</td>        
+        <td class="govuk-table__cell">Arundel Borough Council</td>        
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+      </tr>   
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell">Open</td>        
+        <td class="govuk-table__cell">Waverley Borough Council</td>        
         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
-      </tr>       
+        <td class="govuk-table__cell"><a href="/">Apply</a></td>
+      </tr>             
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
-        <td class="govuk-table__cell">23 May 2020</td>        
-        <td class="govuk-table__cell"><strong class="govuk-tag">Inactive</strong></td>
-        <td class="govuk-table__cell"><a href="/">Add</a></td>
-        <td class="govuk-table__cell"><a href="/">Add</a></td>
-      </tr>                  
+        <td class="govuk-table__cell">Closed</td>        
+        <td class="govuk-table__cell">Arundel Borough Council</td>             
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+      </tr> 
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell">Closed</td>        
+        <td class="govuk-table__cell">Waverley Borough Council</td>            
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+      </tr>                        
     </tbody>
   </table>
 </div>

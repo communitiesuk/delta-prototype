@@ -31,14 +31,22 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">            
+        <dt class="govuk-summary-list__key">
+          Organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Waverley Borough Council
+        </dd>
+      </div>              
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Record ID
         </dt>
         <dd class="govuk-summary-list__value">
-          UHC23WayPqwt543
+          UHC23WayPqwt123
         </dd>
-      </div>      
+      </div>           
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Collection
@@ -60,7 +68,7 @@
           Submission date
         </dt>
         <dd class="govuk-summary-list__value">
-          15 April 2024
+          16 April 2024
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -68,7 +76,7 @@
           Submitted by
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong>Bob Smith</strong>, Waverley County Council<br>data.provider@waverley.gov.uk
+          <strong>Mike Phillips</strong>, Waverley County Council<br>mike.phillips@waverley.gov.uk
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -76,23 +84,33 @@
           Certification
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag delta-tag">Pending certification</strong>
+          <strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong>
         </dd>
       </div>
     </dl>
+    <div class="govuk-warning-text">
+      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+      <strong class="govuk-warning-text__text">
+        <span class="govuk-visually-hidden">Warning</span>
+        This record is locked as it has been certified. Contact <a href="#">support@delta.org</a> quoting the record ID 'UHC23WayPqwt123' to request changes.
+      </strong>
+    </div>
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Edit record
+    </button>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
+      Delete record
+    </button>
   </div>
   <div class="govuk-grid-column-one-third">
-    <!-- Actions -->
-    <h2 class="govuk-heading-m govuk-!-margin-top-7">
-      Certification options
-    </h2>
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Certify (approve)
-    </button>
-    <br>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Email record submitter
-    </button>      
+    <div class="govuk-panel govuk-panel--confirmation">
+      <h1 class="govuk-panel__title">
+        Certified
+      </h1>
+      <div class="govuk-panel__body">
+        <small>By <strong>Emily Thompson</strong> of Certifiers-R-Us on 18 April 2024.</small>
+      </div>
+    </div>
   </div>
 </div>
 <h2 class="govuk-heading-l govuk-!-margin-top-7">
@@ -105,7 +123,7 @@
   Download (.csv)
 </button>
 <div class="designNote govuk-!-margin-bottom-4">
-  <p>Record requiring certification (child of Collection)</p>
+  <p>Record (child of Collection)</p>
   <p><a href="/wayLandingDataProvider-goals">Wayfinding - Data provider goals</a></p>
   <p><a href="/wayLandingDataProvider-collectionRecords">Landing (home)</a></p>
 </div>
