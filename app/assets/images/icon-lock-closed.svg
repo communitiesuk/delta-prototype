@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="448px" height="512px" viewBox="0 0 448 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-lock-closed</title>
+    <g id="icon-lock-closed" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" fill="#000000" fill-rule="nonzero">
+            <path d="M224,64 C268.2,64 304,99.8 304,144 L304,192 L144,192 L144,144 C144,99.8 179.8,64 224,64 Z M80,144 L80,192 L64,192 C28.7,192 0,220.7 0,256 L0,448 C0,483.3 28.7,512 64,512 L384,512 C419.3,512 448,483.3 448,448 L448,256 C448,220.7 419.3,192 384,192 L368,192 L368,144 C368,64.5 303.5,0 224,0 C144.5,0 80,64.5 80,144 Z M256,320 L256,384 C256,401.7 241.7,416 224,416 C206.3,416 192,401.7 192,384 L192,320 C192,302.3 206.3,288 224,288 C241.7,288 256,302.3 256,320 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
