@@ -6,6 +6,9 @@
 $govuk-success-colour:	#00703c;
 $govuk-error-colour:	#d4351c;
 $delta-info:        	#1d70b8;
+
+
+$delta-max-width: 1280px;
 // 
 
 // Add extra styles here
@@ -32,7 +35,7 @@ html {
 }
 
 .govuk-width-container {
-    max-width: 1600px;
+    max-width: $delta-max-width;
     padding: 0 50px;
     margin: 0 auto;
 }
@@ -55,7 +58,7 @@ html {
     }
 
     .delta-wrapper {
-        max-width: 1600px;
+        max-width: $delta-max-width;
         margin: auto;
         display: flex;
         flex-direction: row;
