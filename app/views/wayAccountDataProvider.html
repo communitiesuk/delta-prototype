@@ -123,12 +123,14 @@
 <details class="govuk-details govuk-!-width-two-thirds">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Groups and roles explained
+      Help with collection groups and roles
     </span>
   </summary>
   <div class="govuk-details__text">
-    <p>Below are collection groups that are accessible to organisations for which you are a member. To join a group as a data provider or data certifier click the appropriate 'add' or 'apply' link.</p>
-    <p>Applications to locked collection groups, denoted with a padlock icon <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon">, require approval by the collection group owner. Additionally, all applications to be a data certifier require approval by the collection group owner.</p>
+    <p>Below are collection groups that are accessible to organisations for which you are a member.</p>
+    <p>To become a data provider or data certifier for a collection group click the appropriate 'add' link.</p>
+    <p>Applications to be a data provider for non-self-certify collection group (indicated by a padlock icon <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon">) require approval by the collection group owner.</p>
+    <p>All applications to be a data certifier require approval by the collection group owner.</p>
 
   </div>
 </details>
@@ -142,9 +144,11 @@
         Sort by
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="collectionGroupName">Group name</option>
-        <option value="openCollections">Open collections</option>
-        <option value="status" selected>Status</option>
+        <option value="collectionGroupName">Collection group</option>
+        <option value="status" selected>Status</option>        
+        <option value="organisation">Organisation</option>
+        <option value="dataProvider">Data provider</option>
+        <option value="dataCertifier">Data certifier</option>
       </select>
     </div>
   </div>
@@ -175,7 +179,7 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Collection group</th>
-        <th scope="col" class="govuk-table__header">Group status</th>
+        <th scope="col" class="govuk-table__header">Status</th>
         <th scope="col" class="govuk-table__header">Organisation</th>
         <th scope="col" class="govuk-table__header">Data provider</th>
         <th scope="col" class="govuk-table__header">Data certifier</th>
@@ -184,35 +188,35 @@
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a> <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon"></th>
-        <td class="govuk-table__cell">Open</td>
+        <td class="govuk-table__cell">Active</td>
         <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl"> Arundel Borough Council</td>
-        <td class="govuk-table__cell"><a href="/">Apply</a></td>
-        <td class="govuk-table__cell"><a href="/">Apply</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-        <td class="govuk-table__cell">Open</td>
+        <td class="govuk-table__cell">Active</td>
         <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
         <td class="govuk-table__cell"><a href="/">Add</a></td>
         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-        <td class="govuk-table__cell">Open</td>
+        <td class="govuk-table__cell">Active</td>
         <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
         <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
-        <td class="govuk-table__cell"><a href="/">Apply</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
-        <td class="govuk-table__cell">Closed</td>
+        <td class="govuk-table__cell">Inactive</td>
         <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
         <td class="govuk-table__cell">n/a</td>
         <td class="govuk-table__cell">n/a</td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
-        <td class="govuk-table__cell">Closed</td>
+        <td class="govuk-table__cell">Inactive</td>
         <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
         <td class="govuk-table__cell">n/a</td>
         <td class="govuk-table__cell">n/a</td>
