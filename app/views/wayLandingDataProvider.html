@@ -37,10 +37,10 @@
         <p class="govuk-notification-banner__heading" style="max-width: 100%;">
           You have:</a>
         </p>        
-        <ul class="govuk-list govuk-list--bullet">
-          <li class="govgovuk-notification-banner__heading"><a href="#openCollections" class="govuk-notification-banner__link">3 open collections</a></li>
-          <li><a href="#certificationRequired" class="govuk-notification-banner__link">1 record requiring certification</a></li>
-          <li><a href="#missedCollections" class="govuk-notification-banner__link">2 collections</a> you might have missed</li>
+        <ul class="govuk-list xxxgovuk-list--bullet govgovuk-notification-banner__heading">
+          <li><span class="govuk-heading-m govuk-!-margin-bottom-0"><a href="#openCollections" class="govuk-notification-banner__link">2 open collections</a></span></li>
+          <li><span class="govuk-heading-m govuk-!-margin-bottom-0"><a href="#missedCollections" class="govuk-notification-banner__link">1 missed collections</a></span></li>
+          <li><span class="govuk-heading-m govuk-!-margin-bottom-0"><a href="#certificationRequired" class="govuk-notification-banner__link">1 record requiring certification</a></span></li>          
         </ul>       
       </div>
     </div>
@@ -48,9 +48,9 @@
     <h2 class="govuk-heading-l govuk-!-margin-top-9" id="openCollections">
       Open collections
     </h2>
-    <p class="govuk-body-l">The following collections have open returns. All collections (open and closed) can be accessed via <a href="/wayCollectionsDataProvider">Collections</a>.</p>
+    <p class="govuk-body-l">The following collections have open returns. View <a href="/wayCollectionsDataProvider">all collections</a> (open and closed).</p>
 
-    <div class="govuk-form-group">
+    <!-- <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
         Sort collections by
       </label>
@@ -59,10 +59,10 @@
         <option value="collectionName">Name</option>
         <option value="collectionOrganisation">Organisation</option>
       </select>
-    </div>
+    </div> -->
 
-
-   <!-- Collection records-based start -->
+    <!-- OPEN COLLECTIONS ==================== -->
+    <!-- Collection records-based start -->
     <div class="govuk-summary-card">
       <div class="govuk-summary-card__title-wrapper">
         <h2 class="govuk-summary-card__title govuk-body govuk-!-font-size-27">Urban hedgehog census 2023</h2>
@@ -85,7 +85,7 @@
               Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
+              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small> <strong class="govuk-tag govuk-tag--orange delta-tag">Extended</strong>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -124,7 +124,7 @@
               Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small>
+              16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small> <strong class="govuk-tag delta-tag govuk-tag--green">Open</strong>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -132,7 +132,7 @@
               Records
             </dt>
             <dd class="govuk-summary-list__value">
-              13 (1 in draft)
+              12 <span class="delta-text-secondary">(+1 draft)</span>
             </dd>
           </div>            
         </dl>
@@ -140,6 +140,24 @@
     </div>
     <!-- Collection records-based end -->
 
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+    <!-- MISSED COLLECTIONS ==================== -->
+    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="missedCollections">
+      Missed collections
+    </h2>
+    <p class="govuk-body-l">The following recently closed collections have no return records. View <a href="/wayCollectionsDataProvider">all closed collections with no records</a>.</p>
+
+    <!-- <div class="govuk-form-group">
+      <label class="govuk-label" for="sort">
+        Sort collections by
+      </label>
+      <select class="govuk-select" id="sort" name="sort">
+        <option value="deadline" selected>Deadline</option>
+        <option value="collectionName">Name</option>
+        <option value="collectionOrganisation">Organisation</option>
+      </select>
+    </div> -->
 
 
     <!-- Collection summary start -->
@@ -165,7 +183,7 @@
               Deadline
             </dt>
             <dd class="govuk-summary-list__value">
-              20 July 2024 <small><span class="delta-text-secondary">(100 days remaining)</span></small>
+              30 March 2024 <strong class="govuk-tag delta-tag">Closed</strong>
             </dd>
           </div>
           <div class="govuk-summary-list__row">
@@ -181,18 +199,18 @@
     </div>
     <!-- Collection summary end -->
 
-    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">    
 
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9" id="certificationRequired">
-      Certifications required
+      Records requiring certification
     </h2>
 
-    <p class="govuk-body-l">The following records require certification.</p>
+    <!-- <p class="govuk-body-l">The following records require certification.</p> -->
 
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
-        Sort certifications by
+        Sort records by
       </label>
       <select class="govuk-select" id="sort" name="sort">
         <option value="newest">Newest</option>
