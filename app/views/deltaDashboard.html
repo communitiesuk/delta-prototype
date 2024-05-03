@@ -2,17 +2,6 @@
 
 {% set pageName="Delta Dashboard (alpha)" %}
 
-{% block beforeContent %}
-
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
-  {{ govukPhaseBanner({
-    tag: {
-      text: "Alpha"
-    },
-    html: '– <a class="govuk-link" href="mail:Laurence.Mallows@levellingup.gov.uk">help us improve this report</a>.'
-  }) }}
-{% endblock %}
 
 {% block content %}
 
@@ -52,11 +41,11 @@
             December 2023
           </a>
         </li>
-        <li class="govuk-tabs__list-item">
+        <!-- <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#overview">
             Overview
           </a>
-        </li>        
+        </li>         -->
       </ul>
 
       <!-- ================= TAB: April 2024 ============================ -->
@@ -512,13 +501,13 @@
       <!-- ================= TAB: January 2024 ============================ -->
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="month202401">
         <h2 class="govuk-heading-l">January 2024</h2>
-        <div class="govuk-grid-row">
+        <!-- <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <h3 class="govuk-heading-m">Executive summary</h3>
             <p>December and January are the first full months of data and start to give us a baseline. Key insights for me so far include the high percent of data we receive vial a handful of XML uploads. And the relatively high rate of support required compared to the amount of open collections and error rates on the service. These suggest to me we have room to make the service much better for folks.</p>
             <p>&mdash; Laurence Mallows</p>
           </div>
-        </div>
+        </div> -->
 
         <div class="govuk-grid-row delta-dashboard-masthead">
           <!-- Users -->
@@ -661,13 +650,13 @@
       <!-- ================= TAB: December 2023 ============================ -->
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="month202312">
         <h2 class="govuk-heading-l">December 2023</h2>
-        <div class="govuk-grid-row">
+        <!-- <div class="govuk-grid-row">
           <div class="govuk-grid-column-two-thirds">
             <h3 class="govuk-heading-m">Executive summary</h3>
             <p>Coming soon.</p>
             <p>&mdash; Laurence Mallows</p>
           </div>
-        </div>
+        </div> -->
 
         <div class="govuk-grid-row delta-dashboard-masthead">
           <!-- Users -->
