@@ -206,6 +206,21 @@ html {
 
 // Organisation logos ===============
 
+.delta-org-no-logo-s {
+    // width: 50px;
+    text-align: center;
+    max-width: 50px;
+    background-color: $delta-info;
+    overflow: hidden;
+    // display: flex;
+    padding: 5px;
+    // justify-content: center;
+    border-radius: 2px;
+    font-weight: 700;
+    color: #fff;
+}
+
+
 .delta-org-logo-s {
     max-width: 50px;
 }
