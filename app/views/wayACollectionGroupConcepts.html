@@ -1,0 +1,179 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Collection group table design concepts" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProvider"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Collection group table design concepts
+</h1>
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="collectionGroups">
+  v3 (single roles column)
+</h2>
+
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Organisation</th>
+        <th scope="col" class="govuk-table__header">My roles</th>
+        <th scope="col" class="govuk-table__header">Actions</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a> <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon"></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl"> Arundel Borough Council</td>
+        <td class="govuk-table__cell">Data provider, Data certifier, Admin</td>
+        <td class="govuk-table__cell"><a href="/">Edit roles</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell">Data provider, Data certifier, Admin</td>
+        <td class="govuk-table__cell"><a href="/">Edit roles</a></td>       
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell">Data provider, Data certifier, Admin</td>
+        <td class="govuk-table__cell"><a href="/">Edit roles</a></td>      
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell">Data provider, Data certifier, Admin</td>
+        <td class="govuk-table__cell"><a href="/">Edit roles</a></td>      
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell">Data provider, Data certifier, Admin</td>
+        <td class="govuk-table__cell"><a href="/">Edit roles</a></td>      
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="collectionGroups">
+  v2 (optional DLUHC column)
+</h2>
+
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Organisation</th>
+        <th scope="col" class="govuk-table__header">Data provider</th>
+        <th scope="col" class="govuk-table__header">Data certifier</th>
+        <th scope="col" class="govuk-table__header">DLUHC roles</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a> <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon"></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl"> Arundel Borough Council</td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell">Admin</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+        <td class="govuk-table__cell">Admin</td>        
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell">Admin</td>        
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">Admin</td>        
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">Admin</td>        
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="collectionGroups">
+  v1 (original)
+</h2>
+
+<div>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
+    <thead class="govuk-table__head">
+      <tr class="govuk-table__row">
+        <th scope="col" class="govuk-table__header">Collection group</th>
+        <th scope="col" class="govuk-table__header">Organisation</th>
+        <th scope="col" class="govuk-table__header">Data provider</th>
+        <th scope="col" class="govuk-table__header">Data certifier</th>
+      </tr>
+    </thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a> <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon"></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl"> Arundel Borough Council</td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
+        <td class="govuk-table__cell"><a href="/">Add</a></td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+      </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
+        <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
+        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell">n/a</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+<div class="designNote govuk-!-margin-bottom-4">
+  <p><a href="/straightTalking#glossary">Glossary</a></p>
+</div>
+{% endblock %}
