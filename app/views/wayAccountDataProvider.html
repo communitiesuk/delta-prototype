@@ -133,21 +133,61 @@
 
 
 <!-- Filters -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
+<div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-column-full delta-form-inline-form-groups">
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
         Sort by
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="collectionGroupName" selected>Collection group</option>
-        <option value="organisation">Organisation</option>
-        <option value="dataProvider">Data provider</option>
-        <option value="dataCertifier">Data certifier</option>
+        <option value="collectionName" selected>Collection name</option>
+        <!-- <option value="collectionGroup">Collection group</option> -->
+        <option value="collectionGroup">Organisation</option>
+        <option value="deadline">Data provider status</option>
+        <option value="deadline">Data certifier status</option>
       </select>
     </div>
-  </div>
-  <div class="govuk-grid-column-one-half">
+
+    <!-- <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+          <h5 class="govuk-fieldset__heading delta-hide">
+            Hide closed collections
+          </h5>
+        </legend>
+        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="hide">
+              Hide closed collections
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div> -->
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="organisation">
+        Organisations
+      </label>
+      <select class="govuk-select" id="organisation" name="organisation">
+        <option value="status" selected>All</option>
+        <option value="status" selected>Arundel Borough Council</option>
+        <option value="status" selected>Waverley Borough Council</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="organisation">
+        You role
+      </label>
+      <select class="govuk-select" id="organisation" name="organisation">
+        <option value="status" selected>Data provider</option>
+        <option value="status" selected>Data certifier</option>
+        <option value="status" selected>None</option>
+      </select>
+    </div>    
+
     <!-- <div class="govuk-form-group">
       <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
         <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
@@ -164,9 +204,17 @@
           </div>
         </div>
       </fieldset>
-    </div> -->
+    </div>     -->
+
+    <div>
+      <br><br>
+      <p><a href="#">Clear filters</a></p>
+    </div>
+
   </div>
 </div>
+
+
 
 <div>
   <table class="govuk-table">
@@ -201,17 +249,60 @@
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
         <td class="govuk-table__cell"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</td>
-        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
         <td class="govuk-table__cell">n/a</td>
       </tr>
       <tr class="govuk-table__row">
         <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Parrot Monitoring</a></th>
         <td class="govuk-table__cell"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</td>
-        <td class="govuk-table__cell">n/a</td>
+        <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Active</strong> <a href="/">Remove</a></td>
         <td class="govuk-table__cell">n/a</td>
       </tr>
     </tbody>
   </table>
+  <!-- Pagination -->
+  <p>Displaying records 1 to 10 of 13.</p>
+  <nav class="govuk-pagination" aria-label="Pagination">
+    <div class="govuk-pagination__prev">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+        </svg>
+        <span class="govuk-pagination__link-title">
+          Previous<span class="govuk-visually-hidden"> page</span>
+        </span>
+      </a>
+    </div>
+    <ul class="govuk-pagination__list">
+      <li class="govuk-pagination__item govuk-pagination__item--current">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+          1
+        </a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+          2
+        </a>
+      </li>
+      <li class="govuk-pagination__item">
+        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+          3
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-pagination__next">
+      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+        <span class="govuk-pagination__link-title">
+          Next<span class="govuk-visually-hidden"> page</span>
+        </span>
+        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+        </svg>
+      </a>
+    </div>
+  </nav>
+
+
 </div>
 
 <div class="designNote govuk-!-margin-bottom-4">
