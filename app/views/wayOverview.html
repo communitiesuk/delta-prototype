@@ -6,23 +6,21 @@
 </h1>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
     <h2 class="govuk-heading-l">Why are we doing this?</h2>
-
     <ul class="govuk-list govuk-list--bullet">
-      <li><a href="deltaDashboard">Delta is important</a></li>
+      <li><a href="deltaDashboard" target="_blank">Delta is important</a></li>
       <li>Personalisation
         <ul class="govuk-list govuk-list--bullet">
-          <li>One-click access to everything (intuitive)</li>      
+          <li>One-click access to everything (intuitive)</li>
           <li>Peace of mind (not missed anything, entering data for correct org)</li>
         </ul>
       </li>
-      <li>GDS and UX improvements 
+      <li>GDS and UX improvements
         <ul class="govuk-list govuk-list--bullet">
-          <li>Wider default view</li>          
+          <li>Wider default view</li>
           <li>Simplified site structure (information architecture)</li>
           <li>Ease of sharing / collaboration (entity pages)</li>
-          <li>Efficiency, cost-saving and accuracy (<a href="UxTicketEvaluationCriteria#okr">OKR alignment</a>)</li>
+          <li>Efficiency, cost-saving and accuracy (<a href="UxTicketEvaluationCriteria#okr" target="_blank">OKR alignment</a>)</li>
         </ul>
       </li>
       <li>Foundation for future enhancements
@@ -32,102 +30,75 @@
           <li>Use cases</li>
         </ul>
       </li>
-    </ul>    
-
+    </ul>
     <!-- <h2 class="govuk-heading-l">Clearer labels</h2>
     <ul class="govuk-list govuk-list--bullet">
       <li>Organisation</li>
-      <li>Role (Data Provider, Data Certifier)</li>      
+      <li>Role (Data Provider, Data Certifier)</li>
       <li>Collection Group</li>
       <li>Collection</li>
       <li>Return</li>
       <li>Record</li>
     </ul> -->
-
-    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">    
-
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
     <h2 class="govuk-heading-l">Clear labels and simplified hierarchy</h2>
     <p>Parent > child relationship&hellip;</p>
     <p class="govuk-body-l"><strong>Collection Group</strong> > <strong>Collection</strong> > <strong>Return<sup>*</sup></strong> > <strong>Record</strong></p>
-    <p class="govuk-body-s"><sup>*</sup>No entity (aka landing) page.</p>    
-
-
+    <p class="govuk-body-s"><sup>*</sup>No entity (aka landing) page.</p>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <p class="govuk-body-l"><a href="/wayStart" target="_blank">Start (UX launchpad, new window)</a></p>
   </div>
   <div class="govuk-grid-column-one-third">
-
-    
     <!-- counter -->
     <div class="delta-dashboard-masthead govuk-!-margin-bottom-9">
       <h2 class="govuk-heading-m">Delta transactions</h2>
       <h2 class="govuk-heading-xl">&pound;<span id="counter">0</span></h2>
         <ul class="govuk-list govuk-list--bullet">
+          <li>£<span id="moneyPerSecondElement"></span> per second</li>
           <li>£<span id="moneyInElement"></span> in</li>
           <li>£<span id="moneyOutElement"></span> out</li>
-          <li>£<span id="moneyTotalElement"></span> combined</li>      
-          <li>£<span id="moneyPerSecondElement"></span> per second</li>
+          <li>£<span id="moneyTotalElement"></span> combined</li>
         </ul>
-        <p class="govuk-body-s">Based on <a href="/deltaDashboard#month202403" class="delta-link-light">March 2024</a></p>
+        <p class="govuk-body-s">Based on <a href="/deltaDashboard#month202403" target="_blank" class="delta-link-light">March 2024</a> Delta  Dashboard.</p>
     </div>
-
-    <!-- LINKS -->
-    <h2 class="govuk-heading-m">Links</h2>
-    <ul class="govuk-list govuk-list--number">
-      <li><a href="/wayStart">Start (UX launchpad)</a></li>
-    </ul>    
-
-
   </div>
-
-
     <script>
       document.addEventListener("DOMContentLoaded", function() {
           // The value to count up to
           const x = 10;
-
           const moneyIn = 2240623665;
           const moneyOut = 2870319914;
-
           const moneyTotal = moneyIn + moneyOut;
-
           const secondsInMonth = 2678400; // 31 days = 2678400
-
           const moneyPerSecond = moneyTotal / secondsInMonth;
           // alert(moneyPerSecond);
-
           // Initial count
           let count = 0;
-
           // Get the counter element
           const counterElement = document.getElementById('counter');
-
           const moneyTotalElement = document.getElementById('moneyTotalElement');
           const moneyInElement = document.getElementById('moneyInElement');
           const moneyOutElement = document.getElementById('moneyOutElement');
           const moneyPerSecondElement = document.getElementById('moneyPerSecondElement');
-
           // write money totals
           moneyTotalElement.textContent = Math.round(moneyTotal).toLocaleString();
           moneyInElement.textContent = Math.round(moneyIn).toLocaleString();
           moneyOutElement.textContent = Math.round(moneyOut).toLocaleString();
           moneyPerSecondElement.textContent = Math.round(moneyPerSecond).toLocaleString();
-
           // Function to update the count
           function updateCount() {
               if (count <= moneyTotal) {
                   counterElement.textContent = Math.round(count).toLocaleString();
                   count = count + moneyPerSecond;
-                  alert('counting');
               } else {
                   // Stop the interval when the count reaches monet
                   clearInterval(interval);
               }
           }
-
           // Update the count every 1 second (1000 milliseconds)
           const interval = setInterval(updateCount, 200);
       });
     </script>
-
   </div>
 </div>
 {% endblock %}
