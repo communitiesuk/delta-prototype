@@ -27,39 +27,48 @@
   </div>
 </details>
 
-<!-- Collections -->
+<!-- Collection groups -->
 
 <!-- Filters -->
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-one-third">
+<div class="govuk-grid-row govuk-!-margin-top-3">
+  <div class="govuk-grid-column-full delta-form-inline-form-groups">
     <div class="govuk-form-group">
       <label class="govuk-label" for="sort">
         Sort by
       </label>
       <select class="govuk-select" id="sort" name="sort">
-        <option value="status" selected>Collection group name</option>        
-        <option value="collectionName">Collection count</option>         
+        <option value="collectionGroupName" selected>Collection group</option>
+        <!-- <option value="collectionGroup">Collection group</option> -->
+        <option value="collectionGroup">Open collections</option>
       </select>
-    </div>     
-  </div>
-  <div class="govuk-grid-column-one-half">
-    <!-- <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h5 class="govuk-fieldset__heading delta-hide">
-            Hide inactive collection groups
-          </h5>
-        </legend>
-        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
-            <label class="govuk-label govuk-checkboxes__label" for="hide">
-              Hide inactive collection groups
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>     -->
+    </div>
+
+    <!-- search stuff -->
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="organisation">
+        Organisation access
+      </label>
+      <select class="govuk-select" id="organisation" name="organisation">
+        <option value="status" selected>All</option>
+        <option value="status" selected>Arundel Borough Council</option>
+        <option value="status" selected>Waverley Borough Council</option>
+      </select>
+    </div>
+
+    <div class="govuk-form-group">
+      <div class="govuk-label-wrapper">
+        <label class="govuk-label" for="collection-name">
+          Search
+        </label>
+      </div>
+      <input class="govuk-input" id="collection-name" name="collectionName" type="text">
+    </div>        
+
+    <div>
+      <br><br>
+      <p><a href="#">Clear filters</a></p>
+    </div>
+
   </div>
 </div>
 
@@ -69,18 +78,26 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Collection group</th>
-        <th scope="col" class="govuk-table__header">Collections</th>
+        <th scope="col" class="govuk-table__header">Organisation access</th>
+        <th scope="col" class="govuk-table__header">Open collections</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Dragonfly Monitoring</a></th>
-        <td class="govuk-table__cell">2</td>
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">British Dragonfly Monitoring</a></th>
+        <td class="govuk-table__cell">
+          <div class="delta-block"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</div>
+          <div class="delta-block"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</div>
+        </td>
+        <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">2</a></td>
       </tr>
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="#">English Dragonflies</a></th>
-        <td class="govuk-table__cell">1</td>
-      </tr>
+        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+        <td class="govuk-table__cell">
+          <div class="delta-block"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</div>
+        </td>
+        <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">1</a></td>
+      </tr>      
     </tbody>
   </table>
 </div>

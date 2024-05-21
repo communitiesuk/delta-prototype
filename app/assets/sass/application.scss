@@ -141,6 +141,11 @@ html {
     color: #fff!important;
 }
 
+.delta-block {
+    // keeps content together. useful for stacking in table
+    display: block;
+    clear: both;
+}
 
 .delta-text-secondary {
     color: #505a5f;
