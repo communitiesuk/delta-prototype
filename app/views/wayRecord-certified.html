@@ -39,14 +39,14 @@
           <img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council
         </dd>
       </div>              
-      <div class="govuk-summary-list__row">
+      <!-- <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Record ID
         </dt>
         <dd class="govuk-summary-list__value">
           UHC23WayPqwt123
         </dd>
-      </div>           
+      </div>            -->
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Collection
@@ -98,9 +98,24 @@
     <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
       Edit record
     </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Clone record
+    </button>    
     <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button" disabled>
       Delete record
     </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Certify record
+    </button>    
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Approve data
+    </button>    
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Refresh cascade data
+    </button>     
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Download audit trail
+    </button>  
   </div>
   <div class="govuk-grid-column-one-third">
     <div class="govuk-panel govuk-panel--confirmation">
@@ -116,10 +131,12 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-7">
   Data
 </h2>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  View in form
-</button>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Download (.csv)
-</button>
+
+<ul class="govuk-list govuk-list--spaced">
+  <li><a href="#">View record</a></li>
+  <li><a href="#">View certification</a></li>
+  <li><a href="#">View approval details</a></li>
+</ul>
+
+
 {% endblock %}

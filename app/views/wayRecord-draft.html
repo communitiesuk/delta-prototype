@@ -39,14 +39,14 @@
           <img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council
         </dd>
       </div>              
-      <div class="govuk-summary-list__row">
+      <!-- <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Record ID
         </dt>
         <dd class="govuk-summary-list__value">
           UHC23WayPqwt123
         </dd>
-      </div>           
+      </div>            -->
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Collection
@@ -55,7 +55,7 @@
           <strong><a href="/wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a></strong>
         </dd>
       </div>
-<div class="govuk-summary-list__row">
+      <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Status
         </dt>
@@ -89,16 +89,26 @@
       </div>              
     </dl>
     
-
     <button type="submit" class="govuk-button" data-module="govuk-button">
       Edit record
     </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Clone record
+    </button>    
     <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
       Delete record
     </button>
-    <!-- Submit -->
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Certify record
+    </button>    
+    <button type="submit" class="govuk-button" data-module="govuk-button" disabled>
+      Approve data
+    </button>    
     <button type="submit" class="govuk-button" data-module="govuk-button">
-      Submit record
+      Refresh cascade data
+    </button>     
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+      Download audit trail
     </button>    
   </div>
   <div class="govuk-grid-column-one-third">
@@ -111,12 +121,12 @@
   Data
 </h2>
 
+<ul class="govuk-list govuk-list--spaced">
+  <li><a href="#">View record</a></li>
+  <!-- <li><a href="#">View certification</a></li>
+  <li><a href="#">View approval details</a></li> -->
+</ul>
 
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  View in form
-</button>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Download (.csv)
-</button>
+
 
 {% endblock %}

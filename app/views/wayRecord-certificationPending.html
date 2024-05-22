@@ -38,15 +38,7 @@
         <dd class="govuk-summary-list__value">
           <img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council
         </dd>
-      </div>        
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Record ID
-        </dt>
-        <dd class="govuk-summary-list__value">
-          UHC23WayPqwt543
-        </dd>
-      </div>      
+      </div>    
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
           Collection
@@ -60,7 +52,7 @@
           Status
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag delta-tag">Pending certification</strong>
+          <strong class="govuk-tag delta-tag">Ready for certification</strong>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -88,35 +80,42 @@
         </dd>
       </div>          
     </dl>
-    <!-- <div class="govuk-warning-text">
-      <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-      <strong class="govuk-warning-text__text">
-        <span class="govuk-visually-hidden">Warning</span>
-        This record is locked as it has been submitted for certification. Contact <a href="#">support@delta.org</a> quoting the record ID 'UHC23WayPqwt543' to request changes.
-      </strong>
-    </div>     -->
+    
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Edit record
+    </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Clone record
+    </button>    
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+      Delete record
+    </button>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Certify record
+    </button>    
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Approve data
+    </button>    
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Refresh cascade data
+    </button>     
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Download audit trail
+    </button>  
+    <!-- Submit -->
+
   </div>
   <div class="govuk-grid-column-one-third">
-    <!-- Actions -->
-    <h2 class="govuk-heading-m govuk-!-margin-top-7">
-      Certification options
-    </h2>
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Certify (approve)
-    </button>
-    <br>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Email record submitter
-    </button>      
+      
   </div>
 </div>
+
 <h2 class="govuk-heading-l govuk-!-margin-top-7">
   Data
 </h2>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  View in form
-</button>
-<button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-  Download (.csv)
-</button>
+<ul class="govuk-list govuk-list--spaced">
+  <li><a href="#">View record</a></li>
+  <!-- <li><a href="#">View certification</a></li> -->
+  <li><a href="#">View approval details</a></li>
+</ul>
 {% endblock %}
