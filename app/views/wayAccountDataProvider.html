@@ -23,13 +23,29 @@
     <p class="govuk-body-l">Welcome to your account on Delta. Here you can manage your:</p>
     <ul class="govuk-list govuk-list--bullet govuk-body-l">
       <li><a href="#accountDetails">Account details</a></li>
-      <li><a href="#organisationProfile">Organisation memberships</a></li>
+      <li><a href="#memberships">Organisation memberships</a></li>
       <li><a href="#collectionGroups">Collection groups roles</a></li>
     </ul>
 
     <h2 class="govuk-heading-l govuk-!-margin-top-9" id="accountDetails">
       Account details
     </h2>
+
+    <div class="designNote">
+      <h4 class="govuk-heading-m">Modals</h4>
+      <!-- <h4 class="govuk-heading-s">Change email</h4> -->
+      <div class="delta-modal">
+        <p class="delta-align-right"><a href="#">Close</a></p>
+        <h3 class="govuk-heading-m">Changing your email</h3>
+        <p>Your Delta account is tied to your email address. To change your email <a href="#">contact support</a>.</p>
+        <!-- <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+          Leave organisation
+        </button>
+        <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Cancel
+        </button> -->
+      </div>      
+    </div>
 
     <dl class="govuk-summary-list">
       <div class="govuk-summary-list__row">
@@ -74,30 +90,11 @@
       </div>
     </dl>
 
-    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="accountDetails">
+    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="memberships">
       Organisation memberships
     </h2>
 
     <p>If you don't see an organisation listed that you believe you should be a member of, please <a href="mailto:">contact our support team</a> for assistance.</p>
-
-<div class="designNote">
-  <h4 class="govuk-heading-m">Confirmation modals</h4>
-
-  <h4 class="govuk-heading-s">Confirm: remove organisation access</h4>
-  <div class="delta-modal">
-    <p class="delta-align-right"><a href="#">Close</a></p>
-    <h3 class="govuk-heading-m">Confirmation required: removal from Waverley Borough Council</h3>
-    <p>Are you sure you want to remove yourself from the Waverley Borough Council organisation?</p>
-    <p>Once removed, you will lose access to all collection groups and any past, present, or future collections associated with this organisation.</p>
-    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
-      Leave organisation
-    </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Cancel
-    </button>
-  </div>      
-
-</div>
 
     <dl class="govuk-summary-list" id="organisationProfile">
       <div class="govuk-summary-list__row">
