@@ -22,12 +22,17 @@
       Help with collection groups
     </span>
   </summary>
-  <div class="govuk-details__text">
+  <div class="govuk-details__text delta-reading-width">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </div>
 </details>
 
 <!-- Collection groups -->
+
+<div class="designNote">
+  <p>Organisations filter should only be displayed if user is member of more than one organisation.</p>
+</div>
+
 
 <!-- Filters -->
 <div class="govuk-grid-row govuk-!-margin-top-3">
@@ -46,7 +51,7 @@
     <!-- search stuff -->
     <div class="govuk-form-group">
       <label class="govuk-label" for="organisation">
-        Organisation access
+        Organisation
       </label>
       <select class="govuk-select" id="organisation" name="organisation">
         <option value="status" selected>All</option>
@@ -78,8 +83,8 @@
     <thead class="govuk-table__head">
       <tr class="govuk-table__row">
         <th scope="col" class="govuk-table__header">Collection group</th>
-        <th scope="col" class="govuk-table__header">Organisation access</th>
-        <th scope="col" class="govuk-table__header">Open collections count</th>
+        <th scope="col" class="govuk-table__header">Organisations</th>
+        <th scope="col" class="govuk-table__header">Open collections</th>
       </tr>
     </thead>
     <tbody class="govuk-table__body">
