@@ -25,13 +25,7 @@ html {
 .designNote {
     padding: 2rem;
     background-color: rgba(255, 255, 0, 0.262);
-    display: none;
-
-    &:last-child {
-        margin-bottom: 0;
-        // background-color: pink;
-    }
-
+    // display: none;
 }
 
 .govuk-width-container {
@@ -203,7 +197,7 @@ html {
 }
 
 .delta-reading-width {
-	max-width: 44em;
+	max-width: 70ch;
 }
 
 
@@ -220,6 +214,27 @@ html {
 
 .delta-button-danger {
     background-color: $govuk-error-colour;
+}
+
+.delta-modal {
+    max-width: 44rem;
+    background-color: #fff;
+    border: 2px solid #000;
+    padding: 2rem;
+    margin: auto;
+    margin-bottom: 2rem;
+
+    .delta-align-right {
+        margin: 0;
+    }
+}
+
+.delta-float-right {
+    float: right;
+}
+
+.delta-align-right {
+    text-align: right;
 }
 
 // Organisation logos ===============

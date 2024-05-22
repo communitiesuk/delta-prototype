@@ -80,6 +80,25 @@
 
     <p>If you don't see an organisation listed that you believe you should be a member of, please <a href="mailto:">contact our support team</a> for assistance.</p>
 
+<div class="designNote">
+  <h4 class="govuk-heading-m">Confirmation modals</h4>
+
+  <h4 class="govuk-heading-s">Confirm: remove organisation access</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Confirmation required: removal from Waverley Borough Council</h3>
+    <p>Are you sure you want to remove yourself from the Waverley Borough Council organisation?</p>
+    <p>Once removed, you will lose access to all collection groups and any past, present, or future collections associated with this organisation.</p>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+      Leave organisation
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>      
+
+</div>
+
     <dl class="govuk-summary-list" id="organisationProfile">
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
@@ -115,15 +134,15 @@
 </h2>
 
 
-<details class="govuk-details govuk-!-width-two-thirds">
+<details class="govuk-details delta-reading-width">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       Help with collection groups and roles
     </span>
   </summary>
   <div class="govuk-details__text">
-    <p>Below are collection groups that are accessible to organisations for which you are a member.</p>
-    <p>To become a data provider or data certifier for a group click the appropriate 'add' link.</p>
+    <p>Listed below are 'collection groups' accessible to organisations for which you are a member.</p>
+    <p>To become a data provider or data certifier for a group click the relevant 'add' link.</p>
     <p>Groups that require data provider role approval are marked with a padlock <img src="/public/images/icon-lock-closed.svg" alt="icon lock closed" class="delta-icon">.</p>
     <p>All applications to be a data certifier require approval by the group owner.</p>
 
@@ -132,6 +151,11 @@
 
 
 <!-- Filters -->
+
+<div class="designNote">
+  <p>Organisations filter only displayed if user belongs to 2 or more organisations.</p>
+</div>
+
 <div class="govuk-grid-row govuk-!-margin-top-3">
   <div class="govuk-grid-column-full delta-form-inline-form-groups">
     <div class="govuk-form-group">
@@ -147,24 +171,6 @@
       </select>
     </div>
 
-    <!-- <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h5 class="govuk-fieldset__heading delta-hide">
-            Hide closed collections
-          </h5>
-        </legend>
-        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
-            <label class="govuk-label govuk-checkboxes__label" for="hide">
-              Hide closed collections
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div> -->
-
     <div class="govuk-form-group">
       <label class="govuk-label" for="organisation">
         Organisations
@@ -177,14 +183,13 @@
     </div>
 
     <div class="govuk-form-group">
-      <label class="govuk-label" for="organisation">
+      <label class="govuk-label" for="role">
         Role
       </label>
-      <select class="govuk-select" id="organisation" name="organisation">
-        <option value="status" selected>Any</option>
+      <select class="govuk-select" id="role" name="role">
+        <option value="status" selected>All</option>
         <option value="status">Data provider</option>
         <option value="status">Data certifier</option>
-        <option value="status">Data provider and data certifier</option>        
         <option value="status">None</option>
       </select>
     </div>    
@@ -198,24 +203,6 @@
       <input class="govuk-input" id="collection-name" name="collectionName" type="text">
     </div>        
 
-    <!-- <div class="govuk-form-group">
-      <fieldset class="govuk-fieldset" aria-describedby="hide-hint">
-        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-          <h5 class="govuk-fieldset__heading delta-hide">
-            Hide closed collection groups
-          </h5>
-        </legend>
-        <div class="govuk-checkboxes govuk-!-margin-top-5" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="hide" name="hide" type="checkbox" value="carcasses">
-            <label class="govuk-label govuk-checkboxes__label" for="hide">
-              Hide closed collection groups
-            </label>
-          </div>
-        </div>
-      </fieldset>
-    </div>     -->
-
     <div>
       <br><br>
       <p><a href="#">Clear filters</a></p>
@@ -225,6 +212,88 @@
 </div>
 
 
+<div class="designNote">
+  <h4 class="govuk-heading-s">Confirmation modals</h4>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Confirm: add data provider role</li>
+    <li>Confirm: add data provider role (not self certify)</li>
+    <li>Confirm: remove data provider role</li>
+    <li>Confirm: add data certifier role</li>
+    <li>Confirm: remove data certifier role</li>
+  </ul>
+
+  <h4 class="govuk-heading-s">Confirm: add data provider role</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Data provider confirmation</h3>
+    <p>Please confirm you wish to be a data provider for English Hedgehog Monitoring collection group.</p>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Add data provider role
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>
+
+  <h4 class="govuk-heading-s">Confirm: add data provider role (not self certify)</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Data provider confirmation</h3>
+    <p>Please confirm you wish to be a data provider for English Hedgehog Monitoring collection group.</p>
+    <p>Role applications to this group must be reviewed by the collection group owner.</p>
+    <p>You will be notified by email when your application has been approved.</p>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Add data provider role
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>  
+
+  <h4 class="govuk-heading-s">Confirm: remove data provider role</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Data provider removal confirmation</h3>
+    <p>Please confirm you wish to be removed as a data provider for English Hedgehog Monitoring collection group.</p>
+    <p>You will not be able to edit data for this collection once removed.</p>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+      Remove data provider role
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>    
+
+  <h4 class="govuk-heading-s">Confirm: add data certifier role</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Data certifier confirmation</h3>
+    <p>Please confirm you wish to be a data certifier for English Hedgehog Monitoring collection group.</p>
+    <p>All data certifier role applications must be reviewed by the collection group owner.</p>
+    <p>You will be notified by email when your application has been approved.</p>    
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Add data certifier role
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>  
+
+  <h4 class="govuk-heading-s">Confirm: remove data certifier role</h4>
+  <div class="delta-modal">
+    <p class="delta-align-right"><a href="#">Close</a></p>
+    <h3 class="govuk-heading-m">Data provider removal confirmation</h3>
+    <p>Please confirm you wish to be removed as a data certifier for English Hedgehog Monitoring collection group.</p>
+    <p>You will not be able to certify data for this collection once removed.</p>
+    <button type="submit" class="govuk-button delta-button-danger" data-module="govuk-button">
+      Remove data certifier role
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Cancel
+    </button>
+  </div>      
+
+</div>
 
 <div>
   <table class="govuk-table">
