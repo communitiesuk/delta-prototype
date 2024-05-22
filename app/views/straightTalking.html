@@ -30,20 +30,21 @@
     <h3 class="govuk-heading-m">External users</h3>
     <h4 class="govuk-heading-s">Data provider</h4>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Find the collection I need to provide data for</li>
-      <li>Understand what data is required for which period</li>
-      <li>Understand how long I have to submit data</li>
-      <li>Submit data</li>
-      <li>See responses I have previously made (check data)</li>
-      <li><strike>Understand who else can / has submitted data for a collection</strike></li>
-      <li>See which collections I have access to</li>
-      <li>See if there are other collections I should have access to / join</li>
+      <li>Find the collection I need to provide a return for</li>
+      <li>Understand what period of time the collection relates to</li>
+      <li>Understand collection deadline</li>
+      <li>Submit a return (record(s)</li>
+      <li>View previous collection returns (check records)</li>
+      <li>View collections I may have missed</li>
+      <li>Understand who else can / has submitted data for a collection</li>
+      <li>Find any collection I have access to</li>
+      <li>View if there are other collections I should have access to / join</li>
       <li>Change my role (provider and certifier)</li>
       <li>Manage my account (including change my organisation)</li>
     </ul>
     <h4 class="govuk-heading-s">Data certifier</h4>
     <ul class="govuk-list govuk-list--bullet">
-      <li>See which data (records) I need to certify</li>
+      <li>View which records I need to certify</li>
       <li>Certify a record</li>
       <li>Contact the record owner (submitter) if data is incorrect and/or I have questions</li>
     </ul>
@@ -67,125 +68,30 @@
     <h2 class="govuk-heading-m">Sitemap simplified</h2>
     <ul class="govuk-list govuk-list--number">
       <li><a href="/wayLandingDataProvider.html">Home (aka Landing)</a></li>
-      <li><a href="/wayCollectionsDataProvider">Collections</a>
+      <li><a href="/wayCollectionGroups">Collection groups</a>
         <ul class="govuk-list govuk-list--number">
           <li><a href="/wayCollectionDataProvider-collectionRecords">Collection (entity)</a>
             <ul class="govuk-list govuk-list--number">
-              <li><a href="/wayRecordDataProvider-collectionRecords">Record (entity)</a></li>
+              <li><a href="/wayRecord-certified">Record (entity)</a></li>
             </ul>
           </li>
         </ul>
       </li>
-      <li><a href="/wayAccountDataProvider">Account</a></li>
-      <li><a href="/wayCollectionGroups">Collection groups</a>
+      <li><a href="/wayCollectionsDataProvider">Collections (search)</a>
         <ul class="govuk-list govuk-list--number">
           <li><a href="/wayCollectionGroup">Collection group (entity)</a></li>
         </ul>
       </li>
-      <li>Change log</li>
+      <li>Reports
+        <ul class="govuk-list govuk-list--number">
+          <li>Transactions</li>
+          <li>Changelog</li>
+        </ul>        
+      </li>      
+      <li><a href="/wayAccountDataProvider">Account</a></li>      
     </ul>   
   </div>
 </div>
-
-<!-- <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"> -->
-<!-- GLOSSARY TABLE -->
-<!-- <table class="govuk-table" id="glossary">
-  <caption class="govuk-table__caption govuk-table__caption--l">Glossary</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Term</th>
-      <th scope="col" class="govuk-table__header">Internal version</th>
-      <th scope="col" class="govuk-table__header">External version</th>
-      <th scope="col" class="govuk-table__header">Notes</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection programme</th>
-      <td class="govuk-table__cell">Collection</td>
-      <td class="govuk-table__cell">n/a</td>
-      <td class="govuk-table__cell">Never use with external users - they don't think of collections this way. A Collection Programme (CP or Programme for short) is the parent that has following children: Datasets, Forms, Collections, and grandchildren (records).</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection instance</th>
-      <td class="govuk-table__cell">Collection instance</td>
-      <td class="govuk-table__cell">Collection <strong class="govuk-tag">New</strong></td>
-      <td class="govuk-table__cell">For external users a collection is the request for data</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection window</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">This is the time when the collection is open and the data can be submitted.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Data period</th>
-      <td class="govuk-table__cell">???</td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">This is the period of time for which data is required. Example: 1 January for 31 March 2023.</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Submission</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Record</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Records-based [collection]</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">Multiple [record collection]</td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Summary [collection]</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">Single [record collection]</td>
-      <td class="govuk-table__cell"></td>
-    </tr>        
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Access group</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Entity page</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">n/a</td>
-      <td class="govuk-table__cell">New internal term to describe dedicated pages (each with URL) that act as overview and jumping off point for the 'thing'. External users: Collection and Record. Internal users: Collection Programme, Dataset, Form </td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection title</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">Need to make collection title meaningful, and allow user to differentiate between others within same Collection Programme (often best way to do this is by including the Collection Period in the title - example: Hedgehog census 2023)</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection description</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">New</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Collection ID</th>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell"></td>
-      <td class="govuk-table__cell">When to use?</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">Access group</th>
-      <td class="govuk-table__cell">Collection group</td>
-      <td class="govuk-table__cell">Collection group</td>
-      <td class="govuk-table__cell"></td>
-    </tr>
-  </tbody>
-</table> -->
 
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
@@ -213,11 +119,11 @@
       <li>Collection / <a href="wayCollectionDataProvider-collectionRecords#return">Records</a>: changed column heading '[Last] Edited' to '[Last] Updated'.</li>
       <li>Collection:  added call to action to make changes to team members</li>
       <li>Collection group: added addition team members and call to action to make changes</li>
-      <li>Content change "Urban Hedgehog Census" to "English Hedgehog Census" to convey collection group access being governed by organisation location (England, Wales, Scotland, N. Ireland)</li>
+      <li>Content change "Urban Hedgehog Census" to "English Hedgehog Census" to convey collection group access governed by organisation location (England, Wales, Scotland, N. Ireland)</li>
       <li><a href="/wayRecord-certified">Records</a>: big change to edited, submitted and certified (names and dates). This should work for records with cascading data</li>
       <li>Record: removed "this record is locked" message for records with "pending certification" status</li>
-      <li>Account: removed user email</li>
-      <li>Breadcrumbs: added 'Collection groups', removed 'Collections' (added it to nav). This fit with new hierarchy: Home > Collection group > Collection > Record</li>
+      <li>Account: removed user phone number</li>
+      <li>Breadcrumbs: added 'Collection groups', removed 'Collections' (added it to nav). This fits with new hierarchy: Home > Collection group > Collection > Record</li>
     </ul>    
 
     <h3 class="govuk-heading-m">
@@ -379,10 +285,9 @@
     <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
       <li>Login page mock</li>      
       <li>Draft new on-boarding text (explaining new IA)</li>      
-      <li>Certification workflow mocks</li>
-      <li>Confirmation process for leaving an organisation</li>  
-      <li>Confirmation process for adding / removing roles</li>
-      <li>Review certification process (with Ben)</li>
+      <li>Certification workflow mocks / Review certification process (with Ben)</li>
+      <li><del>Confirmation process for leaving an organisation</del></li>  
+      <li><del>Confirmation process for adding / removing roles</d></li>
       <li><del>Account: explore how to manage very long list of Collection Groups</del></li>
       <li><del>Add 'text filtering' to results tables (Collection Groups, Collections, Records)</del></li>    
       <li><del>Account / Collection groups: Review clearer labels for 'add/apply'</del></li>
