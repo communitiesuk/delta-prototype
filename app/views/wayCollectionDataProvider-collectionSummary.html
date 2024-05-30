@@ -70,9 +70,12 @@
         </dt>
         <dd class="govuk-summary-list__value">
           <a href="#return">Create</a>
-          <!-- <a href="#return"><strong class="govuk-tag govuk-tag--yellow">Draft</strong></a>
-          <a href="#return"><strong class="govuk-tag">Ready for certification</strong></a>
-          <a href="#return"><strong class="govuk-tag govuk-tag--green">Certified</strong></a> -->
+          <div class="designNote">
+            <p>Additional possible tags&hellip;</p>
+            <a href="#return"><strong class="govuk-tag govuk-tag--yellow">Draft</strong></a><br>
+            <a href="#return"><strong class="govuk-tag">Ready for certification</strong></a><br>
+            <a href="#return"><strong class="govuk-tag govuk-tag--green">Certified</strong></a>
+          </div>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -194,7 +197,9 @@
 </h2>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
-    
+    <div class="designNote">
+      <p>Create button should only be displayed if no record exists.</p>
+    </div>
     <button type="submit" class="govuk-button" data-module="govuk-button">
       Create record
     </button>
