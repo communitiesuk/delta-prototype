@@ -1,5 +1,5 @@
 {% extends "layouts/delta-wayfinding.html" %}
-{% set pageName="Wayfinding / Landing (Data Provider / Records based collection)" %}
+{% set pageName="Wayfinding / Landing (Data Provider / Summary collection)" %}
 {% block beforeContent %}
   {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
   {{ govukBreadcrumbs({
@@ -26,7 +26,7 @@
   English hedgehog census 2023
 </h1>
 <div class="designNote">
-  <p>This is a <strong>records-based</strong> (aka case) collection. View the <a href="wayCollectionDataProvider-collectionSummary">summary version</a>.</p>
+  <p>This is a <strong>summary</strong> (aka aggregate (single record)) collection. View the <a href="wayCollectionDataProvider-collectionRecords">record-based version</a>.</p>
 </div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
@@ -66,10 +66,10 @@
       </div>
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Records
+          Record
         </dt>
         <dd class="govuk-summary-list__value">
-          <a href="#return">12 (+1 draft)</a>
+          <a href="#return">View</a>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -189,85 +189,18 @@
 <h2 class="govuk-heading-l govuk-!-margin-top-8" id="return">
   Return
 </h2>
-<p class="govuk-body-l">12 submitted records plus 1 draft record (not submitted).</p>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
     
     <button type="submit" class="govuk-button" data-module="govuk-button">
       Create record
     </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Bulk upload
-    </button> 
   </div>
   <div class="govuk-grid-column-one-half govuk-!-text-align-right ">
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Download all records (.csv)
+      Download record (.csv)
     </button>    
   </div>  
-</div>
-
-<!-- Filters -->
-<div class="designNote">
-  <p>xxx</p>
-</div>
-<div class="govuk-grid-row govuk-!-margin-top-3">
-  <div class="govuk-grid-column-full delta-form-inline-form-groups">
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="sort">
-        Sort by
-      </label>
-      <select class="govuk-select" id="sort" name="sort">
-        <option value="newest">Newest</option>
-        <option value="oldest">Oldest</option>
-        <option value="oldest">Updated</option>
-        <option value="recordName">Record name</option>    
-        <option value="collectionName">Collection name</option>       
-        <option value="certification">Certification</option>      
-        <option value="status" selected>Status</option>     
-      </select>
-    </div>
-
-    <!-- Certificion -->
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="certification">
-        Certification
-      </label>
-      <select class="govuk-select" id="certification" name="certification">
-        <option value="certificationAll" selected>All</option>
-        <option value="certification" selected>Ready for certification</option>
-        <option value="certification" selected>Certified</option>
-      </select>
-    </div>       
-
-
-    <!-- Status -->
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="status">
-        Status
-      </label>
-      <select class="govuk-select" id="status" name="status">
-        <option value="status" selected>All</option>
-        <option value="status" selected>Draft</option>
-        <option value="status" selected>Submitted</option>
-      </select>
-    </div>    
-
-    <div class="govuk-form-group">
-      <div class="govuk-label-wrapper">
-        <label class="govuk-label" for="collection-name">
-          Search
-        </label>
-      </div>
-      <input class="govuk-input" id="collection-name" name="collectionName" type="text">
-    </div>    
-
-    <div>
-      <br><br>
-      <p><a href="#">Clear filters</a></p>
-    </div>
-
-  </div>
 </div>
 
 
@@ -283,106 +216,12 @@
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Witley</a></th>
-      <td class="govuk-table__cell">14 April 2024</td>
+      <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Hascombe</a></th>
+      <td class="govuk-table__cell">30 May 2024</td>
       <td class="govuk-table__cell"></td>            
       <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
     </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certificationPending">Cranleigh</a></th>
-      <td class="govuk-table__cell">15 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Ready for certification</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Godalming</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Alford</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Haslemere</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Milford</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Busbridge</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="wayRecordDataProvider-collectionRecords">Guildford</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Frensham</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
-    <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Loxwood</a></th>
-      <td class="govuk-table__cell">18 April 2024</td>
-      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
-      <td class="govuk-table__cell">Submitted</td>
-    </tr>
   </tbody>
 </table>
-<p>Displaying records 1 to 10 of 13.</p>
-<nav class="govuk-pagination" aria-label="Pagination">
-  <div class="govuk-pagination__prev">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-      </svg>
-      <span class="govuk-pagination__link-title">
-        Previous<span class="govuk-visually-hidden"> page</span>
-      </span>
-    </a>
-  </div>
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-        1
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-        2
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-        3
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-      <span class="govuk-pagination__link-title">
-        Next<span class="govuk-visually-hidden"> page</span>
-      </span>
-      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg>
-    </a>
-  </div>
-</nav>
 
 {% endblock %}
