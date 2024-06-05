@@ -1,0 +1,61 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Collection group" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      },
+      {
+        text: "Collection groups",
+        href: "/wayCollectionGroups"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Collection group</small><br>
+  English Hedgehog Monitoring
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <dl class="govuk-summary-list govuk-!-width-three-quarters">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Group ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UHM
+        </dd>
+      </div>    
+    </dl>
+
+  </div>
+
+  <div class="govuk-grid-column-one-third">
+
+    <div class="designNote">
+      <p><a href="/wayCollectionGroup">Bells and whistles version of this page</a></p>
+    </div>  
+
+  </div>
+</div>
+
+
+<!-- Collections -->
+
+
+<h2 class="govuk-heading-l govuk-!-margin-top-9" id="collections">
+  Collections
+</h2>
+
+<p><a href="/wayCollectionsDataProvider">View collections for the group</a>.</p>
+
+
+
+{% endblock %}
