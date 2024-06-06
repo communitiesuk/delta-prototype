@@ -1,0 +1,150 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Landing (Data Provider / Records based collection)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      },
+            {
+        text: "Collection groups",
+        href: "wayCollectionGroups"
+      },
+      {
+        text: "English Hedgehog Monitoring",
+        href: "wayCollectionGroup"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Collection</small><br>
+  English hedgehog census 2023
+</h1>
+<div class="designNote">
+  <p>This is a <strong>records-based</strong> (aka case) collection. MPV version.</p>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">            
+        <dt class="govuk-summary-list__key">
+          Organisation
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council
+        </dd>
+      </div>         
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          UHC23
+        </dd>
+      </div>      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Deadline
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 July 2024 <small><span class="delta-text-secondary">(90 days remaining)</span></small> <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
+        </dd>
+      </div>     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Opened
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 January 2024
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Return
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="#return">12 (+1 draft) records</a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Data period
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1 January 2023 &dash; 31 December 2023
+        </dd>
+      </div>              
+      <!-- <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Multiple record support
+        </dd>
+      </div>      -->
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Record submission options
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Form, bulk upload, API
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Records require certification
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+      </div>    
+    </dl>
+
+    <h2 class="govuk-heading-l govuk-!-margin-top-9" id="referenceData">Useful documents</h2>
+    <p>Guidance and templates relating to this collection.</p>
+
+    <ul class="govuk-list">
+      <li><a href="#"><strong>Document title</strong> (PDF 2.3MB)</a></li>
+      <li><a href="#"><strong>Document title</strong> (PDF 2.3MB)</a></li>
+      <li><a href="#"><strong>Document title</strong> (PDF 2.3MB)</a></li>
+    </ul>
+
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+    <h2 class="govuk-heading-l">Support</h2>
+    <p>For assistance visit the <a href="#">Delta support portal</a> or email <a href="mailto:Samantha.Bennett@gov.uk">support@delta.org</a> and quote the collection ID 'UHC23'.</p>
+
+
+  </div>
+</div>
+<h2 class="govuk-heading-l govuk-!-margin-top-8" id="return">
+  Return
+</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-half">
+    
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Create record
+    </button>
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Bulk upload
+    </button> 
+  </div>
+  <div class="govuk-grid-column-one-half govuk-!-text-align-right ">
+    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Download all records (.csv)
+    </button>    
+  </div>  
+</div>
+
+
+  <p><a href="#">View record(s) for this collection</a></p>
+
+{% endblock %}
