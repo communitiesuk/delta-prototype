@@ -1,139 +1,62 @@
-{% extends "layouts/delta-wayfinding.html" %}
+{% extends "layouts/delta.html" %}
 {% set pageName="Wayfinding tables" %}
 {% block content %}
 
 
-<!-- Overview and requirements -->
-<div class="delta-full-screen detla-center" id="requirements">
-
-  <div class="">
-    <h1 class="govuk-heading-xl">Tables, results, search and filters</h1>
-
+<!-- fixed nav -->
+<div class="delta-fixed-nav">
     <ul class="govuk-list">
-      <li><a href="#prototype-basic">Prototype - basic</a></li>
-      <li><a href="#prototype-advanced-search">Prototype - advanced search</a></li>
-      <li><a href="#prototype-batch-processing">Prototype - batch processing</a></li>
+      <li><a href="#overview">Overview</a></li>
+      <li>Table versions:</li>
+      <li><a href="#prototype-basic">Basic</a></li>
+      <li><a href="#prototype-advanced-search-closed">Advanced search (closed)</a></li>
+      <li><a href="#prototype-advanced-search-open">Advanced search (open)</a></li>
+      <li><a href="#prototype-batch-processing">Batch processing</a></li>
     </ul>
-    
-   
-
-    <h2 class="govuk-heading-l">Search vs filter</h2>
-    <p>Guidance from <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ pattern library</a>.</p>
-    <ul class="govuk-list govuk-list--number">
-      <li>Type a search term and submit the search form</li>
-      <li>See a search results page with filters</li>
-      <li>Users can then filter the search results page further or search again starting from</li>
-      <li>Delta is unique in search and filters are typically present in the same page</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">Delta hypothesis (and some goals)</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Our design aspiration is for the user never having to enter a search query; the system will intuitively know what the user wants to see</li>
-      <li>Clicking is better (easier, less prone to error) than typing</li>
-      <li>When user input is required to reduce number of displayed results [free] keyword filtering will be most efficient option in majority of cases</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">What 'problems' are we looking to solve</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Complex hidden filters</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">Extending and optimising for Delta users</h2>
-    <p>Extending UX patterns to better support our users</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><del>Frequently used filters permanently visible (not hidden behind optional panel)</del></li>
-      <li>Filter by keyword input box active on page load? Needs testing</li>
-      <li>Where possible make use of full width</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">Functional requirements</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Filter and search parameters in URL (to support saving and sharing)</li>
-      <li>Clearly display if and what search and filter parameters exist</li>
-      <li>Sort columns by clicking column header (toggles)</li>
-      <li>Keyword filter box</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">To table or not to table, that is the question</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Tables used to compare data</li>
-      <li>Tables don't handle long data well. Content wrapping on to multiple lines should be avoided</li>
-      <li>If data is long and scanning comparisons not required then table based results most likely not appropriate. In these instances divs better: more flexibility and better accessibility options.</li>
-    </ul>
-
-
-    <h2 class="govuk-heading-l">Misc</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Search and filter parameters should persists on "user going back" (returning to results page)</li>
-    </ul>
-
-    <h2 class="govuk-heading-l">Links</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><a href="https://design-system.service.gov.uk/components/table/" target="_blank">GOV.UK table</a></li>
-      <li><a href="https://design-patterns.service.justice.gov.uk/components/sortable-table/" target="_blank">MOJ sortable table</a></li>
-      <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></li>
-      <li><a href="https://service-manual.nhs.uk/design-system/components/table" target="_blank">NHS table</a></li>
-      <li><a href="https://design-patterns.service.justice.gov.uk/components/multi-select/" target="_blank">MOJ multi-select</a></li>
-    </ul>
-
-
-  </div>
-
-</div>
-
-<div class="delta-full-screen detla-center delta-text-center" id="tableDefault">
-  <h3 class="govuk-heading-m">Results table - default view (filters closed)</h3>
-  <img src="/public/images/tableResultsFiltersClosed.png" alt="Filters closed" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width  govuk-!-static-margin-bottom-9"><small>High level view of results table. If filters are offered display filter summary  above results. This will include a call to action to edit/apply filters.</small></p>
-
-
-  <!-- inactive -->
-  <img src="/public/images/tableResultsSummaryAndFiltersInactive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width govuk-!-static-margin-bottom-9"><small>Detailed view of filters summary. Consisting of filter count (if active filters) and keyword filter. Results should update in real-time when keyword filter used.</small></p>
-
-  <!-- active -->
-  <img src="/public/images/tableResultsSummaryAndFiltersActive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>Display filter count if active.</small></p>
-
-</div>
-
-<div class="delta-full-screen detla-center delta-text-center" id="tableFiltersOpen">
-  <h3 class="govuk-heading-m">Results table - filters open</h3>
-  <img src="/public/images/tableResultsFiltersOpen.png" alt="Filters open" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>Results pushed right (overflow hidden). Filters summary should update when apply button clicked. Filter panel should remain open until closed. See <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></small></p>
-</div>
-
-<div class="delta-full-screen detla-center delta-text-center" id="tableBatchActions">
-  <h3 class="govuk-heading-m">Results table - batch actions</h3>
-  <img src="/public/images/tableResultsBatchActions.png" alt="Batch actions for selected results" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>If result rows have checkboxes the user should be able to perform actions on the selected batch. These options should be displayed about the results. Initial state of action buttons should be disabled.</small></p>
-</div>
-
-<div class="delta-full-screen detla-center delta-text-center" id="tableSelect">
-  <h3 class="govuk-heading-m">Results table - select</h3>
-  <img src="/public/images/tableResultsSelect.png" alt="Select" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>Selected result count and selection options.</small></p>
 </div>
 
 
-<!-- SPECS -->
-<div class="delta-full-screen detla-center" id="specs">
-    <h2 class="govuk-heading-l">Specs</h2>
-    <h3 class="govuk-heading-m">All</h3>
-    <ul class="govuk-list delta-text-center">
-      <li>Keyword 'quick filter'</li>
-      <li>*Filter parameters in query string</li>
-    </ul>  
-    <h3 class="govuk-heading-m">Optional</h3>
-    <ul class="govuk-list delta-text-center">
-      <li>Filters panel</li>
-      <li>Select and batch actions</li>
-    </ul>      
+<!-- Overview and requirements -->
+<div class="delta-full-screen" id="overview">
+  <h1 class="govuk-heading-xl">Results tables, search and filters</h1>
+
+  <h2 class="govuk-heading-l">Search vs filter</h2>
+  <p>Guidance from <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ pattern library</a>.</p>
+  <ul class="govuk-list govuk-list--number">
+    <li>Type a search term and submit the search form</li>
+    <li>See a search results page with filters</li>
+    <li>Users can then filter the search results page further or search again starting from</li>
+  </ul>
+  <p><em>Delta is unique in search and filters are typically present in the same page.</em></p>
+
+  <h2 class="govuk-heading-l">Design goals</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Our goal is to create a system that anticipates and delivers exactly what the user needs, eliminating the need for them to enter a search query</li>
+    <li>Clicking is better than typing (easier, less prone to error)</li>
+    <li>When user input is required to reduce number of displayed results [free] keyword filtering will be most efficient option in majority of cases</li>
+  </ul>
+
+  <h2 class="govuk-heading-l">Functional requirements</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Filter and search parameters in URL (to support saving and sharing)</li>
+    <li>Clearly display if and what search and filter parameters exist</li>
+    <li>Sort columns by clicking column header (toggles)</li>
+    <li>Keyword filter box (quick search)</li>
+  </ul>
+
+  <h2 class="govuk-heading-l">Links</h2>
+  <ul class="govuk-list govuk-list--bullet">
+    <li><a href="https://design-system.service.gov.uk/components/table/" target="_blank">GOV.UK table</a></li>
+    <li><a href="https://design-patterns.service.justice.gov.uk/components/sortable-table/" target="_blank">MOJ sortable table</a></li>
+    <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></li>
+    <li><a href="https://service-manual.nhs.uk/design-system/components/table" target="_blank">NHS table</a></li>
+    <li><a href="https://design-patterns.service.justice.gov.uk/components/multi-select/" target="_blank">MOJ multi-select</a></li>
+  </ul>
 </div>
 
-<!-- PROTOTYPE v1 - no batch, no filter-->
-<div class="delta-full-screen detla-center" id="prototype-basic">
-  <p class="designNote delta-text-center" style="width: 100%;">No advanced, no batch processing.</p>         
+<!-- PROTOTYPE basic -->
+<div class="delta-full-screen" id="prototype-basic">
+  <p class="designNote delta-text-center" style="width: 100%;">Basic table (with quick search and column sorting).</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
 
@@ -230,10 +153,9 @@
   </div>
 </div>
 
-<!-- PROTOTYPE v2 - filters, no batch-->
-<div class="delta-full-screen detla-center" id="prototype-advanced-search">
-  <p class="designNote delta-text-center" style="width: 100%;">With advanced search, no batch processing.</p>     
-  <p class="designNote" style="width: 100%;">Advanced search panel closed</p>         
+<!-- PROTOTYPE search closed-->
+<div class="delta-full-screen" id="prototype-advanced-search-closed">    
+  <p class="designNote delta-text-center" style="width: 100%;">Advanced search panel closed (note 'Advanced search' link with count)</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
@@ -330,7 +252,11 @@
       </div>
   </div>
   </div>
-  <p class="designNote" style="width: 100%;">Advanced search panel open</p>         
+</div>
+
+<!-- PROTOTYPE search open-->
+<div class="delta-full-screen" id="prototype-advanced-search-open">
+  <p class="designNote  delta-text-center" style="width: 100%;">Advanced search panel open</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
@@ -341,14 +267,16 @@
 
           <!-- active filters -->
           <div class="delta-active-filters">
-            <h3 class="govuk-heading-s">Active filters</h3>
-            <ul class="govuk-list govuk-list--bullet">
-              <li>Filter group 1</li>
-              <li>Filter group 2</li>
-              <li>Filter group 3</li>
+            <h3 class="govuk-heading-s">Active filters: 3</h3>
+            <ul class="govuk-list govuk-list--spaced">
+              <li><a href="#">Filter group 1</a></li>
+              <li><a href="#">Filter group 2</a></li>
+              <li><a href="#">Filter group 3</a></li>
             </ul>
           </div>
           <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p><small><a href="#">Expand all filters</a> | <a href="#">Close all filters</a></small></p>
 
           <details class="govuk-details">
             <summary class="govuk-details__summary">
@@ -381,8 +309,8 @@
             </div>
           </details> 
 
-          <button class="govuk-button">Search</button>
-          <button class="govuk-button govuk-button--secondary">Clear</button>
+          <button class="govuk-button">Apply</button>
+          <button class="govuk-button govuk-button--secondary">Reset filters</button>
         </div>
       </div>
 
@@ -481,9 +409,9 @@
   </div>  
 </div>
 
-<!-- PROTOTYPE v3 - filters, batch processing -->
-<div class="delta-full-screen detla-center" id="prototype-batch-processing">
-  <p class="designNote delta-text-center" style="width: 100%;">Batch processing, no advanced search</p>         
+<!-- PROTOTYPE batch processing -->
+<div class="delta-full-screen" id="prototype-batch-processing">
+  <p class="designNote delta-text-center" style="width: 100%;">Batch processing (select column, select/deselect, selected count and batch option buttons)</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
@@ -494,7 +422,7 @@
           <div>
             <ul class="govuk-list delta-list-horizontal">
               <li>Displaying 1-10 or 13 results.</li>
-              <li><strong><a href="#">Advanced search</a></strong></li>
+              <!-- <li><strong><a href="#">Advanced search</a></strong></li> -->
               <!-- <li><a href="#">Add filter</a></a></li> -->
             </ul>
           </div>
@@ -608,22 +536,6 @@
       </div>
   </div>
   </div>
-</div>
-
-
-
-
-
-
-
-<!-- FILTER CONSIDERATIONS -->
-<div class="delta-full-screen detla-center" id="filterConsiderations">
-    <h2 class="govuk-heading-l">Filter considerations</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Filters required?</li>
-      <li>Filters panel open on page load for pre-filtered results?</li>
-      <li>If multi-select is offered  what batch options will be displayed?</li>
-    </ul>      
 </div>
 
 

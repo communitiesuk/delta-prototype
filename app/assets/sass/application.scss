@@ -23,6 +23,28 @@ html {
     min-height: 100vh;
 }
 
+.delta-fixed-nav {
+    background-color: black;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    color: #fff;
+    padding: 1rem .5rem;
+
+    .govuk-list {
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin: 0;
+        li {
+            list-style-type: none;
+        }
+    }    
+}
 
 .designNote {
     padding: 2rem;
