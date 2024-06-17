@@ -9,7 +9,13 @@
   <div class="">
     <h1 class="govuk-heading-xl">Tables, results, search and filters</h1>
 
-    <p><a href="#prototype">Prototype</a></p>
+    <ul class="govuk-list">
+      <li><a href="#prototype-basic">Prototype - basic</a></li>
+      <li><a href="#prototype-advanced-search">Prototype - advanced search</a></li>
+      <li><a href="#prototype-batch-processing">Prototype - batch processing</a></li>
+    </ul>
+    
+   
 
     <h2 class="govuk-heading-l">Search vs filter</h2>
     <p>Guidance from <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ pattern library</a>.</p>
@@ -126,8 +132,8 @@
 </div>
 
 <!-- PROTOTYPE v1 - no batch, no filter-->
-<div class="delta-full-screen detla-center" id="prototype">
-  <p class="designNote delta-text-center" style="width: 100%;">No filter, no batch processing.</p>         
+<div class="delta-full-screen detla-center" id="prototype-basic">
+  <p class="designNote delta-text-center" style="width: 100%;">No advanced, no batch processing.</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
 
@@ -225,9 +231,9 @@
 </div>
 
 <!-- PROTOTYPE v2 - filters, no batch-->
-<div class="delta-full-screen detla-center" id="prototype">
-  <p class="designNote delta-text-center" style="width: 100%;">With filter, no batch processing.</p>     
-  <p class="designNote" style="width: 100%;">Filter panel closed</p>         
+<div class="delta-full-screen detla-center" id="prototype-advanced-search">
+  <p class="designNote delta-text-center" style="width: 100%;">With advanced search, no batch processing.</p>     
+  <p class="designNote" style="width: 100%;">Advanced search panel closed</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
@@ -237,7 +243,7 @@
           <div>
             <ul class="govuk-list delta-list-horizontal">
               <li>Displaying 1-10 or 13 results.</li>
-              <li><strong><a href="#">Advanced search</a></strong></li>
+              <li><strong><a href="#">Advanced search (3)</a></strong></li>
               <!-- <li><a href="#">Add filter</a></a></li> -->
             </ul>
           </div>
@@ -324,18 +330,59 @@
       </div>
   </div>
   </div>
-  <p class="designNote" style="width: 100%;">Filter panel open</p>         
+  <p class="designNote" style="width: 100%;">Advanced search panel open</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
       <div class="delta-results-filter">
         <div class="delta-results-filter-wrap">
-          <a href="#" style="float: right;">Clear search</a>
-          <h3 class="govuk-heading-l">Search</h3>
-          <h3 class="govuk-heading-s">Search group</h3>          
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <a href="#" style="float: right;">Close</a>
+          <h3 class="govuk-heading-l">Advanced search</h3>
 
-          <button class="govuk-button">Apply search</button>
+          <!-- active filters -->
+          <div class="delta-active-filters">
+            <h3 class="govuk-heading-s">Active filters</h3>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Filter group 1</li>
+              <li>Filter group 2</li>
+              <li>Filter group 3</li>
+            </ul>
+          </div>
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Filter group 1
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </details>          
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Filter group 2
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </details>                    
+          <details class="govuk-details">
+            <summary class="govuk-details__summary">
+              <span class="govuk-details__summary-text">
+                Filter group 3
+              </span>
+            </summary>
+            <div class="govuk-details__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </div>
+          </details> 
+
+          <button class="govuk-button">Search</button>
+          <button class="govuk-button govuk-button--secondary">Clear</button>
         </div>
       </div>
 
@@ -345,7 +392,7 @@
           <div>
             <ul class="govuk-list delta-list-horizontal">
               <li>Displaying 1-10 or 13 results.</li>
-              <li><strong><a href="#">Advanced search</a></strong></li>
+              <li><strong><a href="#">Advanced search (3)</a></strong></li>
               <!-- <li><a href="#">Add filter</a></a></li> -->
             </ul>
           </div>
@@ -435,7 +482,7 @@
 </div>
 
 <!-- PROTOTYPE v3 - filters, batch processing -->
-<div class="delta-full-screen detla-center" id="prototype">
+<div class="delta-full-screen detla-center" id="prototype-batch-processing">
   <p class="designNote delta-text-center" style="width: 100%;">With filter and batch processing.</p>         
   <div style="width: 100%;">
     <div class="delta-results-main">
