@@ -283,6 +283,7 @@ html {
 
 
 
+
 .delta-results-table-filter-summary{
     // background-color: $delta-grey-light;
     background-color: $delta-info;
@@ -319,21 +320,21 @@ html {
 
 
 .delta-results-main {
-    // background-color: red;
-    display: grid;
-    grid-template-columns: 25% auto;
+    display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-
-
 }
+
+
 
 .delta-results-filter {
     background-color: $delta-grey-light;
+    flex: 25%;
+}
 
-    .delta-results-filter-wrap {
-        // max-width: 300px;
-    }
+.delta-results-table-wrap {
+    // background-color: lightpink;
+    flex: auto;
 }
 // full screen stuff ===============
 
