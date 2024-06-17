@@ -248,6 +248,21 @@ html {
     text-align: right;
 }
 
+
+// full screen stuff ===============
+
+.delta-full-screen {
+    min-height: 100vh;
+}
+
+
+.detla-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 // Organisation logos ===============
 
 .delta-icon {

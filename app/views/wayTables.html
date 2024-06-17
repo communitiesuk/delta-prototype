@@ -1,0 +1,86 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding tables" %}
+{% block content %}
+
+
+<!-- Overview and requirements -->
+<div class="delta-full-screen detla-center" id="requirements">
+
+  <div class="">
+    <h1 class="govuk-heading-xl">Tables, results, search and filters</h1>
+
+    <h2 class="govuk-heading-l">Search vs filter</h2>
+    <p>Guidance from <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ pattern library</a>.</p>
+    <ul class="govuk-list govuk-list--number">
+      <li>Type a search term and submit the search form</li>
+      <li>See a search results page with filters</li>
+      <li>Users can then filter the search results page further or search again starting from</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Delta hypothesis (and some goals)</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Our design aspiration is for the user never having to enter a search query</li>
+      <li>The system will intuitively know what the user wants to see</li>
+      <li>Clicking is better (easy) than typing</li>
+      <li>When user input is required to reduce number of displayed results [free] keyword filtering will be best option in majority of the time</li>
+    </ul>    
+
+    <h2 class="govuk-heading-l">Extending and optimising for Delta users</h2>
+    <p>Extending UX patterns to better support our users</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Frequently used filters permanently visible (not hidden behind optional panel)</li>
+      <li>Filter by keyword input box active on page load? Needs testing</li>
+      <li>Where possible make use of full width</li>
+    </ul>        
+
+    <h2 class="govuk-heading-l">Functional requirements</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Filter and search parameters in URL (to support saving and sharing)</li>
+      <li>Clearly display if and what search and filter parameters exist</li>
+      <li>Sort columns by clicking column header (toggles)</li>
+      <li>Keyword filter box</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">To table or not to table, that is the question.</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Tables used to compare data</li>
+      <li>Tables don't handle long data well. Content wrapping on to multiple lines should be avoided</li>
+      <li>If data is long and [scanning comparisons not required then table based results most likely not appropriate. In these instanced divs better: more flexibility and better accessibility options.</li>
+    </ul>
+
+
+    <h2 class="govuk-heading-l">Versions / options</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Results summary box (count, active filter count)</li>      
+      <li>Results summary box (count, active filter count)</li>
+      <li>Primary (quick) filters</li>
+      <li>Secondary (advanced) filters</li>
+      <li>Select some / all capability</li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Misc</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Search and filter parameters should persists on "user going back" (returning to results page)</li>
+    </ul>    
+
+    <h2 class="govuk-heading-l">Links</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="https://design-system.service.gov.uk/components/table/" target="_blank">GOV.UK table</a></li>
+      <li><a href="https://design-patterns.service.justice.gov.uk/components/sortable-table/" target="_blank">MOJ sortable table</a></li>
+      <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list//" target="_blank">MOJ filter pattern</a></li>
+    </ul>        
+
+
+  </div>
+
+</div>
+
+<div class="delta-full-screen detla-center" id="table">
+
+
+
+</div>
+
+
+
+{% endblock %}
