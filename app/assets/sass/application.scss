@@ -7,6 +7,8 @@ $govuk-success-colour:	#00703c;
 $govuk-error-colour:	#d4351c;
 $delta-info:        	#1d70b8;
 
+$delta-grey-light: #f8f8f8;
+
 
 $delta-max-width: 1280px;
 // 
@@ -257,6 +259,66 @@ html {
     text-align: right;
 }
 
+
+// delta table filters ===============
+
+.delta-list-horizontal {
+    display: flex;
+    // flex-direction: row;
+    gap: 1rem;
+    li {
+        list-style-type: none;
+    }
+}
+
+.delta-results-table-filter-summary{
+    background-color: $delta-grey-light;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    .govuk-form-group {
+        margin: 0;
+    }
+}
+
+.delta-results-batch-options {
+    background-color: yellow;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+
+    * {
+        margin-bottom: 0;
+    }
+
+    .govuk-button {
+        margin-bottom: 0;
+    }
+}
+
+
+.delta-results-main {
+    // background-color: red;
+    display: grid;
+    grid-template-columns: 300px auto;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.delta-results-filter {
+    background-color: $delta-grey-light;
+
+    .delta-results-filter-wrap {
+        // max-width: 300px;
+    }
+}
 
 // full screen stuff ===============
 

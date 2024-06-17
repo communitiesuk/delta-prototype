@@ -9,6 +9,8 @@
   <div class="">
     <h1 class="govuk-heading-xl">Tables, results, search and filters</h1>
 
+    <p><a href="#prototype">Prototype</a></p>
+
     <h2 class="govuk-heading-l">Search vs filter</h2>
     <p>Guidance from <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ pattern library</a>.</p>
     <ul class="govuk-list govuk-list--number">
@@ -50,18 +52,9 @@
     <ul class="govuk-list govuk-list--bullet">
       <li>Tables used to compare data</li>
       <li>Tables don't handle long data well. Content wrapping on to multiple lines should be avoided</li>
-      <li>If data is long and [scanning comparisons not required then table based results most likely not appropriate. In these instanced divs better: more flexibility and better accessibility options.</li>
+      <li>If data is long and [scanning comparisons not required then table based results most likely not appropriate. In these instances divs better: more flexibility and better accessibility options.</li>
     </ul>
 
-
-    <h2 class="govuk-heading-l">Versions / options</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Results summary box (count, active filter count)</li>      
-      <li>Results summary box (count, active filter count)</li>
-      <li>Primary (quick) filters</li>
-      <li>Secondary (advanced) filters</li>
-      <li>Select some / all capability</li>
-    </ul>
 
     <h2 class="govuk-heading-l">Misc</h2>
     <ul class="govuk-list govuk-list--bullet">
@@ -84,12 +77,12 @@
 <div class="delta-full-screen detla-center delta-text-center" id="tableDefault">
   <h3 class="govuk-heading-m">Results table - default view (filters closed)</h3>
   <img src="/public/images/tableResultsFiltersClosed.png" alt="Filters closed" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width  govuk-!-static-margin-bottom-9"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+  <p class="delta-reading-width  govuk-!-static-margin-bottom-9"><small>High level view of results table. If filters are offered display filter summary  above results. This will include a call to action to edit/apply filters.</small></p>
 
 
   <!-- inactive -->
   <img src="/public/images/tableResultsSummaryAndFiltersInactive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width govuk-!-static-margin-bottom-9"><small>Detailed view of filter summary. Consisting of filter count (if active filters) and keyword filter. Results should update in real-time when keyword filter used.</small></p>
+  <p class="delta-reading-width govuk-!-static-margin-bottom-9"><small>Detailed view of filters summary. Consisting of filter count (if active filters) and keyword filter. Results should update in real-time when keyword filter used.</small></p>
 
   <!-- active -->
   <img src="/public/images/tableResultsSummaryAndFiltersActive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
@@ -100,7 +93,13 @@
 <div class="delta-full-screen detla-center delta-text-center" id="tableFiltersOpen">
   <h3 class="govuk-heading-m">Results table - filters open</h3>
   <img src="/public/images/tableResultsFiltersOpen.png" alt="Filters open" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>Results pushed right (overflow hidden). Filters summary should update when apply button clicked. Filter panel should remain open until closed.</small></p>
+  <p class="delta-reading-width"><small>Results pushed right (overflow hidden). Filters summary should update when apply button clicked. Filter panel should remain open until closed. See <a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></small></p>
+</div>
+
+<div class="delta-full-screen detla-center delta-text-center" id="tableBatchActions">
+  <h3 class="govuk-heading-m">Results table - batch actions</h3>
+  <img src="/public/images/tableResultsBatchActions.png" alt="Batch actions for selected results" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width"><small>If result rows have checkboxes the user should be able to perform actions on the selected batch. These options should be displayed about the results. Initial state of action buttons should be disabled.</small></p>
 </div>
 
 <div class="delta-full-screen detla-center delta-text-center" id="tableSelect">
@@ -109,10 +108,151 @@
   <p class="delta-reading-width"><small>Selected result count and selection options.</small></p>
 </div>
 
-<div class="delta-full-screen detla-center delta-text-center" id="tableBatchActions">
-  <h3 class="govuk-heading-m">Results table - batch actions</h3>
-  <img src="/public/images/tableResultsBatchActions.png" alt="Batch actions for selected results" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
-  <p class="delta-reading-width"><small>If result rows have checkboxes the user should be able to perform actions on the selected batch. These options should be displayed about the results. Initial stage should be disabled.</small></p>
+<!-- PROTOTYPE -->
+<div class="delta-full-screen detla-center" id="prototype">
+  
+  
+  <div style="width: 100%;">
+
+
+
+    <div class="delta-results-main">
+      <!-- filters -->
+      <div class="delta-results-filter">
+        <div class="delta-results-filter-wrap">
+          <div class="designNote">Filters here</div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+  
+      <div class="delta-results-table-wrap">
+
+        <div class="delta-results-table-filter-summary">
+          <div>
+            <p class="govuk-!-static-margin-bottom-0"><strong>0 filters active. <a href="#">Add</a></strong></p>
+          </div>
+          <div>
+            <div class="govuk-form-group">
+              <h1 class="govuk-label-wrapper">
+                <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
+                  Filters results by keyword
+                </label>
+              </h1>
+              <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Filter by keyword">
+            </div>        
+          </div>
+        </div>
+
+
+
+        <!-- results -->
+        <div class="delta-results-table">
+          <table class="govuk-table">
+            <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"><a href="#">Select</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Title</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">[]</td>
+                <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+                <td class="govuk-table__cell">DataItem</td>
+                <td class="govuk-table__cell">DataItem</td>
+                <td class="govuk-table__cell">DataItem</td>
+                <td class="govuk-table__cell">DataItem</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- selected count and selection options -->
+
+        <!-- Batch options -->
+        <div class="delta-results-batch-options">
+          <div>
+            <ul class="govuk-list delta-list-horizontal">
+              <li>5 selected</li>            
+              <li><a href="#">Select all</a></li>
+              <li><a href="#">Deselect all</a> </li>
+            </ul>            
+          </div>
+          <div>
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Approve
+            </button>
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+              Add
+            </button>  
+          </div>    
+        </div>        
+
+
+
+
+        <!-- pagination -->
+        <p>Displaying records 1 to 10 of 13.</p>
+        <nav class="govuk-pagination" aria-label="Pagination">
+          <div class="govuk-pagination__prev">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+              </svg>
+              <span class="govuk-pagination__link-title">
+                Previous<span class="govuk-visually-hidden"> page</span>
+              </span>
+            </a>
+          </div>
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>    
+      </div>
+  
+
+
+    <!-- RESULT COUNT, SELECTED COUNT, SELECT OPTIONS -->
+
+
+
+
+
+
+  </div>
+
+
 </div>
 
 
