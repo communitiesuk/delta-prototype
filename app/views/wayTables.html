@@ -15,20 +15,25 @@
       <li>Type a search term and submit the search form</li>
       <li>See a search results page with filters</li>
       <li>Users can then filter the search results page further or search again starting from</li>
+      <li>Delta is unique in search and filters are typically present in the same page</li>
     </ul>
 
     <h2 class="govuk-heading-l">Delta hypothesis (and some goals)</h2>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Our design aspiration is for the user never having to enter a search query</li>
-      <li>The system will intuitively know what the user wants to see</li>
-      <li>Clicking is better (easy) than typing</li>
-      <li>When user input is required to reduce number of displayed results [free] keyword filtering will be best option in majority of the time</li>
+      <li>Our design aspiration is for the user never having to enter a search query; the system will intuitively know what the user wants to see</li>
+      <li>Clicking is better (easier, less prone to error) than typing</li>
+      <li>When user input is required to reduce number of displayed results [free] keyword filtering will be most efficient option in majority of cases</li>
     </ul>    
+
+    <h2 class="govuk-heading-l">What 'problems' are we looking to solve</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Complex hidden filters</li>
+    </ul>        
 
     <h2 class="govuk-heading-l">Extending and optimising for Delta users</h2>
     <p>Extending UX patterns to better support our users</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>Frequently used filters permanently visible (not hidden behind optional panel)</li>
+      <li><del>Frequently used filters permanently visible (not hidden behind optional panel)</del></li>
       <li>Filter by keyword input box active on page load? Needs testing</li>
       <li>Where possible make use of full width</li>
     </ul>        
@@ -67,7 +72,8 @@
     <ul class="govuk-list govuk-list--bullet">
       <li><a href="https://design-system.service.gov.uk/components/table/" target="_blank">GOV.UK table</a></li>
       <li><a href="https://design-patterns.service.justice.gov.uk/components/sortable-table/" target="_blank">MOJ sortable table</a></li>
-      <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list//" target="_blank">MOJ filter pattern</a></li>
+      <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></li>
+      <li><a href="https://service-manual.nhs.uk/design-system/components/table" target="_blank">NHS table</a></li>
     </ul>        
 
 
@@ -75,10 +81,33 @@
 
 </div>
 
-<div class="delta-full-screen detla-center" id="table">
+<div class="delta-full-screen detla-center delta-text-center" id="tableDefault">
+  <h3 class="govuk-heading-m">Results table - default view (filters closed)</h3>
+  <img src="/public/images/tableResultsFiltersClosed.png" alt="Filters closed" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width  govuk-!-static-margin-bottom-9"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
 
 
+  <!-- inactive -->
+  <img src="/public/images/tableResultsSummaryAndFiltersInactive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width govuk-!-static-margin-bottom-9"><small>Detailed view of filter summary. Consisting of filter count (if active filters) and keyword filter. Results should update in real-time when keyword filter used.</small></p>
 
+  <!-- active -->
+  <img src="/public/images/tableResultsSummaryAndFiltersActive.png" alt="Filters summary detail view" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width"><small>Display filter count if active.</small></p>
+
+</div>
+
+<div class="delta-full-screen detla-center delta-text-center" id="tableFiltersOpen">
+  <h3 class="govuk-heading-m">Results table - filters open</h3>
+  <img src="/public/images/tableResultsFiltersOpen.png" alt="Filters open" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width"><small>Results pushed right (overflow hidden). Applied filter summary should update when apply button clicked. Filter panel should remain open until closed.</small></p>
+</div>
+
+<div class="delta-full-screen detla-center delta-text-center" id="tableBatchActions">
+  <h3 class="govuk-heading-m">Results table - batch actions</h3>
+  <img src="/public/images/tableResultsBatchActions.png" alt="Batch actions for selected results" class="delta-image-responsive delta-reading-width govuk-!-static-margin-bottom-6">
+  <p class="delta-reading-width"><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</small></p>
+  
 </div>
 
 
