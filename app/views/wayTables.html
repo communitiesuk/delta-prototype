@@ -25,12 +25,12 @@
       <li>Our design aspiration is for the user never having to enter a search query; the system will intuitively know what the user wants to see</li>
       <li>Clicking is better (easier, less prone to error) than typing</li>
       <li>When user input is required to reduce number of displayed results [free] keyword filtering will be most efficient option in majority of cases</li>
-    </ul>    
+    </ul>
 
     <h2 class="govuk-heading-l">What 'problems' are we looking to solve</h2>
     <ul class="govuk-list govuk-list--bullet">
       <li>Complex hidden filters</li>
-    </ul>        
+    </ul>
 
     <h2 class="govuk-heading-l">Extending and optimising for Delta users</h2>
     <p>Extending UX patterns to better support our users</p>
@@ -38,7 +38,7 @@
       <li><del>Frequently used filters permanently visible (not hidden behind optional panel)</del></li>
       <li>Filter by keyword input box active on page load? Needs testing</li>
       <li>Where possible make use of full width</li>
-    </ul>        
+    </ul>
 
     <h2 class="govuk-heading-l">Functional requirements</h2>
     <ul class="govuk-list govuk-list--bullet">
@@ -48,18 +48,18 @@
       <li>Keyword filter box</li>
     </ul>
 
-    <h2 class="govuk-heading-l">To table or not to table, that is the question.</h2>
+    <h2 class="govuk-heading-l">To table or not to table, that is the question</h2>
     <ul class="govuk-list govuk-list--bullet">
       <li>Tables used to compare data</li>
       <li>Tables don't handle long data well. Content wrapping on to multiple lines should be avoided</li>
-      <li>If data is long and [scanning comparisons not required then table based results most likely not appropriate. In these instances divs better: more flexibility and better accessibility options.</li>
+      <li>If data is long and scanning comparisons not required then table based results most likely not appropriate. In these instances divs better: more flexibility and better accessibility options.</li>
     </ul>
 
 
     <h2 class="govuk-heading-l">Misc</h2>
     <ul class="govuk-list govuk-list--bullet">
       <li>Search and filter parameters should persists on "user going back" (returning to results page)</li>
-    </ul>    
+    </ul>
 
     <h2 class="govuk-heading-l">Links</h2>
     <ul class="govuk-list govuk-list--bullet">
@@ -67,7 +67,8 @@
       <li><a href="https://design-patterns.service.justice.gov.uk/components/sortable-table/" target="_blank">MOJ sortable table</a></li>
       <li><a href="https://design-patterns.service.justice.gov.uk/patterns/filter-a-list/" target="_blank">MOJ filter pattern</a></li>
       <li><a href="https://service-manual.nhs.uk/design-system/components/table" target="_blank">NHS table</a></li>
-    </ul>        
+      <li><a href="https://design-patterns.service.justice.gov.uk/components/multi-select/" target="_blank">MOJ multi-select</a></li>
+    </ul>
 
 
   </div>
@@ -108,30 +109,48 @@
   <p class="delta-reading-width"><small>Selected result count and selection options.</small></p>
 </div>
 
+
+<!-- SPECS -->
+<div class="delta-full-screen detla-center" id="specs">
+    <h2 class="govuk-heading-l">Specs</h2>
+    <h3 class="govuk-heading-m">All</h3>
+    <ul class="govuk-list delta-text-center">
+      <li>Keyword 'quick filter'</li>
+      <li>*Filter parameters in query string</li>
+    </ul>  
+    <h3 class="govuk-heading-m">Optional</h3>
+    <ul class="govuk-list delta-text-center">
+      <li>Filters panel</li>
+      <li>Select and batch actions</li>
+    </ul>      
+</div>
+
 <!-- PROTOTYPE -->
 <div class="delta-full-screen detla-center" id="prototype">
-  
-  
   <div style="width: 100%;">
-
-
-
     <div class="delta-results-main">
       <!-- filters -->
       <div class="delta-results-filter">
         <div class="delta-results-filter-wrap">
-          <div class="designNote">Filters here</div>
+          <a href="#" style="float: right;">Clear filters</a>
+          <h3 class="govuk-heading-l">Filters</h3>
+          <h3 class="govuk-heading-s">Filter group</h3>          
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+          <button class="govuk-button">Apply filters</button>
         </div>
       </div>
-  
+
       <div class="delta-results-table-wrap">
 
-        <div class="delta-results-table-filter-summary">
+        <div class="delta-results-table-filter-summary delta-flex-horizontal">
           <div>
-            <p class="govuk-!-static-margin-bottom-0"><strong>0 filters active. <a href="#">Add</a></strong></p>
+            <ul class="govuk-list delta-list-horizontal">
+              <li>13 results.</li>
+              <li>Displaying 1 to 10.</li>
+              <li><strong><a href="#">Advanced search</a></strong></li>
+              <!-- <li><a href="#">Add filter</a></a></li> -->
+            </ul>
           </div>
           <div>
             <div class="govuk-form-group">
@@ -140,30 +159,36 @@
                   Filters results by keyword
                 </label>
               </h1>
-              <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Filter by keyword">
-            </div>        
+              <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Quick search">
+            </div>
           </div>
         </div>
 
-
-
         <!-- results -->
         <div class="delta-results-table">
-          <table class="govuk-table">
+          <table class="govuk-table govuk-table--small-text-until-tablet">
             <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"><a href="#">Select</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Title</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Column</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Title <img src="/public/images/sort-ascending.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Column <img src="/public/images/sort.svg"></a></th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <td class="govuk-table__cell">[]</td>
+                <td class="govuk-table__cell">
+                  <!-- checkbox -->
+                  <div class="govuk-checkboxes__item govuk-checkboxes--small moj-multi-select__checkbox">
+                    <input type="checkbox" class="govuk-checkboxes__input" id="select-item">
+                    <label class="govuk-label govuk-checkboxes__label" for="select-item">
+                      <span class="govuk-visually-hidden">Select name</span>
+                    </label>
+                  </div>                   
+                </td>
                 <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
                 <td class="govuk-table__cell">DataItem</td>
                 <td class="govuk-table__cell">DataItem</td>
@@ -173,86 +198,82 @@
             </tbody>
           </table>
         </div>
-
         <!-- selected count and selection options -->
 
         <!-- Batch options -->
-        <div class="delta-results-batch-options">
+        <p class="designNote">Batch options panel is only displayed if select rows (results) is available.</p>         
+        <div class="delta-results-batch-options delta-flex-horizontal">          
           <div>
             <ul class="govuk-list delta-list-horizontal">
-              <li>5 selected</li>            
               <li><a href="#">Select all</a></li>
               <li><a href="#">Deselect all</a> </li>
-            </ul>            
+              <li>0 selected</li>
+            </ul>
           </div>
           <div>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Approve
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+              Batch option
             </button>
-            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-              Add
-            </button>  
-          </div>    
-        </div>        
-
-
-
+            <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button" disabled>
+              Batch option
+            </button>
+          </div>
+        </div>
 
         <!-- pagination -->
-        <p>Displaying records 1 to 10 of 13.</p>
-        <nav class="govuk-pagination" aria-label="Pagination">
-          <div class="govuk-pagination__prev">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-              </svg>
-              <span class="govuk-pagination__link-title">
-                Previous<span class="govuk-visually-hidden"> page</span>
-              </span>
-            </a>
-          </div>
-          <ul class="govuk-pagination__list">
-            <li class="govuk-pagination__item govuk-pagination__item--current">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-                1
+          <nav class="govuk-pagination" aria-label="Pagination">
+            <div class="govuk-pagination__prev">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+                <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+                </svg>
+                <span class="govuk-pagination__link-title">
+                  Previous<span class="govuk-visually-hidden"> page</span>
+                </span>
               </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-                2
+            </div>
+            <ul class="govuk-pagination__list">
+              <li class="govuk-pagination__item govuk-pagination__item--current">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                  1
+                </a>
+              </li>
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                  2
+                </a>
+              </li>
+              <li class="govuk-pagination__item">
+                <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                  3
+                </a>
+              </li>
+            </ul>
+            <div class="govuk-pagination__next">
+              <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+                <span class="govuk-pagination__link-title">
+                  Next<span class="govuk-visually-hidden"> page</span>
+                </span>
+                <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                  <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+                </svg>
               </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                3
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-pagination__next">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-              <span class="govuk-pagination__link-title">
-                Next<span class="govuk-visually-hidden"> page</span>
-              </span>
-              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-              </svg>
-            </a>
-          </div>
-        </nav>    
+            </div>
+          </nav>
       </div>
-  
-
-
-    <!-- RESULT COUNT, SELECTED COUNT, SELECT OPTIONS -->
-
-
-
-
-
-
   </div>
+</div>
 
 
+
+<!-- FILTER CONSIDERATIONS -->
+<div class="delta-full-screen detla-center" id="filterConsiderations">
+    <h2 class="govuk-heading-l">Filter considerations</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Filters required?</li>
+      <li>Filters panel open on page load for pre-filtered results?</li>
+      <li>If multi-select is offered  what batch options will be displayed?</li>
+    </ul>      
 </div>
 
 
