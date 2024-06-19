@@ -1,0 +1,68 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="UX (Wayfinding) glossary" %}
+{% block content %}
+<h1 class="govuk-heading-xl">
+  Glossary
+</h1>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Current and new Delta terms</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Current term</th>
+      <th scope="col" class="govuk-table__header">New term</th>
+      <th scope="col" class="govuk-table__header">Internal users</th>
+      <th scope="col" class="govuk-table__header">External users</th>
+      <th scope="col" class="govuk-table__header">Notes</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Access group</th>
+      <td class="govuk-table__cell">Collection group</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">The parent of a groups of collections (see next)</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Collection instance</th>
+      <td class="govuk-table__cell">Collection</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">A request for data. Time boxed</td>
+    </tr>     
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">---</th>
+      <td class="govuk-table__cell">Return</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">The set of Records for a specific Collection. Ambiguous before</td>
+    </tr>    
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">---</th>
+      <td class="govuk-table__cell">Record</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">New, a single piece of form data</td>
+    </tr>       
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Form</th>
+      <td class="govuk-table__cell">---</td>
+      <td class="govuk-table__cell">No</td>
+      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">Unchanged, a form definition</td>
+    </tr>                
+  </tbody>
+</table>
+
+
+<!-- Hierarchy -->
+<h2 class="govuk-heading-l">Clear labels and simplified hierarchy</h2>
+<p>Parent > child relationship&hellip;</p>
+<p class="govuk-body-l"><strong>Collection Group</strong> > <strong>Collection</strong> > <strong>Return<sup>*</sup></strong> > <strong>Record</strong></p>
+
+
+
+</div>
+{% endblock %}
