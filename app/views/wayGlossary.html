@@ -6,7 +6,7 @@
 </h1>
 
 
-<table class="govuk-table">
+<table class="govuk-table govuk-!-margin-bottom-9">
   <caption class="govuk-table__caption govuk-table__caption--m">Current and new Delta terms</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
@@ -31,35 +31,35 @@
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">A request for data. Time boxed</td>
-    </tr>     
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">---</th>
       <td class="govuk-table__cell">Return</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">The set of Records for a specific Collection. Ambiguous before</td>
-    </tr>    
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">---</th>
       <td class="govuk-table__cell">Record</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">New, a single piece of form data</td>
-    </tr>       
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Dataset</th>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">Internal use online. Analogous to spreadsheet holding data</td>
-    </tr>         
+    </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Form</th>
       <td class="govuk-table__cell">---</td>
       <td class="govuk-table__cell">No</td>
       <td class="govuk-table__cell">Yes</td>
       <td class="govuk-table__cell">Meaning has changed slightly. Now refers to the 'physical' form through which record data is submitted</td>
-    </tr>                
+    </tr>
   </tbody>
 </table>
 
@@ -68,6 +68,56 @@
 <h2 class="govuk-heading-l">Hierarchy</h2>
 <p>Parent > child relationship&hellip;</p>
 <p class="govuk-body-l"><strong>Collection Group</strong> > <strong>Collection</strong> > <strong>Return<sup>*</sup></strong> > <strong>Record</strong></p>
+
+<p><small>*Returns don't have entity (landing) pages.</small></p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+<!-- Welcome / on-boarding text -->
+<h2 class="govuk-heading-l">Welcome</h2>
+<div class="designNote">
+  <p>Users will have to be alerted and educated about changes to Delta - terminology and structure (information arcature). Current thinking is we will display a message like the one below when they first log in.</p>
+</div>
+
+<div class="govuk-panel delta-panel--information">
+  <h1 class="govuk-panel__title">
+    Making Delta simpler and faster for you
+  </h1>
+  <div class="">
+    <p class="govuk-body-l">We are dedicated to improving your experience with Delta, making it easier and more efficient for you. To achieve this, we are updating the names and locations of various elements you interact with.</p>
+    <h2 class="govuk-heading-l">New labels and relationships</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-body-l">
+        <li>
+            <strong>Collection Group</strong>: Provides information on the collection, its purpose, and how the data is used. The new collection group page lists all collections, both past and present.
+            <br><em>Example: Hedgehog Census</em>
+        </li>
+        <li>
+            <strong>Collection</strong>: A one-off request for a return.<br><em>Example: Hedgehog Census 2023</em>
+        </li>
+        <li>
+            <strong>Return</strong>: The data submitted for a collection. A return may consist of one or more records, depending on the collection type.
+            <br><em>Example: Waverley Hedgehog Census 2023</em>
+        </li>
+        <li>
+            <strong>Record</strong>: A set of data forming part of a return.
+            <br><em>Example: Waverley Hedgehog Census 2023</em>
+        </li>
+    </ul>
+
+    <h2 class="govuk-heading-l">Where to start</h2>
+    <ul class="govuk-list govuk-list--bullet govuk-list--spaced govuk-body-l">
+        <li>
+            <a href="#"><strong>Home page</strong></a>: at a glance overview of all active items
+        </li>
+        <li>
+            <strong>Your account</strong>: join collection groups and manage your roles
+        </li>
+        <li>
+            <strong>Collections</strong>: all your collections in one place
+        </li>
+    </ul>
+  </div>
+</div>
 
 
 
