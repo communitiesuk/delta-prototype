@@ -12,52 +12,45 @@
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Current term</th>
       <th scope="col" class="govuk-table__header">New term</th>
-      <th scope="col" class="govuk-table__header">Internal users</th>
-      <th scope="col" class="govuk-table__header">External users</th>
+      <th scope="col" class="govuk-table__header">Internal&nbsp;only</th>
       <th scope="col" class="govuk-table__header">Notes</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Dataset</th>
-      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">n/a</td>
       <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">No</td>
       <td class="govuk-table__cell">Internal use only. Parent of group of collections</td>
     </tr>    
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Access group</th>
       <td class="govuk-table__cell">Collection group</td>
-      <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">The parent of a groups of collections  / datasets</td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Collection instance</th>
       <td class="govuk-table__cell">Collection</td>
-      <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell"></td>      
       <td class="govuk-table__cell">A request for data. Time boxed</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">---</th>
+      <th scope="row" class="govuk-table__header">n/a</th>
       <td class="govuk-table__cell">Return</td>
-      <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell"></td>      
       <td class="govuk-table__cell">The set of Records for a specific Collection. Ambiguous before</td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">---</th>
+      <th scope="row" class="govuk-table__header">n/a</th>
       <td class="govuk-table__cell">Record</td>
-      <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell"></td>
       <td class="govuk-table__cell">New, a single piece of form data</td>
     </tr>
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header">Form</th>
-      <td class="govuk-table__cell">---</td>
-      <td class="govuk-table__cell">Yes</td>
-      <td class="govuk-table__cell">Yes</td>
+      <td class="govuk-table__cell">n/a</td>
+      <td class="govuk-table__cell"></td> 
       <td class="govuk-table__cell">Meaning has changed slightly. Now refers to the 'physical' form through which record data is submitted</td>
     </tr>
   </tbody>
@@ -65,7 +58,7 @@
 
 
 <!-- Hierarchy -->
-<h2 class="govuk-heading-l">Hierarchy</h2>
+<h2 class="govuk-heading-l" id="hierarchy">Hierarchy</h2>
 <p>Parent > child relationship&hellip;</p>
 <p class="govuk-body-l"><strong>Collection Group</strong> > <strong>Collection</strong> > <strong>Return<sup>*</sup></strong> > <strong>Record</strong></p>
 
@@ -74,7 +67,7 @@
 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
 
 <!-- Welcome / on-boarding text -->
-<h2 class="govuk-heading-l">Welcome</h2>
+<h2 class="govuk-heading-l" id="welcome">Welcome</h2>
 <div class="designNote">
   <p>Users will have to be alerted and educated about changes to Delta - terminology and structure (information arcature). Current thinking is we will display a message like the one below when they first log in.</p>
 </div>
