@@ -165,11 +165,9 @@ html {
     }
 }
 
-.delta-panel--information {
-    background-color: $delta-info;
-    text-align: left;
+.delta-notification-banner__content {
     * {
-        color: #fff;
+        max-width: 100%!important;
     }
 }
 
