@@ -200,16 +200,41 @@ html {
     };
 }
 
-.delta-results-filter {
-    padding: 1.2rem;
-    background-color: #e7e7e7;    
-    .govuk-form-group {
-        margin-bottom: 0;
-    }
-    .govuk-select {
-        min-width: 0;
-    }
+// === attempt 2 at results and filters ================
+
+.hidden {
+    display: none;
 }
+
+.delta-results {
+    display: flex;
+    gap: 1rem;
+}
+#delta-results-filters {
+    min-width: 300px;
+    max-width: 300px;
+    background-color: #f3f2f1;
+
+    .delta-results-filters-header {
+        padding: 1rem;
+        background-color: #b1b4b6;
+    }
+
+    .delta-results-active-filters {
+        padding: 1rem;
+        background-color: #E6E6E6;
+    }    
+
+    .delta-results-filters-filters {
+        padding: 1rem;
+    }        
+
+
+}
+
+#delta-results-data {
+    width: 100%;
+}   
 
 
 .delta-image-responsive {
@@ -288,6 +313,10 @@ html {
 
 
 // delta table filters ===============
+
+.detla-pointer {
+    cursor: pointer;
+}
 
 .delta-list-horizontal {
     display: flex;

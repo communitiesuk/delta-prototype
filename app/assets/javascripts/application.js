@@ -55,8 +55,25 @@ window.GOVUKPrototypeKit.documentReady(() => {
         document.getElementById('todaysDay').innerHTML = currentDay;
     };
 
+    // TOGGLE Results filters ===============
+
+
+
+    document.getElementById('toggleFiltersPanel').addEventListener('click', function() {
+        // alert('Toggle filters clicked');      
+        var deltaResultsFilters = document.getElementById('delta-results-filters');
+        deltaResultsFilters.classList.toggle('hidden');           
+    });  
+    document.getElementById('closeFiltersPanel').addEventListener('click', function() {
+        // alert('Close filters clicked');
+        var deltaResultsFilters = document.getElementById('delta-results-filters');
+        deltaResultsFilters.classList.toggle('hidden');           
+    });          
+
 
 })
+
+
 
 
 
