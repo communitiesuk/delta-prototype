@@ -53,13 +53,13 @@
   </ul>
 </div>
 
-<!-- config checklist -->
-<div class="delta-full-screen" id="config">
-  <h1 class="govuk-heading-xl">Config</h1>
+<!-- config tableSpecification -->
+<div class="delta-full-screen" id="tableSpecification">
+  <h1 class="govuk-heading-xl">Table specification</h1>
 
   <ul class="govuk-list govuk-list--bullet">
     <li>Table name</li>
-    <li>Location</li>
+    <li>Location (on site map)</li>
     <li>Type
       <ul class="govuk-list govuk-list--bullet">
         <li>Basic (quick search and sort by header)</li>
@@ -68,18 +68,31 @@
     </li>
     <li>Batch processing
       <ul class="govuk-list govuk-list--bullet">
-        <li>Boolean (yes/no)</li>
+        <li>Enabled - boolean (yes/no)</li>
       </ul>      
     </li>
-    <li>Secret search enabled
+    <li>Secret squirrel 🐿
       <ul class="govuk-list govuk-list--bullet">
-        <li>Boolean (yes/no) - list fields not displayed in table</li>
+        <li>Enabled - boolean (yes/no) - list fields being searched that are not displayed in table</li>
       </ul>      
     </li>
-    <li>Advanced search options*
+    <li>Advanced search options
       <ul class="govuk-list govuk-list--bullet">
-        <li>Group name, form control type</li>
+        <li>Search group name (similar to form groups)
+          <ul class="govuk-list govuk-list--bullet">
+            <li><em>Supporting notes</em></li>
+            <li>Select - single select</li>
+            <li>Select - multi select</li>
+            <li>Check - multi select</li>
+            <li>Radio - single select</li>
+          </ul>      
+        </li>
       </ul>            
+    </li>
+    <li>Pre-filtered results
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Advanced search option(s)</li>
+      </ul>      
     </li>
     <li>Results table structure
       <ul class="govuk-list govuk-list--bullet">
