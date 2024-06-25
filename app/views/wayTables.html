@@ -218,14 +218,14 @@
     <!-- filters -->
     <div id="delta-results-filters">
       <div class="delta-results-filters-header">
-        <a style="float: right;" id="closeFiltersPanel" class="detla-pointer">Close</a>
-        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Advanced search</h3>
+        <a style="float: right;" id="closeFiltersPanel" class="detla-pointer">Hide</a>
+        <h3 class="govuk-heading-l govuk-!-margin-bottom-0">Advanced search</h3>
       </div>
 
       <!-- active filters -->
-      <div class="delta-results-active-filters">
-        <p class="govuk-body-s govuk-!-margin-bottom-0">Applied filters (3)</p>
-      </div>
+      <!-- <div class="delta-results-active-filters">
+        <p class="govuk-body-s govuk-!-margin-bottom-0">Filters applied: <strong class="govuk-tag delta-tag-pill">3</strong></p>
+      </div> -->
 
       <div class="delta-results-filters-filters">
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -233,7 +233,7 @@
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                  Organisations <small>(2 active)</small>
+                  Organisations <small>(2 active filters)</small>
                 </span>
               </h2>
             </div>
@@ -254,6 +254,7 @@
                   selectOrg
                 </label>
                 <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectOrg" name="selectOrg">
+                  <option value="Select" selected>Select organisation</option>
                   <option value="Rivertown">Rivertown Borough Council</option>
                   <option value="Greendale">Greendale Borough Council</option>
                   <option value="Sunnybrook">Sunnybrook Borough Council</option>
@@ -268,7 +269,7 @@
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                  Status <small>(1 active)</small>
+                  Status <small>(1 active filter)</small>
                 </span>
               </h2>
             </div>
@@ -296,6 +297,7 @@
             </div>
           </div>
         </div>
+        <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
       </div>
     </div>
 
@@ -308,14 +310,13 @@
       <div class="delta-results-data-header">
         <div class="delta-results-table-filter-summary delta-flex-horizontal delta-flex-horizontal__right">
           <div>
-            <p class="govuk-!-margin-bottom-0"><strong><a id="toggleFiltersPanel" class="detla-pointer">Advanced search (3)</a></strong></p>
+            <p class="govuk-!-margin-bottom-0"><strong><a id="toggleFiltersPanel" class="detla-pointer">Advanced search</a> <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">3 active filters</strong></strong></p>
           </div>
           <div>
             <div class="govuk-form-group">
               <h1 class="govuk-label-wrapper">
                 <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
-                  Filters results by keyword
-                </label>
+                  Filters results by keywords
               </h1>
               <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Quick search">
             </div>
@@ -326,7 +327,7 @@
       <!-- data table -->
       <div>
         <table class="govuk-table govuk-table--small-text-until-tablet">
-          <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
+          <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Results</caption>
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header"><a href="#">Title <img src="/public/images/sort-ascending.svg"></a></th>
@@ -412,7 +413,7 @@
       </div>
 
       <!-- Pagination -->
-      <p>Displaying records 1 to 10 of 13.</p>
+      <p>Displaying 1 to 10 of 13.</p>
       <nav class="govuk-pagination" aria-label="Pagination">
         <div class="govuk-pagination__prev">
           <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
