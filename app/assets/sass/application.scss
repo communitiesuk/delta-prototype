@@ -232,9 +232,18 @@ html {
 
 }
 
+
+
 .delta-filter-item-active {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    // padding: 5px 7px;
+    // background-color: #fff;
+    // margin-bottom: 1rem;
+    &:hover {
+        //background-color: #dddddd;
+    }
 }
 
 #delta-results-data {
@@ -339,13 +348,18 @@ html {
 .delta-flex-horizontal {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
     justify-content: space-between;
+    align-items: center;
 
     * {
         margin-bottom: 0;
     }
 }
 
+.delta-flex-horizontal__right {
+    justify-content: end;
+}
 
 
 
@@ -354,7 +368,7 @@ html {
     background-color: $delta-info;
     padding: 1rem;
     margin-bottom: 1rem;
-    align-items: center;
+    align-items: right;
 
 
     li, a {

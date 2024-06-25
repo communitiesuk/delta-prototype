@@ -7,7 +7,7 @@
 <div class="delta-fixed-nav">
     <ul class="govuk-list">
       <li><a href="#overview">Overview</a></li>
-      <li><a href="#tableSpecification">Table specification</a></li>      
+      <li><a href="#tableSpecification">Table specification</a></li>
       <li>Table versions:</li>
       <li><a href="#prototype-basic">Basic</a></li>
       <li><a href="#prototype-advanced-search">Advanced search (filter)</a></li>
@@ -65,23 +65,23 @@
       <ul class="govuk-list govuk-list--bullet">
         <li>External - boolean (yes/no)</li>
         <li>Internal - boolean (yes/no)</li>
-      </ul>            
+      </ul>
     </li>
     <li>Type
       <ul class="govuk-list govuk-list--bullet">
         <li>Basic (quick search and sort by header)</li>
         <li>Advanced search</li>
-      </ul>      
+      </ul>
     </li>
     <li>Batch processing (select column)
       <ul class="govuk-list govuk-list--bullet">
         <li>Enabled - boolean (yes/no)</li>
-      </ul>      
+      </ul>
     </li>
     <li>Secret squirrel 🐿
       <ul class="govuk-list govuk-list--bullet">
         <li>Enabled - boolean (yes/no) - list fields being searched that are not displayed in table</li>
-      </ul>      
+      </ul>
     </li>
     <li>Advanced search options
       <ul class="govuk-list govuk-list--bullet">
@@ -93,19 +93,19 @@
             <li>Check - multi select</li>
             <li>Radio - single select</li>
             <li>Data picker</li>
-          </ul>      
+          </ul>
         </li>
-      </ul>            
+      </ul>
     </li>
     <li>Pre-filtered results
       <ul class="govuk-list govuk-list--bullet">
         <li>Advanced search option(s)</li>
-      </ul>      
+      </ul>
     </li>
     <li>Results table structure
       <ul class="govuk-list govuk-list--bullet">
         <li>Col header + sortable (boolean)</li>
-      </ul>            
+      </ul>
     </li>
   </ul>
 </div>
@@ -113,7 +113,7 @@
 
 <!-- PROTOTYPE basic -->
 <div class="delta-full-screen" id="prototype-basic">
-  <p class="designNote delta-text-center" style="width: 100%;">Basic table (with quick search and column sorting).</p>         
+  <p class="designNote delta-text-center" style="width: 100%;">Basic table (with quick search and column sorting).</p>
   <div style="width: 100%;">
     <div class="delta-results-main">
 
@@ -213,7 +213,7 @@
 
 <!-- PROTOTYPE advanced search -->
 <div class="delta-full-screen" id="prototype-advanced-search">
-  <p class="designNote  delta-text-center" style="width: 100%;">Advanced search panel (filters). Discuss: 1) Need for apply button? 2) Org filters: 'remove all' amd 'add all'? 3)  Display "quick search text" in active filters summary?</p>         
+  <p class="designNote  delta-text-center" style="width: 100%;">Advanced search panel (filters).</p>
   <div class="delta-results">
     <!-- filters -->
     <div id="delta-results-filters">
@@ -223,108 +223,92 @@
       </div>
 
       <!-- active filters -->
-      <div class="delta-results-active-filters">
-        <h3 class="govuk-heading-s">Active filters (3)</h3>
-
-        <h4 class="govuk-label">Organisations</h4>
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="#fltrGrp-org">Waverley Borough Council</a></li>
-          <li><a href="#fltrGrp-org">Arundel Borough Council</a></li>
-        </ul>
-
-        <h4 class="govuk-label">Status</h4>
-        <ul class="govuk-list govuk-list--spaced">
-          <li><a href="#">Live</a></li>
-        </ul>
+      <div class="delta-results-active-filters govuk-visually-hidden">
+        <p class="govuk-body-s govuk-!-margin-bottom-0">Applied filters (3)</p>
       </div>
 
       <div class="delta-results-filters-filters">
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Organisations <small>(2 active)</small>
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
 
-<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-          Organisations (2)
-        </span>
-      </h2>
-    </div>
-    <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-      
-      <!-- active orgs -->
-      <ul class="govuk-list">
-        <li><div class="filter-group-organisation">Waverley Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon"></a></></li>
-        <li><div class="filter-group-status">Arundel Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon"></a></></li>
-      </ul>             
+              <!-- active orgs -->
+              <ul class="govuk-list govuk-list--spaced">
+                <li class="delta-filter-item-active">Waverley Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon"></a></li>
+                <li class="delta-filter-item-active">Arundel Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon"></a></li>
+              </ul>
 
-      <!-- search -->
+              <!-- search -->
 
 
-      <!-- results drop-down -->
-      <div class="govuk-form-group">
-        <label class="govuk-label govuk-visually-hidden" for="selectOrg">
-          selectOrg
-        </label>
-        <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectOrg" name="selectOrg">
-          <option value="Rivertown">Rivertown Borough Council</option>
-          <option value="Greendale">Greendale Borough Council</option>
-          <option value="Sunnybrook">Sunnybrook Borough Council</option>
-          <option value="PineValley">Pine Valley Borough Council</option>
-        </select>
-        <br>
-        <button class="govuk-button">Add</button>      
-      </div>
-    </div>
-  </div>
-  <div class="govuk-accordion__section">
-    <div class="govuk-accordion__section-header">
-      <h2 class="govuk-accordion__section-heading">
-        <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-          Status (1)
-        </span>
-      </h2>
-    </div>
-    <div id="filter-group-status" class="govuk-accordion__section-content">
-        <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
-            <label class="govuk-label govuk-checkboxes__label" for="Status">
-              Live
-            </label>
+              <!-- results drop-down -->
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-visually-hidden" for="selectOrg">
+                  selectOrg
+                </label>
+                <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectOrg" name="selectOrg">
+                  <option value="Rivertown">Rivertown Borough Council</option>
+                  <option value="Greendale">Greendale Borough Council</option>
+                  <option value="Sunnybrook">Sunnybrook Borough Council</option>
+                  <option value="PineValley">Pine Valley Borough Council</option>
+                </select>
+                <br>
+                <button class="govuk-button">Add</button>
+              </div>
+            </div>
           </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
-            <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-              Closed
-            </label>
-          </div>
-          <div class="govuk-checkboxes__item">
-            <input class="govuk-checkboxes__input" id="Status-3" name="Status" type="checkbox" value="farm">
-            <label class="govuk-label govuk-checkboxes__label" for="Status-3">
-              Future
-            </label>
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Status <small>(1 active)</small>
+                </span>
+              </h2>
+            </div>
+            <div id="filter-group-status" class="govuk-accordion__section-content">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="Status">
+                      Live
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                      Closed
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status-3" name="Status" type="checkbox" value="farm">
+                    <label class="govuk-label govuk-checkboxes__label" for="Status-3">
+                      Future
+                    </label>
+                  </div>
+                </div>
+            </div>
           </div>
         </div>
-    </div>
-  </div>
-</div>        
-
       </div>
     </div>
+
+
 
     <!-- data here -->
     <div id="delta-results-data">
 
       <!-- result count, filter toggle (inc. active filter count) quick search,  -->
       <div class="delta-results-data-header">
-
-        <div class="delta-results-table-filter-summary delta-flex-horizontal">
+        <div class="delta-results-table-filter-summary delta-flex-horizontal delta-flex-horizontal__right">
           <div>
-            <ul class="govuk-list delta-list-horizontal">
-              <li>Displaying 1-10 or 13 results.</li>
-              <li><strong><a id="toggleFiltersPanel" class="detla-pointer">Advanced search (3)</a></strong></li>
-              <!-- <li><a href="#">Add filter</a></a></li> -->
-            </ul>
+            <p class="govuk-!-margin-bottom-0"><strong><a id="toggleFiltersPanel" class="detla-pointer">Advanced search (3)</a></strong></p>
           </div>
           <div>
             <div class="govuk-form-group">
@@ -336,10 +320,11 @@
               <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Quick search">
             </div>
           </div>
-        </div>        
-
+        </div>
       </div>
 
+      <!-- data table -->
+      <div>
         <table class="govuk-table govuk-table--small-text-until-tablet">
           <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
           <thead class="govuk-table__head">
@@ -359,15 +344,134 @@
               <td class="govuk-table__cell">DataItem</td>
               <td class="govuk-table__cell">DataItem</td>
             </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+              <td class="govuk-table__cell">DataItem</td>
+            </tr>                                                                                                            
           </tbody>
         </table>
+      </div>
+
+      <!-- Pagination -->
+      <p>Displaying records 1 to 10 of 13.</p>
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">
+              Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+
     </div>
+
+
   </div>
+
+  <h4 class="govuk-heading-l govuk-!-margin-top-9">Change log</h4>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Removed apply button</li>
+    <li>Removed filter overview</li>
+    <li>Moved from Details to Accordion</li>
+    <li>Added paging and removed results count from table header</li>
+  </ul>
+
 </div>
 
 <!-- PROTOTYPE batch processing -->
 <div class="delta-full-screen" id="prototype-batch-processing">
-  <p class="designNote delta-text-center" style="width: 100%;">Batch processing (select column, select/deselect, selected count and batch option buttons)</p>         
+  <p class="designNote delta-text-center" style="width: 100%;">Batch processing (select column, select/deselect, selected count and batch option buttons)</p>
   <div style="width: 100%;">
     <div class="delta-results-main">
       <!-- filters -->
@@ -417,7 +521,7 @@
                     <label class="govuk-label govuk-checkboxes__label" for="select-item">
                       <span class="govuk-visually-hidden">Select name</span>
                     </label>
-                  </div>                   
+                  </div>
                 </td>
                 <th scope="row" class="govuk-table__header"><a href="#">Title</a></th>
                 <td class="govuk-table__cell">DataItem</td>
@@ -430,8 +534,8 @@
         </div>
         <!-- selected count and selection options -->
 
-        <!-- Batch options -->        
-        <div class="delta-results-batch-options delta-flex-horizontal">          
+        <!-- Batch options -->
+        <div class="delta-results-batch-options delta-flex-horizontal">
           <div>
             <ul class="govuk-list delta-list-horizontal">
               <li><a href="#">Select all</a></li>
