@@ -225,47 +225,91 @@
       <!-- active filters -->
       <div class="delta-results-active-filters">
         <h3 class="govuk-heading-s">Active filters (3)</h3>
+
+        <h4 class="govuk-label">Organisations</h4>
         <ul class="govuk-list govuk-list--spaced">
-          <li><a href="#">Filter group 1</a></li>
-          <li><a href="#">Filter group 2</a></li>
-          <li><a href="#">Filter group 3</a></li>
+          <li><a href="#">Waverley Borough Council</a></li>
+          <li><a href="#">Arundel Borough Council</a></li>
+        </ul>
+
+        <h4 class="govuk-label">Status</h4>
+        <ul class="govuk-list govuk-list--spaced">
+          <li><a href="#">Live</a></li>
         </ul>
       </div>
 
       <div class="delta-results-filters-filters">
 
-        <p class="delta-align-right"><small><a href="#">Open all</a> &nbsp; <a href="#">Close all</a></small></p>
+        <p class="delta-align-right"><small><a href="#">Expand all</a> &nbsp; <a href="#">Collapse all</a></small></p>
 
         <details class="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Filter group 1
+              Organisations (2)
             </span>
           </summary>
           <div class="govuk-details__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <!-- active orgs -->
+            <ul class="govuk-list">
+              <li><div class="delta-filter-item-active">Waverley Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span>X</a></></li>
+              <li>Arundel Borough Council</li>
+            </ul>             
+
+            <!-- search -->
+
+
+            <!-- results drop-down -->
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-visually-hidden" for="selectOrg">
+                selectOrg
+              </label>
+              <select class="govuk-select govuk-!-margin-bottom-3" id="selectOrg" name="selectOrg">
+                <option value="Rivertown">Rivertown Borough Council</option>
+                <option value="Greendale">Greendale Borough Council</option>
+                <option value="Sunnybrook">Sunnybrook Borough Council</option>
+                <option value="PineValley">Pine Valley Borough Council</option>
+              </select>
+
+               <button class="govuk-button">Add</button>
+
+            </div>
+
+
+
           </div>
         </details>          
         <details class="govuk-details">
           <summary class="govuk-details__summary">
             <span class="govuk-details__summary-text">
-              Filter group 2
+              Status (1)
             </span>
           </summary>
           <div class="govuk-details__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+            
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="Status">
+                  Live
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                  Closed
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="Status-3" name="Status" type="checkbox" value="farm">
+                <label class="govuk-label govuk-checkboxes__label" for="Status-3">
+                  Future
+                </label>
+              </div>
+            </div>
+
           </div>
         </details>                    
-        <details class="govuk-details">
-          <summary class="govuk-details__summary">
-            <span class="govuk-details__summary-text">
-              Filter group 3
-            </span>
-          </summary>
-          <div class="govuk-details__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </div>
-        </details> 
 
         <button class="govuk-button">Apply</button>
         <button class="govuk-button govuk-button--secondary">Reset filters</button>
