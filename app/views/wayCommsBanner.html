@@ -1,0 +1,135 @@
+{% extends "layouts/delta.html" %}
+{% set pageName="UX (Wayfinding) Comms Banner" %}
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="designNote">
+      <p>Banner</p>
+      <ul class="govuk-list delta-list-horizontal">
+        <li><a href="/wayCommsBanner">Comms - banner</a></li>
+        <li><a href="/wayCommsInt">Comms - internal</a></li>
+        <li><a href="/wayCommsExt">Comms - external</a></li>
+      </ul>
+    </div>
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Important
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+        <p class="govuk-notification-banner__heading">
+          We are making improvements to Delta. From [date] there will be new pages to make it easier to find the tasks you need to do. <a class="govuk-notification-banner__link" href="#">Find out more about improvements to Delta</a>.
+        </p>
+      </div>
+    </div>
+
+
+    <h1 class="govuk-heading-xl">Help and guidance</h1>
+
+
+    <h1 class="govuk-heading-l">How to use the new pages</h1>
+    <p>As part of the improvements to Delta, we have introduced a new homepage and new pages for each collection group, collection, and record. There are also changes to the datastore.</p>
+
+    <h2 class="govuk-heading-m">Homepage</h2>
+    <p>The new homepage shows:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>open and missed collections</li>
+        <li>records that need certifying</li>
+        <li>records that have been submitted</li>
+        <li>deadlines</li>
+    </ul>
+    <p>This makes it easier to get to collections.</p>
+    <p>Users can see information for all their organisations and will no longer have to choose which organisation to view.</p>
+    <p>Links to support are clearer, making it easier for users to find the support they need.</p>
+
+    <!-- =================================================== -->
+    <div class="designNote">
+      <h3 class="govuk-heading-m">Action banner</h3>
+      <p>A banner at the top of the page shows users actions they need to take. This could be a record that needs submitting or certifying, or a collection where the deadline has passed. It links to the section of the page with more information.</p>
+    </div>
+
+    <h3 class="govuk-heading-m">Open collections</h3>
+    <p>The homepage shows open collections for every organisation the user has access to where:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the deadline has not passed</li>
+        <li>the deadline has been extended</li>
+        <li>a record has been submitted</li>
+        <li>no record has been submitted</li>
+    </ul>
+    <p>The homepage shows up to 5 records. It links to the collections table which shows all the records.</p>
+
+    <h3 class="govuk-heading-m">Missed collections</h3>
+    <p>The homepage shows collections with no returns in the last 2 years. To request a deadline extension, contact XX.</p>
+
+    <h3 class="govuk-heading-m">Certify a record</h3>
+    <p>Data certifiers and users with the correct permissions can see which records they need to certify. The homepage shows up to 5 records and links to the collections table where they can see all the records that need certifying. To certify a record, select ‘view record and certify’.</p>
+
+    <h3 class="govuk-heading-m">What has moved</h3>
+    <p>Links that were previously on the homepage can still be found at the top of the page. They are XXX</p>
+
+    <h2 class="govuk-heading-l">Collection</h2>
+    <p>Users can go straight to the new collection page by selecting the link on the homepage.</p>
+    <p>There is a page for each collection. This makes it easier for organisations to:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>view related collections</li>
+        <li>view previous submissions</li>
+        <li>see who has worked on the return</li>
+        <li>see all relevant returns and records</li>
+        <li>see deadlines</li>
+        <li>find out how to get support</li>
+        <li>find out why we ask for this data and what we use it for</li>
+    </ul>
+    <p>Users can share a direct link to the collection with colleagues who have the correct permissions.</p>
+    <p>The permissions you need to view or certify data have stayed the same.</p>
+
+    <h3 class="govuk-heading-m">What is on the collection page</h3>
+    <p>On the collection page is:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the collection’s name</li>
+        <li>the deadline and how many days the user has to submit</li>
+        <li>whether a collection is open or closed</li>
+        <li>the date the collection opened</li>
+        <li>whether a return has been submitted</li>
+        <li>the time period the data covers</li>
+        <li>what options are available to submit data</li>
+        <li>if the collection needs certifying</li>
+        <li>useful documents</li>
+    </ul>
+
+    <h3 class="govuk-heading-m">How to create a record</h3>
+    <p>On the collection page, select ‘create record’. This creates a draft record that can be filled in as usual.</p>
+      
+
+
+    <h2 class="govuk-heading-l">Record</h2>
+    <p>This page shows a summary of a record. Find this page by selecting a record on the collection page.</p>
+    <p>It shows:</p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>the name of the record</li>
+        <li>the organisation</li>
+        <li>the collection</li>
+        <li>the status</li>
+        <li>who last updated, submitted or certified it and when</li>
+    </ul>
+    <p>Users can share a direct link to the record with colleagues who have permission. If users can't edit or submit a record, there is a drop down to tell them why.</p>
+
+
+    <h2 class="govuk-heading-l">Collection group</h2>
+    <p>A collection group is all the collections for a specific purpose.</p>
+    <p>The hierarchy is:</p>
+    <p>Collection group > Collection > Return > Record</p>
+    <p>For example, the census is a collection group.</p>
+    <p>This page gives users information about the collection group, how the data is used and lists all collections, both past and present. It displays the ID and links to a table with all the collections in the group listed.</p>
+
+
+    <h2 class="govuk-heading-l">Datastore</h2>
+    <p>The link in the datastore now takes users to the record page. It shows the date a record was last updated and submitted. It also shows the date a record was certified if it has been certified.</p>
+
+  </div>
+</div>
+
+{% endblock %}
