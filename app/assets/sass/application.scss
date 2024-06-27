@@ -47,7 +47,7 @@ html {
 }
 
 .designNote {
-    padding: 2rem;
+    padding: 2rem 0;
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 0, 0.262);
     // display: none;
@@ -232,6 +232,9 @@ html {
 
 }
 
+.delta-icon--link {
+    fill: red!important;
+}
 
 
 .delta-filter-item-active {
@@ -383,8 +386,11 @@ html {
     background-color: $delta-info;
     padding: 1rem;
     margin-bottom: 1rem;
-    align-items: right;
+    align-items: center;
 
+    p {
+    color: #fff;        
+    }
 
     li, a {
         color: #fff!important;
