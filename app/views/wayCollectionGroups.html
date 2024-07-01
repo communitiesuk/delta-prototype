@@ -16,7 +16,7 @@
   Collection groups
 </h1>
 
-<details class="govuk-details">
+<!-- <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
       Help with collection groups
@@ -25,127 +25,158 @@
   <div class="govuk-details__text delta-reading-width">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
   </div>
-</details>
+</details> -->
 
 <!-- Collection groups -->
-
-<div class="designNote">
-  <p>Organisations filter should only be displayed if user is member of more than one organisation.</p>
-</div>
-
-
-<!-- Filters -->
-<div class="govuk-grid-row govuk-!-margin-top-3">
-  <div class="govuk-grid-column-full delta-form-inline-form-groups">
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="sort">
-        Sort by
-      </label>
-      <select class="govuk-select" id="sort" name="sort">
-        <option value="collectionGroupName" selected>Collection group</option>
-        <!-- <option value="collectionGroup">Collection group</option> -->
-        <option value="collectionGroup">Open collections</option>
-      </select>
+<!-- table results start -->
+<div class="delta-results">
+  <!-- filters -->
+  <div id="delta-results-filters" class="hidden">
+    <div class="delta-results-filters-header">
+      <a style="float: right;" id="closeFiltersPanel" class="detla-pointer">Hide</a>
+      <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Search</h3>
     </div>
-
-    <!-- search stuff -->
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="organisation">
-        Organisation
-      </label>
-      <select class="govuk-select" id="organisation" name="organisation">
-        <option value="status" selected>All</option>
-        <option value="status" selected>Arundel Borough Council</option>
-        <option value="status" selected>Waverley Borough Council</option>
-      </select>
-    </div>
-
-    <div class="govuk-form-group">
-      <div class="govuk-label-wrapper">
-        <label class="govuk-label" for="collection-name">
-          Search
-        </label>
+    <div class="delta-results-filters-filters">
+      <!-- Quick search -->
+      <div>
+        <div class="govuk-form-group">
+          <h1 class="govuk-label-wrapper">
+            <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
+              Filters results by keywords
+          </h1>
+          <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
+        </div>
       </div>
-      <input class="govuk-input" id="collection-name" name="collectionName" type="text">
-    </div>        
+      <!-- Accordion -->
+      <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+        <div class="govuk-accordion__section">
+          <div class="govuk-accordion__section-header">
+            <h2 class="govuk-accordion__section-heading">
+              <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                Organisations <small>(1 active<span class="govuk-visually-hidden"> filter</span>)</small>
+              </span>
+            </h2>
+          </div>
+          <div id="accordion-default-content-1" class="govuk-accordion__section-content">
 
-    <div>
-      <br><br>
-      <p><a href="#">Clear filters</a></p>
+            <!-- active orgs -->
+            <ul class="govuk-list govuk-list--spaced">
+              <li class="delta-filter-item-active">Waverley Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+              <li class="delta-filter-item-active">Arundel Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+            </ul>
+
+            <!-- search -->
+
+
+            <!-- results drop-down -->
+            <div class="govuk-form-group">
+              <label class="govuk-label govuk-visually-hidden" for="selectOrg">
+                selectOrg
+              </label>
+              <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectOrg" name="selectOrg">
+                <option value="Select" selected>Select organisation</option>
+                <option value="Rivertown">Rivertown Borough Council</option>
+                <option value="Greendale">Greendale Borough Council</option>
+                <option value="Sunnybrook">Sunnybrook Borough Council</option>
+                <option value="PineValley">Pine Valley Borough Council</option>
+              </select>
+              <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
+      <p><a href="#">Save this search</a></p>
+    </div>
+  </div>
+  <!-- table data here -->
+  <div id="delta-results-data">
+    <!-- result count, filter toggle (inc. active filter count) quick search,  -->
+    <div class="delta-results-data-header">
+      <div class="delta-results-table-filter-summary delta-flex-horizontal">
+        <div>
+          <p class="govuk-!-margin-bottom-0">Displaying 1 to 10 of 13.</p>
+        </div>
+        <div>
+          <p class="govuk-!-margin-bottom-0"><strong><a id="toggleFiltersPanel" class="detla-pointer">Search</a></strong> <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">1 active filter</strong></p>
+        </div>
+      </div>
     </div>
 
+    <!-- data table -->
+    <div>
+      <table class="govuk-table govuk-table--small-text-until-tablet">
+        <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"><a href="#">Collection groups <img src="/public/images/sort.svg"></a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Organisations <img src="/public/images/sort.svg"></a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Open collections <img src="/public/images/sort.svg"></a></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">British Dragonfly Monitoring</a></th>
+            <td class="govuk-table__cell">
+              <div class="delta-block"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</div>
+            </td>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">2</a></td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
+            <td class="govuk-table__cell">
+              <div class="delta-block"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</div>
+              <div class="delta-block"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</div>
+            </td>
+            <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">1</a></td>
+          </tr>      
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Pagination -->
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>
   </div>
 </div>
+<!-- table end start -->
 
-<div>
-  <table class="govuk-table">
-    <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collection groups</caption>
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Collection group</th>
-        <th scope="col" class="govuk-table__header">Organisations</th>
-        <th scope="col" class="govuk-table__header">Open collections</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">British Dragonfly Monitoring</a></th>
-        <td class="govuk-table__cell">
-          <div class="delta-block"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</div>
-        </td>
-        <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">2</a></td>
-      </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a></th>
-        <td class="govuk-table__cell">
-          <div class="delta-block"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</div>
-          <div class="delta-block"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Waverley Borough Council</div>
-        </td>
-        <td class="govuk-table__cell"><a href="/wayCollectionGroup#collections">1</a></td>
-      </tr>      
-    </tbody>
-  </table>
-</div>
-
-<p>Displaying 1 to 2 of 2.</p>
-<!-- <nav class="govuk-pagination" aria-label="Pagination">
-  <div class="govuk-pagination__prev">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-      </svg>
-      <span class="govuk-pagination__link-title">
-        Previous<span class="govuk-visually-hidden"> page</span>
-      </span>
-    </a>
-  </div>
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-        1
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-        2
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-        3
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-      <span class="govuk-pagination__link-title">
-        Next<span class="govuk-visually-hidden"> page</span>
-      </span>
-      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg>
-    </a>
-  </div>
-</nav> -->
 
 {% endblock %}
