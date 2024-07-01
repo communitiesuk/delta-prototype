@@ -17,35 +17,27 @@
 
 <!-- PROTOTYPE advanced search -->
 <div class="delta-full-screen" id="prototype-advanced-search">
-  <p class="designNote  delta-text-center" style="width: 100%;">Advanced search panel (filters).</p>
+  <p class="designNote  delta-text-center" style="width: 100%;">Search panel (filters).</p>
+
+  <!-- table results start -->
   <div class="delta-results">
     <!-- filters -->
-    <div id="delta-results-filters">
+    <div id="delta-results-filters" class="hidden">
       <div class="delta-results-filters-header">
         <a style="float: right;" id="closeFiltersPanel" class="detla-pointer">Hide</a>
         <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Search</h3>
       </div>
-
-      <!-- active filters -->
-      <!-- <div class="delta-results-active-filters">
-        <p class="govuk-body-s govuk-!-margin-bottom-0">Filters applied: <strong class="govuk-tag delta-tag-pill">3</strong></p>
-      </div> -->
-      
-    
-
       <div class="delta-results-filters-filters">
-
-      <!-- Quick search -->
-      <div>
-        <div class="govuk-form-group">
-          <h1 class="govuk-label-wrapper">
-            <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
-              Filters results by keywords
-          </h1>
-          <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
-        </div>
-      </div>           
-
+        <!-- Quick search -->
+        <div>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
+                Filters results by keywords
+            </h1>
+            <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
+          </div>
+        </div>           
         <!-- Accordion -->
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
           <div class="govuk-accordion__section">
@@ -141,16 +133,11 @@
           </div>
         </div>
         <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
-
         <p><a href="#">Save this search</a></p>
       </div>
     </div>
-
-
-
-    <!-- data here -->
+    <!-- table data here -->
     <div id="delta-results-data">
-
       <!-- result count, filter toggle (inc. active filter count) quick search,  -->
       <div class="delta-results-data-header">
         <div class="delta-results-table-filter-summary delta-flex-horizontal">
@@ -295,6 +282,10 @@
       </nav>
     </div>
   </div>
+  <!-- table end start -->
+
+
+
 </div>
 
 
