@@ -1,10 +1,25 @@
-{% extends "layouts/delta.html" %}
-{% set pageName="UX (Wayfinding) Comms / Help & Guidance" %}
-{% block content %}
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Help and guidance" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      },
+      {
+        text: "Help and guidance",
+        href: "#"
+      }
+    ]
+  }) }}
 
+{% endblock %}
+{% block content %}
 <div class="designNote">
-    <h1 class="govuk-heading-l">
-      Web page
+  <h1 class="govuk-heading-l">
+    Web page
   </h1>
   <ul class="govuk-list delta-list-horizontal">
     <li><a href="/wayCommsBanner">Comms - banner</a></li>
@@ -13,11 +28,10 @@
   </ul>
 </div>
 
-<div class="govuk-grid-row govuk-!-static-margin-bottom-9">
+<div class="govuk-grid-row govuk-!-static-margin-bottom-3">
   <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">Help and guidance</h1>
-    <h2 class="govuk-heading-m">How to use the new pages</h2>
-    <p>As part of the improvements to Delta, we have introduced a new homepage and new pages for each collection group, collection, and record. There are also changes to the datastore.</p>
+    <h1 class="govuk-heading-xl">Delta 2.0 overview</h1>
+    <p class="govuk-body-l">As part of the improvements to Delta, we have introduced a new <a href="#homepage">homepage</a> and new pages for each <a href="#collectionGroup">collection group</a>, <a href="#collection">collection</a>, and <a href="#record">record</a>. There are also changes to the <a href="#datastore">datastore</a>.</p>
   </div>
 </div>  
 
@@ -64,9 +78,28 @@
     </div>
     <div class="govuk-grid-column-one-third">
       <img src="/public/images/grab-landing-MVP.png" class="delta-image-responsive delta-screen-grab">        
+      <p><small>Version 2.0 of the new Delta homepage with dedicated sections for open collections, missed collections and records requiring certification.</small></p>
     </div>  
   </div>
 </section>
+
+<!-- Collection Group -->
+<section id="collectionGroup" class="govuk-!-static-margin-bottom-9">
+  <h2 class="govuk-heading-l">Collection group</h2>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">  
+      <p>A collection group is all the collections for a specific purpose.</p>
+      <p>The hierarchy is:</p>
+      <p><strong>Collection group > Collection > Return > Record</strong></p>
+      <p>For example, the census is a collection group.</p>
+      <p>This page gives users information about the collection group, how the data is used and lists all collections, both past and present. It displays the ID and links to a table with all the collections in the group listed.</p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <img src="/public/images/grab-collection-group-MVP.png" class="delta-image-responsive delta-screen-grab"> 
+      <p><small>Version 2.0 of the new Delta collection group page.</small></p>
+    </div>    
+  </div>
+</section>   
 
 <!-- Collection -->
 <section id="collection" class="govuk-!-static-margin-bottom-9">
@@ -106,6 +139,7 @@
     </div>
     <div class="govuk-grid-column-one-third">
       <img src="/public/images/grab-collection-MVP.png" class="delta-image-responsive delta-screen-grab"> 
+      <p><small>Version 2.0 of the new Delta collection page.</small></p>      
     </div>    
   </div>
 </section>
@@ -128,33 +162,18 @@
     </div>
     <div class="govuk-grid-column-one-third">
       <img src="/public/images/grab-record-MVP.png" class="delta-image-responsive delta-screen-grab"> 
+      <p><small>Version 2.0 of the new Delta record page.</small></p>      
     </div>    
   </div>
 </section>      
 
-<!-- Collection Group -->
-<section id="collectionGroup" class="govuk-!-static-margin-bottom-9">
-  <h2 class="govuk-heading-l">Collection group</h2>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">  
-      <p>A collection group is all the collections for a specific purpose.</p>
-      <p>The hierarchy is:</p>
-      <p><strong>Collection group > Collection > Return > Record</strong></p>
-      <p>For example, the census is a collection group.</p>
-      <p>This page gives users information about the collection group, how the data is used and lists all collections, both past and present. It displays the ID and links to a table with all the collections in the group listed.</p>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <img src="/public/images/grab-collection-group-MVP.png" class="delta-image-responsive delta-screen-grab"> 
-    </div>    
-  </div>
-</section>   
-
-
+<!-- Data store -->
 <section id="datastore" class="govuk-!-static-margin-bottom-9">
   <h2 class="govuk-heading-l">Datastore</h2>
-  <section class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds"> 
-    <p>The link in the datastore now takes users to the record page. It shows the date a record was last updated and submitted. It also shows the date a record was certified if it has been certified.</p>
+      <p>The link in the datastore now takes users to the record page. It shows the date a record was last updated and submitted. It also shows the date a record was certified if it has been certified.</p>
+    </div>
   </div>
 </section>
 
