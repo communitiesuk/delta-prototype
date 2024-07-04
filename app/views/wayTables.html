@@ -15,11 +15,299 @@
     </ul>
 </div>
 
-<!-- PROTOTYPE advanced search -->
+<!-- PROTOTYPE v2 advanced search -->
 <div class="delta-full-screen" id="prototype-advanced-search">
-  <p class="designNote  delta-text-center" style="width: 100%;">Search panel (filters).</p>
+  <div class="designNote" style="width: 100%;">
+    <p>Search panel (filters) v2.</p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>CHANGES:</li>
+      <li>"Show filters" button, instead of link</li>
+      <li>Moved "3 active filters" alongside results count</li>
+      <li>Renamed 'search' panel to 'filter' panel</li>
+      <li>Added magnifying glass icon to button</li>
+      <li>Horizontal scrolling of table!!</li>
+    </ul>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>TO DO / DISCUSS:</li>
+      <li>"Show filters" button should change to "Hide filters" when panel open</li>
+      <li>Discuss: active filter count, and what people's understanding of the counts might be</li>
+      <li>Discuss: in filter panel, moving show (expand) link icons to right right (to reduce vertical space)</li>
+    </ul>    
+  </div>
 
   <!-- table results start -->
+  <div class="delta-results">
+    <!-- filters -->
+    <div id="delta-results-filters" class="hidden">
+      <div class="delta-results-filters-header">
+        <!-- <a style="float: right;" id="closeFiltersPanel" class="detla-pointer">Hide</a> -->
+        <h3 class="govuk-heading-m govuk-!-margin-bottom-0">Filters</h3>
+      </div>
+      <div class="delta-results-filters-filters">
+        <!-- Quick search -->
+        <div>
+          <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper">
+              <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
+                Filters results by keywords
+            </h1>
+            <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
+          </div>
+        </div>           
+        <!-- Accordion -->
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Organisations <small>(2 active<span class="govuk-visually-hidden"> filters</span>)</small>
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+
+              <!-- active orgs -->
+              <ul class="govuk-list govuk-list--spaced">
+                <li class="delta-filter-item-active">Rivendell Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+                <li class="delta-filter-item-active">Arundel Borough Council<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+              </ul>
+
+              <!-- search -->
+
+
+              <!-- results drop-down -->
+              <div class="govuk-form-group">
+                <label class="govuk-label govuk-visually-hidden" for="selectOrg">
+                  selectOrg
+                </label>
+                <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectOrg" name="selectOrg">
+                  <option value="Select" selected>Select organisation</option>
+                  <option value="Rivertown">Rivertown Borough Council</option>
+                  <option value="Greendale">Greendale Borough Council</option>
+                  <option value="Sunnybrook">Sunnybrook Borough Council</option>
+                  <option value="PineValley">Pine Valley Borough Council</option>
+                </select>
+                <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
+              </div>
+            </div>
+          </div>
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Certification
+                </span>
+              </h2>
+            </div>
+            <div id="filter-group-status" class="govuk-accordion__section-content">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="Status">
+                      ready for certification
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                      Submitted
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="Status">
+                      Certified
+                    </label>
+                  </div>
+                </div>
+            </div>
+          </div>          
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Status
+                </span>
+              </h2>
+            </div>
+            <div id="filter-group-status" class="govuk-accordion__section-content">
+                <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="Status">
+                      Draft
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                      Submitted
+                    </label>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <button class="govuk-button">Apply filters</button>        
+        <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
+        <p><a href="#">Save this search</a></p>
+      </div>
+    </div>
+    <!-- table data here -->
+    <div id="delta-results-data">
+      <!-- result count, filter toggle (inc. active filter count) quick search,  -->
+      <div class="delta-results-data-header">
+        <div class="delta-results-table-filter-summary delta-flex-horizontal">
+          <div>
+            <p class="govuk-!-margin-bottom-0">Displaying 1 to 10 of 13 <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">3 active filters</strong></p>
+          </div>
+          <div>
+              <button class="govuk-button govuk-button--inverse" id="toggleFiltersPanel"><img src="/public/images/icon-search.svg" alt="icon remove" class="delta-icon"> Show filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- data table -->
+      <div class="delta-scrollable-pane">
+        <table class="govuk-table govuk-table--small-text-until-tablet">
+          <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header"><a href="#">Title <img src="/public/images/sort.svg"></a></th>
+              <th scope="col" class="govuk-table__header"><a href="#">Updated <img src="/public/images/sort-descending.svg"></a></th>
+              <th scope="col" class="govuk-table__header"><a href="#">By <img src="/public/images/sort.svg"></a></th>
+              <th scope="col" class="govuk-table__header"><a href="#">Certification <img src="/public/images/sort.svg"></a></th>
+              <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Elmsworth</a></th>
+              <td class="govuk-table__cell">14 April 2024</td>
+              <td class="govuk-table__cell">mike.phillips@rivendell.gov.uk</td>
+              <td class="govuk-table__cell">n/a</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certificationPending">Silverbrook</a></th>
+              <td class="govuk-table__cell">15 April 2024</td>
+              <td class="govuk-table__cell">sarah.jones@rivendell.gov.uk</td>      
+              <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Ready for certification</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Ashford Hollow</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Crestwood Falls</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Thornfield Glen</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Misty Pines</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Ravenwood</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="wayRecordDataProvider-collectionRecords">Pinehurst Bay</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Willow Creek</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-certified">Oakridge Valley</a></th>
+              <td class="govuk-table__cell">18 April 2024</td>
+              <td class="govuk-table__cell">emily.thompson@certifiers-r-us.org</td>            
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Certified</strong></td>
+              <td class="govuk-table__cell">Submitted</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        
+      </div>
+
+      <!-- Pagination -->
+      <nav class="govuk-pagination" aria-label="Pagination">
+        <div class="govuk-pagination__prev">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+            <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+            </svg>
+            <span class="govuk-pagination__link-title">
+              Previous<span class="govuk-visually-hidden"> page</span>
+            </span>
+          </a>
+        </div>
+        <ul class="govuk-pagination__list">
+          <li class="govuk-pagination__item govuk-pagination__item--current">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+              1
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+              2
+            </a>
+          </li>
+          <li class="govuk-pagination__item">
+            <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+              3
+            </a>
+          </li>
+        </ul>
+        <div class="govuk-pagination__next">
+          <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+            <span class="govuk-pagination__link-title">
+              Next<span class="govuk-visually-hidden"> page</span>
+            </span>
+            <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+              <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <!-- table results end -->
+</div>
+
+  <!-- PROTOTYPE v2 advanced search -->
+<div class="delta-full-screen" id="prototype-advanced-search">
+  <p class="designNote  delta-text-center" style="width: 100%;">Search panel (filters) v1.</p>
+
+
+  <!-- table results start OLD -->
   <div class="delta-results">
     <!-- filters -->
     <div id="delta-results-filters" class="hidden">
@@ -282,7 +570,7 @@
       </nav>
     </div>
   </div>
-  <!-- table end start -->
+  <!-- table results end OLD -->
 
 
 

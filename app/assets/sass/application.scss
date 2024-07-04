@@ -251,7 +251,22 @@ html {
 
 #delta-results-data {
     width: 100%;
+    // background-color: pink;
+    overflow: hidden;
 }   
+
+.delta-scrollable-pane {
+    overflow-x: scroll;
+    min-width: 100%;
+    table {
+        // background-color: yellowgreen;
+        th, td {
+            white-space: nowrap;
+        }
+    }
+}
+
+
 
 .delta-w-100 {
     width: 100%;
