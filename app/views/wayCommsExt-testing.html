@@ -1,88 +1,42 @@
-{% extends "layouts/delta-testing.html" %}
-{% set pageName="UX (Wayfinding) Comm External" %}
+{% extends "layouts/delta-email-testing.html" %}
+<!-- {% set pageName="UX (Wayfinding) Comm External" %} -->
 {% block content %}
 
-<div class="govuk-grid-row" class="govuk-!-static-margin-bottom-9">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Delta improvements
-    </h1>
-    <p class="govuk-body-l">
-      We are using your feedback to improve Delta. These improvements will make it easier and
-      faster to use.</p>
-  </div>
-</div>
+<h1 class="govuk-heading-l">
+Delta improvements
+</h1>
+<p class="govuk-body-l">Hi Susie,<br><br>
+We are using your feedback to improve Delta. These improvements will make it easier and
+faster to use.</p>    
 
+<h2 class="govuk-heading-m"><a href="/wayCommsHelpGuidance-testing#homepage">Homepage</a></h2>
+<p>Your new homepage will show you:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>open and missed collections</li>
+  <li>records that need certifying</li>
+  <li>what has been submitted</li>
+  <li>deadlines you need to meet</li>
+</ul>
 
+<h2 class="govuk-heading-m"><a href="/wayCommsHelpGuidance-testing#collection">Collection page</a></h2>      
+<p>There will be a page for each collection. This will make it easier to see all relevant returns and records and find out how to get support.</p>
+<p>We are not changing the permissions you need to view or certify data.</p>      
 
-<!-- Home page -->
-<section id="homepage" class="govuk-!-static-margin-bottom-9">
-  <h2 class="govuk-heading-l">Homepage</h2>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <p>Your new homepage will show you:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>open and missed collections</li>
-        <li>records that need certifying</li>
-        <li>what has been submitted</li>
-        <li>deadlines you need to meet</li>
-      </ul>
-      <!-- <p>You will still be able to access the same links as before. Access XX by selecting the link at  the top of the page.</p> -->
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <img src="/public/images/grab-landing-MVP.png" class="delta-image-responsive delta-screen-grab">        
-    </div>
-  </div>
-</section>   
-
-<!-- Collection -->
-<section id="collection" class="govuk-!-static-margin-bottom-9">
-  <h2 class="govuk-heading-l">Collection page</h2>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <p>There will be a page for each collection. This will make it easier to see all relevant returns and records and find out how to get support.</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <!-- <li>view related collections</li> -->
-        <!-- <li>view previous submissions</li> -->
-        <!-- <li>see who has worked on the return</li> -->
-        <!-- <li>see all relevant returns and records</li> -->
-        <!-- <li>find out how to get support</li> -->
-        <!-- <li>find out why we ask you for this data and what we use it for</li> -->
-      </ul>
-      <p>We are not changing the permissions you need to view or certify data.</p>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <img src="/public/images/grab-collection-MVP.png" class="delta-image-responsive delta-screen-grab"> 
-    </div>
-  </div>
-</section>   
-
-<!-- Records -->
-<section id="records" class="govuk-!-static-margin-bottom-9">
-  <h2 class="govuk-heading-l">Record page</h2>
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-third">
-      <p>This is a new page to view a summary of a record. You can see this page by selecting a record on the collections page.</p>
-      <p>It will show:</p>
-      <ul class="govuk-list govuk-list--bullet">
-        <li>the name of the record</li>
-        <li>the organisation</li>
-        <li>the collection</l>
-        <li>the status</li>
-        <li>who last updated/submitted/certified and when</li>
-      </ul>
-    </div>
-    <div class="govuk-grid-column-one-third">
-      <img src="/public/images/grab-record-MVP.png" class="delta-image-responsive delta-screen-grab"> 
-    </div>
-  </div>
-</section>  
-
+<h2 class="govuk-heading-m"><a href="/wayCommsHelpGuidance-testing#record">Record page</a></h2>
+<p>This is a new page to view a summary of a record. You can see this page by selecting a record on the collections page.</p>
+<p>It will show:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>the name of the record</li>
+  <li>the organisation</li>
+  <li>the collection</l>
+  <li>the status</li>
+  <li>who last updated/submitted/certified and when</li>
+</ul>
 
 <!-- End / CTA -->
-<h2 class="govuk-heading-l">How to use Delta</h2>
+<h2 class="govuk-heading-m"><a href="/wayCommsHelpGuidance-testing">How to use Delta</a></h2>
 <p>See our <a href="#"">help and guidance pages</a> for more information on how to use Delta.</p>
-<h2 class="govuk-heading-l">Your feedback</h2>
+<h2 class="govuk-heading-m">Your feedback</h2>
 <p>To help us improve Delta, contact...</p>
 
 {% endblock %}
