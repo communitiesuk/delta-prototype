@@ -50,7 +50,7 @@ html {
     padding: 2rem;
     margin-bottom: 2rem;
     background-color: rgba(255, 255, 0, 0.262);
-    // display: none;
+    display: none;
 
     &*:last-child {
         margin-bottom: 0;
@@ -214,27 +214,19 @@ html {
     min-width: 400px;
     max-width: 400px;
     background-color: #f3f2f1;
-
     .delta-results-filters-header {
         padding: 1rem;
         background-color: #b1b4b6;
     }
-
     .delta-results-active-filters {
         padding: 1rem;
         background-color: #E6E6E6;
     }    
-
     .delta-results-filters-filters {
         padding: 1rem;
     }        
-
-
 }
 
-.delta-icon--link {
-    fill: red!important;
-}
 
 
 .delta-filter-item-active {
@@ -245,33 +237,36 @@ html {
     // background-color: #fff;
     // margin-bottom: 1rem;
     &:hover {
-        //background-color: #dddddd;
+        background-color: #dddddd;
     }
 }
-
 #delta-results-data {
     width: 100%;
-    // background-color: pink;
+    //background-color: peachpuff;
     overflow: hidden;
 }   
-
 .delta-scrollable-pane {
     overflow-x: scroll;
     min-width: 100%;
     table {
         // background-color: yellowgreen;
         th, td {
-            white-space: nowrap;
+            // white-space: nowrap;
+            // width: fit-content;
+            max-width: 30ch;
+            word-break: break-all;
         }
     }
 }
 
-
+.delta-no-wrap {
+    white-space: nowrap;
+    word-break: keep-all;
+}
 
 .delta-w-100 {
     width: 100%;
 }
-
 .delta-tag-pill {
     border: 0;
     border-radius: 1rem;
@@ -280,14 +275,12 @@ html {
     background-color: $delta-info;
     color: #fff;
 }
-
 .delta-tag-pill--inverse {
     border: 0;
     border-radius: 1rem;
     background-color: #fff;
     color: $delta-info;
 }
-
 .delta-image-responsive {
     width: 100%;
 }
@@ -466,11 +459,11 @@ html {
     // background-color: #fff;
 }
 
-.detla-center {
+.detla-center-vertical {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
 }
 
 // Organisation logos ===============

@@ -1,16 +1,86 @@
 {% extends "layouts/delta.html" %}
 {% set pageName="UX (Wayfinding) overview" %}
 {% block content %}
-<h1 class="govuk-heading-xl">
-  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Project overview</small><br>
-  Wayfinding redesign
-</h1>
+
+<div class="delta-full-screen detla-center-vertical" id="intro">
+  <div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+          <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Project overview</small><br>
+          Delta 2.0
+        </h1>
+        <h2 class="govuk-heading-l">"Tapping, not typing"</h2>
+         <p><a href="#overview">Overview...</a></p>
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <!-- counter -->
+        <div class="delta-dashboard-masthead govuk-!-margin-bottom-9">
+          <p class="govuk-body-s">Based on <a href="/deltaDashboard#month202403" target="_blank" class="delta-link-light">March 2024</a> Delta  Dashboard.</p>      
+          <h2 class="govuk-heading-m">Transactions total</h2>
+          <h2 class="govuk-heading-xl">&pound;<span id="counter">0</span></h2>
+            <ul class="govuk-list govuk-list--bullet delta-hide">
+              <li>£<span id="moneyPerSecondElement"></span> per second</li>
+              <li>£<span id="moneyInElement"></span> in</li>
+              <li>£<span id="moneyOutElement"></span> out</li>
+              <li>£<span id="moneyTotalElement"></span> combined</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="delta-full-screen detla-center-vertical" id="overview">
+  <div>
+    <h1 class="govuk-heading-xl">
+      Overview
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-l">Goals</h3>
+        <ul class="govuk-list govuk-body-l govuk-list--bullet">
+          <li>Easier and faster for all</li>
+          <li>Save money</li>
+          <li>Increase data accuracy</li>
+        </ul> 
+        <p><a href="UxTicketEvaluationCriteria#okr" target="_blank">OKR alignment</a> (efficiency, cost-saving and accuracy)</p>      
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-l">Focus</h3>
+        <ul class="govuk-list govuk-body-l govuk-list--bullet">
+          <li><strong>Structure</strong> - labels, hierarchy, intelligence</li>
+          <li><strong>Collaboration</strong> - share and monitor</li>
+          <li><strong>Data</strong><sup>*</sup> - continuous improvement</li>
+        </ul>         
+      </div>
+      <div class="govuk-grid-column-one-third">
+        <h3 class="govuk-heading-l">Progress</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li><strong>External</strong>
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Data providers</li>
+              <li>Data certifiers</li>
+            </ul>            
+          </li>
+          <li><strong>Internal</strong> (in-flight)
+            <ul class="govuk-list govuk-body-l govuk-list--bullet">
+              <li>Collections managers</li>
+              <li>Admin</li>
+            </ul>            
+          </li>          
+        </ul>         
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h2 class="govuk-heading-l">Why are we doing this?</h2>
     <ul class="govuk-list govuk-list--bullet">
       <li><a href="deltaDashboard" target="_blank">Delta is important</a></li>
-      <li><a href="UxTicketEvaluationCriteria#okr" target="_blank">OKR alignment</a> (efficiency, cost-saving and accuracy)</li>      
+      <li></li>      
       <li>Personalisation
         <ul class="govuk-list govuk-list--bullet">
           <li>One-click access to everything (intuitive)</li>
