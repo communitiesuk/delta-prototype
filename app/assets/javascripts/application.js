@@ -6,10 +6,19 @@
 window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
 
+    // Results table fixed width
+    function setElementWidth() {   
+        var deltaScrollablePane = document.getElementById('delta-scrollable-pane');
+        var resultTable = document.getElementById('resultTable');
+        var width = deltaScrollablePane.offsetWidth; // Get the width in pixels
+        resultTable.style.width = width + 'px'; // Set the width as an inline style
+        // alert('widthing it');
+    };
+    setElementWidth();
 
-    const designNotes = document.querySelectorAll('.designNote'); // Get all elements with class 'designNote'
 
     // DESIGN NOTES: SHOW/HIDE CLICK
+    const designNotes = document.querySelectorAll('.designNote'); // Get all elements with class 'designNote'    
     document.getElementById('toggleLink').addEventListener('click', function() {
         showHideDesignNotes();
     });
@@ -22,7 +31,7 @@ window.GOVUKPrototypeKit.documentReady(() => {
             showHideDesignNotes();
         }
     });
-    
+
     // DESIGN NOTES: SHOW/HIDE
     function showHideDesignNotes() {
         // alert('Show hide activated');
@@ -56,19 +65,25 @@ window.GOVUKPrototypeKit.documentReady(() => {
     };
 
     // TOGGLE Results filters ===============
-
-
-
     document.getElementById('toggleFiltersPanel').addEventListener('click', function() {
         // alert('Toggle filters clicked');      
         var deltaResultsFilters = document.getElementById('delta-results-filters');
         deltaResultsFilters.classList.toggle('hidden');           
+        // alert('toggle');
+        var filterBtnText = document.getElementById('filterBtnText');
+        if (filterBtnText.textContent === 'Show filters') {
+            filterBtnText.textContent = 'Hide filters';
+        } else {
+            filterBtnText.textContent = 'Show filters';
+        }        
     });  
     document.getElementById('closeFiltersPanel').addEventListener('click', function() {
         // alert('Close filters clicked');
         var deltaResultsFilters = document.getElementById('delta-results-filters');
         deltaResultsFilters.classList.toggle('hidden');           
     });          
+
+
 
 
 })

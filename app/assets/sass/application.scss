@@ -248,25 +248,27 @@ html {
 .delta-scrollable-pane {
     overflow-x: scroll;
     min-width: 100%;
+
     table {
         // background-color: yellowgreen;
         th, td {
             // white-space: nowrap;
             // width: fit-content;
-            max-width: 30ch;
-            word-break: break-all;
+            // word-break: break-all;
         }
     }
+}
+
+.delta-word-break {
+    word-break: break-all;
 }
 
 .delta-no-wrap {
     white-space: nowrap;
     word-break: keep-all;
+    // background-color: #d4351c;
 }
 
-.delta-w-100 {
-    width: 100%;
-}
 .delta-tag-pill {
     border: 0;
     border-radius: 1rem;
