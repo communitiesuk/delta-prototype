@@ -7,15 +7,14 @@ window.GOVUKPrototypeKit.documentReady(() => {
   // Add JavaScript here
 
     // Results table fixed width
-    function setElementWidth() {   
+    function setResultTable() {   
         var deltaScrollablePane = document.getElementById('delta-scrollable-pane');
         var resultTable = document.getElementById('resultTable');
         var width = deltaScrollablePane.offsetWidth; // Get the width in pixels
         resultTable.style.width = width + 'px'; // Set the width as an inline style
-        // alert('widthing it');
+        // alert('Resizer');
     };
-    setElementWidth();
-
+    setResultTable();
 
     // DESIGN NOTES: SHOW/HIDE CLICK
     const designNotes = document.querySelectorAll('.designNote'); // Get all elements with class 'designNote'    
