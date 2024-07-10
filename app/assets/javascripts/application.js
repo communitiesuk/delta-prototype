@@ -14,13 +14,13 @@ window.GOVUKPrototypeKit.documentReady(() => {
         resultTable.style.width = width + 'px'; // Set the width as an inline style
         // alert('Resizer');
     };
-    setResultTable();
+    setResultTable;
 
     // DESIGN NOTES: SHOW/HIDE CLICK
     const designNotes = document.querySelectorAll('.designNote'); // Get all elements with class 'designNote'    
-    document.getElementById('toggleLink').addEventListener('click', function() {
-        showHideDesignNotes();
-    });
+    // document.getElementById('toggleLink').addEventListener('click', function() {
+    //     showHideDesignNotes();
+    // });
 
     // DESIGN NOTES: SHOW/HIDE KEY DOWN (N)
     document.addEventListener('keydown', function(event) {
