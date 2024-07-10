@@ -30,8 +30,8 @@
   <ul class="govuk-list govuk-list--bullet">
     <li><a href="/wayCollectionDataProvider-collectionRecords">Records collection</a></li>
     <li><a href="wayCollectionDataProvider-collectionSummary">Summary collection</a></li>
-    <li>Records collection MVP</li>
-    <li><a href="wayCollectionDataProvider-collectionSummaryMVP">Summary collection MVP</a></li>
+    <li><a href="wayCollectionDataProvider-collectionRecordsMVP">Records collection MVP</a></li>
+    <li>Summary collection MVP</li>
     <li><a href="wayCollectionDataProvider-collectionSummaryFuture">Summary collection future</a></li>
   </ul>
 </div>
@@ -75,7 +75,14 @@
           Return
         </dt>
         <dd class="govuk-summary-list__value">
-          <a href="#return">12 (+1 draft) records</a>
+          <a href="#return"><strong class="govuk-tag govuk-tag--yellow">Draft</strong></a>
+          <div class="designNote">
+            <p>Additional possible tags&hellip;</p>
+            <a href="#return">Create</a><br>
+            <a href="#return"><strong class="govuk-tag">Ready for certification</strong></a><br>
+            <a href="#return"><strong class="govuk-tag govuk-tag--green">Submitted</strong></a><br>
+            <a href="#return"><strong class="govuk-tag govuk-tag--green">Certified</strong></a>
+          </div>
         </dd>
       </div>
       <div class="govuk-summary-list__row">
@@ -131,25 +138,46 @@
 
   </div>
 </div>
+
 <h2 class="govuk-heading-l govuk-!-margin-top-8" id="return">
   Return
 </h2>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-one-half">
-    
+    <div class="designNote">
+      <p>Create button should only be displayed if no return (aka record) exists.</p>
+    </div>
     <button type="submit" class="govuk-button" data-module="govuk-button">
-      Create record
+      Create
     </button>
-    <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Bulk upload
-    </button> 
   </div>
   <div class="govuk-grid-column-one-half govuk-!-text-align-right ">
     <button type="submit" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Download all records (.csv)
+      Download record (.csv)
     </button>    
   </div>  
 </div>
+
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m govuk-visually-hidden">Records</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Title</th>
+      <th scope="col" class="govuk-table__header">Updated</th>
+      <th scope="col" class="govuk-table__header">Certification</th>
+      <th scope="col" class="govuk-table__header">Status</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Hascombe</a></th>
+      <td class="govuk-table__cell">30 May 2024</td>
+      <td class="govuk-table__cell"></td>            
+      <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 
   <p><a href="#">View record(s) for this collection</a></p>
