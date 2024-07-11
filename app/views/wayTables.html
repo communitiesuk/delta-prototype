@@ -18,20 +18,13 @@
 <!-- PROTOTYPE v2 advanced search -->
 <div class="delta-full-screen" id="prototype-advanced-search">
   <div class="designNote" style="width: 100%;">
-    <p>Search panel (filters) v2.</p>
+    <p>Notes</p>
     <ul class="govuk-list govuk-list--bullet">
-      <li>CHANGES:</li>
-      <li>"Show filters" button, instead of link</li>
-      <li>Moved "3 active filters" alongside results count</li>
-      <li>Renamed 'search' panel to 'filter' panel</li>
-      <li>Added magnifying glass icon to button</li>
-      <li>Horizontal scrolling of table!!</li>
-    </ul>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>TO DO / DISCUSS:</li>
-      <li>"Show filters" button should change to "Hide filters" when panel open</li>
-      <li>Discuss: active filter count, and what people's understanding of the counts might be</li>
-      <li>Discuss: in filter panel, moving show (expand) link icons to right right (to reduce vertical space)</li>
+      <li>Sort icons should not be inline. Replicate MOJ</li>
+      <li>Col widths should persist when pagination used (set as variable in page load / resize)</li>
+      <li>Discuss filter count logic. Example: if displaying all orgs is this filter active?</li>
+      <li>Magnifying glass icon is placeholder and inline image. Use GDS standard icon</li>
+      <li>Accessibility text?</li>
     </ul>    
   </div>
 
@@ -182,7 +175,7 @@
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Elmsworth Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a></th>
+              <th scope="row" class="govuk-table__header"><a href="/wayRecord-draft">Elmsworth</a></th>
               <td class="govuk-table__cell delta-no-wrap">14 April 2024</td>
               <td class="govuk-table__cell delta-word-break">sarah.jones@rivendellrivendellrivendellrivendellrivendellrivendell.gov.uk</td>                    
               <td class="govuk-table__cell">n/a</td>            
@@ -300,6 +293,8 @@
     </div>
   </div>
   <!-- table results end -->
+
+  
 </div>
 
 
