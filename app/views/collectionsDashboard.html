@@ -1,0 +1,94 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Template" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <!-- <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-XXX" target="_blank">DT-XXX</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Note</li>
+      <li>Note</li>
+      <li>Note</li>
+    </ul>
+  </div> -->
+
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Collections dashboard (internal)",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Collections dashboard
+    </h1>
+    
+    <h2 class="govuk-heading-l">
+      What and why
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Primary</strong>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>So we can see which collections are live or opening (coming) soon</li>
+        </ul>
+      </li>
+      <li><strong>Secondary</strong>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Understand (get a sense of) size, responses, usage</li>
+          <li>Link to where live collection (form) can be viewed) - collection entity</li>
+          <li>Link to collection group</li>
+          <li>Some idea of collection size / complexity?</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h2 class="govuk-heading-l">
+      Logic
+    </h2>
+
+    <p>A collection is deemed to be open if any organisation invited to return data for it has an deadline that hasn't elapsed (this includes extensions)</p>
+
+
+    <h2 class="govuk-heading-l">
+      Columns
+    </h2>
+1
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Collection name</li>
+      <li>Collection group</li>
+      <li>Type (summary vs records)</li>
+      <li>Opened?</li>
+      <li>Deadline</li>
+      <li>Extended?</li>
+    </ul>
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+
