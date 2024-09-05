@@ -1,0 +1,200 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="MHCLG Data Ownership Vision" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel">
+  <h1 class="govuk-heading-xl">
+    MHCLG data ownership vision
+  </h1>
+  <h1 class="govuk-heading-m">
+    Updated: 5 September 2024
+  </h1>
+  
+  <ol class="govuk-list govuk-list--number designNote">
+    <li>Overview / mission / why / what this presentation is and isn't</li>
+    <li>Delivery ambition - what problems are we looking to solve, something that can be adopted without undue burden, not boiling ocean, why this is exciting (the first time ever a central list will exist)</li>
+    <li>Blueprint
+      <ol class="govuk-list govuk-list--number">
+        <li>Architecture diagram</li>
+      </ol>
+    </li>    
+    <li>Design concepts
+      <ol class="govuk-list govuk-list--number">
+        <li>Search interface (imagine the power...)</li>
+        <li>Checklist screen shots (don't worry, this will be very easy for data owners...)</li>
+      </ol>
+    </li>    
+    <li>Roles and responsibilities
+      <ol class="govuk-list govuk-list--number">
+        <li>Primary
+          <ol class="govuk-list govuk-list--number">
+            <li>Data Guardian</li>
+            <li>Senior Responsible Owner (SRO)</li>
+          </ol>
+        </li>
+        <li>Secondary
+          <ol class="govuk-list govuk-list--number">
+            <li>[Data] Service Owner</li>
+            <li>Head of Professional Statistics</li>
+            <li>Chief Data Officer</li>
+          </ol>
+        </li>        
+      </ol>      
+    </li>
+    <li>Example (case study)</li>
+    <li>Summary (why this is great for MHCLG and wider (who?), it's simple but powerful)</li>
+    <li>Appendix
+      <ol class="govuk-list govuk-list--number">
+        <li>Next steps / contact / request for input</li>
+        <li>FAQs (key messages repeated)
+          <ol class="govuk-list govuk-list--number">
+            <li>How does this differ from Assets Register</li>
+            <li>????</li>
+            <li>Design process (what has been done, who has been involved)</li>        
+            <li>Challenges / risks to adoption</li>
+          </ol>
+        </li>            
+        <li>Useful links
+          <ol class="govuk-list govuk-list--number">
+            <li>CDDO</li>
+          </ol>
+        </li>
+      </ol>
+    </li>
+  </ol>
+
+
+
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+   Ambition
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Blueprint
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Designs
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Roles and responsibilities 
+  </h2n>
+  <h3 class="govuk-heading-m">Primary roles</h3>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Case Study 
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Summary
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h2n class="govuk-heading-l">
+    Appendix
+  </h2n>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+

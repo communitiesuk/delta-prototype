@@ -1,0 +1,108 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Test Panels" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel">
+  <h1 class="govuk-heading-xl">
+    Panel 1
+  </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h1 class="govuk-heading-xl">
+    Panel 2
+  </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<div class="panel">
+  <h1 class="govuk-heading-xl">
+    Panel 3
+  </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+

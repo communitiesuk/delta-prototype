@@ -593,3 +593,54 @@ color: $govuk-error-colour;
 //     background-color: pink;
 //     max-width: 40ch;
 // }
+
+
+// 04/09/2024 Panels ===============
+
+$mhclg-brand: #1d70b8;
+
+.panel-nav {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    padding: 0;
+    background-color: #fff;
+
+    li {
+        list-style-type: none;
+
+        a {
+            cursor: pointer;
+        }
+    }
+}
+
+.panel {    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    &:nth-child(odd) {
+        //background-color: rgba(222, 222, 222, 0.14);
+    }
+}
+
+.panel-cover {
+    background-color: $mhclg-brand;
+
+    * {
+        color: #fff;
+    }
+    
+}
+
+/* Hide navPanel on screens smaller than 768px */
+@media only screen and (max-width: 768px) {
+    .panel-nav {
+        display: none;
+    }
+}
+
+
+
