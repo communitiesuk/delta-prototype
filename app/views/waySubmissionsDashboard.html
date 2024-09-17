@@ -24,44 +24,76 @@
 
   <h3 class="govuk-heading-l">Design notes</h3>
 
+  <h3 class="govuk-heading-m">Hypothesis</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>The submissions dashboard (SB) is primarily for Collection Managers to monitor their collection — to see high level information</li>
+    <li>At a glance who needs support</li>
+    <li>Simple functionality to support understanding of cadence and being able to see which orgs did what recently</li>
+    <li>Submissions summary: What is this purpose of this area? High level understanding. Quick route to details</li>
+  </ul>  
+
+<!-- 
   <h3 class="govuk-heading-m">Eeek</h3>
 
   <ul class="govuk-list govuk-list--bullet">
-    <li>Ditch data range</li>
-    <li>Ditch multiple collections</li>
-  </ul>  
+    <li><del>Ditch data range</del></li>
+    <li><del>Ditch multiple collections</del></li>
+  </ul>   -->
 
   <h3 class="govuk-heading-m">Primary</h3>
 
   <ul class="govuk-list govuk-list--bullet">
     <li>Who has [and has not] submitted</li>
-    <li><del>How many [records]?</del></li>
-    <li>When [cadence]*</li>
+    <li>How many [records]?</li>
+    <li>When [cadence]?*</li>
   </ul>
 
   <h3 class="govuk-heading-m">Secondary</h3>
 
   <ul class="govuk-list govuk-list--bullet">
-    <li><del>Share report - reports have unique URLs</del></li>
-    <li><del>See related collections</del></li>
+    <li>Share report - reports have unique URLs</li>
+    <li>See related collections</li>
   </ul>
 
-  <h3 class="govuk-heading-m">Discuss</h3>
+  <!-- <h3 class="govuk-heading-m">Discuss</h3>
 
   <ul class="govuk-list govuk-list--bullet">
     <li>Parent > child (Submission DB landing / Collection report)</li>
-    <li>Does supporting viewing report for multiple collections add complexity? Is it needed?</li>
+    <li><del>Does supporting viewing report for multiple collections add complexity? Is it needed?</del></li>
     <li><del>'View another collection' button? Should we take users back to parent?</del></li>
-    <li>Submissions summary: What is this purpose of this area? High level understanding. Quick route to details</li>
-    <li>Reamed 'Submissions summary' to 'overview'</li>
-    <li>Overview: need to brainstorm requirements then work on labels. At a glance: How many orgs did we ask? How many are in progress? How many completed? How many are being blocked by certification? Average records per submission?</li>
+    <li></li>
+    <li><del>Renamed 'Submissions summary' to 'overview'</del></li>
+    <li><del>Overview: need to brainstorm requirements then work on labels. At a glance: How many orgs did we ask? How many are in progress? How many completed? How many are being blocked by certification? Average records per submission?</del></li>
     <li><del>Submissions summary: better labels? Open, Saved (aka Draft), Awaiting certification, Complete</del></li>
     <li><del>Submissions summary: Add 'average records per submission'</del></li>
     <li><del>Submissions summary: lose percentages to declutter?</del></li>
     <li><del>Submissions summary: 'view' - is this clear that is filters the table below? If not, how can we make it so?</del></li>
     <li>Confirm how download buttons work. Is 'download submissions' oly completed submissions?</li>
     <li>How would related submission reports work? Could this be automated?</li>
+    <li><del>Can we add org contact name(s) to allow collection managers to make contact quickly to offer support?</del></li>
+  </ul>   -->
+
+  <h3 class="govuk-heading-m">Change log</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Standardised status labels: All, Not started, Saved (in progress), Certification required, Completed</li>
+    <li>Submissions by status: added 'updated column' and ability to sort by</li>
+    <li>Submissions by status: linked org name to new page with org collection group memberships and contacts list</li>
+    <li>Overview: removed 'download summary' button</li>
+    <li>Overview: removed "certification required" count</li>
+    <li>Overview: added hyperlinks to number to skip used down to submissions by status</li>
   </ul>  
+
+
+  <h3 class="govuk-heading-m">To do</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Pie chart</li>
+    <li>Parent > child (Submission DB landing / Collection report)</li>
+    <li>Confirm how download buttons work. Is 'download submissions' only completed submissions?</li>
+    <li>How would related submission reports work? Could this be automated?</li>
+    <li>Better title for 'Submissions by status'</li>
+  </ul>    
+
 
 </div>
 
@@ -71,8 +103,6 @@
   English hedgehog census 2023
 </h1>
 
-
-<!-- <button class="govuk-button">View another collection</button> -->
 
 <div class="govuk-grid-row">
   <!-- collection meta -->
@@ -122,10 +152,6 @@
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9">Overview</h3>    
 
-
-    <button class="govuk-button">Download summary</button>
-    <button class="govuk-button">Download completed submissions</button>
-
     <!-- Summary -->
 
     <!-- NEW --> 
@@ -139,35 +165,27 @@
       </thead> -->
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Asked</th>
-          <td class="govuk-table__cell">100</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">In progress</th>
-          <td class="govuk-table__cell">50</td>
+          <th scope="row" class="govuk-table__header">All</th>
+          <td class="govuk-table__cell"><a href="/submissionByStatus">155</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Not started</th>
-          <td class="govuk-table__cell">50</td>
-        </tr>        
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Saved (draft)</th>
-          <td class="govuk-table__cell">20</td>
+          <td class="govuk-table__cell"><a href="/submissionByStatus">50</a></td>
         </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">In progress</th>
+          <td class="govuk-table__cell"><a href="/submissionByStatus">50</a></td>
+        </tr>        
         <!-- <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Submitted</th>
+          <th scope="row" class="govuk-table__header">Certification required</th>
           <td class="govuk-table__cell">15</td>
         </tr> -->
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Awaiting certification</th>
-          <td class="govuk-table__cell">15</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Complete</th>
-          <td class="govuk-table__cell">40</td>
+          <th scope="row" class="govuk-table__header">Completed</th>
+          <td class="govuk-table__cell"><a href="/submissionByStatus">40</a></td>
         </tr>           
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Average records per submission</th>
+          <th scope="row" class="govuk-table__header">Records per submission (average)</th>
           <td class="govuk-table__cell">3.2</td>
         </tr>          
       </tbody>
@@ -193,24 +211,29 @@
   <!-- primary content -->
   <div class="govuk-grid-column-full">
 
-    
     <!-- By org -->
+    <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByStatus">Submissions by status</h3>    
 
-    <h3 class="govuk-heading-l govuk-!-margin-top-9">Submissions status</h3>    
-
-    <div class="govuk-form-group">
-      <label class="govuk-label" for="filter">
-        View by submission status
-      </label>
-      <select class="govuk-select" id="filter" name="filter">
-        <option value="" selected>All</option>
-        <option value="">Not started</option>
-        <option value="">Saved</option>
-        <option value="">Certification required</option>
-        <option value="">Complete</option>
-      </select>
-    </div>    
-
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-half">    
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="filter">
+            View by submission status
+          </label>
+          <select class="govuk-select" id="filter" name="filter">
+            <option value="" selected>All</option>
+            <option value="">Not started</option>
+            <option value="">Saved (in progress)</option>
+            <option value="">Certification required</option>
+            <option value="">Complete</option>
+          </select>
+        </div>            
+      </div>
+      <div class="govuk-grid-column-one-half">    
+        <button class="govuk-button delta-float-right">Download completed submissions</button>    
+      </div>      
+    </div>
+    
     <table class="govuk-table">
       <!-- <caption class="govuk-table__caption govuk-table__caption--l">Submissions by organisation</caption> -->
       <thead class="govuk-table__head">
@@ -223,19 +246,60 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</th>
-          <td class="govuk-table__cell">Open</td>
+          <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></th>
+          <td class="govuk-table__cell">Not started</td>
           <td class="govuk-table__cell">17 September 2024</td>          
           <td class="govuk-table__cell">n/a</td>
         </tr>     
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</th>          
+          <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></th>          
           <td class="govuk-table__cell">Certification required</td>
           <td class="govuk-table__cell">16 September 2024</td>          
           <td class="govuk-table__cell"><a href="#">5</a></td>
         </tr>                
       </tbody>
     </table>    
+
+    <!-- Pagination -->
+    <nav class="govuk-pagination" aria-label="Pagination">
+      <div class="govuk-pagination__prev">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+          <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+          </svg>
+          <span class="govuk-pagination__link-title">
+            Previous<span class="govuk-visually-hidden"> page</span>
+          </span>
+        </a>
+      </div>
+      <ul class="govuk-pagination__list">
+        <li class="govuk-pagination__item govuk-pagination__item--current">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+            1
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+            2
+          </a>
+        </li>
+        <li class="govuk-pagination__item">
+          <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+            3
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-pagination__next">
+        <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+          <span class="govuk-pagination__link-title">
+            Next<span class="govuk-visually-hidden"> page</span>
+          </span>
+          <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+            <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+          </svg>
+        </a>
+      </div>
+    </nav>    
 
   </div>
   <div class="govuk-grid-column-one-third">

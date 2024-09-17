@@ -1,0 +1,51 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Collections (Data Provider)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      },
+      {
+        text: "Organisations",
+        href: "/wayOrganisationInternalReport"
+      }      
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="designNote">
+  <h3 class="govuk-heading-l">Design notes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Early stage design for page displaying individuals and contact details for members of organisations who have access to this user's (collection manager) collections.</li>
+  </ul>  
+</div>
+
+
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Organisation</small><br>
+  <img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-l delta-org-logo-fr">Rivendell Borough Council
+</h1>
+
+
+<h2 class="govuk-heading-l">Collection groups and users</h2>
+
+<h3 class="govuk-heading-m"><a href="/wayCollectionGroup">English Hedgehog Monitoring</a> <strong class="govuk-tag govuk-tag--green">Active</strong></h3>
+<ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+  <li><strong>Emily Thompson</strong>, Data certifier (Section 151 officer), <a href="#">emily.thompson@certifiers-r-us.org</a></li>
+  <li><strong>Pipa Jones</strong>, Data provider, <a href="#">pipa.jones@arundel.gov.uk</a></li>
+  <li><strong>Duncan Dixon</strong>, Data provider, <a href="#">duncan.dixon@arundel.gov.uk</a></li>
+  <li><strong>Olivia Smith</strong>, Data provider, <a href="#">olivia.smith@arundel.gov.uk</a></li>
+  <li><strong>Jonny Caffell</strong>, Data provider, <a href="#">jonny.caffell@rivendell.gov.uk</a></li>
+</ul>
+
+
+
+
+{% endblock %}
