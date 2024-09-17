@@ -1,0 +1,276 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Collections (Data Provider)" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      },
+      {
+        text: "Submissions dashboard",
+        href: "/waySubmissionsDashboard"
+      }      
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="designNote">
+
+  <h3 class="govuk-heading-l">Design objectives</h3>
+
+  <h3 class="govuk-heading-m">Primary</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Who has [and has not] submitted</li>
+    <li><del>How many [records]?</del></li>
+    <li>When [cadence]*</li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Secondary</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li><del>Share report - reports have unique URLs</del></li>
+    <li><del>See related collections</del></li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Discuss</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Parent > child (Submission DB landing / Collection report)</li>
+    <li>Does supporting viewing report for multiple collections add complexity? Is it needed?</li>
+    <li><del>'View another collection' button? Should we take users back to parent?</del></li>
+    <li>Submissions summary: What is this purpose of this area? High level understanding. Quick route to details</li>
+    <li>Reamed 'Submissions summary' to 'overview'</li>
+    <li>Overview: need to brainstorm requirements then work on labels. At a glance: How many orgs did we ask? How many are in progress? How many completed? How many are being blocked by certification? Average records per submission?</li>
+    <li><del>Submissions summary: better labels? Open, Saved (aka Draft), Awaiting certification, Complete</del></li>
+    <li><del>Submissions summary: Add 'average records per submission'</del></li>
+    <li><del>Submissions summary: lose percentages to declutter?</del></li>
+    <li><del>Submissions summary: 'view' - is this clear that is filters the table below? If not, how can we make it so?</del></li>
+    <li>Confirm how download buttons work. Is 'download submissions' oly completed submissions?</li>
+    <li>How would related submission reports work? Could this be automated?</li>
+  </ul>  
+
+</div>
+
+
+<h1 class="govuk-heading-xl">
+  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Submissions report</small><br>
+  English hedgehog census 2023
+</h1>
+
+
+<!-- <button class="govuk-button">View another collection</button> -->
+
+<div class="govuk-grid-row">
+  <!-- collection meta -->
+  <div class="govuk-grid-column-two-thirds">
+    <dl class="govuk-summary-list">     
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection ID
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <a href="/wayCollectionDataProvider-collectionRecords">UHC24</a>
+        </dd>
+      </div>      
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Deadline
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 July 2025
+        </dd>
+      </div>     
+      <!-- <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Opens
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 January 2025
+        </dd>
+      </div> -->
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
+        </dd>
+      </div>         
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Data period
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1 January 2024 &dash; 31 December 2024
+        </dd>
+      </div>                   
+    </dl>      
+  </div>
+  <!-- collection submissions summary content -->
+  <div class="govuk-grid-column-one-third">
+
+    <h2 class="govuk-heading-s" id="relatedCollections">Related submissions reports</h2>
+    <ul class="govuk-list govuk-list--spaced">
+      <li><a href="#"><strong>Urban hedgehog census 2022</strong></a></li>
+      <li><a href="#"><strong>Urban hedgehog census 2021</strong></a></li>
+      <li><a href="#"><strong>Urban hedgehog census 2020</strong></a></li>
+    </ul>    
+    <p><a href="/">View all related reports</a></p>    
+  </div>
+</div>
+
+
+<div class="govuk-grid-row">
+  <!-- primary content -->
+  <div class="govuk-grid-column-two-thirds">
+
+    <h3 class="govuk-heading-l govuk-!-margin-top-9">Overview</h3>    
+
+
+    <button class="govuk-button">Download summary</button>
+    <button class="govuk-button">Download completed submissions</button>
+
+    <!-- Summary -->
+
+    <!-- NEW --> 
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption> -->
+      <!-- <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Count</th>
+        </tr>
+      </thead> -->
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Asked</th>
+          <td class="govuk-table__cell">100</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">In progress</th>
+          <td class="govuk-table__cell">50</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Not started</th>
+          <td class="govuk-table__cell">50</td>
+        </tr>        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Saved (draft)</th>
+          <td class="govuk-table__cell">20</td>
+        </tr>
+        <!-- <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Submitted</th>
+          <td class="govuk-table__cell">15</td>
+        </tr> -->
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Awaiting certification</th>
+          <td class="govuk-table__cell">15</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Complete</th>
+          <td class="govuk-table__cell">40</td>
+        </tr>           
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Average records per submission</th>
+          <td class="govuk-table__cell">3.2</td>
+        </tr>          
+      </tbody>
+    </table>     
+
+
+    <!-- OLD --> 
+    <!-- <table class="govuk-table govuk-!-margin-top-9"">
+      <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption>
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Count</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Open</th>
+          <td class="govuk-table__cell">10</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Saved</th>
+          <td class="govuk-table__cell">20</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Submitted</th>
+          <td class="govuk-table__cell">15</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Ready to certify</th>
+          <td class="govuk-table__cell">15</td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Certified</th>
+          <td class="govuk-table__cell">40</td>
+        </tr>           
+      </tbody>
+    </table> -->
+
+    <!-- By org -->
+
+    <h3 class="govuk-heading-l govuk-!-margin-top-9">Submissions status</h3>    
+
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="filter">
+        View by submission status
+      </label>
+      <select class="govuk-select" id="filter" name="filter">
+        <option value="" selected>All</option>
+        <option value="">Not started</option>
+        <option value="">Saved</option>
+        <option value="">Certification required</option>
+        <option value="">Complete</option>
+      </select>
+    </div>    
+
+    <table class="govuk-table">
+      <!-- <caption class="govuk-table__caption govuk-table__caption--l">Submissions by organisation</caption> -->
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header"><a href="#">Organisation <img src="/public/images/sort.svg"></a></th>
+          <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
+          <th scope="col" class="govuk-table__header"><a href="#">Records <img src="/public/images/sort.svg"></a></th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</th>
+          <td class="govuk-table__cell">Open</td>
+          <td class="govuk-table__cell">n/a</td>
+        </tr>     
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</th>
+          <td class="govuk-table__cell">Certification required</td>
+          <td class="govuk-table__cell"><a href="#">5</a></td>
+        </tr>                
+      </tbody>
+    </table>    
+
+  </div>
+  <div class="govuk-grid-column-one-third">
+
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
