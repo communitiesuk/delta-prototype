@@ -79,8 +79,11 @@
     <li><del>Can we add org contact name(s) to allow collection managers to make contact quickly to offer support?</del></li>
   </ul>   -->
 
-  <h3 class="govuk-heading-m">Change log</h3>
+  <h3 class="govuk-heading-m" id="changelog">Change log</h3>
   <ul class="govuk-list govuk-list--bullet">
+    <li>Added details [expander] under 'Returns overview' and drafted status explainer text.</li>
+    <li>Hyperlinked records counts to Data Store.</li>
+    <li>Removed records counts and average records from 'Returns overview'</li>
     <li>Using 'return' in place of 'submission' where appropriate</li>
     <li>Standardised status labels: All, Not started, Saved (in progress), Certification required, Completed</li>
     <li>Submissions by organisation: added 'updated column' and ability to sort by</li>
@@ -167,51 +170,70 @@
 
     <div class="designNote">
       <ul class="govuk-list govuk-list--bullet">
-        <li>'Records' and 'Records per submission (average)' only displayed for records-based collections.</li>
+        <!-- <li>'Records' and 'Records per submission (average)' only displayed for records-based collections.</li> -->
         <li>Hyperlinked counts scroll page to 'Returns by organisation' table with it pre-filters by the corresponding status.</li>
       </ul>
     </div>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with statuses
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        
+        <ul class="govuk-list govuk-list--spaced">
+          <li><strong>All</strong> - The number of organisations who have been invited to submit a return for this collection.</li>
+          <li><strong>Not started</strong> - The number of organisations who have not provided a return (not submitted one or more records).</li>
+          <li><strong>Saved (draft)</strong> - ??? No idea what this is at a returns level. It would make sense if it were for records. How does a data provider actually submit a return? Do they need to submit a return? Is a return created as soon as the first record is submitted? TBC.</li>
+          <li><strong>Awaiting certification</strong> - The number of organisations with a return that contains one or more records requires certification.</li>
+          <li><strong>Submitted</strong> - the number of organisations who have submitted a return consisting of one or more records (signed off if required).</li>
+        </ul>
+
+      </div>
+    </details>
 
     <!-- Summary -->
 
     <!-- NEW --> 
     <table class="govuk-table">
       <!-- <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption> -->
-      <!-- <thead class="govuk-table__head">
+      <thead class="govuk-table__head">
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Status</th>
-          <th scope="col" class="govuk-table__header">Count</th>
+          <th scope="col" class="govuk-table__header">Organisations</th>
         </tr>
-      </thead> -->
+      </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">All</th>
-          <td class="govuk-table__cell"><a href="/submissionByOrg">180</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">180</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Not started</th>
-          <td class="govuk-table__cell"><a href="/submissionByOrg">50</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">50</a></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">In progress</th>
-          <td class="govuk-table__cell"><a href="/submissionByOrg">50</a></td>
+          <th scope="row" class="govuk-table__header">Saved (draft)</th>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">50</a></td>
         </tr>          
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Awaiting certification</th>
-          <td class="govuk-table__cell"><a href="/submissionByOrg">40</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
         </tr>    
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Submitted</th>
-          <td class="govuk-table__cell"><a href="/submissionByOrg">40</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
         </tr>                     
-        <tr class="govuk-table__row">
+        <!-- <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Records</th>
           <td class="govuk-table__cell">456</td>
         </tr>             
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Records per submission (average)</th>
           <td class="govuk-table__cell">3.2</td>
-        </tr>          
+        </tr>           -->
       </tbody>
     </table>        
 
@@ -375,13 +397,13 @@
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
                 <td class="govuk-table__cell">Open</td>              
                 <td class="govuk-table__cell">16 July 2024 </td>
-                <td class="govuk-table__cell">9</td>
+                <td class="govuk-table__cell"><a href="#">9</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
                 <td class="govuk-table__cell">Open</td>              
                 <td class="govuk-table__cell">15 July 2024 </td>
-                <td class="govuk-table__cell">2</td>
+                <td class="govuk-table__cell"><a href="#">2</a></td>
               </tr>          
             </tbody>
           </table>
