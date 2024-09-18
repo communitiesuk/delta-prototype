@@ -22,7 +22,7 @@
 
 <div class="designNote">
 
-  <h3 class="govuk-heading-l">Design notes</h3>
+  <h3 class="govuk-heading-l">Design notes <small>(toggle visibility with keyboard shortcut 'n')</small></h3>
 
   <h3 class="govuk-heading-m">Hypothesis</h3>
 
@@ -31,9 +31,9 @@
     <li>At a glance
         <ul class="govuk-list govuk-list--bullet">
           <li>Who may need support</li>
-          <li>Records submitted by org, to compare current with previous returns</li>
+          <li>How many records have been submitted in each return, by each org, so comparisons can be mad with previous returns</li>
           <li>See what has changed since yesterday* (focus on what is new)</li>
-          <li>Quick route to data store</li>
+          <li>Quick route to returns data</li>
         </ul>
     </li>
   </ul>  
@@ -110,6 +110,12 @@
   English hedgehog census 2023
 </h1>
 
+<div class="designNote">
+  <ul class="govuk-list govuk-list--bullet">
+    <li>V2. Link to collection entity page from Collection ID.</li>
+  </ul>
+</div>    
+
 
 <div class="govuk-grid-row">
   <!-- collection meta -->
@@ -158,6 +164,13 @@
     </dl>      
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9">Returns overview</h3>    
+
+    <div class="designNote">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>'Records' and 'Records per submission (average)' only displayed for records-based collections.</li>
+        <li>Hyperlinked counts scroll page to 'Returns by organisation' table with it pre-filters by the corresponding status.</li>
+      </ul>
+    </div>
 
     <!-- Summary -->
 
@@ -209,9 +222,10 @@
 
     <h2 class="govuk-heading-s" id="relatedCollections">Related submissions reports</h2>
     <ul class="govuk-list govuk-list--spaced">
+      <li><a href="#"><strong>Urban hedgehog census 2023</strong></a></li>
+      <li><a href="#"><strong>Urban hedgehog finances 2023</strong></a></li>
       <li><a href="#"><strong>Urban hedgehog census 2022</strong></a></li>
-      <li><a href="#"><strong>Urban hedgehog census 2021</strong></a></li>
-      <li><a href="#"><strong>Urban hedgehog census 2020</strong></a></li>
+      <li><a href="#"><strong>Urban hedgehog finances 2022</strong></a></li>
     </ul>    
     <p><a href="/">View all related reports</a></p>    
   </div>
@@ -223,6 +237,12 @@
   <div class="govuk-grid-column-full">
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByOrg">Returns by organisation</h3>    
+
+    <div class="designNote">
+      <ul class="govuk-list govuk-list--bullet">
+        <li>V2. Organisation name linked to new page displaying list of all collections that the user (collection manager) has access to, with contact details for individuals listed under each.</li>
+      </ul>
+    </div>    
 
     <!-- table results start -->
     <div class="delta-results">
