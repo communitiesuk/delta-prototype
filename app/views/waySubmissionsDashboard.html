@@ -7,11 +7,7 @@
       {
         text: "Home",
         href: "/wayLandingDataProviderAndCertifierAll"
-      },
-      {
-        text: "Submissions",
-        href: "/waySubmissionsDashboard"
-      }      
+      }
     ]
   }) }}
 {% endblock %}
@@ -24,84 +20,34 @@
 
   <h3 class="govuk-heading-l">Design notes <small>(toggle visibility with keyboard shortcut 'n')</small></h3>
 
-  <h3 class="govuk-heading-m">Hypothesis</h3>
+  <h3 class="govuk-heading-m">Overview</h3>
 
   <ul class="govuk-list govuk-list--bullet">
-    <li>The submissions dashboard (SB) is primarily for collection managers to monitor their collection</li>
-    <li>At a glance
-        <ul class="govuk-list govuk-list--bullet">
-          <li>Who may need support</li>
-          <li>How many records have been submitted in each return, by each org, so comparisons can be made with previous returns</li>
-          <li>See what has changed since yesterday* (focus on what is new)</li>
-          <li>Quick route to returns data</li>
-        </ul>
-    </li>
+    <li>This page will list all collection [reports] a user [internal] has access to.</li>
+    <li>It will default to being ordered by deadline, with the latest deadline at the top.</li>
   </ul>  
 
-<!-- 
-  <h3 class="govuk-heading-m">Eeek</h3>
-
-  <ul class="govuk-list govuk-list--bullet">
-    <li><del>Ditch data range</del></li>
-    <li><del>Ditch multiple collections</del></li>
-  </ul>   -->
 
   <h3 class="govuk-heading-m">Primary</h3>
 
   <ul class="govuk-list govuk-list--bullet">
-    <li>Who has [and has not] submitted</li>
-    <li>How many [records]?</li>
-    <li>When [cadence]?*</li>
+    <li>See list of 'my' collections (the ones I have access to, past and present)</li>
+    <li>Top level information (number of returns, number 'blocked'</li>
+    <li>Click through to detailed report</li>
   </ul>
 
-  <h3 class="govuk-heading-m">Secondary</h3>
 
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Share report - reports have unique URLs</li>
-    <li>See related collections</li>
-  </ul>
-
-  <!-- <h3 class="govuk-heading-m">Discuss</h3>
-
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Parent > child (Submission DB landing / Collection report)</li>
-    <li><del>Does supporting viewing report for multiple collections add complexity? Is it needed?</del></li>
-    <li><del>'View another collection' button? Should we take users back to parent?</del></li>
-    <li></li>
-    <li><del>Renamed 'Submissions summary' to 'overview'</del></li>
-    <li><del>Overview: need to brainstorm requirements then work on labels. At a glance: How many orgs did we ask? How many are in progress? How many completed? How many are being blocked by certification? Average records per submission?</del></li>
-    <li><del>Submissions summary: better labels? Open, Saved (aka Draft), Awaiting certification, Complete</del></li>
-    <li><del>Submissions summary: Add 'average records per submission'</del></li>
-    <li><del>Submissions summary: lose percentages to declutter?</del></li>
-    <li><del>Submissions summary: 'view' - is this clear that is filters the table below? If not, how can we make it so?</del></li>
-    <li>Confirm how download buttons work. Is 'download submissions' oly completed submissions?</li>
-    <li>How would related submission reports work? Could this be automated?</li>
-    <li><del>Can we add org contact name(s) to allow collection managers to make contact quickly to offer support?</del></li>
-  </ul>   -->
 
   <h3 class="govuk-heading-m" id="changelog">Change log</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Added details [expander] under 'Returns overview' and drafted status explainer text.</li>
-    <li>Hyperlinked records counts to Data Store.</li>
-    <li>Removed records counts and average records from 'Returns overview'</li>
-    <li>Using 'return' in place of 'submission' where appropriate</li>
-    <li>Standardised status labels: All, Not started, Saved (in progress), Certification required, Completed</li>
-    <li>Submissions by organisation: added 'updated column' and ability to sort by</li>
-    <li>Submissions by organisation: linked org name to new page with org collection group memberships and contacts list</li>
-    <li>Submissions by organisation: used standardised table and filter design</li>
-    <li>Overview: removed 'download summary' button</li>
-    <li>Overview: removed "certification required" count</li>
-    <li>Overview: added hyperlinks to number to skip used down to Submissions by organisation</li>
+    <li>Filters (once table columns agreed)</li>
   </ul>  
 
 
   <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>User testing into current and proposed status labels</li>
-    <li>Pie chart</li>
-    <li>Parent > child (Submission DB landing / Collection report)</li>
-    <li>Confirm how download buttons work. Is 'download submissions' only completed submissions?</li>
-    <li>How would related submission reports work? Could this be automated?</li>
+    <li>Susanna to write labels explainer</li>
+    <li>Discuss value of adding data period in table</li>
   </ul>    
 
 
@@ -109,162 +55,34 @@
 
 
 <h1 class="govuk-heading-xl">
-  <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Submissions report</small><br>
-  English hedgehog census 2023
+  Submissions dashboard
 </h1>
 
-<div class="designNote">
-  <ul class="govuk-list govuk-list--bullet">
-    <li>V2. Link to collection entity page from Collection ID.</li>
-  </ul>
-</div>    
+<h2 class="govuk-heading-l">
+  Collections reports
+</h2>
 
-
-<div class="govuk-grid-row">
-  <!-- collection meta -->
-  <div class="govuk-grid-column-two-thirds">
-    <dl class="govuk-summary-list">     
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Collection ID
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <a href="/wayCollectionDataProvider-collectionRecords">UHC24</a>
-        </dd>
-      </div>      
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Deadline
-        </dt>
-        <dd class="govuk-summary-list__value">
-          16 July 2025
-        </dd>
-      </div>     
-      <!-- <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Opens
-        </dt>
-        <dd class="govuk-summary-list__value">
-          16 January 2025
-        </dd>
-      </div> -->
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Status
-        </dt>
-        <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
-        </dd>
-      </div>         
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Data period
-        </dt>
-        <dd class="govuk-summary-list__value">
-          1 January 2024 &dash; 31 December 2024
-        </dd>
-      </div>                   
-    </dl>      
-
-    <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Returns overview</h3>    
-
-    <div class="designNote">
-      <ul class="govuk-list govuk-list--bullet">
-        <!-- <li>'Records' and 'Records per submission (average)' only displayed for records-based collections.</li> -->
-        <li>Hyperlinked counts scroll page to 'Returns by organisation' table with it pre-filters by the corresponding status.</li>
-      </ul>
-    </div>
-
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with statuses
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        
-        <ul class="govuk-list govuk-list--spaced">
-          <li><strong>All</strong> - The number of organisations who have been invited to submit a return for this collection.</li>
-          <li><strong>Not started</strong> - The number of organisations who have not provided a return (not submitted one or more records).</li>
-          <li><strong>Contains records in draft</strong> - The  number of organisations with a return that contains one or more records that are in draft format (incomplete).</li>
-          <li><strong>Contains records awaiting certification</strong> - The number of organisations with a return that contains one or more records requiring certification.</li>
-          <li><strong>Submitted</strong> - the number of organisations who have submitted a return consisting of one or more records (signed off if required).</li>
-        </ul>
-
-      </div>
-    </details>
-
-    <!-- Summary -->
-
-    <!-- NEW --> 
-    <table class="govuk-table">
-      <!-- <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption> -->
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Return status</th>
-          <th scope="col" class="govuk-table__header">Organisations</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">All</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">180</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Not started</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">50</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Contains records in draft</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">50</a></td>
-        </tr>          
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Contains records awaiting certification</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
-        </tr>    
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Submitted</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
-        </tr>                     
-        <!-- <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Records</th>
-          <td class="govuk-table__cell">456</td>
-        </tr>             
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Records per submission (average)</th>
-          <td class="govuk-table__cell">3.2</td>
-        </tr>           -->
-      </tbody>
-    </table>        
-
-
-  </div>
-  <!-- collection submissions summary content -->
-  <div class="govuk-grid-column-one-third">
-
-    <h2 class="govuk-heading-s" id="relatedCollections">Related submissions reports</h2>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Help with table column labels
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    
     <ul class="govuk-list govuk-list--spaced">
-      <li><a href="#"><strong>Urban hedgehog census 2023</strong></a></li>
-      <li><a href="#"><strong>Urban hedgehog finances 2023</strong></a></li>
-      <li><a href="#"><strong>Urban hedgehog census 2022</strong></a></li>
-      <li><a href="#"><strong>Urban hedgehog finances 2022</strong></a></li>
-    </ul>    
-    <p><a href="/">View all related reports</a></p>    
+      <li><strong>Collection name</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+      <li><strong>Collection ID</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+      <li><strong>Status</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+      <li><strong>Deadline</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
+      <li><strong>Asked</strong> - The number of organisations invited to submit a return.</li>
+      <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification.</li>
+      <li><strong>Returns</strong> - The number returns.</li>
+    </ul>
+
   </div>
-</div>
+</details>
 
-
-<div class="govuk-grid-row" id="returns">
-  <!-- primary content -->
-  <div class="govuk-grid-column-full">
-
-    <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByOrg">Returns by organisation</h3>    
-
-    <div class="designNote">
-      <ul class="govuk-list govuk-list--bullet">
-        <li>V2. Organisation name linked to new page displaying list of all collections that the user (collection manager) has access to, with contact details for individuals listed under each.</li>
-      </ul>
-    </div>    
 
     <!-- table results start -->
     <div class="delta-results">
@@ -386,25 +204,27 @@
             <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"><a href="#">Organisation <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>            
-                <th scope="col" class="govuk-table__header"><a href="#">Updated <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Records <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Collection ID <img src="/public/images/sort.svg"></a></th>            
+                <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Data period <img src="/public/images/sort.svg"></a></th>                
+                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Asked <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Blocked <img src="/public/images/sort.svg"></a></th>                
+                <th scope="col" class="govuk-table__header"><a href="#">Returns <img src="/public/images/sort.svg"></a></th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
-                <td class="govuk-table__cell">Open</td>              
-                <td class="govuk-table__cell">16 July 2024 </td>
-                <td class="govuk-table__cell"><a href="#">9</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
-                <td class="govuk-table__cell">Open</td>              
-                <td class="govuk-table__cell">15 July 2024 </td>
-                <td class="govuk-table__cell"><a href="#">2</a></td>
-              </tr>          
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">English hedgehog census 2023</a></th>
+                <td class="govuk-table__cell">UHC24</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td>
+                <td class="govuk-table__cell">16 July 2024</td>
+                <td class="govuk-table__cell">180</td>
+                <td class="govuk-table__cell">90</td>                
+                <td class="govuk-table__cell">40</td>
+              </tr>       
             </tbody>
           </table>
         </div>
@@ -452,16 +272,6 @@
       </div>
     </div>
     <!-- table results end -->
-
-  </div>
-</div>
-
-
-
-
-
-
-
 
 
 
