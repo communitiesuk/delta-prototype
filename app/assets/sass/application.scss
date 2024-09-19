@@ -27,6 +27,25 @@ html {
     min-height: 100vh;
 }
 
+.delta-responsive-image {
+    max-width: 100%;
+}
+
+.delta-fl {
+    float: left;
+    margin: 0 1rem 1rem 0;
+}
+
+.detla-image-sm {
+    max-width: 80px;
+}
+
+.delta-caption {
+    margin-top: 1rem;
+    font-size: small;
+    text-align: center
+}
+
 .delta-fixed-nav {
     background-color: black;
     position: fixed;
