@@ -55,7 +55,7 @@
       </ul>    
     </div> 
     <div class="govuk-grid-column-one-half">  
-      <p>[Animated screenshots here - DC search interface, DC search result, nutrition label]</p>      
+      <p class="delta-caption">[Animated screenshots here - DC search interface, DC search result, nutrition label]</p>      
     </div>       
   </div>    
 </div>
@@ -92,16 +92,16 @@
 
 <div class="panel delta-text-center" id="how">
   <h2 class="govuk-heading-xl">
-    Success
+    Success through clarity, simplicity and consistency
   </h2>
      
   <p class="govuk-body-l">The Data Catalogue only works if all data assets are registered and entries actively maintained.</p>
   <p>To achieve this we need&hellip;</p>
 
   <ul class="govuk-list govuk-list--spaced">
-    <li>New, clear, simple roles with regards to data ownership.</li>
-    <li>Effective monitoring tools.</li>
-    <li>Working practices that reduce, not add to, the burden for data owners.</li>
+    <li><a href="#">Clear, simple roles</a> with regards to data ownership.</li>
+    <li>Effective<a href="#"> monitoring tools</a>.</li>
+    <li><a href="#waysOfWorking">Working practices</a> that reduce, not add to, the burden for data owners.</li>
   </ul>           
   
 
@@ -123,8 +123,9 @@
 
 <div class="panel" id="roles">
   <h2 class="govuk-heading-xl delta-text-center">
-    Clear roles and responsibilities
+    Roles and responsibilities
   </h2>
+  <p class="govuk-body-l delta-text-center">Built upon the work of the <a href="https://www.gov.uk/government/organisations/central-digital-and-data-office" target="_blank">CDDO (new window)</a> but optimised to MHCLG.</p>
 
   <img src="/public/images/dataOwnership-roles.png" alt="" class="delta-responsive-image">
   <p class="delta-caption">The Data Guardian sits at the centre and is supported by an SRO and, as required, other specialists.</p>  
@@ -207,6 +208,118 @@
   
 </div>
 
+
+<!-- MOCK Up -->
+<div class="panel delta-hide">
+  <div class="govuk-tabs" data-module="govuk-tabs">
+    <h2 class="govuk-tabs__title">
+      Data guardian checklist
+    </h2>
+    <ul class="govuk-tabs__list">
+      <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+        <a class="govuk-tabs__tab" href="#commisssion">
+          Commissioning data
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#using">
+          Acquiring, storing, monitoring and using data
+        </a>
+      </li>
+      <li class="govuk-tabs__list-item">
+        <a class="govuk-tabs__tab" href="#archival">
+          Archival and deletion of data
+        </a>
+      </li>
+    </ul>
+    <div class="govuk-tabs__panel" id="commissioning">
+      <h2 class="govuk-heading-l">Commissioning data</h2>
+      <p class="">Before you begin does this data, or similar, already exist? Check the <a href="#">Data Catalogue (new window)</a>.</p>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Have you?
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+              <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Identified the tools you will use for <em>collecting</em> the data? <a href="#">Related guidance</a>.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Identified the tools you will use for <em>storing</em> the data? <a href="#">Related guidance</a>.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Identified the tools you will use for <em>managing</em> the data? <a href="#">Related guidance</a>.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Identified potential <em>reference data</em> to reuse? <a href="#">Related guidance</a>.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Identified potential <em>data standards</em> to reuse? <a href="#">Related guidance</a>.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Considered data <em>interoperability</em> and linkage potential? <a href="#">Related guidance</a>.
+              </label>
+            </div>                                    
+          </div>
+        </fieldset>
+      </div>      
+      <!-- <ul class="govuk-list govuk-list--bulet">
+        <li></li>
+      </ul> -->
+    </div>
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="past-week">
+      <h2 class="govuk-heading-l">Past week</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Case manager</th>
+            <th scope="col" class="govuk-table__header">Cases opened</th>
+            <th scope="col" class="govuk-table__header">Cases closed</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">David Francis</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">18</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Paul Farmer</td>
+            <td class="govuk-table__cell">16</td>
+            <td class="govuk-table__cell">20</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Rita Patel</td>
+            <td class="govuk-table__cell">24</td>
+            <td class="govuk-table__cell">27</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>  
+
+
+</div>
+
 <div class="panel" id="roleSRO">
   <h2 class="govuk-heading-xl">
     Senior Responsible Officer
@@ -233,6 +346,18 @@
     Chief Data Officer
   </h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+
+<div class="panel delta-text-center" id="waysOfWorking">
+
+  <h2 class="govuk-heading-xl">
+    Simplified ways of working
+   </h2>
+
+  <img src="/public/images/dataOwnership-working-checklist.png" alt="" class="delta-image-responsive">      
+  <p class="delta-caption">Screenshot of the phased based guidance offered to data guardians. Checklists like this ensure consistence and accuracy of entries in the data store.</p>      
+
 </div>
 
 
