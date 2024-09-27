@@ -38,11 +38,6 @@
   English hedgehog census 2023
 </h1>
 
-<div class="designNote">
-  <ul class="govuk-list govuk-list--bullet">
-    <li>V2. Link to collection entity page from Collection ID.</li>
-  </ul>
-</div>    
 
 
 <div class="govuk-grid-row">
@@ -59,10 +54,18 @@
       </div>      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
+          Open
+        </dt>
+        <dd class="govuk-summary-list__value">
+          16 June 2024
+        </dd>
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
           Deadline
         </dt>
         <dd class="govuk-summary-list__value">
-          16 July 2025
+          16 July 2024
         </dd>
       </div>     
       <!-- <div class="govuk-summary-list__row">
@@ -78,7 +81,7 @@
           Status
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--green delta-tag">Open</strong>
+          <strong class="govuk-tag govuk-tag--red delta-tag">Extended</strong> (5 days remaining)
         </dd>
       </div>         
       <div class="govuk-summary-list__row">
@@ -91,14 +94,8 @@
       </div>                   
     </dl>      
 
-    <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Returns overview</h3>    
+    <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Overview</h3>    
 
-    <div class="designNote">
-      <ul class="govuk-list govuk-list--bullet">
-        <!-- <li>'Records' and 'Records per submission (average)' only displayed for records-based collections.</li> -->
-        <li>Hyperlinked counts scroll page to 'Returns by organisation' table with it pre-filters by the corresponding status.</li>
-      </ul>
-    </div>
 
     <details class="govuk-details">
       <summary class="govuk-details__summary">
@@ -110,10 +107,11 @@
         
         <ul class="govuk-list govuk-list--spaced">
           <li><strong>All</strong> - The number of organisations who have been asked to submit a return for this collection.</li>
+          <li><strong>Extended</strong> - The number of organisations have been granted a submission extension.</li>
           <li><strong>Not started</strong> -  The number of organisations who have not submitted any records.</li>
-          <li><strong>Contains records in draft</strong> - The number of organisations who have started at least one return and saved it in draft format.</li>
-          <li><strong>Contains records awaiting certification</strong> - The number of organisations with a return that has records that need to be certified.</li>
-          <li><strong>Submitted</strong> - The number of organisations who have submitted a return.</li>
+          <li><strong>Return contains records in draft</strong> - The number of organisations who have started at least one return and saved it in draft format.</li>
+          <li><strong>Return contains records awaiting certification</strong> - The number of organisations with a return that has records that need to be certified.</li>
+          <li><strong>Submitted return</strong> - The number of organisations who have submitted a return.</li>
         </ul>
 
       </div>
@@ -126,30 +124,41 @@
       <!-- <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption> -->
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Return status</th>
-          <th scope="col" class="govuk-table__header">Organisations</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Count</th>
+          <th scope="col" class="govuk-table__header">Action</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">All</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport#returns">180</a></td>
+          <th scope="row" class="govuk-table__header">Organisations asked to submit a return</th>
+          <td class="govuk-table__cell">180</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Not started</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport#returns">50</a></td>
+          <th scope="row" class="govuk-table__header">Organisations granted submission extension</th>
+          <td class="govuk-table__cell">30</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+        </tr>        
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Organisations that have not started</th>
+          <td class="govuk-table__cell">30</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Contains records in draft</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport#returns">50</a></td>
+          <th scope="row" class="govuk-table__header">Return contains records in draft</th>
+          <td class="govuk-table__cell">50</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
         </tr>          
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Contains records awaiting certification</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
+          <th scope="row" class="govuk-table__header">Return contains records awaiting certification</th>
+          <td class="govuk-table__cell">40</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
         </tr>    
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Submitted</th>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">40</a></td>
+          <th scope="row" class="govuk-table__header">Submitted returns</th>
+          <td class="govuk-table__cell">40</td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
         </tr>                     
         <!-- <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Records</th>
@@ -185,13 +194,7 @@
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByOrg">Returns by organisation</h3>    
 
-    <button class="govuk-button">Download all</button>
-
-    <div class="designNote">
-      <ul class="govuk-list govuk-list--bullet">
-        <li>V2. Organisation name linked to new page displaying list of all collections that the user (collection manager) has access to, with contact details for individuals listed under each.</li>
-      </ul>
-    </div>    
+    <button class="govuk-button">Download organisations list</button>
 
     <!-- table results start -->
     <div class="delta-results">
