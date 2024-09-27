@@ -10,7 +10,7 @@
       },
       {
         text: "Submissions dashboard",
-        href: "/waySubmissionsDashboard"
+        href: "/waySubmissionsDashboard001"
       }      
     ]
   }) }}
@@ -24,9 +24,84 @@
 
   <h3 class="govuk-heading-l">Design notes <small>(toggle visibility with keyboard shortcut 'n')</small></h3>
 
+  <h3 class="govuk-heading-m">Hypothesis</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>The submissions report is primarily for collection managers to monitor their collection</li>
+    <li>At a glance
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Monitor submissions</li>
+          <li>Who may need support</li>
+          <li>See what has changed since yesterday* (focus on what is new)</li>
+          <li>Quick route to returns data</li>
+        </ul>
+    </li>
+  </ul>  
+
+<!-- 
+  <h3 class="govuk-heading-m">Eeek</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li><del>Ditch data range</del></li>
+    <li><del>Ditch multiple collections</del></li>
+  </ul>   -->
+
+  <h3 class="govuk-heading-m">Primary</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Who has [and has not] submitted</li>
+    <li>How many [records]?</li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Secondary</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>When [cadence]?*</li>    
+    <li>Share report - reports have unique URLs</li>
+    <li>See related collections</li>
+  </ul>
+
+  <!-- <h3 class="govuk-heading-m">Discuss</h3>
+
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Parent > child (Submission DB landing / Collection report)</li>
+    <li><del>Does supporting viewing report for multiple collections add complexity? Is it needed?</del></li>
+    <li><del>'View another collection' button? Should we take users back to parent?</del></li>
+    <li></li>
+    <li><del>Renamed 'Submissions summary' to 'overview'</del></li>
+    <li><del>Overview: need to brainstorm requirements then work on labels. At a glance: How many orgs did we ask? How many are in progress? How many completed? How many are being blocked by certification? Average records per submission?</del></li>
+    <li><del>Submissions summary: better labels? Open, Saved (aka Draft), Awaiting certification, Complete</del></li>
+    <li><del>Submissions summary: Add 'average records per submission'</del></li>
+    <li><del>Submissions summary: lose percentages to declutter?</del></li>
+    <li><del>Submissions summary: 'view' - is this clear that is filters the table below? If not, how can we make it so?</del></li>
+    <li>Confirm how download buttons work. Is 'download submissions' oly completed submissions?</li>
+    <li>How would related submission reports work? Could this be automated?</li>
+    <li><del>Can we add org contact name(s) to allow collection managers to make contact quickly to offer support?</del></li>
+  </ul>   -->
+
+  <h3 class="govuk-heading-m" id="changelog">Change log</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Added details [expander] under 'Returns overview' and drafted status explainer text.</li>
+    <li>Hyperlinked records counts to Data Store.</li>
+    <li>Removed records counts and average records from 'Returns overview'</li>
+    <li>Using 'return' in place of 'submission' where appropriate</li>
+    <li>Standardised status labels: All, Not started, Saved (in progress), Certification required, Completed</li>
+    <li>Submissions by organisation: added 'updated column' and ability to sort by</li>
+    <li>Submissions by organisation: linked org name to new page with org collection group memberships and contacts list</li>
+    <li>Submissions by organisation: used standardised table and filter design</li>
+    <li>Overview: removed 'download summary' button</li>
+    <li>Overview: removed "certification required" count</li>
+    <li>Overview: added hyperlinks to number to skip used down to Submissions by organisation</li>
+  </ul>  
+
+
   <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>xxx</li>
+    <li>User testing into current and proposed status labels</li>
+    <li>Pie chart</li>
+    <li><del>Parent > child (Submission DB landing / Collection report)</del></li>
+    <li>Confirm how download buttons work. Is 'download submissions' only completed submissions?</li>
+    <li>How would related submission reports work? Could this be automated?</li>
   </ul>    
 
 
