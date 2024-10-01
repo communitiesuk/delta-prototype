@@ -31,7 +31,7 @@
     <li>Meta data: added "x days remaining" for collection window deadline and latest extension deadline</li>
     <li>Overview: more descriptive labels</li>
     <li>Overview: added percentages</li>
-    <li>Overview: added clearer link text "Viw organisations". @Jemma, it would be good to get this down to a single word</li>
+    <li>Overview: added clearer link text "View organisations". @Jemma, it would be good to get this down to a single word</li>
     <li>Returns by organisation: clearer button text</li>
     <li>Returns by organisation table: added 'extensions deadline' column</li>
   </ul>    
@@ -66,7 +66,7 @@
           Collection ID
         </dt>
         <dd class="govuk-summary-list__value">
-          <a href="/wayCollectionDataProvider-collectionRecords">UHC24</a>
+          UHC24
         </dd>
       </div>      
       <div class="govuk-summary-list__row">
@@ -108,7 +108,23 @@
         <dd class="govuk-summary-list__value">
           29 July 2024 <small><span class="delta-text-secondary">(X remaining)</span></small>
         </dd>
-      </div>                                 
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Certification required
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Yes
+        </dd>
+      </div> 
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection type
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Case
+        </dd>
+      </div>                                             
     </dl>      
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Overview</h3>    
@@ -150,32 +166,32 @@
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Organisations asked to submit a return</th>
           <td class="govuk-table__cell">180</td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Organisations granted submission extension</th>
           <td class="govuk-table__cell">30 <small><span class="delta-text-secondary">(17%)</span></small></td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>        
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Organisations that have not started</th>
           <td class="govuk-table__cell">30 <small><span class="delta-text-secondary">(17%)</span></small></td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Return contains records in draft</th>
           <td class="govuk-table__cell">50  <small><span class="delta-text-secondary">(28%)</span></small></td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>          
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Return contains records awaiting certification</th>
           <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>    
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Submitted returns</th>
           <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
-          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View organisations</a></td>
+          <td class="govuk-table__cell"><a href="/waySubmissionsDashboard#returns">View</a></td>
         </tr>                     
         <!-- <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Records</th>
@@ -211,7 +227,7 @@
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByOrg">Returns by organisation</h3>    
 
-    <button class="govuk-button">Download organisations list</button>
+    <button class="govuk-button">Download organisations (.csv)</button>
 
     <!-- table results start -->
     <div class="delta-results">
@@ -342,70 +358,70 @@
             </thead>
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">1 July 2024 </td>
                 <td class="govuk-table__cell">16 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">9</a></td>
               </tr>
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">3 July 2024 </td>
                 <td class="govuk-table__cell">16 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">2</a></td>
               </tr>   
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red delta-tag">Extended</strong></td>              
                 <td class="govuk-table__cell">16 September 2024 </td>                
                 <td class="govuk-table__cell">n/a</td>
                 <td class="govuk-table__cell">0</td>
               </tr>     
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
