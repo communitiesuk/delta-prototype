@@ -30,20 +30,19 @@
     <li>Tweaked 'help with column labels' text</li>
     <li>Reduced text width in top of page; should make help clearer</li>
     <li>Help text: added information on status, plus misc tweaks</li>
+    <li>Table: removed collection ID</li>
+    <li>Table: added column for collection type - summary or case (aka records)</del></li>    
     <li>Table: added extensions count column</li>
-    <li>Table: added percentages. @Jemma, let's discuss and if agreed add to remaining rows</li>
+    <li>Table: added percentages</li>
+    <li>Table: added 'extended' tag</li>
+    <li>Table: heading change: "Asked" to "Organisations"</li>
+    <li>Table: heading change: "Returns" to "Compeleted"</li>
   </ul>    
 
   <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
     <li>Check / update filters to reflect changes above</li>
-    <li><del>Collect type? Summary or case (aka records)</del></li>
-    <li>Requires certification</li>
     <li>'The latest deadline date for any organisation asked to submit a return.' emphasise extensions included</li>
-    <li>Remove Collection ID</li>
-    <li>Asked to Orgs?</li>
-    <li>Returns > Completed [returns]</li>
-    <li>Add 'extended' tag in table</li>
   </ul>
 
 </div>
@@ -68,13 +67,13 @@
         
         <ul class="govuk-list govuk-list--spaced">
           <li><strong>Collection name</strong> - The title of the collection.</li>
-          <li><strong>Type</strong> - the collection type: summary or case (aka record-based).</li>
-          <li><strong>Status</strong> - open, extended or closed. A collection is open if the collection window has not closed and no organisations have an open extension. </li>                
+          <li><strong>Status</strong> - open, extended or closed. A collection is open if the collection window has not closed and no organisations have an open extension. </li>            
+          <li><strong>Type</strong> - the collection type: summary or case (aka record-based).</li>              
           <li><strong>Deadline</strong> - The latest date any organisation can submit a return. This includes extension deadlines.</li>
+          <li><strong>Organisations</strong> - The number of organisations invited to submit a return.</li>          
           <li><strong>Extensions</strong> - The number of organisations granted an extension.</li>
-          <li><strong>Organisations</strong> - The number of organisations invited to submit a return.</li>
           <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification. These records require action before they can be submitted.</li>
-          <li><strong>Returns</strong> - The number organisations that have submitted a return consisting of one or more records.</li>
+          <li><strong>Completed</strong> - The number organisations that have submitted a return consisting of one or more records.</li>
         </ul>
     
       </div>
@@ -252,9 +251,9 @@
                 <td class="govuk-table__cell">Summary <span class="govuk-visually-hidden"> collection</span></td>
                 <td class="govuk-table__cell">16 July 2023</td>
                 <td class="govuk-table__cell">180</td>
-                <td class="govuk-table__cell">45</td>                
+                <td class="govuk-table__cell">45 <small><span class="delta-text-secondary">(25%)</span></small></td>                
                 <td class="govuk-table__cell">0</td>                
-                <td class="govuk-table__cell">180</td>
+                <td class="govuk-table__cell">180 <small><span class="delta-text-secondary">(100%)</span></small></td>
               </tr>  
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
@@ -262,9 +261,9 @@
                 <td class="govuk-table__cell">Case <span class="govuk-visually-hidden"> collection</span></td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>                
-                <td class="govuk-table__cell">xxxx</td>                
-                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(100%)</span></small></td>                
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(100%)</span></small></td>                
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(100%)</span></small></td>
               </tr>                                                                                                                      
             </tbody>
           </table>
