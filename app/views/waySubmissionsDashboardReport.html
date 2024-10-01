@@ -54,6 +54,22 @@
       </div>      
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
+          Data period
+        </dt>
+        <dd class="govuk-summary-list__value">
+          1 January 2024 &dash; 31 December 2024
+        </dd>
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          <strong class="govuk-tag govuk-tag--red delta-tag">Extended</strong>
+        </dd>
+      </div>        
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
           Open
         </dt>
         <dd class="govuk-summary-list__value">
@@ -62,36 +78,20 @@
       </div>        
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Deadline
+          Close
         </dt>
         <dd class="govuk-summary-list__value">
-          16 July 2024
+          16 July 2024 <small><span class="delta-text-secondary">(X remaining)</span></small>
         </dd>
-      </div>     
-      <!-- <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Opens
-        </dt>
-        <dd class="govuk-summary-list__value">
-          16 January 2025
-        </dd>
-      </div> -->
+      </div>  
       <div class="govuk-summary-list__row">
         <dt class="govuk-summary-list__key">
-          Status
+          Latest extension deadline
         </dt>
         <dd class="govuk-summary-list__value">
-          <strong class="govuk-tag govuk-tag--red delta-tag">Extended</strong> (5 days remaining)
+          29 July 2024 <small><span class="delta-text-secondary">(X remaining)</span></small>
         </dd>
-      </div>         
-      <div class="govuk-summary-list__row">
-        <dt class="govuk-summary-list__key">
-          Data period
-        </dt>
-        <dd class="govuk-summary-list__value">
-          1 January 2024 &dash; 31 December 2024
-        </dd>
-      </div>                   
+      </div>                                 
     </dl>      
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Overview</h3>    
@@ -318,6 +318,7 @@
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"><a href="#">Organisation <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>            
+                <th scope="col" class="govuk-table__header"><a href="#">Extension deadline <img src="/public/images/sort.svg"></a></th>    
                 <th scope="col" class="govuk-table__header"><a href="#">Updated <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records <img src="/public/images/sort.svg"></a></th>
               </tr>
@@ -325,61 +326,71 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">1 July 2024 </td>
                 <td class="govuk-table__cell">16 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">9</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
-                <td class="govuk-table__cell">Open</td>              
-                <td class="govuk-table__cell">15 July 2024 </td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">3 July 2024 </td>
+                <td class="govuk-table__cell">16 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">2</a></td>
               </tr>   
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red delta-tag">Extended</strong></td>              
+                <td class="govuk-table__cell">16 September 2024 </td>                
+                <td class="govuk-table__cell">n/a</td>
+                <td class="govuk-table__cell">0</td>
+              </tr>     
+              <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
-                <td class="govuk-table__cell"><a href="#">x</a></td>
-              </tr>     
-              <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell">Open</td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>                                                                                                                          

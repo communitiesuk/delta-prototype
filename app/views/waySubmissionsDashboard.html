@@ -26,7 +26,7 @@
   
   <h3 class="govuk-heading-m">Dashboard</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Dashboard -include percentages</li>
+    <li>Dashboard - include percentages</li>
     <li>Better labels/col headings (and help text)</li>
   </ul>    
 
@@ -60,13 +60,12 @@
   <div class="govuk-details__text">
     
     <ul class="govuk-list govuk-list--spaced">
-      <!-- <li><strong>Collection name</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-      <li><strong>Collection ID</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li>
-      <li><strong>Status</strong> - Lorem ipsum dolor sit, amet consectetur adipisicing elit.</li> -->
-      <li><strong>Deadline</strong> - The furthest submission deadline date for any organisation asked to submit a return.</li>
+      <li><strong>Deadline</strong> - The latest deadline date for any organisation asked to submit a return.</li>
+      <li><strong>Extensions</strong> - The number of organisations granted an extension.</li>
       <li><strong>Asked</strong> - The number of organisations invited to submit a return.</li>
-      <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification.</li>
-      <li><strong>Returns</strong> - The number returns.</li>
+      <li><strong>Status</strong> - 'open' or 'closed'. A collection is open if it is still able to receive submissions because either the collection window or an extension deadline has not passed. </li>      
+      <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification. These records require action before they can be submitted.</li>
+      <li><strong>Returns</strong> - The number organisations that have submitted a return consisting of one or more records.</li>
     </ul>
 
   </div>
@@ -217,9 +216,9 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Collection ID <img src="/public/images/sort.svg"></a></th>            
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
-                <!-- <th scope="col" class="govuk-table__header"><a href="#">Data period <img src="/public/images/sort.svg"></a></th> -->
-                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>           
                 <th scope="col" class="govuk-table__header"><a href="#">Asked <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Extensions <img src="/public/images/sort.svg"></a></th>                     
                 <th scope="col" class="govuk-table__header"><a href="#">Blocked <img src="/public/images/sort.svg"></a></th>                
                 <th scope="col" class="govuk-table__header"><a href="#">Returns <img src="/public/images/sort.svg"></a></th>
               </tr>
@@ -232,16 +231,29 @@
                 <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
                 <td class="govuk-table__cell">16 July 2024</td>
                 <td class="govuk-table__cell">180</td>
+                <td class="govuk-table__cell">60</td>                
                 <td class="govuk-table__cell">90</td>                
                 <td class="govuk-table__cell">40</td>
               </tr>       
               <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">English hedgehog census 2022</a></th>
+                <td class="govuk-table__cell">UHC23</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>              
+                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
+                <td class="govuk-table__cell">16 July 2023</td>
+                <td class="govuk-table__cell">180</td>
+                <td class="govuk-table__cell">45</td>                
+                <td class="govuk-table__cell">0</td>                
+                <td class="govuk-table__cell">180</td>
+              </tr>  
+              <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
                 <td class="govuk-table__cell">xxxxx</td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
                 <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>   
@@ -253,15 +265,6 @@
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
-                <td class="govuk-table__cell">xxxx</td>
-              </tr>   
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
-                <td class="govuk-table__cell">xxxxx</td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
-                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>   
@@ -273,15 +276,6 @@
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
-                <td class="govuk-table__cell">xxxx</td>
-              </tr>   
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
-                <td class="govuk-table__cell">xxxxx</td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
-                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>   
@@ -293,15 +287,6 @@
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
-                <td class="govuk-table__cell">xxxx</td>
-              </tr>   
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
-                <td class="govuk-table__cell">xxxxx</td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
-                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>   
@@ -313,6 +298,7 @@
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>   
               <tr class="govuk-table__row">
@@ -322,6 +308,29 @@
                 <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>
+              </tr>   
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell">xxxxx</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>
+              </tr>   
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell">xxxxx</td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>                
                 <td class="govuk-table__cell">xxxx</td>
               </tr>                                                                                                                     
