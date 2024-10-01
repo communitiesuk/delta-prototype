@@ -1,0 +1,213 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Design demo: Submissions Dashboard" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+    <p>
+      <a href="/waySubmissionsDashboard" target="_blank">Dashboard</a> (new window)
+    |
+    <a href="/waySubmissionsDashboardReport" target="_blank">Report</a> (new window)
+  </p>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel xdelta-text-center">
+  <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;">
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Design demo</small><br>
+    Submissions Dashboard
+  </h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <p class="govuk-body-l xdelta-reading-width">Show and tell.</p> -->
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+        Updated: 1 October 2024
+      </h4>       
+    </div>
+  </div>    
+
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Running order</h2>
+
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Setting the scene</li>
+    <li>Why are we redesigning the submission dashboard?</li>
+    <li>Scope and phased delivery</li>
+    <li>User testing recap</li>
+    <li>Version 1 designs
+      <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+        <li>One to two</li>
+        <li>Dashboard</li>
+        <li>Reports</li>
+      </ul>
+    </li>
+    <li>Summary</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Setting the scene</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Part 1 - overview (5 mins)</li>
+    <li>Part 2 - design demo (15 mins) <strong class="govuk-tag govuk-tag--red delta-tag">Recorded</strong></li>
+    <li>Part 3 - questions and discussion (20 mins)</li>
+    <li>Dummy data: hedgehogs</li>
+    <li>Case level collection requiring certification</li>
+    <li>Language / terms
+      <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+        <li>Collection group > Collection > Return > Record</li>
+      </ul>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Why are we redesigning the submission dashboard?</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Make collection manager's lives easier (simpler and faster)</li>
+    <li>Better support, more accurate data</li>
+    <li>Not getting rid of anything: cosmetic and functional changes only</li>    
+    <li>Aligning with new Delta 2.0 look and feel (UI)</li>
+    <li>Laying foundations for accessibility and analytics improvements</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Scope and phased delivery</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Nof a full redesign</li>
+    <li>Evolution not revolution</li>
+    <li>First phase of several: replicate existing capabilities and implement quick wins</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">User testing recap</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>5 user research sessions</li>
+    <li>Learnings incorporated in these designs</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Version 1 designs</h2>
+
+  <h2 class="govuk-heading-m">One to two</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Changing structure of dashboard so that reports have their own dedicated pages (URLs).</li>
+    <li>Submission dashboard (landing and list)
+      <ul>
+        <li>Collection report</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Submission dashboard</h2>
+  <p><a href="/waySubmissionsDashboard" target="_blank">View design</a> (new window)</p>
+
+  <h2 class="govuk-heading-m">Collection report</h2>
+  <p><a href="/waySubmissionsDashboardReport" target="_blank">View design</a> (new window)</p>
+
+</div>
+
+<div class="panel"></div>
+  <h2 class="govuk-heading-l">Summary</h2>
+
+
+  <h3 class="govuk-heading-m">Dashboard</h3>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>99% of the time no need to filter to see the collection you wish to see</li>
+    <li>High level stats</li>
+    <li>Better extension reporting</li>
+  </ul>
+
+  <h3 class="govuk-heading-m">Dashboard</h3>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Dedicated URL (bookmark / share)</li>
+    <li>One click access to manage (collection managers)</li>
+    <li>Clearer overview</li>
+    <li>Returns by organisation (reduced need to download CSV)</li>
+    <li>Data store integration</li>
+  </ul>
+
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+
