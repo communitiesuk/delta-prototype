@@ -24,21 +24,20 @@
 
   <h3 class="govuk-heading-m">Post UR round 1</h3>
   
-  <h3 class="govuk-heading-m">Dashboard</h3>
+  <h3 class="govuk-heading-m">Changes</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Dashboard - include percentages</li>
-    <li>Better labels/col headings (and help text)</li>
+    <li>Added explainer text under page title</li>
+    <li>Tweaked 'help with column labels' text</li>
+    <li>Reduced text width in top of page; should make help clearer</li>
+    <li>Help text: added information on status, plus misc tweaks</li>
+    <li>Table: added extensions count column</li>
+    <li>Table: added percentages. @Jemma, let's discuss and if agreed add to remaining row</li>
   </ul>    
 
-  <h3 class="govuk-heading-m">Report</h3>
+  <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Meta data - window (open, closed), has extension(s)</li>
-    <li>Overview - add percentages</li>
-    <li>Overview - add number of orgs with extensions</li>
-    <li>Table - add 'has extension' col</li>
-    <li>Add chart</li>
-    <li>Look at status labels</li>
-  </ul>    
+    <li>Check / update filters to reflect changes above</li>  
+  </ul>
 
 </div>
 
@@ -47,30 +46,34 @@
   Submissions dashboard
 </h1>
 
-<h2 class="govuk-heading-l">
-  Collections reports
-</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
 
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Help with column labels
-    </span>
-  </summary>
-  <div class="govuk-details__text">
+    <p class="govuk-body">Below is a list of submission reports for the collections you have access to. You can sort the table by clicking on any column heading or use 'Show Filters' for more advanced filtering options.</p>
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with column labels
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        
+        <ul class="govuk-list govuk-list--spaced">
+          <li><strong>Deadline</strong> - The latest deadline date for any organisation asked to submit a return.</li>
+          <li><strong>Extensions</strong> - The number of organisations granted an extension.</li>
+          <li><strong>Asked</strong> - The number of organisations invited to submit a return.</li>
+          <li><strong>Status</strong> - 'open' or 'closed'. A collection is open if it is still able to receive submissions because either the collection window or an extension deadline has not passed. </li>      
+          <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification. These records require action before they can be submitted.</li>
+          <li><strong>Returns</strong> - The number organisations that have submitted a return consisting of one or more records.</li>
+        </ul>
     
-    <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Deadline</strong> - The latest deadline date for any organisation asked to submit a return.</li>
-      <li><strong>Extensions</strong> - The number of organisations granted an extension.</li>
-      <li><strong>Asked</strong> - The number of organisations invited to submit a return.</li>
-      <li><strong>Status</strong> - 'open' or 'closed'. A collection is open if it is still able to receive submissions because either the collection window or an extension deadline has not passed. </li>      
-      <li><strong>Blocked</strong> - The number of returns containing one or more records either in draft format or requiring certification. These records require action before they can be submitted.</li>
-      <li><strong>Returns</strong> - The number organisations that have submitted a return consisting of one or more records.</li>
-    </ul>
+      </div>
+    </details>
+    
 
   </div>
-</details>
-
+</div>
 
     <!-- table results start -->
     <div class="delta-results">
@@ -231,9 +234,9 @@
                 <!-- <td class="govuk-table__cell">1 January 2023 ‐ 31 December 2023 </td> -->
                 <td class="govuk-table__cell">16 July 2024</td>
                 <td class="govuk-table__cell">180</td>
-                <td class="govuk-table__cell">60</td>                
-                <td class="govuk-table__cell">90</td>                
-                <td class="govuk-table__cell">40</td>
+                <td class="govuk-table__cell">60 <small><span class="delta-text-secondary">(33%)</span></small></td>                
+                <td class="govuk-table__cell">90 <small><span class="delta-text-secondary">(50%)</span></small></td>                
+                <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
               </tr>       
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">English hedgehog census 2022</a></th>
