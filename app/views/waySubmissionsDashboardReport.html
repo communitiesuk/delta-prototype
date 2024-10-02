@@ -156,18 +156,18 @@
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Help with statuses
+      Help with status
     </span>
   </summary>
   <div class="govuk-details__text">
     
     <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Organisations asked to submit a return</strong> the number of organisations who have been asked to submit a return for this collection.</li>
-      <li><strong>Extensions</strong>: the number of organisations who have been granted a submission extension.</li>
-      <li><strong>Organisations that have not started</strong>: the number of organisations who have not submitted any records.</li>
+      <li><strong>Organisations asked to submit a return</strong> the number of organisations who have been asked to submit a return for this collection.</li>      
+      <li><strong>Organisations that have not started</strong>: the number of organisations who have not create a record.</li>
       <li><strong>Return contains records in draft</strong>: the number of organisations who have started at least one return and saved it in draft format.</li>
       <li><strong>Return contains records awaiting certification</strong>: the number of organisations with a return that has records that need to be certified.</li>
       <li><strong>Completed return</strong>: the number of organisations who have submitted a return.</li>
+      <li><strong>Extensions</strong>: the number of organisations who have been granted a submission extension.</li>      
     </ul>
 
   </div>
@@ -207,7 +207,7 @@
           <td class="govuk-table__cell">20 <small><span class="delta-text-secondary">(11%)</span></small></td>
         </tr>    
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Certified returns</a></th>
+          <th scope="row" class="govuk-table__header"><a href="#returns">Completed (certified)</a></th>
           <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
         </tr>   
         <tr class="govuk-table__row">
@@ -234,11 +234,11 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Not started', 'In progress', 'Completed'],
+          labels: ['Not started', 'Draft', 'Awaiting certification', 'Completed (certified)'],
           
           datasets: [{
-            data: [100, 40, 40],
-            backgroundColor: ["#f47738", "#5694ca", "#85994b"], 
+            data: [180, 100, 20, 20],
+            backgroundColor: ["#f47738", "#5694ca", "#85994b", "#85994b", "#85994b"], 
             borderWidth: 0
           }]
         },
