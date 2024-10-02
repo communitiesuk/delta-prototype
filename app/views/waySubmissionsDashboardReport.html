@@ -216,11 +216,12 @@
     <h4 class="govuk-heading-m">Extensions</h4>
     <p>Organisations granted submission extensions: 30 <small><span class="delta-text-secondary">(17%)</span></small>.</p>
   </div>
+
   <div class="govuk-grid-column-one-half">
     <!-- Chart here ======== -->
 
     <div>
-      <canvas id="myChart"></canvas>
+      <canvas id="myChart" width="538" height="269" style="display: block; box-sizing: border-box; height: 269px; width: 538px;"></canvas>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -231,14 +232,23 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Not started', 'In progress', 'Submitted'],
+          labels: ['Not started', 'In progress', 'Completed'],
+          
           datasets: [{
-            label: 'Submission status',
-            data: [30, 80, 40],
+            data: [100, 40, 40],
+            backgroundColor: ["#f47738", "#5694ca", "#85994b"], 
             borderWidth: 0
           }]
         },
         options: {
+          plugins: {
+            legend: {
+                display: false
+            },
+        },
+          tooltip: {
+            display: false
+          },
           scales: {
             y: {
               beginAtZero: true
