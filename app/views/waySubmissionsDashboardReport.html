@@ -100,7 +100,7 @@
           Close
         </dt>
         <dd class="govuk-summary-list__value">
-          16 July 2024 <small><span class="delta-text-secondary">(X remaining)</span></small>
+          16 July 2024 <small><span class="delta-text-secondary">(X days remaining)</span></small>
         </dd>
       </div>  
       <div class="govuk-summary-list__row">
@@ -108,7 +108,7 @@
           Last extension deadline
         </dt>
         <dd class="govuk-summary-list__value">
-          29 July 2024 <small><span class="delta-text-secondary">(X remaining)</span></small>
+          29 July 2024 <small><span class="delta-text-secondary">(X days remaining)</span></small>
         </dd>
       </div> 
       <div class="govuk-summary-list__row">
@@ -124,7 +124,7 @@
           Collection type
         </dt>
         <dd class="govuk-summary-list__value">
-          Case
+          Case level
         </dd>
       </div>                                             
     </dl>      
@@ -156,18 +156,18 @@
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Help with statuses
+      Help with status
     </span>
   </summary>
   <div class="govuk-details__text">
     
     <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Organisations asked to submit a return</strong> the number of organisations who have been asked to submit a return for this collection.</li>
-      <li><strong>Organisations granted submission extension</strong>: the number of organisations who have been granted a submission extension.</li>
-      <li><strong>Organisations that have not started</strong>: the number of organisations who have not submitted any records.</li>
+      <li><strong>Organisations asked to submit a return</strong> the number of organisations who have been asked to submit a return for this collection.</li>      
+      <li><strong>Organisations that have not started</strong>: the number of organisations who have not create a record.</li>
       <li><strong>Return contains records in draft</strong>: the number of organisations who have started at least one return and saved it in draft format.</li>
       <li><strong>Return contains records awaiting certification</strong>: the number of organisations with a return that has records that need to be certified.</li>
       <li><strong>Completed return</strong>: the number of organisations who have submitted a return.</li>
+      <li><strong>Extensions</strong>: the number of organisations who have been granted a submission extension.</li>      
     </ul>
 
   </div>
@@ -195,8 +195,8 @@
           <td class="govuk-table__cell">180</td>
         </tr>   
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Organisations that have not started</a></th>
-          <td class="govuk-table__cell">100 <small><span class="delta-text-secondary">(56%)</span></small></td>
+          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Organisations that have not started</a></th>
+          <td class="govuk-table__cell govuk-!-static-padding-top-6">100 <small><span class="delta-text-secondary">(56%)</span></small></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a href="#returns">Return contains records in draft</a></th>
@@ -207,20 +207,23 @@
           <td class="govuk-table__cell">20 <small><span class="delta-text-secondary">(11%)</span></small></td>
         </tr>    
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Certified returns</a></th>
+          <th scope="row" class="govuk-table__header"><a href="#returns">Completed (certified)</a></th>
           <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
-        </tr>                     
+        </tr>   
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Extensions</a></th>
+          <td class="govuk-table__cell  govuk-!-static-padding-top-6">30 <small><span class="delta-text-secondary">(17%)</span></small></td>
+        </tr>                           
       </tbody>
     </table>      
 
-    <h4 class="govuk-heading-m">Extensions</h4>
-    <p>Organisations granted submission extensions: 30 <small><span class="delta-text-secondary">(17%)</span></small>.</p>
   </div>
+
   <div class="govuk-grid-column-one-half">
     <!-- Chart here ======== -->
 
     <div>
-      <canvas id="myChart"></canvas>
+      <canvas id="myChart" width="538" height="269" style="display: block; box-sizing: border-box; height: 269px; width: 538px;"></canvas>
     </div>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -231,14 +234,26 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Not started', 'In progress', 'Submitted'],
+          labels: ['Not started', 'Draft', 'Awaiting certification', 'Completed (certified)'],
+          
           datasets: [{
-            label: 'Submission status',
-            data: [30, 80, 40],
+            data: [180, 100, 20, 20],
+            backgroundColor: ["#f47738", "#5694ca", "#85994b", "#85994b", "#85994b"], 
             borderWidth: 0
           }]
         },
         options: {
+          plugins: {
+            legend: {
+                display: false
+            },
+        },
+          tooltip: {
+            display: false
+          },
+          tooltip: {
+            display: false
+          },
           scales: {
             y: {
               beginAtZero: true
@@ -383,7 +398,7 @@
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"><a href="#">Organisation <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>            
-                <th scope="col" class="govuk-table__header"><a href="#">Extension deadline <img src="/public/images/sort.svg"></a></th>    
+                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>    
                 <th scope="col" class="govuk-table__header"><a href="#">Updated <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records <img src="/public/images/sort.svg"></a></th>
               </tr>
