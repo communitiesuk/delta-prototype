@@ -39,6 +39,8 @@
     <li>Collect type? Summary or case (aka records)</li>
     <li>Help text updated</li>
     <li>Overview [table]: removed 'view' column and put hyperlink on status name. This enabled the column to be thinner, giving more space to chart</li>
+    <li>Percentage value from extensions removed. It was confusing having percentages add up to more than 100%.</li>
+    <li>Moved extensions count and link from own line in overview table, and put it alongside organisation count</li>
 
   </ul>    
 
@@ -163,12 +165,12 @@
   <div class="govuk-details__text">
     
     <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Organisations asked to submit a return</strong> the number of organisations who have been asked to submit a return for this collection.</li>      
-      <li><strong>Organisations that have not started</strong>: the number of organisations who have not create a record.</li>
-      <li><strong>Return contains records in draft</strong>: the number of organisations who have started at least one return and saved it in draft format.</li>
-      <li><strong>Return contains records awaiting certification</strong>: the number of organisations with a return that has records that need to be certified.</li>
-      <li><strong>Completed return</strong>: the number of organisations who have submitted a return.</li>
-      <li><strong>Extensions</strong>: the number of organisations who have been granted a submission extension.</li>      
+      <li><strong>Organisations</strong> the number of organisations who have been asked to submit a return for this collection.</li>      
+      <li><strong>Not started</strong>: the number of organisations who have not create a record.</li>
+      <li><strong>In draft</strong>: the number of organisations who have started at least one record and saved it in draft format.</li>
+      <li><strong>Awaiting certification</strong>: the number of organisations with a return that has records that need to be certified.</li>
+      <li><strong>Completed</strong>: the number organisations that have submitted and certified a return. [OR for uncertifiable returns] the number of organisations who have submitted a return.</li>
+      <li><strong>Extended</strong>: the number of organisations who have been granted a submission extension.</li>      
     </ul>
 
   </div>
@@ -192,29 +194,25 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Organisations asked to submit a return</a></th>
-          <td class="govuk-table__cell">180</td>
+          <th scope="row" class="govuk-table__header"><a href="#returns">Organisations</a></th>
+          <td class="govuk-table__cell">180 <small><span class="delta-text-secondary">(Extended: <a href="#returns">30</a>)</span></small></td>
         </tr>   
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Organisations that have not started</a></th>
+          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Not started</a></th>
           <td class="govuk-table__cell govuk-!-static-padding-top-6">100 <small><span class="delta-text-secondary">(56%)</span></small></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Return contains records in draft</a></th>
+          <th scope="row" class="govuk-table__header"><a href="#returns">In draft</a></th>
           <td class="govuk-table__cell">20  <small><span class="delta-text-secondary">(11%)</span></small></td>
         </tr>          
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Return contains records awaiting certification</a></th>
+          <th scope="row" class="govuk-table__header"><a href="#returns">Awaiting certification</a></th>
           <td class="govuk-table__cell">20 <small><span class="delta-text-secondary">(11%)</span></small></td>
         </tr>    
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Completed (certified)</a></th>
+          <th scope="row" class="govuk-table__header"><a href="#returns">Completed</a></th>
           <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
-        </tr>   
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Extensions</a></th>
-          <td class="govuk-table__cell  govuk-!-static-padding-top-6">30 <small><span class="delta-text-secondary">(17%)</span></small></td>
-        </tr>                           
+        </tr>                       
       </tbody>
     </table>      
 
@@ -235,11 +233,15 @@
       new Chart(ctx, {
         type: 'bar',
         data: {
-          labels: ['Not started', 'Draft', 'Awaiting certification', 'Completed (certified)'],
+          labels: ['Not started', 'Draft', 'Awaiting certification', 'Completed'],
           
           datasets: [{
             data: [180, 100, 20, 20],
+<<<<<<< HEAD
             backgroundColor: ["#f47738", "#5694ca", "#85994b", "#85994b"], 
+=======
+            backgroundColor: ["#f47738", "#5694ca", "#6f72af", "#85994b"], 
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
             borderWidth: 0
           }]
         },
@@ -247,14 +249,12 @@
           plugins: {
             legend: {
                 display: false
-            },
+            },        
+            tooltip: {
+              enabled: false
+            }
+
         },
-          tooltip: {
-            display: false
-          },
-          tooltip: {
-            display: false
-          },
           scales: {
             y: {
               beginAtZero: true
@@ -263,6 +263,7 @@
         }
       });
     </script>
+
 
 
   </div>
@@ -323,7 +324,7 @@
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                       <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                        In progress
+                        In draft
                       </label>
                     </div>                                          
                     <div class="govuk-checkboxes__item">
@@ -335,9 +336,15 @@
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                       <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                        Extended
+                      </label>
+                    </div>    
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                         Completed
                       </label>
-                    </div>                                 
+                    </div>                                                     
                   </div>
               </div>
             </div>                    
@@ -407,14 +414,14 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo002.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Arundel Borough Council</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">In draft</strong></td>              
                 <td class="govuk-table__cell">1 July 2024 </td>
                 <td class="govuk-table__cell">16 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">9</a></td>
               </tr>
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Awaiting certification</strong></td>              
                 <td class="govuk-table__cell">3 July 2024 </td>
                 <td class="govuk-table__cell">15 July 2024 </td>
                 <td class="govuk-table__cell"><a href="#">2</a></td>
@@ -428,49 +435,49 @@
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Completed</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>     
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th scope="row" class="govuk-table__header"><a href="/wayCollectionDataProvider-collectionRecords"><img src="/public/images/logo000.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Another organisation</a></td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>              
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Not started</strong></td>              
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell">xxxxxxx </td>
                 <td class="govuk-table__cell"><a href="#">x</a></td>

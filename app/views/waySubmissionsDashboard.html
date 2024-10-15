@@ -42,6 +42,8 @@
     <li>Table: Not started column added</li>
     <li>Table: 'blocked' renamed to 'in progress'</li>
     <li>Table: % removed for extended (so not started, in progress and completed should add up to 100%)</li>
+    <li><strong>04/10/2024 - post Jeremy feedback</strong></li>
+    <li>Table: removed extended column and added start column.</li>
   </ul>
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -78,7 +80,7 @@
           <li><strong>Extensions</strong>: the number of organisations who have been granted an extension.</li>
           <li><strong>Not started</strong>: the number of organisations who have not started uploading data.</li>          
           <li><strong>In progress</strong>: the number of returns containing one or more records either in draft format or requiring certification. These records require action before they can be submitted.</li>
-          <li><strong>Completed</strong>: the number organisations that have submitted a return consisting of one or more records.</li>
+          <li><strong>Completed</strong>: the number organisations that have submitted and certified a return. [OR for uncertifiable returns] the number organisations that have submitted a return</li>
         </ul>
 
       </div>
@@ -125,6 +127,12 @@
                         All
                       </label>
                     </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="Status-2">
+                        Future
+                      </label>
+                    </div>                    
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                       <label class="govuk-label govuk-checkboxes__label" for="Status-2">
@@ -181,6 +189,7 @@
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+<<<<<<< HEAD
                     Collection group
                   </span>
                 </h2>
@@ -207,6 +216,8 @@
               <div class="govuk-accordion__section-header">
                 <h2 class="govuk-accordion__section-heading">
                   <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+=======
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
                     Organisations
                   </span>
                 </h2>
@@ -256,10 +267,16 @@
               <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
+<<<<<<< HEAD
                 <th scope="col" class="govuk-table__header"><a href="#">Start date <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Organisations <img src="/public/images/sort.svg"></a></th>
                 <!-- <th scope="col" class="govuk-table__header"><a href="#">Extensions <img src="/public/images/sort.svg"></a></th> -->
+=======
+                <th scope="col" class="govuk-table__header"><a href="#">Start <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Organisations <img src="/public/images/sort.svg"></a></th>
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
                 <th scope="col" class="govuk-table__header"><a href="#">Not started <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">In progress <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Completed <img src="/public/images/sort.svg"></a></th>
@@ -272,13 +289,20 @@
                 <td class="govuk-table__cell">16 June 2024</td>
                 <td class="govuk-table__cell">16 July 2024</td>
                 <td class="govuk-table__cell">180</td>
+<<<<<<< HEAD
                 <td class="govuk-table__cell">100 <small><span class="delta-text-secondary">(33%)</span></small></td>
                 <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(50%)</span></small></td>
                 <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(17%)</span></small></td>
+=======
+                <td class="govuk-table__cell">100 <small><span class="delta-text-secondary">(56%)</span></small></td>
+                <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
+                <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
               </tr>
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green delta-tag">Open</strong></td>
+                <td class="govuk-table__cell">2 June 2024</td>
                 <td class="govuk-table__cell">2 July 2024</td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
@@ -288,6 +312,7 @@
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">English hedgehog census 2022</a></th>
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">16 June 2023</td>
                 <td class="govuk-table__cell">16 July 2023</td>
                 <td class="govuk-table__cell">180</td>
                 <td class="govuk-table__cell">45 <small><span class="delta-text-secondary">(25%)</span></small></td>
@@ -299,6 +324,73 @@
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
+<<<<<<< HEAD
+=======
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>                
+                <td class="govuk-table__cell">xxxx</td>
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>
+<<<<<<< HEAD
+=======
+                <td class="govuk-table__cell">xxxx</td>                
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
+              </tr>
+              <tr class="govuk-table__row">
+                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
+                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
+                <td class="govuk-table__cell">xxxx</td>
+                <td class="govuk-table__cell">xxxx</td>
+<<<<<<< HEAD
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
@@ -335,24 +427,9 @@
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
                 <td class="govuk-table__cell">xxxx</td>
                 <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-                <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="/waySubmissionsDashboardReport">Another Collection</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
-                <td class="govuk-table__cell">xxxx</td>
-                <td class="govuk-table__cell">xxxx</td>
+=======
+                <td class="govuk-table__cell">xxxx</td>                
+>>>>>>> 68305ae2bbeef78ac1ac16edae5b9c93f73582d2
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
                 <td class="govuk-table__cell">xxxx <small><span class="delta-text-secondary">(0%)</span></small></td>
