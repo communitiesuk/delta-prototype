@@ -163,22 +163,77 @@
               </div>
               <div id="filter-group-status" class="govuk-accordion__section-content">
                   <!-- Date picker stuff to go here -->
-
                   <!-- Date picker from -->
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                        <h1 class="govuk-fieldset__heading">
-                        From
-                        </h1>
-                      </legend>
-                      <div id="passport-issued-hint" class="govuk-hint">
-                        For example, 12 3 2022
-                      </div>
-                    </fieldset>
-                  </div>
+                  <h3 class="govuk-label govuk-label--s delta-margin-top-null">From</h3>                   
+                  <div class="delta-grid-row ">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="fromMonth">
+                        Month
+                      </label>
+                      <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="" selected>January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                      </select>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="fromMonth">
+                        Year
+                      </label>
+                      <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="">2024</option>
+                        <option value="">2023</option>
+                        <option value="">2022</option>
+                        <option value="">2021</option>
+                        <option value="" selected>2020</option>
+                      </select>
+                    </div>   
+                  </div>               
 
                   <!-- Date picker to -->             
+                  <h3 class="govuk-label govuk-label--s">To</h3>                   
+                  <div class="delta-grid-row ">
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="fromMonth">
+                        Month
+                      </label>
+                      <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="">January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="" selected>October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                      </select>
+                    </div>
+                    <div class="govuk-form-group">
+                      <label class="govuk-label" for="fromMonth">
+                        Year
+                      </label>
+                      <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="">2024</option>
+                        <option value="">2023</option>
+                        <option value="">2022</option>
+                        <option value="">2021</option>
+                        <option value="" selected>2020</option>
+                      </select>
+                    </div>   
+                  </div> 
 
                   <!-- Date picket stuff end -->
               </div>
@@ -209,6 +264,32 @@
                 </div>
               </div>
             </div>
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                    organisation
+                  </span>
+                </h2>
+              </div>
+              <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                <!-- search -->
+                <!-- results drop-down -->
+                <div class="govuk-form-group">
+                  <label class="govuk-label govuk-visually-hidden" for="selectCollectionGroup">
+                    selectCollectionGroup
+                  </label>
+                  <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollectionGroup" name="selectCollectionGroup">
+                    <option value="Select" selected>All</option>
+                    <option value="xxx">Urban hedgehog census</option>
+                    <option value="xxx">English dragonfly census</option>
+                    <option value="xxx">Another collection group</option>
+                    <option value="xxx">Another collection group</option>
+                  </select>
+                  <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
+                </div>
+              </div>
+            </div>            
           </div>
           <button class="govuk-button">Apply filters</button>
           <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
