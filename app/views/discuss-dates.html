@@ -1,0 +1,58 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Template" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <!-- <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-XXX" target="_blank">DT-XXX</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Note</li>
+      <li>Note</li>
+      <li>Note</li>
+    </ul>
+  </div> -->
+
+
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      What is the nest date format on Delta?
+    </h1>
+    
+    <ul class="govuk-list govuk-list--bullet">
+      <li></li>
+    </ul>
+
+    Up to now (16 October 2024) the design team have been advocating for the date format where the month is a word, not a number. Example: 1 September 2024.
+    We suggested this as it was felt such a format allowed for fast scanning of dates in columns in tables, but this has not been formally tested.
+    Writing dates in this format has the downside of taking more horizontal space, which is something Delta struggles with due to the amount of content we are often required to display on a screen. Example: '1 September 2024'. vs '1 9 2024'.
+    
+    <h3>Guidance</h3>
+
+    GDS advice that dates be written 
+
+
+    Considerations - (unique to Delta?)
+
+    Space constraints: things like filters need to contain much in a small areas. 
+    Our primary users (internal and external) are 'power users', meaning they have a high level of digital literacy and savviness. It is our hypothesis that they would prefer user contracts (e.g. drop-down menus) to be offered when they would support faster ways of working.
+
+
+  </div>
+</div>
+
+{% endblock %}
+
+
+
