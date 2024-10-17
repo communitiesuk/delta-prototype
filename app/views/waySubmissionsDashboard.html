@@ -190,6 +190,8 @@
                         Year
                       </label>
                       <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="">2026</option>
+                        <option value="">2025</option>
                         <option value="">2024</option>
                         <option value="">2023</option>
                         <option value="">2022</option>
@@ -216,9 +218,9 @@
                         <option value="">July</option>
                         <option value="">August</option>
                         <option value="">September</option>
-                        <option value="" selected>October</option>
+                        <option value="" >October</option>
                         <option value="">November</option>
-                        <option value="">December</option>
+                        <option value="" selected>December</option>
                       </select>
                     </div>
                     <div class="govuk-form-group">
@@ -263,33 +265,7 @@
                   <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
                 </div>
               </div>
-            </div>
-            <div class="govuk-accordion__section">
-              <div class="govuk-accordion__section-header">
-                <h2 class="govuk-accordion__section-heading">
-                  <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                    organisation
-                  </span>
-                </h2>
-              </div>
-              <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-                <!-- search -->
-                <!-- results drop-down -->
-                <div class="govuk-form-group">
-                  <label class="govuk-label govuk-visually-hidden" for="selectCollectionGroup">
-                    selectCollectionGroup
-                  </label>
-                  <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollectionGroup" name="selectCollectionGroup">
-                    <option value="Select" selected>All</option>
-                    <option value="xxx">Urban hedgehog census</option>
-                    <option value="xxx">English dragonfly census</option>
-                    <option value="xxx">Another collection group</option>
-                    <option value="xxx">Another collection group</option>
-                  </select>
-                  <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
-                </div>
-              </div>
-            </div>            
+            </div>          
           </div>
           <button class="govuk-button">Apply filters</button>
           <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
