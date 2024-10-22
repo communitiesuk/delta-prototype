@@ -120,12 +120,6 @@
               <div id="filter-group-status" class="govuk-accordion__section-content">
                   <div class="govuk-checkboxes" data-module="govuk-checkboxes">
                     <div class="govuk-checkboxes__item">
-                      <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
-                      <label class="govuk-label govuk-checkboxes__label" for="Status">
-                        All
-                      </label>
-                    </div>
-                    <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                       <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                         Future
@@ -170,7 +164,8 @@
                         Month
                       </label>
                       <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
-                        <option value="" selected>January</option>
+                        <option value="" selected>-</option>
+                        <option value="">January</option>
                         <option value="">February</option>
                         <option value="">March</option>
                         <option value="">April</option>
@@ -189,7 +184,8 @@
                         Year
                       </label>
                       <select class="govuk-select delta-select-min-width" id="toMonth" name="toMonth">
-                        <option value="" selected>2026</option>
+                        <option value="" selected>-</option>
+                        <option value="">2026</option>
                         <option value="">2025</option>
                         <option value="">2024</option>
                         <option value="">2023</option>
@@ -208,6 +204,7 @@
                         Month
                       </label>
                       <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="" selected>-</option>
                         <option value="">January</option>
                         <option value="">February</option>
                         <option value="">March</option>
@@ -227,11 +224,12 @@
                         Year
                       </label>
                       <select class="govuk-select delta-select-min-width" id="fromMonth" name="fromMonth">
+                        <option value="" selected>-</option>
                         <option value="">2024</option>
                         <option value="">2023</option>
                         <option value="">2022</option>
                         <option value="">2021</option>
-                        <option value="" selected>2020</option>
+                        <option value="">2020</option>
                       </select>
                     </div>   
                   </div> 
