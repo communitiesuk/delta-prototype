@@ -44,6 +44,10 @@
     <li>Table filters: renamed 'status' to 'return status' and removed 'extended' as an option</li>
     <li>Table filters: added 'Collection status' with options for 'all', 'open', 'extended' and 'closed'.</li>
     <li>Table: moved 'extended' tag from Return Status column to after date in deadline column</li>
+    <li>23/10/24 - Loads of changes...</li>
+    <li>Overview: added dedicated column for extension count. Moved hyperlink from row title to counts within row. This means use can now apply two filters with one click. Example: show me all orgs who have not started and have an extension</li>
+    <li>Chart colours updated to MHCLG palette (SM: not sure this is correct)</li>
+    <li>Table filters: changed title to "Deadline status", removed Open and Closed and added 'Not extended' options</li>
   </ul>    
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -191,36 +195,36 @@
       <!-- <caption class="govuk-table__caption govuk-table__caption--l">Summary</caption> -->
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Return status</th>
+          <th scope="col" class="govuk-table__header">Status</th>
           <th scope="col" class="govuk-table__header">All</th>
           <th scope="col" class="govuk-table__header">Extended</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Organisations</a></th>
-          <td class="govuk-table__cell">180</td>
-          <td class="govuk-table__cell">30</td>
+          <th scope="row" class="govuk-table__header">Organisations</th>          
+          <td class="govuk-table__cell"><a href="#returns">180</a></td>
+          <td class="govuk-table__cell"><a href="#returns">30</a></td>
         </tr>   
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6"><a href="#returns">Not started</a></th>
-          <td class="govuk-table__cell govuk-!-static-padding-top-6">100 <small><span class="delta-text-secondary">(56%)</span></small></td>
-          <td class="govuk-table__cell">10</td>
+          <th scope="row" class="govuk-table__header govuk-!-static-padding-top-6">Not started</th>
+          <td class="govuk-table__cell govuk-!-static-padding-top-6"><a href="#returns">100</a> <small><span class="delta-text-secondary">(56%)</span></small></td>
+          <td class="govuk-table__cell govuk-!-static-padding-top-6"><a href="#returns">10</a></td>
         </tr>
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">In draft</a></th>
-          <td class="govuk-table__cell">20  <small><span class="delta-text-secondary">(11%)</span></small></td>
-          <td class="govuk-table__cell">10</td>
+          <th scope="row" class="govuk-table__header">In draft</th>
+          <td class="govuk-table__cell"><a href="#returns">20</a> <small><span class="delta-text-secondary">(11%)</span></small></td>
+          <td class="govuk-table__cell"><a href="#returns">10</a></td>
         </tr>          
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Awaiting certification</a></th>
-          <td class="govuk-table__cell">20 <small><span class="delta-text-secondary">(11%)</span></small></td>
-          <td class="govuk-table__cell">5</td>
+          <th scope="row" class="govuk-table__header">Awaiting certification</th>
+          <td class="govuk-table__cell"><a href="#returns">20</a> <small><span class="delta-text-secondary">(11%)</span></small></td>
+          <td class="govuk-table__cell"><a href="#returns">5</a></td>
         </tr>    
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header"><a href="#returns">Completed</a></th>
-          <td class="govuk-table__cell">40 <small><span class="delta-text-secondary">(22%)</span></small></td>
-          <td class="govuk-table__cell">5</td>
+          <th scope="row" class="govuk-table__header">Completed</a></th>
+          <td class="govuk-table__cell"><a href="#returns">40</a> <small><span class="delta-text-secondary">(22%)</span></small></td>
+          <td class="govuk-table__cell"><a href="#returns">5</a></td>
         </tr>                       
       </tbody>
     </table>      
@@ -245,8 +249,8 @@
           labels: ['Not started', 'Draft', 'Awaiting certification', 'Completed'],
           
           datasets: [{
-            data: [180, 100, 20, 20],
-            backgroundColor: ["#f47738", "#5694ca", "#6f72af", "#85994b"], 
+            data: [100, 20, 20, 40],
+            backgroundColor: ["#DC3230", "#FAA322", "#1D5181", "#40611f"], 
             borderWidth: 0
           }]
         },
@@ -362,7 +366,7 @@
                       <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                         Extended
                       </label>
-                    </div>                                                   
+                    </div>                                                                                                             
                   </div>
               </div>
             </div>                                
