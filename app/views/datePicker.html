@@ -33,10 +33,15 @@
     <h3 class="govuk-heading-l">Data range picker requirements</h3>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>User can specify day<sup>*</sup>, month, year</li>
-      <li>Date follow format: Day Month Year.</li>
-      <li>The day is a 1-31 with 0 omitted for days less than 10.</li>
-      <li>Months are spelt out. Years are always 4 digits. Example: <strong>1 January 2923 </strong>or <strong>31 October 2024</strong>.</li>
+      <li>User can specify day<sup>*</sup>, month, year for From and To</li>
+      <li>Date follow format: Day (number) Month (word) Year (number).
+        <ul class="govuk-list govuk-list--bullet">
+          <li>The day is 1-31 with 0 omitted for days less than 10.</li>
+          <li>Months are written out.</li>
+          <li>Years are always 4 digits.</li>
+          <li>Example: <strong>1 January 2923 </strong>or <strong>31 October 2024</strong>.</li>
+        </ul>
+      </li>
       <li>For Delta where possible we want to allow users to avoid having to type in data. Instead we want to offer drop-down controls.</li>
       <li>We also want to offer calendar date picker</li>
       <li>There should be option to clear all data </li>
