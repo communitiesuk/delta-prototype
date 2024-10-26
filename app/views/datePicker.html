@@ -35,27 +35,31 @@
           Filters
         </h1>
         <!-- ACCORDION -->
-        <div class="govuk-accordion" data-module="govuk-accordion" id="table-filters">
+        <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
           <!-- DATE RANGE -->
           <div class="govuk-accordion__section">
             <div class="govuk-accordion__section-header">
               <h2 class="govuk-accordion__section-heading">
                 <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Date range
+                  Date range <strong class="govuk-tag">Active</strong>
                 </span>
               </h2>
+              <!-- Delta's filter active indicator and clear option ====== -->
+              <div class="delta-accordion-filter-status">
+                <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
+              </div>
             </div>
             <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
               <!-- DATE FROM -->
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h1 class="govuk-fieldset__heading">
                       From
                     </h1>
                   </legend>
                   <div id="date-from-hint" class="govuk-hint">
-                    Leave blank to include all dates in the past.<br>Example date, 3 2022.
+                    Example date, 3 2022.<br>Leave blank to include all past dates.
                   </div>            
                   <div class="govuk-date-input" id="range-from">
                     <div class="govuk-date-input__item">
@@ -80,7 +84,7 @@
               <!-- DATE TO -->
               <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h1 class="govuk-fieldset__heading">
                       To
                     </h1>
@@ -138,14 +142,16 @@
                         </fieldset>
                       </div>
                     </div>
-
                   </div>
                 </fieldset>
               </div>    
-              <!-- RESET DATE RANGE FILTERS -->
-              <p><a href="#">Clear date range inputs</a></p>
             </div>
           </div>
+        </div>
+        <div class="govuk-button-group">
+        <button class="govuk-button">Update filters</button>
+          <a href="#" class="govuk-link" title="Clear all active filters">Clear all filters</a>
+          <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
         </div>
       </div>
       <div class="govuk-grid-column-two-thirds">
@@ -153,24 +159,20 @@
           Design notes
         </h3>
         <ul class="govuk-list govuk-list--bullet">
-          <li>'Clear date range inputs' only displayed if any inputs have been changed by the user (i.e. not default)</li>
           <li>Error messages on specific date:
             <ul class="govuk-list govuk-list--bullet">
               <li>Month required</li>
               <li>Year required</li>
               <li>Month and year required</li>
               <li>Year must be 4 numbers</li>
-              <li>'Clear filters' link only displayed if there are filters to display</li>
-              <li>'Apply filters' button should say 'Update filters' if changes to filters have been made</li>              
+              <li>To date must be after from date</li>
+            </ul>
+            <li>'Clear' link only displayed if there are active filters within that accordion item</li>
+            <li>'Apply filters' button should say 'Update filters' if changes to filters have been made</li>   
+            <li>'Reset filters' should only be displayed if A) the user has changed the filters B) the page was initially loaded with filters applied (aka pre-filtered).</li>           
             </ul>
           </li>
         </ul>
-        <h3 class="govuk-heading-l">
-          To discuss
-        </h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li>How to indicate if a closed accordion item contains active filters? And should there be a quick way to clear these without opening the accordion item? This would negate the need for the clear date range inputs link.</li>        
-          <li>Should the filters title have count for active filters (accordion items with filters)?</li>
       </div>
     </div>     
 

@@ -250,6 +250,27 @@ html {
     display: none;
 }
 
+.delta-accordion {
+
+    .govuk-accordion__section-header {
+        // background-color: green;
+        // display: flex;
+        // justify-content: space-between;
+        position: relative;
+
+        .delta-accordion-filter-status {
+            // background-color: yellow;
+            position: absolute;
+            top: 1rem;
+            right: 5px;
+        }
+
+    }
+}
+
+
+
+
 .delta-results {
     display: flex;
     gap: 1rem;
