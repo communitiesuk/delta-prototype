@@ -13,6 +13,13 @@
       <li>Add data picker to table filters (<a href="https://design-system.service.gov.uk/patterns/dates/#asking-for-memorable-dates">GDS dates</a>, <a href="https://designnotes.blog.gov.uk/2013/12/05/asking-for-a-date-of-birth/">Asking for a date</a>, <a href="https://designsystem.gov.scot/components/date-picker">Scottish Gov Date Picker</a>)</li>
       <li><a href="https://www.figma.com/design/1PeM2va3uW1pB7x7RkLF9V/Date-range-picker-requirements?node-id=0-1&node-type=canvas&t=jWOznxIPZY8psk7Z-0" target="_blank">Figma sketches</a></li>
     </ul>    
+    <h2 class="govuk-heading-s">Change log</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>Change filter count in heading to be a tag to match filters active tag in accordions</li>
+      <li>Shorted 'Clear all filters' to 'clear filters'</li>
+      <li>Added day input fields but these will not be used on the Submissions Dashboard</li>
+    </ul>
+
   </div>
 
 {% endblock %}
@@ -29,10 +36,13 @@
       Spec for data range selector
     </h1>
 
+
+
+    <!-- MAIN DEMO -->
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-one-third govuk-!-margin-bottom-7 govuk-!-padding-4" style="background-color: #f3f2f1;">
         <h1 class="govuk-heading-l">
-          Filters  <small class="delta-text-secondary">(1 active)</small>
+          Filters <strong class="govuk-tag">1 active</strong>
         </h1>
         <!-- ACCORDION -->
         <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
@@ -55,13 +65,21 @@
                 <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h1 class="govuk-fieldset__heading">
-                      From
+                      Date from
                     </h1>
                   </legend>
                   <div id="date-from-hint" class="govuk-hint">
-                    Example date, 3 2022.<br>Leave blank to include all past dates.
+                    Example date, 24 2 2022.<br>Leave blank to include all past dates.
                   </div>            
                   <div class="govuk-date-input" id="range-from">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="range-from-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>                    
                     <div class="govuk-date-input__item">
                       <div class="govuk-form-group">
                         <label class="govuk-label govuk-date-input__label" for="range-from-month">
@@ -86,7 +104,7 @@
                 <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                   <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                     <h1 class="govuk-fieldset__heading">
-                      To
+                      Date to
                     </h1>
                   </legend>
                   <div id="contact-hint" class="govuk-hint">
@@ -116,12 +134,20 @@
                           </legend>
               
                           <div id="date-to-hint" class="govuk-hint">
-                            For example, 3 2026
+                            For example, 24 2 2022
                           </div>
                           <p id="contact-by-email-error" class="govuk-error-message">
-                            <span class="govuk-visually-hidden">Error:</span> Month and year required
+                            <span class="govuk-visually-hidden">Error:</span> Day, month and year required
                           </p>
-                          <div class="govuk-date-input" id="range-from">
+                          <div class="govuk-date-input" id="range-to">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="range-to-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
+                              </div>
+                            </div>                                
                             <div class="govuk-date-input__item">
                               <div class="govuk-form-group">
                                 <label class="govuk-label govuk-date-input__label" for="range-to-month">
@@ -149,21 +175,35 @@
           </div>
         </div>
         <div class="govuk-button-group">
-        <button class="govuk-button">Update filters</button>
-          <a href="#" class="govuk-link" title="Clear all active filters">Clear all filters</a>
+        <button class="govuk-button">Apply filters</button>
+          <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
           <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
         </div>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <h3 class="govuk-heading-l">
           Design notes
-        </h3>
+        </h3>        
         <ul class="govuk-list govuk-list--bullet">
-          <li>Error messages on specific date:
+          <li>Logic for From date
             <ul class="govuk-list govuk-list--bullet">
+              <li>User can leave both field blank, in which case earliest data is displayed</li>
+              <li>User can specify only a year (i.e. they don't need to type in a day<sup>*</sup> or month) but when 'Apply filters' or 'Update filters' is clicked both day and month are populated with 1.</li>
+              <li>Error messages to From date:
+                <ul class="govuk-list govuk-list--bullet">
+                  <li>User enters only a day<sup>*</sup>: Error: Month and year required</li>
+                  <li>User enters only a month: Error: Year required</li>
+                  <li>User enters only a day<sup>*</sup> and year: Error: Month required</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Error messages on specific To date:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Day required<sup>*</sup></li>
               <li>Month required</li>
               <li>Year required</li>
-              <li>Month and year required</li>
+              <li>Day<sup>*</sup> and month and year required</li>
               <li>Year must be 4 numbers</li>
               <li>To date must be after from date</li>
             </ul>
@@ -174,10 +214,158 @@
           </li>
         </ul>
       </div>
-    </div>     
+    </div>  
+    
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">    
 
+    <!-- NO FILTERS -->
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-7 govuk-!-padding-4" style="background-color: #f3f2f1;">
+        <h1 class="govuk-heading-l">
+          Filters
+        </h1>
+        <!-- ACCORDION -->
+        <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
+          <!-- DATE RANGE -->
+          <div class="govuk-accordion__section">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Date range
+                </span>
+              </h2>
+              <!-- Delta's filter active indicator and clear option ====== -->
 
+            
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
+              <!-- DATE FROM -->
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                      Date from
+                    </h1>
+                  </legend>
+                  <div id="date-from-hint" class="govuk-hint">
+                    Example date, 24 2 2022.<br>Leave blank to include all past dates.
+                  </div>            
+                  <div class="govuk-date-input" id="range-from">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="range-from-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
+                      </div>
+                    </div>                    
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="range-from-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-month" name="range-from-month" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="range-from-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>  
+              <!-- DATE TO -->
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h1 class="govuk-fieldset__heading">
+                      Date to
+                    </h1>
+                  </legend>
+                  <div id="contact-hint" class="govuk-hint">
+                    Select one option
+                  </div>
+                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="phone" checked data-aria-controls="conditional-date-to-specific">
+                      <label class="govuk-label govuk-radios__label" for="contact-2">
+                        Any future date
+                      </label>
+                    </div>          
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="email" data-aria-controls="conditional-date-to-specific">
+                      <label class="govuk-label govuk-radios__label" for="date-to-specific">
+                        Specific date
+                      </label>
+                    </div>
 
+                    <div class="govuk-radios__conditional" id="conditional-date-to-specific">
+                      <div class="govuk-form-groupr">
+                        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                            <h1 class="govuk-fieldset__heading">
+                              Date
+                            </h1>
+                          </legend>
+              
+                          <div id="date-to-hint" class="govuk-hint">
+                            For example, 24 2 2022
+                          </div>
+                          <!-- <p id="contact-by-email-error" class="govuk-error-message">
+                            <span class="govuk-visually-hidden">Error:</span> Day, month and year required
+                          </p> -->
+                          <div class="govuk-date-input" id="range-to">
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="range-to-day">
+                                  Day
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
+                              </div>
+                            </div>                                
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="range-to-month">
+                                  Month
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-month" name="range-to-month" type="text" inputmode="numeric">
+                              </div>
+                            </div>
+                            <div class="govuk-date-input__item">
+                              <div class="govuk-form-group">
+                                <label class="govuk-label govuk-date-input__label" for="range-to-year">
+                                  Year
+                                </label>
+                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
+                              </div>
+                            </div>
+                          </div>
+                        </fieldset>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>    
+            </div>
+          </div>
+        </div>
+        <div class="govuk-button-group">
+        <button class="govuk-button" disabled>Apply filters</button>
+        </div>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <h3 class="govuk-heading-l">
+          Design notes
+        </h3>        
+        <ul class="govuk-list govuk-list--bullet">
+          <li>This version has no active filters (so no active tags or error messages</li>
+          <li>Bacause no filters have been pre-applied or applied by the user there are no 'remove filters' or 'reset filters' links</li>
+          <li>I have left the Apply filter button in but disabled it, which ,<a href="https://design-system.service.gov.uk/components/button/">GDS</a> does allow. I felt this educated and informed the user they could (and should?) apply filters. </li>
+        </ul>
 
   </div>
 </div>
