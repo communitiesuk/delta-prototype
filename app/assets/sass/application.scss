@@ -268,7 +268,19 @@ html {
     }
 }
 
+.delta-date-picker-with-icon-button {
+    display: flex;
+    align-items: top;
+}
+.delta-icon-button-icon {
+    width: 1.3rem;
+    height: 1.3rem;
+    fill: #fff;
+}
 
+.delta-visually-hidden {
+    visibility: hidden;
+}
 
 
 .delta-results {

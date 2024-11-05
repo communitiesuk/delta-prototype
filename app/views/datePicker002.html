@@ -11,7 +11,8 @@
     <p><a href="https://mhclgdigital.atlassian.net/browse/DT-1292" target="_blank">DT-1292</a></p>
     <ul class="govuk-list govuk-list--bullet">
       <li>Using same patterns for From and To dates (radio buttons)</li>    
-      <li><a href="/datePicker">Date range selector option 1</a> 28/10/2024</li>            
+      <li><del><a href="/datePicker">Date range selector option 1</a> 28/10/2024<</del>/li>            
+      <li>Added calendar. Should work like <a href="https://designsystem.gov.scot/components/date-picker">Scottish Gov</a></li>
     </ul>    
 
   </div>
@@ -32,9 +33,10 @@
 
 
 
+
     <!-- MAIN DEMO -->
     <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third govuk-!-margin-bottom-7 govuk-!-padding-4" style="background-color: #f3f2f1;">
+      <div class="govuk-grid-column-one-half govuk-!-margin-bottom-7 govuk-!-padding-4" style="background-color: #f3f2f1;">
         <h1 class="govuk-heading-l">
           Filters <strong class="govuk-tag">1 active</strong>
         </h1>
@@ -56,75 +58,62 @@
             <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
               <!-- DATE FROM -->
               <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="date-from-hint">
-                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                     <h1 class="govuk-fieldset__heading">
-                      Date from
+                      Date
                     </h1>
                   </legend>
-                  <!-- <div id="date-from-hint" class="govuk-hint">
-                    Select one option
-                  </div> -->
-                  <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="date-from-any" name="date-from" type="radio" value="phone" data-aria-controls="conditional-date-from-specific">
-                      <label class="govuk-label govuk-radios__label" for="date-from-2">
-                        Any previous date
-                      </label>
-                    </div>          
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="date-from-specific" name="date-from" type="radio" value="email" data-aria-controls="conditional-date-from-specific">
-                      <label class="govuk-label govuk-radios__label" for="date-to-specific">
-                        Specific previous date
-                      </label>
-                    </div>
-
-                    <div class="govuk-radios__conditional" id="conditional-date-from-specific">
-                      <div class="govuk-form-group govuk-form-group--error">
-                        <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
-                          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                            <h1 class="govuk-fieldset__heading">
-                              Date
-                            </h1>
-                          </legend>
-              
-                          <div id="date-from-hint" class="govuk-hint">
-                            For example, 24 2 2022
-                          </div>
-                          <p id="date-from-error" class="govuk-error-message">
-                            <span class="govuk-visually-hidden">Error:</span> Day, month and year required
-                          </p>
-                          <div class="govuk-date-input" id="range-from">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-from-day">
-                                  Day
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
-                              </div>
-                            </div>                                
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-from-month">
-                                  Month
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-month" name="range-from-month" type="text" inputmode="numeric">
-                              </div>
-                            </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-from-year">
-                                  Year
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
-                              </div>
-                            </div>
-                          </div>
-                        </fieldset>
+            
+                  <div id="date-from-hint" class="govuk-hint">
+                    For example, 24 2 2022
+                  </div>
+                  <p id="date-from-error" class="govuk-error-message">
+                    <span class="govuk-visually-hidden">Error:</span> Day, month and year required
+                  </p>
+                  
+                  <div class="delta-date-picker-with-icon-button">
+                    <!-- Date input as text ====== -->
+                    <div class="govuk-date-input" id="range-from">
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="range-from-day">
+                            Day
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
+                        </div>
+                      </div>                                
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="range-from-month">
+                            Month
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-month" name="range-from-month" type="text" inputmode="numeric">
+                        </div>
                       </div>
+                      <div class="govuk-date-input__item">
+                        <div class="govuk-form-group">
+                          <label class="govuk-label govuk-date-input__label" for="range-from-year">
+                            Year
+                          </label>
+                          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
+                        </div>
+                      </div>
+                                                                       
+                    </div>
+                    <!-- Date input as calendar picker ====== -->
+                    <div>
+                      <label class="govuk-label govuk-date-input__label" for="range-calendar">
+                        <span class="delta-visually-hidden">Calendar</span>
+                      </label>
+                      <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
+                          <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
+                        </svg>                                  
+                      </button>
                     </div>
                   </div>
-                </fieldset>
+                </fieldset>   
               </div>   
               <!-- DATE TO -->
               <div class="govuk-form-group">
@@ -141,7 +130,7 @@
                     <div class="govuk-radios__item">
                       <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="phone" data-aria-controls="conditional-date-to-specific">
                       <label class="govuk-label govuk-radios__label" for="contact-2">
-                        Any future date
+                        All future dates
                       </label>
                     </div>          
                     <div class="govuk-radios__item">
@@ -159,40 +148,56 @@
                               Date
                             </h1>
                           </legend>
-              
+                    
                           <div id="date-to-hint" class="govuk-hint">
                             For example, 24 2 2024
                           </div>
-                          <p id="contact-by-email-error" class="govuk-error-message">
+                          <p id="date-to-error" class="govuk-error-message">
                             <span class="govuk-visually-hidden">Error:</span> Day, month and year required
                           </p>
-                          <div class="govuk-date-input" id="range-to">
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-to-day">
-                                  Day
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
+                          
+                          <div class="delta-date-picker-with-icon-button">
+                            <!-- Date input as text ====== -->
+                            <div class="govuk-date-input" id="range-to">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="range-to-day">
+                                    Day
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
+                                </div>
+                              </div>                                
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="range-to-month">
+                                    Month
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-month" name="range-to-month" type="text" inputmode="numeric">
+                                </div>
                               </div>
-                            </div>                                
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-to-month">
-                                  Month
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-month" name="range-to-month" type="text" inputmode="numeric">
+                              <div class="govuk-date-input__item">
+                                <div class="govuk-form-group">
+                                  <label class="govuk-label govuk-date-input__label" for="range-to-year">
+                                    Year
+                                  </label>
+                                  <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
+                                </div>
                               </div>
+                                                                               
                             </div>
-                            <div class="govuk-date-input__item">
-                              <div class="govuk-form-group">
-                                <label class="govuk-label govuk-date-input__label" for="range-to-year">
-                                  Year
-                                </label>
-                                <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
-                              </div>
+                            <!-- Date input as calendar picker ====== -->
+                            <div>
+                              <label class="govuk-label govuk-date-input__label" for="range-calendar">
+                                <span class="delta-visually-hidden">Calendar</span>
+                              </label>
+                              <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
+                                  <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
+                                </svg>                                  
+                              </button>
                             </div>
                           </div>
-                        </fieldset>
+                        </fieldset>   
                       </div>
                     </div>
                   </div>
