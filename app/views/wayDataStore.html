@@ -28,7 +28,9 @@
 
   <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
-    <li>Nothing outstanding</li>
+    <li>Filters</li>
+    <li>Copy including table helper text (not present)</li>
+    <li>Battle over lack of action drop-down</li>
   </ul>
 
 </div>
@@ -78,6 +80,16 @@
 </div>
 
     <!-- table results start -->
+
+    <h4 class="govuk-heading-m">Download records</h4>
+
+    <div class="govuk-button-group">
+      <button class="govuk-button">Download CSV</button>
+      <button class="govuk-button">Download XML</button>
+    </div>
+
+
+
     <div class="delta-results">
         <!-- FILTERS START ============= -->
         <div id="delta-results-filters" class="hidden">
@@ -356,7 +368,7 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Collection <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Organisation <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Editor <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Edited date <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Updated <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
               </tr>
             </thead>
@@ -367,7 +379,7 @@
                 <td class="govuk-table__cell">Rivendell Borough Council</td>
                 <td class="govuk-table__cell">Mike Phillips</td>
                 <td class="govuk-table__cell">14 April 2024</td>
-                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Submitted</strong></td>
+                <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
               </tr>              
             </tbody>
           </table>
