@@ -1,0 +1,223 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="MI Report Vision" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel xdelta-text-center">
+
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    MI Report Vision
+  </h1>
+
+  <h2 class="govuk-heading-l">One-click access to insight on Delta's performance</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+        Updated: 9 November 2024
+      </h4>       
+    </div>
+  </div>    
+
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Why we’re doing this</h2>
+  <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Inspire and engage:</strong> show Delta’s impact as critical infrastructure with accessible, insightful, and visually appealing data.</li>
+      <li><strong>Showcase diversity:</strong> illustrate the range of Delta’s applications (collections) and engagement across organisations.</li>
+      <li><strong>Enable decision-making:</strong> support operational planning with insights that inform decisions on downtime, feature prioritisation, and growth.</li>
+      <li><strong>Answer key questions:</strong> provide a snapshot answer to "How’s Delta performing?" and "What’s interesting about Delta right now?"</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Report characteristics</h2>
+  <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Ease of access:</strong> one-click availability, fully automated with real-time updates.</li>
+      <li><strong>Audience focus:</strong> tailored for Delta, FS teams, and SLT, providing a strategic yet concise view.</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Core metrics: Delta at a glance</h2>
+  <div class="govuk-inset-text">
+      <h3 class="govuk-heading-m">1. Engagement overview</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Users:</strong> total users, breakdown by user type (e.g., organisation, admin, read-only).</li>
+          <li><strong>Organisations:</strong> number of unique organisations using Delta, by usage type and volume.</li>
+          <li><strong>Sessions:</strong> total sessions, average session duration, and usage peaks.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">2. Collections and activity</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Collections overview:</strong> count of active, new, and completed collections.</li>
+          <li><strong>Submissions:</strong> volume of submissions, averages, and notable changes.</li>
+          <li><strong>Records managed:</strong> total records handled, with highlighted additions.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">3. Financial metrics</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Payments overview:</strong> total revenue, broken down by collection types if applicable.</li>
+          <li><strong>Expenditures:</strong> summary of outflows for collection management or enhancements.</li>
+          <li><strong>Net revenue:</strong> high-level summary of financial health and ROI indicators.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">4. Collection dynamics</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Collection timing:</strong> insights on collection starts, duration, and extensions.</li>
+          <li><strong>Types and themes:</strong> overview of collection types (e.g., funding, compliance) with notable trends.</li>
+          <li><strong>Standout collections:</strong> highlights of unique or high-impact collections with relevant data points.</li>
+      </ul>
+  </div>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Interactive insights and exploration</h2>
+  <div class="govuk-inset-text">
+      <h3 class="govuk-heading-m">1. Smart indexing</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Quick-access links:</strong> dynamic index to collection groups and entity pages for deeper exploration.</li>
+          <li><strong>User access control proposal:</strong> address read-only status options for controlled access.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">2. Inspirational insight section</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Interesting trends:</strong> snapshot of current trends or unusual patterns to keep the report engaging.</li>
+          <li><strong>Did-you-know facts:</strong> eye-catching data points or “fun facts” on Delta’s usage or collections.</li>
+          <li><strong>Monthly highlights:</strong> key monthly events showing Delta’s relevance and impact.</li>
+      </ul>
+
+      <h3 class="govuk-heading-m">3. Future-proofing considerations</h3>
+      <ul class="govuk-list govuk-list--bullet">
+          <li><strong>Adaptability for new collections:</strong> considerations to streamline new collection inclusion (e.g., funding service).</li>
+          <li><strong>Blueprint for broader application:</strong> aims to create a reporting model for adaptation across other digital products.</li>
+      </ul>
+  </div>
+</div>
+
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Additional goals and design principles</h2>
+  <ul class="govuk-list govuk-list--bullet">
+      <li><strong>Visual and user-friendly design:</strong> ensure a polished, engaging look that’s ready for show and tell presentations.</li>
+      <li><strong>Intuitive navigation:</strong> user-friendly visuals and data visualisations to clarify complex metrics.</li>
+      <li><strong>Scope clarity:</strong> maintain a high-level “bird’s eye view” without diving into detailed analysis.</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <div class="govuk-grid-row">
+  <h2 class="govuk-heading-l">Links</h3>
+    <div class="govuk-grid-column-one-third">        
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><a href="https://delta.stage.communities.gov.uk/analytics/searches?exclude-default-search=true" target="_blank">Search analytics dashboard</a></li>
+        <li><a href="/deltaDashboard" target="_blank">PoC usage reporting (manual updates)</a></li>
+        <li><a href="/collectionsDashboard" target="_blank">Collections dashboard (just started)</a></li>
+        <li><a href="/waySubmissionsDashboard" target="_blank">Submissions dashboard</a></li>
+        <li><a href="/waySubmissionsDashboardReport" target="_blank">Submissions report</a></li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <img src="/public/images/usageReport.png" class="delta-image-responsive delta-screen-grab"> 
+      <p><small>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit qui a nisi eveniet veniam ab odit reprehenderit corrupti eius, rerum totam autem illo quasi quisquam obcaecati animi omnis officia labore?</small></p>      
+    </div>    
+  </div>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">KO meeting action items</h2>
+  <ul class="govuk-list govuk-list--bullet">
+      <li>Filter - types, date range, etc? [Gen)</li>
+      <li>Other use groups - policy groups, money paid out, related collections</li>
+      <li>Grants vs collections</li>
+      <li>Complexity - Orbeon form complexity  [Jemma]</li>
+      <li>Stats vs Grants - not a useful distinction? [Jemma]</li>
+      <li>Jira dashboards? [Jemma]</li>
+      <li><strong>Agreed scope: this is about reporting on Delta usage, not reporting (and analysis) of data inputted via Delta</strong></li>
+  </ul>
+</div>
+
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+
