@@ -20,18 +20,21 @@
 
   <p><a href="https://mhclgdigital.atlassian.net/browse/DT-1292" target="_blank">DT-1289</a></p>
 
-  
+
   <h3 class="govuk-heading-m">Changes</h3>
   <ul class="govuk-list govuk-list--bullet">
     <li>Built all the things</li>
     <li>Filters</li>
     <li>Copy including table helper text</li>
+    <li>Added Collection group to filters</li>
+    <li>Added Day to date range</li>
   </ul>
 
   <h3 class="govuk-heading-m">To do</h3>
   <ul class="govuk-list govuk-list--bullet">
     <li>Battle over lack of action drop-down - use needs to click through to record page to see things like audit trail, etc</li>
     <li>Battle over links to Collection (entity) and Organisation (report) in table</li>
+    <li>Explore adding search box to long lists</li>
   </ul>
 
 </div>
@@ -65,13 +68,13 @@
               <li><strong>Draft</strong>: The record has been saved but not yet submitted.</li>
               <li><strong>Submitted</strong>: The record has been submitted; no further action is required.</li>
               <li><strong>Ready to Certify</strong>: The record has been saved and is awaiting certification.</li>
-              <li><strong>Certified</strong>: The record has been certified and submitted; no further action is required.</li>              
-              <li><strong>Certified (Latest Version)</strong>: The most recent certified version of the record.</li>                                                        
+              <li><strong>Certified</strong>: The record has been certified and submitted; no further action is required.</li>
+              <li><strong>Certified (Latest Version)</strong>: The most recent certified version of the record.</li>
             </ul>
           </li>
         </ul>
-        
-        
+
+
       </div>
     </details>
 
@@ -106,7 +109,7 @@
                 </h1>
                 <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
               </div>
-            </div>          
+            </div>
             <!-- ACCORDION -->
             <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
               <!-- DATA SET-->
@@ -119,10 +122,10 @@
                   </h2>
                   <!-- Delta's filter active indicator and clear option ====== -->
                   <div class="delta-accordion-filter-status">
-                    <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
+                    <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active data set filters</span></a>
                   </div>
                 </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                   <!-- Dataset name
                   *Collection name (conditional on dataset name)
                   Search by tags -->
@@ -136,50 +139,62 @@
                       <option value="Select" selected>Select</option>
                       <option value="dragonfly">English dragonfly census</option>
                       <option value="protectionOfficer">Hedgehog protection officer</option>
-                      <option value="hedgehog">Urban hedgehog census</option>                      
+                      <option value="hedgehog">Urban hedgehog census</option>
                     </select>
-                  </div>                  
+                  </div>
 
-                  <!-- collection drop-down NB: conditional of dataset selection -->
+                  <!-- collection groups drop-down -->
+                  <div class="govuk-form-group">
+                    <label class="govuk-label for="selectCollectionGroup">
+                      Collection group
+                    </label>
+                    <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollectionGroup" name="selectCollectionGroup">
+                      <option value="Select" selected>Select</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog monitoring</option>
+                      <option value="hedgehogCensus2023">British Dragonfly Monitoring</option>                    
+                    </select>
+                  </div>
+
+                  <!-- collection drop-down -->
                   <div class="govuk-form-group">
                     <label class="govuk-label for="selectCollection">
                       Collection
                     </label>
                     <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollection" name="selectCollection">
                       <option value="Select" selected>Select</option>
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2023</option>         
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2022</option>         
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2021</option>         
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2020</option>         
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2019</option>         
-                      <option value="hedgehogCensus2023">Urban hedgehog census 2018</option>         
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2023</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2022</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2021</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2020</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2019</option>
+                      <option value="hedgehogCensus2023">Urban hedgehog census 2018</option>
                     </select>
-                  </div>    
-                  
-                  
+                  </div>
+
+
                   <!-- search by tags (seem to be independent of datastore and collection -->
 
                   <!-- active tags -->
                   <ul class="govuk-list govuk-list--spaced">
                     <li class="delta-filter-item-active">C-3P0<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
                     <li class="delta-filter-item-active">MSE-6<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
-                  </ul>                  
+                  </ul>
 
                   <div class="govuk-form-group">
                     <label class="govuk-label for="selectTags">
                       Tags
                     </label>
                     <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectTags" name="selectTags">
-                      <option value="Select" selected>Select</option>     
-                      <option value="hedgehogCensus2023">R2-D2</option>         
-                      <option value="hedgehogCensus2023">BB-8</option>         
-                      <option value="hedgehogCensus2023">D-O</option>         
-                      <option value="hedgehogCensus2023">GNK</option>         
-                      <option value="hedgehogCensus2023">4-LOM</option>         
+                      <option value="Select" selected>Select</option>
+                      <option value="hedgehogCensus2023">R2-D2</option>
+                      <option value="hedgehogCensus2023">BB-8</option>
+                      <option value="hedgehogCensus2023">D-O</option>
+                      <option value="hedgehogCensus2023">GNK</option>
+                      <option value="hedgehogCensus2023">4-LOM</option>
                     </select>
-                  </div>    
+                  </div>
                 </div>
-              </div>           
+              </div>
               <!-- ORGANISATIONS-->
               <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
@@ -191,7 +206,7 @@
                   <!-- Delta's filter active indicator and clear option ====== -->
                   <div class="delta-accordion-filter-status">
                     <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
-                  </div>                  
+                  </div>
                 </div>
                 <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                   <!-- active orgs -->
@@ -214,7 +229,7 @@
                     <button class="govuk-button govuk-!-margin-bottom-0">Add</button>
                   </div>
                 </div>
-              </div>                     
+              </div>
               <!-- DATE RANGE -->
               <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
@@ -228,7 +243,7 @@
                     <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
                   </div>
                 </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                   <!-- DATE FROM -->
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -246,14 +261,14 @@
                           <label class="govuk-label govuk-radios__label" for="contact-2">
                             Earliest open date
                           </label>
-                        </div>          
+                        </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="date-to-specific" data-aria-controls="conditional-date-from-specific">
                           <label class="govuk-label govuk-radios__label" for="date-to-specific">
                             Specific open date
                           </label>
                         </div>
-    
+
                         <div class="govuk-radios__conditional" id="conditional-date-from-specific">
                           <div class="govuk-form-group">
                             <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
@@ -262,22 +277,22 @@
                                   Date
                                 </h1>
                               </legend>
-                        
+
                               <div id="date-to-hint" class="govuk-hint">
                                 For example, 2 2022
                               </div>
-                              
+
                               <div class="delta-date-picker-with-icon-button">
                                 <!-- Date input as text ====== -->
                                 <div class="govuk-date-input" id="range-from">
-                                  <!-- <div class="govuk-date-input__item">
+                                  <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
                                       <label class="govuk-label govuk-date-input__label" for="range-from-day">
                                         Day
                                       </label>
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
                                     </div>
-                                  </div>                                 -->
+                                  </div>
                                   <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
                                       <label class="govuk-label govuk-date-input__label" for="range-from-month">
@@ -293,7 +308,7 @@
                                       </label>
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
                                     </div>
-                                  </div>                                                                                 
+                                  </div>
                                 </div>
                                 <!-- Date input as calendar picker ====== -->
                                 <div>
@@ -303,16 +318,16 @@
                                   <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
                                       <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
-                                    </svg>                                  
+                                    </svg>
                                   </button>
                                 </div>
                               </div>
-                            </fieldset>   
+                            </fieldset>
                           </div>
                         </div>
                       </div>
                     </fieldset>
-                  </div>    
+                  </div>
                   <!-- DATE TO -->
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
@@ -330,14 +345,14 @@
                           <label class="govuk-label govuk-radios__label" for="contact-2">
                             Latest deadline
                           </label>
-                        </div>          
+                        </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="email" data-aria-controls="conditional-date-to-specific">
                           <label class="govuk-label govuk-radios__label" for="date-to-specific">
                             Specific deadline
                           </label>
                         </div>
-    
+
                         <div class="govuk-radios__conditional" id="conditional-date-to-specific">
                           <div class="govuk-form-group govuk-form-group--error">
                             <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
@@ -346,25 +361,25 @@
                                   Date
                                 </h1>
                               </legend>
-                        
+
                               <div id="date-to-hint" class="govuk-hint">
                                 For example, 2 2024
                               </div>
                               <p id="date-to-error" class="govuk-error-message">
                                 <span class="govuk-visually-hidden">Error:</span> Month and year required
                               </p>
-                              
+
                               <div class="delta-date-picker-with-icon-button">
                                 <!-- Date input as text ====== -->
                                 <div class="govuk-date-input" id="range-to">
-                                  <!-- <div class="govuk-date-input__item">
+                                  <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
                                       <label class="govuk-label govuk-date-input__label" for="range-to-day">
                                         Day
                                       </label>
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
                                     </div>
-                                  </div>                                 -->
+                                  </div>
                                   <div class="govuk-date-input__item">
                                     <div class="govuk-form-group">
                                       <label class="govuk-label govuk-date-input__label" for="range-to-month">
@@ -381,7 +396,7 @@
                                       <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
                                     </div>
                                   </div>
-                                                                                  
+
                                 </div>
                                 <!-- Date input as calendar picker ====== -->
                                 <div>
@@ -391,16 +406,16 @@
                                   <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
                                       <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
-                                    </svg>                                  
+                                    </svg>
                                   </button>
                                 </div>
                               </div>
-                            </fieldset>   
+                            </fieldset>
                           </div>
                         </div>
                       </div>
                     </fieldset>
-                  </div>    
+                  </div>
                 </div>
               </div>
               <!-- STATUS -->
@@ -409,14 +424,14 @@
                   <h2 class="govuk-accordion__section-heading">
                     <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
                       Status
-                    </span>                    
+                    </span>
                   </h2>
                   <!-- Delta's filter active indicator and clear option ====== -->
                   <!-- <div class="delta-accordion-filter-status">
                     <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active status filters</span></a>
                   </div>                   -->
                 </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">    
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                   <div class="govuk-form-group">
                     <div class="govuk-form-group">
                       <fieldset class="govuk-fieldset">
@@ -455,14 +470,14 @@
                             <label class="govuk-label govuk-checkboxes__label" for="record-status-4">
                               Certified (latest version)
                             </label>
-                          </div>                          
+                          </div>
                         </div>
                         </legend>
                       </fieldset>
-                    </div>                         
+                    </div>
                   </div>
                 </div>
-              </div>     
+              </div>
               <!-- UPLOADER-->
               <div class="govuk-accordion__section">
                 <div class="govuk-accordion__section-header">
@@ -476,7 +491,7 @@
                     <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
                   </div> -->
                 </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">          
+                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
                  <!-- SM: no idea what is being displayed in this drop-down -->
 
                  <div class="govuk-form-group">
@@ -484,7 +499,7 @@
                     Uploaded by
                   </label>
                   <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectTags" name="selectTags">
-                    <option value="Select" selected>Select</option>     
+                    <option value="Select" selected>Select</option>
                     <option value="alicejohnson">Alice Johnson, 6 Nov 24, 10:15</option>
                     <option value="charliebrown">Charlie Brown, 12 Nov 24, 11:03</option>
                     <option value="danalee">Dana Lee, 18 Nov 24, 09:47</option>
@@ -494,13 +509,13 @@
                     <option value="hannahwhite">Hannah White, 15 Dec 24, 13:07</option>
                     <option value="ianblack">Ian Black, 20 Dec 24, 16:34</option>
                     <option value="juliagreen">Julia Green, 27 Dec 24, 09:28</option>
-                    <option value="kevinmoore">Kevin Moore, 5 Jan 25, 11:45</option>                    
+                    <option value="kevinmoore">Kevin Moore, 5 Jan 25, 11:45</option>
                   </select>
-                </div>   
+                </div>
 
 
                 </div>
-              </div>                                
+              </div>
             </div>
             <div class="govuk-button-group">
           <button class="govuk-button">Apply filters</button>
@@ -547,7 +562,7 @@
                 <td class="govuk-table__cell">Mike Phillips</td>
                 <td class="govuk-table__cell">14 April 2024</td>
                 <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow delta-tag">Draft</strong></td>
-              </tr>              
+              </tr>
             </tbody>
           </table>
         </div>
