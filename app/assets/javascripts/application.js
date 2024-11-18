@@ -8,7 +8,6 @@ window.GOVUKPrototypeKit.documentReady(() => {
     // Ensure the DOM is fully loaded before running the scripts
 document.addEventListener('DOMContentLoaded', function() {
     // Results table fixed width
-    console.log('Results table fixed width');
     function setResultTable() {   
         var deltaScrollablePane = document.getElementById('delta-scrollable-pane');
         var resultTable = document.getElementById('resultTable');
