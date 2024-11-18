@@ -2,3 +2,8 @@ Heroku Prototype URL:
 https://delta-prototype-f2a9f85d3c91.herokuapp.com/
 
 npm run dev
+
+
+
+## When cloning to new machine be sure to 
+npm install 
