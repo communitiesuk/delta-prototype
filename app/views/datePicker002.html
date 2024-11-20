@@ -98,38 +98,24 @@
                             </div>
                             
                             <div class="delta-date-picker-with-icon-button">
-                              <!-- Date input as text ====== -->
-                              <div class="govuk-date-input" id="range-from">
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="range-from-day">
-                                      Day
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
-                                  </div>
-                                </div>                                
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="range-from-month">
-                                      Month
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-month" name="range-from-month" type="text" inputmode="numeric">
-                                  </div>
-                                </div>
-                                <div class="govuk-date-input__item">
-                                  <div class="govuk-form-group">
-                                    <label class="govuk-label govuk-date-input__label" for="range-from-year">
-                                      Year
-                                    </label>
-                                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
-                                  </div>
-                                </div>                                                                                 
-                              </div>
                               <!-- Date input as calendar picker ====== -->
                               <div>
-                                <label class="govuk-label govuk-date-input__label" for="range-calendar">
-                                  <span class="delta-visually-hidden">Calendar</span>
-                                </label>
+                                <div class="ds_datepicker  ds_datepicker--multiple" id="my-date-picker" data-module="ds-datepicker">
+                                  <div class="ds_datepicker__input-wrapper">
+                                    <div>
+                                      <label class="ds_label" for="day">Day</label>
+                                      <input id="day" name="day" class="ds_input ds_input--fixed-2  js-datepicker-date">
+                                    </div>
+                                    <div>
+                                      <label class="ds_label" for="month">Month</label>
+                                      <input id="month" name="month" class="ds_input ds_input--fixed-2  js-datepicker-month">
+                                    </div>
+                                    <div>
+                                      <label class="ds_label" for="year">Year</label>
+                                      <input id="year" name="year" class="ds_input ds_input--fixed-4  js-datepicker-year">
+                                    </div>
+                                  </div>
+                                </div>
                                 <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
                                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
                                     <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
@@ -142,7 +128,29 @@
                       </div>
                     </div>
                   </fieldset>
-                </div>    
+                </div>
+
+                <script>
+                  window.addEventListener("load", function(){
+                    const datePicker = new window.DS.components.DSDatePicker(
+                            document.getElementById('my-date-picker'),
+                            {
+                              dateSelectCallback: function (date) {
+                                console.log(`the selected date is ${date}`);
+                              },
+                              disabledDates: [
+                                new Date(2023, 4, 12),
+                                new Date(2023, 4, 13)
+                              ],
+                              imagePath: '/my/image/path/',
+                              maxDate: new Date(),
+                              minDate: new Date(2019, 1, 1)
+                            }
+                    );
+
+                    datePicker.init();
+                  })
+                </script>
                 <!-- DATE TO -->
                 <div class="govuk-form-group">
                   <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
