@@ -271,6 +271,11 @@ html {
 .delta-date-picker-with-icon-button {
     display: flex;
     align-items: top;
+
+    .govuk-date-input__item {
+        margin-right: 12px;
+    }
+
 }
 .delta-icon-button-icon {
     width: 1.3rem;
