@@ -90,9 +90,29 @@
 
     <h4 class="govuk-heading-m">Download records</h4>
 
-    <div class="govuk-button-group">
-      <button class="govuk-button">Download CSV</button>
-      <button class="govuk-button">Download XML</button>
+    <div class="delta-flex-horizontal govuk-!-margin-bottom-3" style="justify-content: start;">
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading govuk-visually-hidden">
+              Remove personally identifiable data from downloads
+            </h1>
+          </legend>
+          <div class="govuk-checkboxes xxgovuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="excludePersonalData" checked>
+              <label class="govuk-label govuk-checkboxes__label" for="excludePersonalData">
+                Remove personally identifiable data from downloads
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+  
+      <div class="govuk-button-group govuk-!-margin-top-2">
+        <button class="govuk-button">Download CSV</button>
+        <button class="govuk-button">Download XML</button>
+      </div>
     </div>
 
 
