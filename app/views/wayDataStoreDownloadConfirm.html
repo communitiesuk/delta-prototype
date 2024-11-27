@@ -1,0 +1,221 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Wayfinding / Data Store " %}
+
+{% block content %}
+
+
+<a href="/wayDataStore" class="govuk-back-link">Back</a>
+
+
+<!-- <div class="designNote">
+
+  <p><a href="https://mhclgdigital.atlassian.net/browse/DT-1278" target="_blank">DT-1278</a></p>
+
+
+  <h3 class="govuk-heading-m">Changes</h3>
+
+
+  <h3 class="govuk-heading-m">To do</h3>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>All the things</li>
+  </ul>
+
+</div> -->
+
+
+<h1 class="govuk-heading-xl">
+  Download confirmation
+</h1>
+
+<div class="govuk-inset-text">
+  You have selected 1,234 records to download.
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+
+    <h1 class="govuk-heading-l">Check your filters before downloading</h1>
+    <h2 class="govuk-heading-m">Collections</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Data set
+        </dt>
+        <dd class="govuk-summary-list__value">
+          xxxxx
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> data set</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection group
+        </dt>
+        <dd class="govuk-summary-list__value">
+          xxxxx
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> collection group</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Collection
+        </dt>
+        <dd class="govuk-summary-list__value">
+          xxxxx
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> collection</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Tags
+        </dt>
+        <dd class="govuk-summary-list__value">
+          C-3P0, MSE-6
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> collection</span></a>
+        </dd>
+      </div>      
+    </dl>
+
+
+    <h2 class="govuk-heading-m">Organisations</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Rivendell Borough Council
+        </dt>
+        <dd class="govuk-summary-list__value">
+          
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> organisation</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Arundel Borough Council
+        </dt>
+        <dd class="govuk-summary-list__value">
+           
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> organisation</span></a>
+        </dd>
+      </div>
+    </dl>    
+
+    <h2 class="govuk-heading-m">Data range</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Open
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Earliest open date
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> open date</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Deadline
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Latest deadline
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> deadline</span></a>
+        </dd>
+      </div>
+    </dl>    
+
+    <h2 class="govuk-heading-m">Status</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Status
+        </dt>
+        <dd class="govuk-summary-list__value">
+          Draft, Submitted, Certified, Ready to certify, Certified (latest version)
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> status</span></a>
+        </dd>
+      </div>
+    </dl>      
+    
+    
+    <h2 class="govuk-heading-m">Uploaded by</h2>
+    <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Uploaded by
+        </dt>
+        <dd class="govuk-summary-list__value">
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Add<span class="govuk-visually-hidden"> uploaded by</span></a>
+        </dd>
+      </div>
+    </dl>     
+
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading govuk-visually-hidden">
+            Remove personally identifiable data from downloads
+          </h1>
+        </legend>
+        <div class="govuk-checkboxes xxgovuk-checkboxes--small" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="excludePersonalData" checked>
+            <label class="govuk-label govuk-checkboxes__label" for="excludePersonalData">
+              Remove personally identifiable data from downloads
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">
+            Download format
+          </h1>
+        </legend>
+        <div class="govuk-radios" data-module="govuk-radios">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="downloadFormat" name="downloadFormat" type="radio" value="csv">
+            <label class="govuk-label govuk-radios__label" for="downloadFormat">
+              CSV
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="downloadFormat-2" name="downloadFormat" type="radio" value="xml">
+            <label class="govuk-label govuk-radios__label" for="downloadFormat-2">
+              XML
+            </label>
+          </div>
+        </div>
+      </fieldset>
+    </div>    
+
+
+
+    <button class="govuk-button">Download</button>
+    
+
+
+  </div>
+</div>
+
+{% endblock %}
