@@ -1,0 +1,292 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Date Picker - Option 1" %}
+
+
+{% block beforeContent %}
+
+<!-- ================= UX Design notes ================= -->
+<div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-s">Design notes</h2>
+    <p><a href="https://mhclgdigital.atlassian.net/browse/DT-1292" target="_blank">DT-1292</a></p>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Using same patterns for From and To dates (radio buttons)</li>
+        <li><del><a href="/datePicker">Date range selector option 1</a> 28/10/2024<</del>/li>
+        <li>Added calendar. Should work like <a href="https://designsystem.gov.scot/components/date-picker">Scottish Gov</a></li>
+    </ul>
+
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <h1 class="govuk-heading-xl">
+            Spec for data range selector - Option 2
+        </h1>
+
+
+
+
+        <!-- MAIN DEMO -->
+        <div class="govuk-grid-row">
+
+            <div class="govuk-grid-column-one-third govuk-!-margin-bottom-7" >
+                <!-- FILTERS START ============= -->
+                <div class="govuk-!-padding-4" style="background-color: #f3f2f1;">
+                    <h1 class="govuk-heading-l">
+                        Filters <strong class="govuk-tag">1 active</strong>
+                    </h1>
+                    <!-- ACCORDION -->
+                    <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
+                        <!-- DATE RANGE -->
+                        <div class="govuk-accordion__section">
+                            <div class="govuk-accordion__section-header">
+                                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                    Date range <strong class="govuk-tag">Active</strong>
+                  </span>
+                                </h2>
+                                <!-- Delta's filter active indicator and clear option ====== -->
+                                <div class="delta-accordion-filter-status">
+                                    <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
+                                </div>
+                            </div>
+                            <div id="accordion-default-content-1" class="govuk-accordion__section-content">
+                                <!-- DATE FROM -->
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                            <h1 class="govuk-fieldset__heading">
+                                                Date from
+                                            </h1>
+                                        </legend>
+                                        <!-- <div id="contact-hint" class="govuk-hint">
+                                          Select one option
+                                        </div> -->
+                                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="date-to-all" data-aria-controls="conditional-date-to-specific">
+                                                <label class="govuk-label govuk-radios__label" for="contact-2">
+                                                    All previous dates
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="date-to-specific" data-aria-controls="conditional-date-from-specific">
+                                                <label class="govuk-label govuk-radios__label" for="date-to-specific">
+                                                    Specific previous date
+                                                </label>
+                                            </div>
+
+                                            <div class="govuk-radios__conditional" id="conditional-date-from-specific">
+                                                <div class="govuk-form-group">
+                                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
+                                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                                            <h1 class="govuk-fieldset__heading">
+                                                                Date
+                                                            </h1>
+                                                        </legend>
+
+                                                        <div id="date-to-hint" class="govuk-hint">
+                                                            For example, 24 2 2022
+                                                        </div>
+
+                                                        <div class="delta-date-picker-with-icon-button">
+                                                            <!-- Date input as calendar picker ====== -->
+                                                            <div>
+                                                                <div class="ds_datepicker  ds_datepicker--multiple" id="my-date-picker" data-module="ds-datepicker">
+                                                                    <div class="ds_datepicker__input-wrapper">
+                                                                        <div>
+                                                                            <label class="ds_label" for="day">Day</label>
+                                                                            <input id="day" name="day" class="ds_input ds_input--fixed-2  js-datepicker-date">
+                                                                        </div>
+                                                                        <div>
+                                                                            <label class="ds_label" for="month">Month</label>
+                                                                            <input id="month" name="month" class="ds_input ds_input--fixed-2  js-datepicker-month">
+                                                                        </div>
+                                                                        <div>
+                                                                            <label class="ds_label" for="year">Year</label>
+                                                                            <input id="year" name="year" class="ds_input ds_input--fixed-4  js-datepicker-year">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
+                                                                        <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+
+                                <script>
+                                    window.addEventListener("load", function(){
+                                        const datePicker = new window.DS.components.DSDatePicker(
+                                            document.getElementById('my-date-picker'),
+                                            {
+                                                dateSelectCallback: function (date) {
+                                                    console.log(`the selected date is ${date}`);
+                                                },
+                                                disabledDates: [
+                                                    new Date(2023, 4, 12),
+                                                    new Date(2023, 4, 13)
+                                                ],
+                                                imagePath: '/my/image/path/',
+                                                maxDate: new Date(),
+                                                minDate: new Date(2019, 1, 1)
+                                            }
+                                        );
+
+                                        datePicker.init();
+                                    })
+                                </script>
+                                <!-- DATE TO -->
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                                            <h1 class="govuk-fieldset__heading">
+                                                Date to
+                                            </h1>
+                                        </legend>
+                                        <!-- <div id="contact-hint" class="govuk-hint">
+                                          Select one option
+                                        </div> -->
+                                        <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="phone" data-aria-controls="conditional-date-to-specific">
+                                                <label class="govuk-label govuk-radios__label" for="contact-2">
+                                                    All future dates
+                                                </label>
+                                            </div>
+                                            <div class="govuk-radios__item">
+                                                <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="email" data-aria-controls="conditional-date-to-specific">
+                                                <label class="govuk-label govuk-radios__label" for="date-to-specific">
+                                                    Specific future date
+                                                </label>
+                                            </div>
+
+                                            <div class="govuk-radios__conditional" id="conditional-date-to-specific">
+                                                <div class="govuk-form-group govuk-form-group--error">
+                                                    <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
+                                                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                                                            <h1 class="govuk-fieldset__heading">
+                                                                Date
+                                                            </h1>
+                                                        </legend>
+
+                                                        <div id="date-to-hint" class="govuk-hint">
+                                                            For example, 24 2 2024
+                                                        </div>
+                                                        <p id="date-to-error" class="govuk-error-message">
+                                                            <span class="govuk-visually-hidden">Error:</span> Day, month and year required
+                                                        </p>
+
+                                                        <div class="delta-date-picker-with-icon-button">
+                                                            <!-- Date input as text ====== -->
+                                                            <div class="govuk-date-input" id="range-to">
+                                                                <div class="govuk-date-input__item">
+                                                                    <div class="govuk-form-group">
+                                                                        <label class="govuk-label govuk-date-input__label" for="range-to-day">
+                                                                            Day
+                                                                        </label>
+                                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="govuk-date-input__item">
+                                                                    <div class="govuk-form-group">
+                                                                        <label class="govuk-label govuk-date-input__label" for="range-to-month">
+                                                                            Month
+                                                                        </label>
+                                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-month" name="range-to-month" type="text" inputmode="numeric">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="govuk-date-input__item">
+                                                                    <div class="govuk-form-group">
+                                                                        <label class="govuk-label govuk-date-input__label" for="range-to-year">
+                                                                            Year
+                                                                        </label>
+                                                                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                            <!-- Date input as calendar picker ====== -->
+                                                            <div>
+                                                                <label class="govuk-label govuk-date-input__label" for="range-calendar">
+                                                                    <span class="delta-visually-hidden">Calendar</span>
+                                                                </label>
+                                                                <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
+                                                                        <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
+                                                                    </svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="govuk-button-group">
+                        <button class="govuk-button">Apply filters</button>
+                        <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
+                        <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
+                    </div>
+                </div>
+                <!-- FILTERS END ============= -->
+            </div>
+            <div class="govuk-grid-column-two-thirds">
+                <h3 class="govuk-heading-l">
+                    Design notes
+                </h3>
+
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Simplified the design by using a consistent radio button pattern for both "From Date" and "To Date".</li>
+                    <li>Simplified error handling by requiring users to complete all date input fields (Day/Month/Year or Month/Year); inputs cannot be left empty.</li>
+                    <li>Error messages:
+                        <ul class="govuk-list govuk-list--bullet">
+                            <li>Day is required.</li>
+                            <li>Month is required.</li>
+                            <li>Year is required.</li>
+                            <li>Day, month, and year are required.</li>
+                            <li>Year must be a 4-digit number.</li>
+                            <li>"To Date" must be after "From Date".</li>
+                        </ul>
+                    </li>
+                    <li>The "Clear" link is displayed only if there are active filters within that accordion section.</li>
+                    <li>The "Apply filters" button should display "Update filters" if filter changes have been made.</li>
+                    <li>The "Reset filters" button is displayed only if:
+                        <ul>
+                            <li>A) Filters have been modified by the user, or</li>
+                            <li>B) The page initially loaded with filters applied (pre-filtered).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    {% endblock %}
+
+
+

@@ -32,6 +32,10 @@
     <li>Table heading change: "Editor" to "Updated by"</li>
     <li>Filters: removed Data Set drop-down</li>
     <li>Filters: in light of data set drop-down being removed renamed filter item to "Collections"</li>
+    <li>19/11/2024</li>
+    <li>Filters: added back in Data Set drop-down</li>
+    <li>Renamed to 'Record store'</li>
+    <li>In data range filter changes to 'From' and 'To'</li>
   </ul>
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -45,13 +49,11 @@
 
 
 <h1 class="govuk-heading-xl">
-  Data store
+  Record store
 </h1>
 
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-
-    <p class="govuk-body">It's where data is stored, init.</p>
 
     <details class="govuk-details">
       <summary class="govuk-details__summary">
@@ -65,7 +67,7 @@
           <li><strong>Record</strong>: The title of the individual record.</li>
           <li><strong>Collection</strong>: The parent collection to which this record belongs as part of the return.</li>
           <li><strong>Organisation</strong>: The number of organisations submitting this record.</li>
-          <li><strong>Editor</strong>: The name of the last individual to edit this record.</li>
+          <li><strong>Updated by</strong>: The last individual to edit this record.</li>
           <li><strong>Updated</strong>: The most recent date this record was edited.</li>
           <li><strong>Status</strong>:
             <ul>
@@ -73,7 +75,7 @@
               <li><strong>Submitted</strong>: The record has been submitted; no further action is required.</li>
               <li><strong>Ready to Certify</strong>: The record has been saved and is awaiting certification.</li>
               <li><strong>Certified</strong>: The record has been certified and submitted; no further action is required.</li>
-              <li><strong>Certified (Latest Version)</strong>: The most recent certified version of the record.</li>
+              <li><strong>Certified (latest version)</strong>: The most recent certified version of the record.</li>
             </ul>
           </li>
         </ul>
@@ -90,17 +92,12 @@
 
     <h4 class="govuk-heading-m">Download records</h4>
 
-    <div class="govuk-button-group">
-      <button class="govuk-button">Download CSV</button>
-      <button class="govuk-button">Download XML</button>
-    </div>
-
-
+    <p><a href="/wayDataStoreDownloadConfirm" class="govuk-button">Download records</a></p>
 
     <div class="delta-results">
         <!-- FILTERS START ============= -->
         <div id="delta-results-filters" class="hidden">
-          <div class="govuk-!-padding-4" style="background-color: #f3f2f1;">
+          <div class="govuk-!-padding-3" style="background-color: #f3f2f1;">
             <h1 class="govuk-heading-l">
               Filters <strong class="govuk-tag">3 active</strong>
             </h1>
@@ -253,7 +250,7 @@
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                         <h1 class="govuk-fieldset__heading">
-                          Open
+                          From
                         </h1>
                       </legend>
                         <!-- <div id="contact-hint" class="govuk-hint">
@@ -261,21 +258,21 @@
                         </div> -->
                       <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="date-to-all" data-aria-controls="conditional-date-to-specific">
-                          <label class="govuk-label govuk-radios__label" for="contact-2">
-                            Earliest open date
+                          <input class="govuk-radios__input" id="date-to-any" name="date-from" type="radio" value="date-to-all" data-aria-controls="conditional-date-from-specific">
+                          <label class="govuk-label govuk-radios__label" for="date-from-any">
+                            Earliest from date
                           </label>
                         </div>
                         <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="date-to-specific" data-aria-controls="conditional-date-from-specific">
-                          <label class="govuk-label govuk-radios__label" for="date-to-specific">
-                            Specific open date
+                          <input class="govuk-radios__input" id="date-to-specific" name="date-from" type="radio" value="date-to-specific" data-aria-controls="conditional-date-from-specific">
+                          <label class="govuk-label govuk-radios__label" for="date-from-specific">
+                            Specific from date
                           </label>
                         </div>
 
                         <div class="govuk-radios__conditional" id="conditional-date-from-specific">
                           <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
+                            <fieldset class="govuk-fieldset" role="group" aria-describedby="date-from-hint">
                               <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
                                 <h1 class="govuk-fieldset__heading">
                                   Date
@@ -337,7 +334,7 @@
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
                       <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
                         <h1 class="govuk-fieldset__heading">
-                          Deadline
+                          To
                         </h1>
                       </legend>
                         <!-- <div id="contact-hint" class="govuk-hint">
@@ -347,13 +344,13 @@
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="phone" data-aria-controls="conditional-date-to-specific">
                           <label class="govuk-label govuk-radios__label" for="contact-2">
-                            Latest deadline
+                            Latest to
                           </label>
                         </div>
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="email" data-aria-controls="conditional-date-to-specific">
                           <label class="govuk-label govuk-radios__label" for="date-to-specific">
-                            Specific deadline
+                            Specific to
                           </label>
                         </div>
 
@@ -561,7 +558,7 @@
             <tbody class="govuk-table__body">
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="/wayRecord-draft">Elmsworth</a></th>
-                <td class="govuk-table__cell"><a href="//wayCollectionGroup">Urban hedgehog census 2023</a></td>
+                <td class="govuk-table__cell"><a href="/wayCollectionGroup">Urban hedgehog census 2023</a></td>
                 <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport"><img src="/public/images/logo001.png" alt="Organisation logo" class="delta-org-logo-s delta-org-logo-fl">Rivendell Borough Council</a></td>
                 <td class="govuk-table__cell">Mike Phillips</td>
                 <td class="govuk-table__cell">14 April 2024</td>
