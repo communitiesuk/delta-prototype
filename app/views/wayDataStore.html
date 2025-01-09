@@ -36,6 +36,8 @@
     <li>Filters: added back in Data Set drop-down</li>
     <li>Renamed to 'Record store'</li>
     <li>In data range filter changes to 'From' and 'To'</li>
+    <li>19/12/24</li>
+    <li>Added hint text to collection accordion.</li>
   </ul>
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -92,7 +94,20 @@
 
     <h4 class="govuk-heading-m">Download records</h4>
 
-    <p><a href="/wayDataStoreDownloadConfirm" class="govuk-button">Download records</a></p>
+    <div class="delta-flex-horizontal delta-flex-horizontal__left govuk-!-margin-bottom-6">
+
+      <p><a href="/wayDataStoreDownloadConfirm" class="govuk-button">Download records</a></p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-visually-hidden">Warning</span>
+          To download records, go to Filters > Collections and select a dataset or collection group.
+        </strong>
+      </div>    
+  
+      
+    </div>
 
     <div class="delta-results">
         <!-- FILTERS START ============= -->
@@ -131,10 +146,14 @@
                   *Collection name (conditional on dataset name)
                   Search by tags -->
 
+                  <div class="govuk-hint">
+                    Select either a dataset or collection group in order to select a collection.
+                  </div>
+
                   <!-- dataset drop-down -->
                   <!-- <div class="govuk-form-group">
                     <label class="govuk-label" for="selectDataSet">
-                      Dataset
+                      Datasets
                     </label>
                     <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectDataSet" name="selectDataSet">
                       <option value="Select" selected>Select</option>
@@ -161,7 +180,7 @@
                     <label class="govuk-label for="selectCollection">
                       Collection
                     </label>
-                    <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollection" name="selectCollection">
+                    <select class="govuk-select govuk-!-margin-bottom-3 delta-w-100" id="selectCollection" name="selectCollection" disabled>
                       <option value="Select" selected>Select</option>
                       <option value="hedgehogCensus2023">Urban hedgehog census 2023</option>
                       <option value="hedgehogCensus2023">Urban hedgehog census 2022</option>
@@ -174,12 +193,6 @@
 
 
                   <!-- search by tags (seem to be independent of datastore and collection -->
-
-                  <!-- active tags -->
-                  <ul class="govuk-list govuk-list--spaced">
-                    <li class="delta-filter-item-active">C-3P0<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
-                    <li class="delta-filter-item-active">MSE-6<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
-                  </ul>
 
                   <div class="govuk-form-group">
                     <label class="govuk-label for="selectTags">
@@ -194,6 +207,12 @@
                       <option value="hedgehogCensus2023">4-LOM</option>
                     </select>
                   </div>
+                  <!-- active tags -->
+                  <ul class="govuk-list govuk-list--spaced">
+                    <li class="delta-filter-item-active">C-3P0<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+                    <li class="delta-filter-item-active">MSE-6<a href="#" class="filter-item-remove" title="Remove"><span class="govuk-visually-hidden">Remove  </span><img src="/public/images/icon-close.svg" alt="icon remove" class="delta-icon delta-icon--link"></a></li>
+                  </ul>
+
                 </div>
               </div>
               <!-- ORGANISATIONS-->
