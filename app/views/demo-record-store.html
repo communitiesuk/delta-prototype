@@ -1,0 +1,214 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Design demo: Submissions Dashboard" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+    <!-- <p>
+      <a href="/waySubmissionsDashboard" target="_blank">Dashboard</a> (new window)
+    |
+    <a href="/waySubmissionsDashboardReport" target="_blank">Report</a> (new window)
+    </p> -->
+  </div>
+
+
+</div>
+
+
+
+<div class="panel xdelta-text-center">
+  <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;">
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Delta design demo</small><br>
+    <del>Data</del> Record Store
+  </h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <p class="govuk-body-l xdelta-reading-width">Show and tell.</p> -->
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+        Updated: Thursday 9 January 2025
+      </h4>       
+    </div>
+  </div>    
+
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Running order</h2>
+
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Part 1 - overview (5 mins) <strong class="govuk-tag govuk-tag--red delta-tag">Recorded</strong>
+      <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+        <li>Setting the scene</li>
+        <li>Why</li>
+        <li>Designs</li>
+      </ul>
+    </li>
+    <li>Part 2 - design demo (5 mins) <strong class="govuk-tag govuk-tag--red delta-tag">Recorded</strong></li>
+    <li>Part 3 - summary, feedback and questions (20 mins)</li>
+  </ul>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Setting the scene</h2>
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-one-half">
+       <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+          <li>Minor cosmetic changes</li>
+          <li>No loss of functionality</li>
+          <li>Hierarchy
+            <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+              <li>Collection group > Collection > Return > <strong>Record</strong></li>
+            </ul>
+          </li>
+          <li>A new name for the Data Store: <strong>Record Store</strong></li>
+          <li>Design: static wireframe with dummy (hedgehog) data</li>    
+        </ul>
+    </div>
+    <div class="nhsuk-grid-column-one-half">
+      <img src="/public/images/hedgehog002.png" alt="hedgehog" class="delta-responsive-image">
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Why are we redesigning the record store?</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Aligning with new Delta 2.0 look and feel (UI)</li>    
+    <li>Accessibility improvements</li>
+    <li>Improved ways of collaboration (link sharing)</li>
+    <li>Reduction in use by external users (data providers) due do improvements to Collections entity page</li>
+  </ul>
+</div>
+
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Data Store (current)</h2>
+
+  <img src="/public/images/dataStore.png" alt="screen grab" class="delta-responsive-image" style="max-width: 700px;">
+  <p><small>Data store</small></p>
+
+  <img src="/public/images/dataStore-actions.png" alt="screen grab" class="delta-responsive-image" style="max-width: 400px;">
+  <p><small>Actions</small></p>  
+
+</div>
+
+
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Design: Record Store</h2>
+
+  <p><a href="/wayDataStore" target="_blank"><strong>[New] Record store wireframe</strong> (new window)</a></p>
+
+
+  <img src="/public/images/recordStore.png" alt="screen grab" class="delta-responsive-image" style="max-width: 800px;">
+  <p><small>Default view</small></p>
+
+  <img src="/public/images/recordStore-help.png" alt="screen grab" class="delta-responsive-image" style="max-width: 800px;">
+  <p><small>Help text</small></p>
+
+  <img src="/public/images/recordStore-filters.png" alt="screen grab" class="delta-responsive-image" style="max-width: 800px;">
+  <p><small>Filters</small></p>
+
+  <img src="/public/images/recordStore-filtersOpen.png" alt="screen grab" class="delta-responsive-image" style="max-width: 800px;">
+  <p><small>Filters expanded</small></p>  
+
+
+  <h2 class="govuk-heading-m">Deep linking</h2>
+  <p><a href="/waySubmissionsDashboardReport" target="_blank">Submission report</a></p>
+
+</div>
+
+<div class="panel">
+  <h2 class="govuk-heading-l">Summary</h2>
+
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>New UI matching other tables and filter in Delta 2.0</li>
+    <li>New name (Record Store)</li>
+    <li>Actions moved to record [entity] page</li>
+    <li>Easier sharing</li>
+  </ul>
+
+  <h2 class="govuk-heading-m">Next steps</h2>
+  <ul class="govuk-list govuk-body-l govuk-list--bullet govuk-list--spaced">
+    <li>Links to designs and feedback question will be shared with call attendees</li>
+    <li>All feedback welcome</li>
+    <li>Deadline Friday 17 January 2025</li>
+  </ul>
+  <p><a href="mailtto:jemma.hoare@levellingup.gov.uk">jemma.hoare@levellingup.gov.uk</a></p>
+</div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+
