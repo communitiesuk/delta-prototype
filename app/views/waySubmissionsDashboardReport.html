@@ -49,6 +49,8 @@
     <li>Chart colours updated to MHCLG palette (SM: not sure this is correct)</li>
     <li>Chart: updated dummy data to match counts in Overview table</li>
     <li>Table filters: changed title to "Deadline status", removed Open and Closed and added 'Not extended' options</li>
+    <li>13/01/2025</li>
+    <li>Added 'Include removed organisations' checkbox and updated help info</li>    
   </ul>    
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -164,22 +166,47 @@
 <details class="govuk-details">
   <summary class="govuk-details__summary">
     <span class="govuk-details__summary-text">
-      Help with labels
+      Help with labels and removed organisations
     </span>
   </summary>
   <div class="govuk-details__text">
     
     <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Organisations</strong>: The number of organisations that have been asked to submit a return for this collection.</li>
-      <li><strong>Extended</strong>: Flags whether the submission deadline for this return has been extended beyond the original collection window.</li>
-      <li><strong>Not started</strong>: The number of organisations that have not created a record.</li>
-      <li><strong>In draft</strong>: The number of organisations that have started at least one record and saved it in draft format.</li>
-      <li><strong>Awaiting certification</strong>: The number of organisations with a return that has records needing certification.</li>
-      <li><strong>Completed</strong>: The number of organisations that have submitted and certified a return. [OR for uncertifiable returns] The number of organisations that have submitted a return.</li>      
+      <li><strong>Labels:</strong>
+     :   <ul class="govuk-list govuk-list--spaced">
+          <li><strong>Organisations</strong>: The number of organisations that have been asked to submit a return for this collection.</li>
+          <li><strong>Extended</strong>: Flags whether the submission deadline for this return has been extended beyond the original collection window.</li>
+          <li><strong>Not started</strong>: The number of organisations that have not created a record.</li>
+          <li><strong>In draft</strong>: The number of organisations that have started at least one record and saved it in draft format.</li>
+          <li><strong>Awaiting certification</strong>: The number of organisations with a return that has records needing certification.</li>
+          <li><strong>Completed</strong>: The number of organisations that have submitted and certified a return. [OR for uncertifiable returns] The number of organisations that have submitted a return.</li>      
+        </ul>
+      </li>
+      <li><strong>Include removed organisations:</strong> This option includes organisations that have submitted a return but were later removed from the collection group. These organisations will be included in the report counts, such as the organisation count.</li>
     </ul>
+
 
   </div>
 </details>
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" aria-describedby=includeRemoved">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+      <h1 class="govuk-fieldset__heading">
+        Removed organisations
+      </h1>
+    </legend>
+    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="includeRemoved" name="includeRemoved" type="checkbox" value="includeRemoved">
+        <label class="govuk-label govuk-checkboxes__label" for="includeRemoved">
+          Include removed organisations
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
 
 
 <div class="govuk-grid-row">
