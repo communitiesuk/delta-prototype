@@ -97,31 +97,34 @@
             </h2>
           </div>
           <div id="filter-group-status" class="govuk-accordion__section-content">
-              <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                  <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="open" checked>
                   <label class="govuk-label govuk-checkboxes__label" for="Status">
                     Open
                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="carcasses" checked>
+                  <input class="govuk-checkboxes__input" id="Status" name="Status" type="checkbox" value="future" checked>
                   <label class="govuk-label govuk-checkboxes__label" for="Status">
                     Future
                   </label>
                 </div>                
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
+                  <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="closed">
                   <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                     Closed
                   </label>
                 </div>
               </div>
           </div>
-        </div>        
+        </div>  
       </div>
-      <button class="govuk-button govuk-button--secondary govuk-button--inverse">Clear filters</button>
-      <p><a href="#">Save this search</a></p>
+      <div class="govuk-button-group">
+        <button class="govuk-button">Apply filters</button>
+        <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
+        <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
+      </div>       
     </div>
   </div>
   <!-- table data here -->
