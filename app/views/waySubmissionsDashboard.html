@@ -50,6 +50,8 @@
     <li>Added updated help text from Susanna</li>
     <li><strong>5/11/24</strong></li>
     <li>Added date range picker table filters. In this instance we have omitted asking for days. See <a href="/datePicker002">Design notes</a></li>
+    <li>13/01/2025</li>
+    <li>Added 'Include removed organisations' filter</li>
   </ul>
 
   <h3 class="govuk-heading-m">To do</h3>
@@ -321,7 +323,7 @@
                   </h2>
                 </div>
                 <div id="filter-group-status" class="govuk-accordion__section-content">
-                    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
                         <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                         <label class="govuk-label govuk-checkboxes__label" for="Status-2">
@@ -348,12 +350,32 @@
                       </div>
                     </div>
                 </div>
-              </div>            
+              </div>       
+              <!-- INCLUDE REMOVED ORGANISATIONS -->
+              <div class="govuk-accordion__section">
+                <div class="govuk-accordion__section-header">
+                  <h2 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                      Removed organisations
+                    </span>
+                  </h2>
+                </div>
+                <div id="filter-group-status" class="govuk-accordion__section-content">
+                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="includeRemoved" name="includeRemoved" type="checkbox" value="includeRemoved">
+                        <label class="govuk-label govuk-checkboxes__label" for="includeRemoved">
+                          Include removed organisations
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>                     
             </div>
             <div class="govuk-button-group">
-          <button class="govuk-button">Apply filters</button>
-            <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
-            <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
+              <button class="govuk-button">Apply filters</button>
+              <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
+              <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
             </div>
           </div>
         </div>
