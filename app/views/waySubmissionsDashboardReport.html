@@ -307,12 +307,39 @@
 </div>
 
 <div class="govuk-grid-row" id="returns">
-  <!-- primary content -->
-  <div class="govuk-grid-column-full">
+  <div class="govuk-grid-column-two-thirds">
 
     <h3 class="govuk-heading-l govuk-!-margin-top-9" id="submissionByOrg">Returns by organisation</h3>    
 
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with table labels
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+
+      <ul class="govuk-list govuk-list--spaced">
+          <li><strong>Organisation</strong>: The name of the organisation submitting the return.</li>
+          <li><strong>Return status</strong>: The status of the return, based on the least progressed record within it. For example, if a return has 4 records, with 3 completed and 1 in draft, the return status will be 'draft'.</li>
+          <li><strong>Deadline</strong>: The deadline for submitting the return. An 'extended' tag will appear next to the date if an extension has been granted.</li>
+          <li><strong>Updated</strong>: The most recent date that any record within the return was edited.</li>
+          <li><strong>Records</strong>: The number of records matching the selected filters. By default, all records are counted.</li>
+        </ul>
+          
+
+      </div>
+    </details>
+
+
     <button class="govuk-button">Download organisations (.csv)</button>
+  </div>
+</div>
+
+
+<!-- Table -->
+ <div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
 
     <!-- table results start -->
     <div class="delta-results">
@@ -584,6 +611,8 @@
 
   </div>
 </div>
+
+
 
 
 
