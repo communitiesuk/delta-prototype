@@ -1,115 +1,120 @@
 {% extends "layouts/delta.html" %}
 
-{% set pageName="MHCLG Data Ownership Vision" %}
+{% set pageName="Delta Excel uploads" %}
 
 
 {% block content %}
 
-<div class="panel-nav">
-
-  <div class="controls">
-    <button id="startBtn" class="govuk-button">Start</button>
-    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
-    <button id="nextBtn" class="govuk-button" disabled>Next</button>
-  </div>
-
-
-</div>
-
-
-
-<div class="panel xdelta-text-center">
-  <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
-  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-    Delta <del>Bulk</del> Excel uploads
-  </h1>
-
-    <h4 class="govuk-heading-s govuk-!-margin-top-3">
-    Updated: 07/02/2025
-  </h4> 
-
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m">Overview</h2>      
-      <p class="govuk-body-l">We assessed the user experience of bulk data uploads into Delta using Excel templates and Orbeon.</p>
-      <p class="govuk-body-l">Feedback from data providers indicates that the process is complex and prone to errors. As a result, many users opt to enter returns manually, one at a time, using the standard Orbeon forms.</p>
-
-      <h2 class="govuk-heading-m">'Bulk uploads' scope clarification</h2>      
-      <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document. Another way to bulk upload data is through an API, but this is out of scope for this investigation.</p>          
-      
+<div class="container">
+  <div class="panel-nav">
+  
+    <div class="controls">
+      <button class="govuk-button" id="startBtn" disabled aria-disabled="true">Start</button>
+      <button class="govuk-button" id="backBtn" disabled aria-disabled="true">Back</button>
+      <button class="govuk-button" id="forwardBtn">Forward</button>
     </div>
-  </div>    
-
-</div>
-
-<div class="panel">
+  
+  </div>
+  
+  <div class="panel xdelta-text-center">
+    <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
+    <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+      Delta <del>Bulk</del> Excel uploadssss
+    </h1>
+  
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+      Updated: 07/02/2025
+    </h4> 
+  
+  
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m"><del>Bulk</del> Excel uploads - a better name?</h2>      
-        <p class="govuk-body-l">So far, this area of the Delta product and user experience has been called 'bulk uploads' or 'bulk upload errors'. We believe this label limits our approach and reduces the potential impact and value of our work, particularly in terms of cost savings through efficiency gains.</p>         
-        <p class="govuk-body-l">We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing processes. They either upload data as an Excel file or, if that fails, manually copy and paste it into the Orbeon form. This is inefficient and prone to errors.</p>         
-        <p class="govuk-body-l">We propose renaming this part of the platform to 'Excel uploads' and improving its usability and stability. This would simplify Delta's data submission options to:</p>       
+        <h2 class="govuk-heading-m">Overview</h2>      
+        <p class="govuk-body-l">We assessed the user experience of bulk data uploads into Delta using Excel templates and Orbeon.</p>
+        <p class="govuk-body-l">Feedback from data providers indicates that the process is complex and prone to errors. As a result, many users opt to enter returns manually, one at a time, using the standard Orbeon forms.</p>
+  
+        <h2 class="govuk-heading-m">'Bulk uploads' scope clarification</h2>      
+        <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document. Another way to bulk upload data is through an API, but this is out of scope for this investigation.</p>          
         
-        <ul class="govuk-list govuk-list--bullet govuk-body-l">        
-          <li><strong>Form-based</strong> – best for simple collections where a return has only a small number of records</li>
-          <li><strong>Excel upload</strong> – best for complex collections and medium to large numbers of records</p>
-          <li><strong>API</strong> – best for collections with very large volumes of data</li>
-        </ul>  
       </div>
-    </div>  
-</div>
-
-<div class="panel">
-  <h2 class="govuk-heading-l">To do</h3>
-  <ul class="govuk-list govuk-list--bullet">
-    <li>Quantifying the scape of the problem to assess impact of addressing (business case)
-      <ul class="govuk-list govuk-list--bullet">
-        <li>How many collections offer an Excel upload option?</li>
-        <li>What percentage of data providers use Excel upload in these collections?</li>
-        <li>What percentage of organisations using Excel upload encounter an error?</li>
-        <li>Of those that encounter an error, what percentage successfully complete the submission via Excel, and what percentage switch to manual submission?</li>
-        <li>Of those that encounter an error, what percentage resolve it independently, and what percentage require support from a third party (typically the MHCLG support team)?</li>
-      </ul>
-    </li>
-    <li>Error type investigation
-      <ul class="govuk-list govuk-list--bullet">
-        <li>User feedback form data providers suggest there are a number of different types of errors. We need to develop a clear picture of what these are as the means of tackling them will differ by type. Initially the errors seem to fall into the following buckets:
-          <ul class="govuk-list govuk-list--bullet">
-            <li>System stability</li>
-            <li>Validation errors (client and server side)</li>
-          </ul>
-        </li>
-      </ul>      
-    </li>
-    <li>Discuss with Lesley
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Random stuff to discuss:
-          <ul class="govuk-list govuk-list--bullet">
-            <li>Collections report (internal)
-              <ul class="govuk-list govuk-list--bullet">
+    </div>    
+  
+  </div>
+  
+  <div class="panel">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m"><del>Bulk</del> Excel uploads - a better name?</h2>      
+          <p class="govuk-body-l">So far, this area of the Delta product and user experience has been called 'bulk uploads' or 'bulk upload errors'. We believe this label limits our approach and reduces the potential impact and value of our work, particularly in terms of cost savings through efficiency gains.</p>         
+          <p class="govuk-body-l">We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing processes. They either upload data as an Excel file or, if that fails, manually copy and paste it into the Orbeon form. This is inefficient and prone to errors.</p>         
+          <p class="govuk-body-l">We propose renaming this part of the platform to 'Excel uploads' and improving its usability and stability. This would simplify Delta's data submission options to:</p>       
+          
+          <ul class="govuk-list govuk-list--bullet govuk-body-l">        
+            <li><strong>Form-based</strong> – best for simple collections where a return has only a small number of records</li>
+            <li><strong>Excel upload</strong> – best for complex collections and medium to large numbers of records</p>
+            <li><strong>API</strong> – best for collections with very large volumes of data</li>
+          </ul>  
+        </div>
+      </div>  
+  </div>
+  
+  <div class="panel">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">To do</h3>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>Quantifying the scape of the problem to assess impact of addressing (business case)
+            <ul class="govuk-list govuk-list--bullet">
+              <li>How many collections offer an Excel upload option?</li>
+              <li>What percentage of data providers use Excel upload in these collections?</li>
+              <li>What percentage of organisations using Excel upload encounter an error?</li>
+              <li>Of those that encounter an error, what percentage successfully complete the submission via Excel, and what percentage switch to manual submission?</li>
+              <li>Of those that encounter an error, what percentage resolve it independently, and what percentage require support from a third party (typically the MHCLG support team)?</li>
+            </ul>
+          </li>
+          <li>Error type investigation
+            <ul class="govuk-list govuk-list--bullet">
+              <li>User feedback form data providers suggest there are a number of different types of errors. We need to develop a clear picture of what these are as the means of tackling them will differ by type. Initially the errors seem to fall into the following buckets:
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>Chronological list of all collections</li>
-                  <li>Submission options (form, Excel, api)</li>
-                  <li>Complexity /size</li>
-                  <li>Open status / window</li>
-                  <li>Error counts</li>
-                </ul>              
-              </ul>              
-            </li>
-            <li>Error reporting (for use in Collection report (above)) and logging
+                  <li>System stability</li>
+                  <li>Validation errors (client and server side)</li>
+                </ul>
+              </li>
+            </ul>      
+          </li>
+          <li>Discuss with Lesley
+            <ul class="govuk-list govuk-list--bullet">
+              <li>Random stuff to discuss:
                 <ul class="govuk-list govuk-list--bullet">
-                  <li>Org</li>
-                  <li>Error count</li>
-                  <li>Initial submission method</li>
-                  <li>Final submission method</li>
-                  <li>Third party support required?</li>
-                </ul>                
-            </li>
-        </li>
-      </ul>      
-    </li>    
-  </ul>
+                  <li>Collections report (internal)
+                    <ul class="govuk-list govuk-list--bullet">
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Chronological list of all collections</li>
+                        <li>Submission options (form, Excel, api)</li>
+                        <li>Complexity /size</li>
+                        <li>Open status / window</li>
+                        <li>Error counts</li>
+                      </ul>              
+                    </ul>              
+                  </li>
+                  <li>Error reporting (for use in Collection report (above)) and logging
+                      <ul class="govuk-list govuk-list--bullet">
+                        <li>Org</li>
+                        <li>Error count</li>
+                        <li>Initial submission method</li>
+                        <li>Final submission method</li>
+                        <li>Third party support required?</li>
+                      </ul>                
+                  </li>
+              </li>
+            </ul>      
+          </li>    
+        </ul>
+      </div>
+    </div>
+  
+  
+  </div>
 </div>
 
 
@@ -130,46 +135,77 @@
       }
 
 
-      // Panel stuff =================================================================================================================
-      const panels = document.querySelectorAll('.panel');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const startBtn = document.getElementById('startBtn');
-      
-      let currentPanel = -1; // Before start button is clicked, no panel is active
+    // Panel stuff =============================================================
+    const container = document.querySelector('.container');
+    const panels = document.querySelectorAll('.panel');
+    const startBtn = document.getElementById('startBtn');
+    const backBtn = document.getElementById('backBtn');
+    const forwardBtn = document.getElementById('forwardBtn');
 
-      // Function to update the button states
-      function updateButtons() {
-        startBtn.disabled = currentPanel <= 0;
-        prevBtn.disabled = currentPanel <= 0;
-        nextBtn.disabled = currentPanel === panels.length - 1;
-      }
+    let currentIndex = 0;
 
-      // Function to scroll to a specific panel
-      function scrollToPanel(index) {
-        if (index >= 0 && index < panels.length) {
-          currentPanel = index;
-          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
-          updateButtons();
+    alert('JS running');
+
+    // Function to enable/disable panel nav buttons   
+    function enableButtons() {
+      alert('enableButtons JS running');
+      startBtn.disabled = currentIndex === 0;
+      backBtn.disabled = currentIndex === 0;
+      forwardBtn.disabled = currentIndex === panels.length - 1;
+    };
+    
+
+    // Function to update active panel based on scroll
+    function updateActivePanel() {
+      const containerTop = container.getBoundingClientRect().top;
+      panels.forEach((panel, index) => {
+        const panelTop = panel.getBoundingClientRect().top;
+        const panelBottom = panel.getBoundingClientRect().bottom;
+        if (panelTop - containerTop <= 0 && panelBottom - containerTop > 0) {
+          panel.classList.add('active');
+          panel.setAttribute('aria-current', 'true');
+          currentIndex = index;
+        } else {
+          panel.classList.remove('active');
+          panel.removeAttribute('aria-current');
         }
+      });
+
+      // Enable/disable buttons based on current index
+      enableButtons();
+    }
+
+    // Scroll to a specific panel
+    function scrollToPanel(index) {
+      panels[index].scrollIntoView({ behavior: 'smooth' });
+      panels[index].focus(); // Move focus to the panel
+      currentIndex = index;
+      updateActivePanel();
+      consol.log('currentIndex: ' + currentIndex)
+    }
+
+    // Event listeners for buttons
+    startBtn.addEventListener('click', () => {
+      scrollToPanel(0);
+    });
+
+    backBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        scrollToPanel(currentIndex - 1);
       }
+    });
 
-      // Event listener for the Start button
-      startBtn.addEventListener('click', function () {
-        scrollToPanel(0);  // Scroll to the first panel
-      });
+    forwardBtn.addEventListener('click', () => {
+      if (currentIndex < panels.length - 1) {
+        scrollToPanel(currentIndex + 1);
+      }
+    });
 
-      // Event listeners for the Next and Previous buttons
-      prevBtn.addEventListener('click', function () {
-        scrollToPanel(currentPanel - 1);
-      });
+    // Update active panel on scroll
+    container.addEventListener('scroll', updateActivePanel);
 
-      nextBtn.addEventListener('click', function () {
-        scrollToPanel(currentPanel + 1);
-      });
-
-      // Initial check to ensure buttons are in the right state
-      updateButtons();
+    // Initialize
+    updateActivePanel();      
 
     });
   </script>

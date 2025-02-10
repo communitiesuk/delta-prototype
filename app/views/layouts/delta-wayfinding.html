@@ -117,3 +117,8 @@
     </div>
   </footer>
   {% endblock %}
+
+    {% block scripts %}
+    {{ super() }}
+    <script src="/public/javascripts/designNotes.js"></script>
+  {% endblock %}
