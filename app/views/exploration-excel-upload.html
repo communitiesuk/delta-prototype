@@ -5,21 +5,23 @@
 
 {% block content %}
 
-<div class="container">
   <div class="panel-nav">
   
     <div class="controls">
-      <button class="govuk-button" id="startBtn" disabled aria-disabled="true">Start</button>
-      <button class="govuk-button" id="backBtn" disabled aria-disabled="true">Back</button>
+      <button class="govuk-button" id="startBtn">Start</button>
+      <button class="govuk-button" id="backBtn">Back</button>
       <button class="govuk-button" id="forwardBtn">Forward</button>
     </div>
   
   </div>
   
+
+<div class="container">
+
   <div class="panel xdelta-text-center">
     <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
     <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-      Delta <del>Bulk</del> Excel uploadssss
+      Delta <del>Bulk</del> Excel uploads
     </h1>
   
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
@@ -115,101 +117,35 @@
   
   
   </div>
+
+  <div class="panel">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">Another panel</h3>
+        <p>Lots of text.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">A further panel</h3>
+        <p>Lots of text.</p>
+      </div>
+    </div>
+  </div>  
+
 </div>
 
 
 
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
+{% endblock %}
 
-      // Hide header and footer in prootyping kit
-      var header = document.querySelector('.govuk-header');
-      var footer = document.querySelector('.govuk-footer');
-
-      if (footer) {
-          footer.style.display = 'none';
-      }
-      if (header) {
-          header.style.display = 'none';
-      }
-
-
-    // Panel stuff =============================================================
-    const container = document.querySelector('.container');
-    const panels = document.querySelectorAll('.panel');
-    const startBtn = document.getElementById('startBtn');
-    const backBtn = document.getElementById('backBtn');
-    const forwardBtn = document.getElementById('forwardBtn');
-
-    let currentIndex = 0;
-
-    alert('JS running');
-
-    // Function to enable/disable panel nav buttons   
-    function enableButtons() {
-      alert('enableButtons JS running');
-      startBtn.disabled = currentIndex === 0;
-      backBtn.disabled = currentIndex === 0;
-      forwardBtn.disabled = currentIndex === panels.length - 1;
-    };
-    
-
-    // Function to update active panel based on scroll
-    function updateActivePanel() {
-      const containerTop = container.getBoundingClientRect().top;
-      panels.forEach((panel, index) => {
-        const panelTop = panel.getBoundingClientRect().top;
-        const panelBottom = panel.getBoundingClientRect().bottom;
-        if (panelTop - containerTop <= 0 && panelBottom - containerTop > 0) {
-          panel.classList.add('active');
-          panel.setAttribute('aria-current', 'true');
-          currentIndex = index;
-        } else {
-          panel.classList.remove('active');
-          panel.removeAttribute('aria-current');
-        }
-      });
-
-      // Enable/disable buttons based on current index
-      enableButtons();
-    }
-
-    // Scroll to a specific panel
-    function scrollToPanel(index) {
-      panels[index].scrollIntoView({ behavior: 'smooth' });
-      panels[index].focus(); // Move focus to the panel
-      currentIndex = index;
-      updateActivePanel();
-      consol.log('currentIndex: ' + currentIndex)
-    }
-
-    // Event listeners for buttons
-    startBtn.addEventListener('click', () => {
-      scrollToPanel(0);
-    });
-
-    backBtn.addEventListener('click', () => {
-      if (currentIndex > 0) {
-        scrollToPanel(currentIndex - 1);
-      }
-    });
-
-    forwardBtn.addEventListener('click', () => {
-      if (currentIndex < panels.length - 1) {
-        scrollToPanel(currentIndex + 1);
-      }
-    });
-
-    // Update active panel on scroll
-    container.addEventListener('scroll', updateActivePanel);
-
-    // Initialize
-    updateActivePanel();      
-
-    });
-  </script>
-
+{% block pageScripts %}  
+<!-- Need to add for any pages with panel scrolling -->
+  <script src="/public/javascripts/panelScroller.js"></script>
 {% endblock %}
 
 
