@@ -36,14 +36,13 @@
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">Index</h2>
         <ul class="govuk-list govuk-list--number govuk-body-l govuk-list--spaced">
-            <li><a href="#whatDoWeMean">What do we mean by bulk uploads?</a></li>
-            <li><a href="#whatIsTheProblem">What is the problem? What are the errors?</a></li>
-            <li><a href="#scale">What is the scale of the problem? Are things improving or getting worse?</a></li>
+            <li><a href="#whatDoWeMean">What do we mean by bulk uploads? And a better name?</a></li>
+            <li><a href="#whatIsTheProblem">The problem: errors, scale, are things improving or getting worse?</a></li>
             <li><a href="#heuristic">High-level heuristic review of the existing Orbeon bulk upload process</a></li>
             <li><a href="#whatWeShouldDo">What we should do</a></li>            
             <li><a href="#MIconcept">Global collections MI report [concept]</a></li>
             <li><a href="#CollectionActivityReportConcept">Collection activity report (with error reporting) [concept]</a></li>
-            <li>What does success look like (north star)?</li>
+            <li><a href="visionForBetter">A vision for better: Delta 2.0 Excel upload and validation reports</a></li>
             <li>Final thought: thinking bigger – a case for renaming this work from "bulk upload" to "Excel upload" to make Delta more versatile.</li>
         </ul>
       </div>
@@ -56,8 +55,19 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">What do we mean by bulk uploads?</h2>
-        <p>In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document.</p>
-        <p>Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
+        <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document. Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
+
+        <h2 class="govuk-heading-m"><del>Bulk</del> Excel uploads - a better name?</h2>      
+        <p>To date, this area of Delta has been called 'bulk uploads'. As a label we feel it is confusing, not representative of how users see the task and we also believe it constrains creative thinking, about new ways Delta could be used. </p>         
+        <!-- <p>We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing processes. They either upload data as an Excel file or, if that fails, manually copy and paste it into the Orbeon form. This is inefficient and prone to errors.</p>          -->
+        <p>We propose renaming 'Bulk uploads' to 'Excel uploads' and overhauling the UX..</p>       
+        
+        <!-- <ul class="govuk-list govuk-list--bullet govuk-body-l">        
+          <li><strong>Form-based</strong> – best for simple collections where a return has only a small number of records</li>
+          <li><strong>Excel upload</strong> – best for complex collections and medium to large numbers of records</p>
+          <li><strong>API</strong> – best for collections with very large volumes of data</li>
+        </ul>   -->
+
       </div>
     </div>
   </div>  
@@ -155,9 +165,19 @@
       <div class="govuk-details__text">
 
       <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Collection name</strong>: The last date any organisation can submit a return. This includes extensions.</li>
+        <li><strong>Status</strong>:
+          <ul>
+            <li><strong>Future</strong>: The collection is currently closed and will open in the future.</li>
+            <li><strong>Open</strong>: The collection is open, and there are no extensions.</li>
+            <li><strong>Extended</strong>: The collection is open and there is an extension for one or more organisations.</li>
+            <li><strong>Closed</strong>: The collection is closed, and returns cannot be submitted.</li>
+          </ul>
+        </li>        
+        <li><strong>Deadline</strong>: The last date any organisation can submit a return. This includes extensions.</li>
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
         <li><strong>Fields</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
-        <li><strong>Form, Bulk and API</strong>: The number of organisations that have submitted a return (not individual records) broken down by submission method.</li>
+        <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method.</li>
         <li><strong>Organisations</strong>: the number of unique organisations who have a return (with any status).</li>
         <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission.</li>
         <li><strong>Errors</strong>: the percentage of organisations who when submitting a return and experienced one or more validation errors.</li>
@@ -468,8 +488,8 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Channel <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Fields <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Form <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Excel <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Bulk <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">API <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Organisations<img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records<img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Errors<img src="/public/images/sort.svg"></a></th>
@@ -486,7 +506,7 @@
                 <td class="govuk-table__cell">70%</td>
                 <td class="govuk-table__cell">n/a</td>
                 <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport" title="Submission dasboard report">100</a></td>
-                <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport" title="Record store">1,000 <small class="delta-text-secondary">(100)</small></a></td>
+                <td class="govuk-table__cell"><a href="/waySubmissionsDashboardReport" title="Record store">1,000 <small class="delta-text-secondary">(av. 100)</small></a></td>
                 <td class="govuk-table__cell"><a href="" title="Collection error report">60%</a></td>
               </tr>
             </tbody>
