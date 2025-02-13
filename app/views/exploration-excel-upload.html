@@ -20,9 +20,12 @@
 
   <div class="panel xdelta-text-center">
     <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
-    <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-      Delta <del>Bulk</del> Excel uploads design exploration
+    <h1 class="govuk-heading-xl govuk-!-margin-top-9 govuk-!-margin-bottom-3">
+      Delta 2.0 <del>bulk</del> Excel uploads
     </h1>
+    <h1 class="govuk-heading-l ">
+      Design exploration
+    </h1>    
 
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
       Updated: Thursday 13 February 2025
@@ -54,7 +57,7 @@
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">What do we mean by bulk uploads?</h2>
         <p>In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document.</p>
-        <p>Another method for bulk uploading data is through an API, but this is out of scope for this investigation.</p>
+        <p>Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
       </div>
     </div>
   </div>  
@@ -97,7 +100,7 @@
         <h2 class="govuk-heading-l">What we should do</h2>
         <h2 class="govuk-heading-m">Suggested next steps</h2>
         <ul class="govuk-list govuk-list--number">
-          <li><strong>Create an <a href="MIconcept">MI report</a></strong> – delivering actionable data on collections, bulk uploads, and errors.</li>
+          <li><strong>Create an <a href="#MIconcept">MI report</a></strong> – delivering actionable data on collections, bulk uploads, and errors.</li>
           <li><strong>Optimise the UX of bulk upload </strong> – including error reporting.</li>
           <li><strong>Assess UX improvements</strong> – collaborate with development to refine the bulk upload process within Orbeon constraints. Prioritise a pragmatic 80:20 approach, delivering high-impact changes in weeks, not months.</li>
         </ul>
@@ -112,10 +115,8 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">Collections MI report [concept]</h2>
-        <h2 class="govuk-heading-m">Knowledge is power!</h2>
-        <p>Access to clear and actionable insight is essential to understanding and resolving issues with bulk uploads.</p>
-        <p>The Collections MI report would also facilitate wider improvements across Delta.</p>
-        <p><strong>We believe the creation of a Management information (MI) reporting system be included as part of this project.</strong></p>
+        <p>Access to clear and actionable insight is essential to understanding and resolving issues with bulk uploads. The Collections MI report would also facilitate wider improvements across Delta.</p>
+        <p>We believe the creation of a Management information (MI) reporting system be included as part of this project.</p>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -143,7 +144,7 @@
     </div>
 
 
-    <h2 class="govuk-heading-l govuk-!-static-margin-top-8">Collection report concept</h3>
+    <h2 class="govuk-heading-l govuk-!-static-margin-top-8">Collection MI report</h3>
 
     <details class="govuk-details">
       <summary class="govuk-details__summary">
@@ -157,9 +158,9 @@
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
         <li><strong>Fields</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
         <li><strong>Form, Bulk and API</strong>: The number of organisations that have submitted a return (not individual records) broken down by submission method.</li>
-        <li><strong>Returns</strong>: the number of submissions from unique organisations.</li>
+        <li><strong>Organisations</strong>: the number of unique organisations who have a return (with any status).</li>
         <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission.</li>
-        <li><strong>Errors</strong>: the percentage of organisations that submitted a return and experienced one or more errors.</li>
+        <li><strong>Errors</strong>: the percentage of organisations who when submitting a return and experienced one or more validation errors.</li>
       </ul>
 
 
@@ -464,12 +465,12 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Type <img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Channel <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Fields <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Form <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Bulk <img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">API <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Returns<img src="/public/images/sort.svg"></a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Organisations<img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records<img src="/public/images/sort.svg"></a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Errors<img src="/public/images/sort.svg"></a></th>
               </tr>
@@ -538,7 +539,7 @@
 
     <h2 class="govuk-heading-m govuk-!-static-margin-top-8">Discuss</h2>
     <ul class="govuk-list govuk-list--bullet">
-      <li><strong>Better name for type or channel</strong>: The grouping of collections should be based on their division, for example, Funding Service.</li>
+      <li><strong><del>Better name for type or channel</strong>: The grouping of collections should be based on their division, for example, Funding Service.</del></li>
       <li><strong>No start date</strong>: There is not enough space to display the start date.</li>
       <li><strong>Links in table data</strong>: Add links to the collection entity, submission report, and record store.</li>
       <li><strong>Collection group in table</strong>: This would allow users to filter and compare historic collections, particularly error rates.</li>
