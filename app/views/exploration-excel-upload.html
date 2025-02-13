@@ -21,7 +21,7 @@
   <div class="panel xdelta-text-center">
     <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
     <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-      Delta bulk upload errors
+      Delta <del>Bulk</del> Excel uploads design exploration
     </h1>
 
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
@@ -29,16 +29,16 @@
     </h4>
 
 
-    <div class="govuk-grid-row">
+    <div class="govuk-grid-row  govuk-!-margin-top-6">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Proposal structure</h2>
-        <ul class="govuk-list govuk-list--number">
-            <li>What do we mean by bulk uploads?</li>
-            <li>What is the problem? What are the errors?</li>
-            <li>What is the scale of the problem? Are things improving or getting worse?</li>
-            <li>High-level heuristic review of the existing Orbeon bulk upload process (template download, data entry, form data upload, error reporting, and help and guidance).</li>
-            <li>A proposal and concept for a <a href="#MIconcept">global collections MI report</a>.</li>
-            <li>A proposal and concept for a <a href="#CollectionActivityReportConcept">collection manager activity report with error reporting</a>.</li>
+        <h2 class="govuk-heading-l">Index</h2>
+        <ul class="govuk-list govuk-list--number govuk-body-l govuk-list--spaced">
+            <li><a href="#whatDoWeMean">What do we mean by bulk uploads?</a></li>
+            <li><a href="#whatIsTheProblem">What is the problem? What are the errors?</a></li>
+            <li><a href="#scale">What is the scale of the problem? Are things improving or getting worse?</a></li>
+            <li><a href="#heuristic">High-level heuristic review of the existing Orbeon bulk upload process</a></li>
+            <li><a href="#MIconcept">Global collections MI report [concept]</a></li>
+            <li><a href="#CollectionActivityReportConcept">Collection activity report (with error reporting) [concept]</a></li>
             <li>Given Orbeon is central to bulk uploads, what can we realistically change in the user experience?</li>
             <li>What does success look like (north star)?</li>
             <li>80:20 rule – how can we deliver 80% of the value in 20% of the time? What can we ship soon – in weeks, not months?</li>
@@ -50,13 +50,61 @@
 
   </div>
 
+
+  <div class="panel" id="whatDoWeMean">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">What do we mean by bulk uploads?</h2>
+        <p>In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document.</p>
+        <p>Another method for bulk uploading data is through an API, but this is out of scope for this investigation.</p>
+      </div>
+    </div>
+  </div>  
+
+  <div class="panel" id="whatIsTheProblem">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">What is the scale of the problem?</h2>
+        <p>Feedback from data providers indicates that the bulk upload process is complex and prone to errors. As a result, many users opt to enter returns manually, one at a time, using the standard Orbeon forms.</p>
+        <p>Analysis of 27 collections by Delta's BA team suggest 20 of them required manual intervention to get the data into a valid format for submission.</p>
+        <p><strong>This represents a failure rate of 75% to get [bulk uploaded] data right first time.</strong></p>
+        <h3 class="govuk-heading-m">Are things improving or getting worse?</h3>
+        <p>As of Thursday 13 February 2025, there is little actionable insight into bulk upload errors. No reports exist. Extracting and analysing raw data is too time-consuming and not feasible for ongoing monitoring.</p>
+
+        <p>We recommend urgently creating <a href="#MIconcept">a report</a> to provide real-time insight. This will:</p>
+
+        <ul class="govuk-list govuk-list--bullet">
+          <li>establish a baseline of the current experience</li>
+          <li>track improvements with evidence</li>
+          <li>enable ongoing monitoring to support timely interventions when needed</li>
+
+        </ul>
+
+    
+    
+    
+      </div>
+    </div>
+  </div>   
+  
+  <div class="panel" id="scale">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-l">High-level heuristic review of the existing Orbeon bulk upload process</h2>
+        <h2 class="govuk-heading-m">Template download, data entry, form data upload, error reporting, and help and guidance</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint similique ipsum laboriosam optio mollitia veritatis voluptate quo hic blanditiis itaque, quisquam cumque explicabo, nesciunt delectus, ullam ea voluptatum quasi aliquam!</p>
+      </div>
+    </div>
+  </div>     
+
   <div class="panel" id="MIconcept">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">Collections MI report [concept]</h2>
-        <h2 class="govuk-heading-m"><em>Knowledge is power!</em></h2>
-        <p class="govuk-body-l">Access to clear and actionable insight is essential to understanding and resolving issues with bulk uploads. This inight would also facilitate wider improvements across Delta. </p>
-        <p class="govuk-body-l"><strong>We believe the creation of a Management information (MI) reporting system be included as part of this project.</strong></p>
+        <h2 class="govuk-heading-m">Knowledge is power!</h2>
+        <p>Access to clear and actionable insight is essential to understanding and resolving issues with bulk uploads.</p>
+        <p>The Collections MI report would also facilitate wider improvements across Delta.</p>
+        <p><strong>We believe the creation of a Management information (MI) reporting system be included as part of this project.</strong></p>
 
         <div class="govuk-warning-text">
           <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
@@ -71,8 +119,8 @@
 
         <h3 class="govuk-heading-m">What problems does this solve?</h3>
         <ul class="govuk-list govuk-list--bullet">
-          <li><strong>Accessible to all*</strong>: <em>For the first time ever</em> one-click access to a global list of all collections, which can be reordered, with real-time insights.</li>
-          <li><strong>Public-facing collection page</strong>: One-click access to view the public-facing collection entity page.</li>
+          <li><strong>Accessible to all*</strong>: <em>For the first time ever</em> one-click access to a global list of all collections with powerful filtering and real-time insights.</li>
+          <li><strong>Public-facing collections</strong>: One-click access to view the public-facing collection entity page.</li>
           <li><strong>Form complexity</strong>: A high-level overview of the form's complexity, based on the amount of data requested.</li>
           <li><strong>Collection channel and data upload options</strong>: Ability to view and filter by collection channel (for example, Funding Service) and supported data upload options.</li>
           <li><strong>Submission data</strong>: High-level submission data with links to the submission report.</li>
