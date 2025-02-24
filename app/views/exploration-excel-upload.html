@@ -40,7 +40,7 @@
             <li><a href="#whatIsTheProblem">The scale of the problem</a></li>
             <li><a href="#collectionCreationProcess">Existing collection creation process and Excel upload journey</a></li>            
             <li><a href="#validationIssuesAndFixes">Validation issues</a></li>
-            <li><a href="#whatCouldGoodLookLike">Collection activity report (with error reporting) [concept]</a></li>
+            <li><a href="#whatCouldGoodLookLike">What good could look like (design concepts)</a></li>
         </ul>
       </div>
     </div>
@@ -146,25 +146,21 @@
 
 
   <div class="panel" id="whatCouldGoodLookLike">
+    <h2 class="govuk-heading-l">What good could look like</h2>
     <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <!-- Overview -->
+        <h2 class="govuk-heading-l">Step X</h3>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint aperiam, inventore repudiandae atque totam ea natus cumque. Esse consectetur numquam dolor ea. Magnam eos inventore sapiente ut ea nesciunt.</p>
+      </div>
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">What good could look like</h3>
-        <p>From the perspective of data provider&hellip;</p>
-
-        
-        <ul class="govuk-list govuk-list--number govuk-list--spaced">
-            <li><strong>Download Excel template</strong>: Users can download a pre-formatted Excel template.</li>
-            <li><strong>Enter data into the Excel template</strong>: The template includes guidance and inline validation.</li>
-            <li><strong>Upload Excel file</strong>: Users can upload the Excel file without needing to convert it to CSV.</li>
-            <li><strong>Successful upload</strong>: A confirmation page is displayed.</li>
-            <li><strong>Errors in submission</strong>: An error report is generated.
-                <ul class="govuk-list govuk-list--number govuk-list--spaced">
-                    <li>The error report should highlight which cells contain errors (for example, B36) and provide guidance on how to fix them (such as incorrect data type, out of range, or missing information).</li>
-                    <li>Users should see an inline preview of the error data without needing to download or open the file.</li>
-                </ul>
-            </li>
-            <li><strong>Fixing errors</strong>: Users can either correct the errors in Excel and reupload the file or edit the data in the Orbeon form view.</li>
-        </ul>
+        <!-- Design concept -->
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="file-upload-1">
+          Upload a file
+        </label>
+          <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+        </div>         
 
       </div>
     </div>
