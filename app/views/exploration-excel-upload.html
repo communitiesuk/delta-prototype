@@ -21,14 +21,14 @@
   <div class="panel xdelta-text-center">
     <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
     <h1 class="govuk-heading-xl govuk-!-margin-top-9 govuk-!-margin-bottom-3">
-      Delta 2.0 <del>bulk</del> Excel uploads
+      Delta 2.0 bulk uploads
     </h1>
     <h1 class="govuk-heading-l ">
       Design exploration
     </h1>    
 
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
-      Updated: Thursday 13 February 2025
+      Updated: Monday 24 February 2025
     </h4>
 
 
@@ -37,13 +37,10 @@
         <h2 class="govuk-heading-l">Index</h2>
         <ul class="govuk-list govuk-list--number govuk-body-l govuk-list--spaced">
             <li><a href="#whatDoWeMean">What do we mean by bulk uploads? And a better name?</a></li>
-            <li><a href="#whatIsTheProblem">The problem: errors, scale, are things improving or getting worse?</a></li>
-            <li><a href="#heuristic">High-level heuristic review of the existing Orbeon bulk upload process</a></li>
-            <li><a href="#whatWeShouldDo">What we should do</a></li>            
-            <li><a href="#MIconcept">Global collections MI report [concept]</a></li>
-            <li><a href="#CollectionActivityReportConcept">Collection activity report (with error reporting) [concept]</a></li>
-            <li><a href="visionForBetter">A vision for better: Delta 2.0 Excel upload and validation reports</a></li>
-            <li>Final thought: thinking bigger – a case for renaming this work from "bulk upload" to "Excel upload" to make Delta more versatile.</li>
+            <li><a href="#whatIsTheProblem">The scale of the problem</a></li>
+            <li><a href="#collectionCreationProcess">Existing collection creation process and Excel upload journey</a></li>            
+            <li><a href="#validationIssuesAndFixes">Validation issues</a></li>
+            <li><a href="#whatCouldGoodLookLike">Collection activity report (with error reporting) [concept]</a></li>
         </ul>
       </div>
     </div>
@@ -55,18 +52,14 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">What do we mean by bulk uploads?</h2>
-        <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document. Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
+        <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document.</p>
+        <p>Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
 
-        <h2 class="govuk-heading-m"><del>Bulk</del> Excel uploads - a better name?</h2>      
-        <p>To date, this area of Delta has been called 'bulk uploads'. As a label we feel it is confusing, not representative of how users see the task and we also believe it constrains creative thinking, about new ways Delta could be used. </p>         
-        <!-- <p>We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing processes. They either upload data as an Excel file or, if that fails, manually copy and paste it into the Orbeon form. This is inefficient and prone to errors.</p>          -->
-        <p>We propose renaming 'Bulk uploads' to 'Excel uploads' and overhauling the UX..</p>       
+        <h2 class="govuk-heading-m">Bulk uploads - a better name?</h2>      
+        <p>To date, the uploading of data via an Excel template has been referred to as 'bulk uploads'. As a label we feel it is confusing, not representative of how users see the task and we also believe it constrains creative thinking about new ways Delta could be utilised.</p>            
+        <p>It is worth noting that upload single records (i.e. not bulk records) via Excel often provides a better UX (especially for complex returns).</p>      
+        <p><strong>We propose renaming 'Bulk uploads' to 'Excel uploads'.</strong></p>       
         
-        <!-- <ul class="govuk-list govuk-list--bullet govuk-body-l">        
-          <li><strong>Form-based</strong> – best for simple collections where a return has only a small number of records</li>
-          <li><strong>Excel upload</strong> – best for complex collections and medium to large numbers of records</p>
-          <li><strong>API</strong> – best for collections with very large volumes of data</li>
-        </ul>   -->
 
       </div>
     </div>
@@ -76,552 +69,83 @@
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">What is the scale of the problem?</h2>
+        <p>We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing,internal processes.</p>
         <p>Feedback from data providers indicates that the bulk upload process is complex and prone to errors. As a result, many users opt to enter returns manually, one at a time, using the standard Orbeon forms.</p>
         <p>Analysis of 27 collections by Delta's BA team suggest 20 of them required manual intervention to get the data into a valid format for submission.</p>
         <p><strong>This represents a failure rate of 75% to get [bulk uploaded] data right first time.</strong></p>
+        
         <h3 class="govuk-heading-m">Are things improving or getting worse?</h3>
-        <p>As of Thursday 13 February 2025, there is little actionable insight into bulk upload errors. No reports exist. Extracting and analysing raw data is too time-consuming and not feasible for ongoing monitoring.</p>
+        <p>To date there is little easily accessible insight into bulk upload errors; no reports exist. Extracting and analysing raw data is too time-consuming and not feasible for ongoing monitoring.</p>
 
-        <p>We recommend urgently creating <a href="#MIconcept">a report</a> to provide real-time insight. This will:</p>
+        <h3 class="govuk-heading-m">The need for data</h3>
+
+      <img src="/public/images/MIconcept.png" alt="MI Collection Report concept" class="govuk-!-static-margin-bottom-3" style="max-width: 100%;">
+
+        <p>We recommend creating a Management Information (MI) Collection Report to provide real-time, quantified insight. This will:</p>
 
         <ul class="govuk-list govuk-list--bullet">
-          <li>establish a baseline of the current experience</li>
-          <li>track improvements with evidence</li>
-          <li>enable ongoing monitoring to support timely interventions when needed</li>
+          <li>Establish a baseline of the current experience</li>
+          <li>Track improvements with quantifiable evidence</li>
+          <li>Enable ongoing monitoring to support timely interventions when needed</li>
         </ul>
+
+        <p>There are many other benefits of investing in the creation of an MI Collection Report, but these will be addressed separating on on the dedicated <a href="/MIreport">MI Collections Report prototype</a> page.</p>
 
       </div>
     </div>
   </div>   
 
-  <div class="panel" id="heuristic">
+  <div class="panel" id="collectionCreationProcess">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">High-level heuristic review of the existing Orbeon bulk upload process</h2>
-        <h2 class="govuk-heading-m">Template download, data entry, form data upload, error reporting, and help and guidance</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint similique ipsum laboriosam optio mollitia veritatis voluptate quo hic blanditiis itaque, quisquam cumque explicabo, nesciunt delectus, ullam ea voluptatum quasi aliquam!</p>
-      </div>
-    </div>
-  </div>       
-  
-  <div class="panel" id="whatWeShouldDo">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">What we should do</h2>
-        <h2 class="govuk-heading-m">Suggested next steps</h2>
+        <h2 class="govuk-heading-l">Collection creation process and Excel upload journey</h2>
         <ul class="govuk-list govuk-list--number">
-          <li><strong>Create an <a href="#MIconcept">MI report</a></strong> – delivering actionable data on collections, bulk uploads, and errors.</li>
-          <li><strong>Optimise the UX of bulk upload </strong> – including error reporting.</li>
-          <li><strong>Assess UX improvements</strong> – collaborate with development to refine the bulk upload process within Orbeon constraints. Prioritise a pragmatic 80:20 approach, delivering high-impact changes in weeks, not months.</li>
+          <li>Collection manager: creates collection (form) in Orbeon, including validation rules.</li>
+          <li>Collection manager: Excel template is exported from Orbeon.<sup>*</sup></li>
+          <li>Data provider: downloads Excel template.</li>
+          <li>Data provider: inputs data.</li>
+          <li>Excel: if inline validation present they correct data in Excel until now warnings.</li>
+          <li>Data provider: uploads Excel document.</li>
+          <li>Orbeon: processes uploaded file creating a record for each row in the Excel document.</li>
+          <li>Orbeon: if there are validation errors the user (data provider) is provided with no details on where the validation errors are or how to address them.</li>
+          <li>Data provider: either contacts support for assistance, or abandons process and uploads data one record at a time via the Orbeon form interface.</li>
         </ul>
+
+        <p><strong><sup>*</sup> Need to observe this process and undertand if validation rules are added inline into the Excel template.</strong></p>
+
       </div>
     </div>
-  </div>    
-
-
-
-
-  <div class="panel" id="MIconcept">
+  </div>
+  
+  <div class="panel" id="validationIssuesAndFixes">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Collections MI report [concept]</h2>
-        <p>Access to clear and actionable insight is essential to understanding and resolving issues with bulk uploads. The Collections MI report would also facilitate wider improvements across Delta.</p>
-        <p>We believe the creation of a Management information (MI) reporting system be included as part of this project.</p>
-
-        <div class="govuk-warning-text">
-          <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-          <strong class="govuk-warning-text__text">
-            <span class="govuk-visually-hidden">Warning</span>
-                  This is not a replacement for the Submissions Dashboard.
-          </strong>
-        </div>
-
-
-        <p class="govuk-body-l"></p>
-
-        <h3 class="govuk-heading-m">What problems does this solve?</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><strong>Accessible to all*</strong>: <em>For the first time ever</em> one-click access to a global list of all collections with powerful filtering and real-time insights.</li>
-          <li><strong>Public-facing collections</strong>: One-click access to view the public-facing collection entity page.</li>
-          <li><strong>Form complexity</strong>: A high-level overview of the form's complexity, based on the amount of data requested.</li>
-          <li><strong>Collection channel and data upload options</strong>: Ability to view and filter by collection channel (for example, Funding Service) and supported data upload options.</li>
-          <li><strong>Submission data</strong>: High-level submission data with links to the submission report.</li>
-          <li><strong>Record store view</strong>: One-click access to a filtered record store view for the collection.</li>
-          <li><strong>Errors</strong>:  Error rates provide insights to support collection improvements and enable timely, targeted support from the relevant collection manager.</li>
+        <h2 class="govuk-heading-l">Validation issues</h2>
+        <ul class="govuk-list govuk-list--number">
+          <li>Users download the Excel template</li>
+          <li>Not all Excel templates have 'inline validation. And the ones that do often have a discrepancy between the in Excel (inline) validation rules and the validation rules applied by Orbeon (at point of upload).</li>
         </ul>
 
+        
+        <h2 class="govuk-heading-l">Suggested fixes</h2>
+        <ul class="govuk-list govuk-list--number">
+          <li>Ensure Excel templates contain inline validation rules</li>
+          <li>Ensure validation rules in Excel match and operate in the same way as the validation rules in Orbon (applied at point of upload)</li>
+          <li>Create a validation error report that:
+            <ul class="govuk-list govuk-list--number">
+              <li>Clearly directs the data provider to the specific cells that contain invalid data</li>
+              <li>Provide clear guidance on the error and how to fix it.</li>
+            </ul>
+          </li>
+          <li>Inform collections managers if a data provider is repeatedly encountering validation errors on upload.</li>
+          <li>Inform collections managers if a data provider abandons a submission made by Excel and instead opts to manually upload the date, via a form.</li>
+        </ul>
       </div>
     </div>
+  </div>     
 
 
-    <h2 class="govuk-heading-l govuk-!-static-margin-top-8">Collection MI report</h3>
-
-    <details class="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Help with table labels
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-
-      <ul class="govuk-list govuk-list--spaced">
-        <li><strong>Collection name</strong>: The last date any organisation can submit a return. This includes extensions.</li>
-        <li><strong>Status</strong>:
-          <ul>
-            <li><strong>Future</strong>: The collection is currently closed and will open in the future.</li>
-            <li><strong>Open</strong>: The collection is open, and there are no extensions.</li>
-            <li><strong>Extended</strong>: The collection is open and there is an extension for one or more organisations.</li>
-            <li><strong>Closed</strong>: The collection is closed, and returns cannot be submitted.</li>
-          </ul>
-        </li>        
-        <li><strong>Deadline</strong>: The last date any organisation can submit a return. This includes extensions.</li>
-        <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
-        <li><strong>Fields</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
-        <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method.</li>
-        <li><strong>Organisations</strong>: the number of unique organisations who have a return (with any status).</li>
-        <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission.</li>
-        <li><strong>Errors</strong>: the percentage of organisations who when submitting a return and experienced one or more validation errors.</li>
-      </ul>
-
-
-      </div>
-    </details>
-
-    <!-- table results start -->
-    <div class="delta-results">
-        <!-- FILTERS START ============= -->
-        <div id="delta-results-filters" class="hidden">
-          <div class="govuk-!-padding-4" style="background-color: #f3f2f1;">
-            <h1 class="govuk-heading-l">
-              Filters <strong class="govuk-tag">1 active</strong>
-            </h1>
-            <!-- Quick search -->
-            <div>
-              <div class="govuk-form-group">
-                <h1 class="govuk-label-wrapper">
-                  <label class="govuk-label govuk-label--s govuk-visually-hidden" for="Keyword filter">
-                    Filters results by keywords
-                </h1>
-                <input class="govuk-input" id="filter-keyword" name="filterKeyword" type="text" placeholder="Text search">
-              </div>
-            </div>
-            <!-- ACCORDION -->
-            <div class="govuk-accordion delta-accordion" data-module="govuk-accordion" id="table-filters">
-              <!-- DATE RANGE -->
-              <div class="govuk-accordion__section">
-                <div class="govuk-accordion__section-header">
-                  <h2 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-l">
-                      Date range <strong class="govuk-tag">Active</strong>
-                    </span>
-                  </h2>
-                  <!-- Delta's filter active indicator and clear option ====== -->
-                  <div class="delta-accordion-filter-status">
-                    <a href="#" title="Clear data range filter inputs">Clear <span class="govuk-visually-hidden">active date range filters</span></a>
-                  </div>
-                </div>
-                <div id="accordion-default-content-1" class="govuk-accordion__section-content">
-                  <!-- DATE FROM -->
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h1 class="govuk-fieldset__heading">
-                          Open
-                        </h1>
-                      </legend>
-                        <!-- <div id="contact-hint" class="govuk-hint">
-                          Select one option
-                        </div> -->
-                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="date-to-all" data-aria-controls="conditional-date-to-specific">
-                          <label class="govuk-label govuk-radios__label" for="contact-2">
-                            Earliest open date
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="date-to-specific" data-aria-controls="conditional-date-from-specific">
-                          <label class="govuk-label govuk-radios__label" for="date-to-specific">
-                            Specific open date
-                          </label>
-                        </div>
-
-                        <div class="govuk-radios__conditional" id="conditional-date-from-specific">
-                          <div class="govuk-form-group">
-                            <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                <h1 class="govuk-fieldset__heading">
-                                  Date
-                                </h1>
-                              </legend>
-
-                              <div id="date-to-hint" class="govuk-hint">
-                                For example, 2 2022
-                              </div>
-
-                              <div class="delta-date-picker-with-icon-button">
-                                <!-- Date input as text ====== -->
-                                <div class="govuk-date-input" id="range-from">
-                                  <!-- <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-from-day">
-                                        Day
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-day" name="range-from-day" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>                                 -->
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-from-month">
-                                        Month
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-from-month" name="range-from-month" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-from-year">
-                                        Year
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-from-year" name="range-from-year" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                </div>
-                                <!-- Date input as calendar picker ====== -->
-                                <div>
-                                  <label class="govuk-label govuk-date-input__label" for="range-calendar">
-                                    <span class="delta-visually-hidden">Calendar</span>
-                                  </label>
-                                  <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
-                                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </div>
-                            </fieldset>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                  <!-- DATE TO -->
-                  <div class="govuk-form-group">
-                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                        <h1 class="govuk-fieldset__heading">
-                          Deadline
-                        </h1>
-                      </legend>
-                        <!-- <div id="contact-hint" class="govuk-hint">
-                          Select one option
-                        </div> -->
-                      <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-any" name="date-to" type="radio" value="phone" data-aria-controls="conditional-date-to-specific">
-                          <label class="govuk-label govuk-radios__label" for="contact-2">
-                            Latest deadline
-                          </label>
-                        </div>
-                        <div class="govuk-radios__item">
-                          <input class="govuk-radios__input" id="date-to-specific" name="date-to" type="radio" value="email" data-aria-controls="conditional-date-to-specific">
-                          <label class="govuk-label govuk-radios__label" for="date-to-specific">
-                            Specific deadline
-                          </label>
-                        </div>
-
-                        <div class="govuk-radios__conditional" id="conditional-date-to-specific">
-                          <div class="govuk-form-group govuk-form-group--error">
-                            <fieldset class="govuk-fieldset" role="group" aria-describedby="date-to-hint">
-                              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-                                <h1 class="govuk-fieldset__heading">
-                                  Date
-                                </h1>
-                              </legend>
-
-                              <div id="date-to-hint" class="govuk-hint">
-                                For example, 2 2024
-                              </div>
-                              <p id="date-to-error" class="govuk-error-message">
-                                <span class="govuk-visually-hidden">Error:</span> Month and year required
-                              </p>
-
-                              <div class="delta-date-picker-with-icon-button">
-                                <!-- Date input as text ====== -->
-                                <div class="govuk-date-input" id="range-to">
-                                  <!-- <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-to-day">
-                                        Day
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-day" name="range-to-day" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>                                 -->
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-to-month">
-                                        Month
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="range-to-month" name="range-to-month" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-                                  <div class="govuk-date-input__item">
-                                    <div class="govuk-form-group">
-                                      <label class="govuk-label govuk-date-input__label" for="range-to-year">
-                                        Year
-                                      </label>
-                                      <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="range-to-year" name="range-to-year" type="text" inputmode="numeric">
-                                    </div>
-                                  </div>
-
-                                </div>
-                                <!-- Date input as calendar picker ====== -->
-                                <div>
-                                  <label class="govuk-label govuk-date-input__label" for="range-calendar">
-                                    <span class="delta-visually-hidden">Calendar</span>
-                                  </label>
-                                  <button class="govuk-button detla-icon-button" title="Select date with calendar picker">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="delta-icon-button-icon">
-                                      <path d="M152 24c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L64 64C28.7 64 0 92.7 0 128l0 16 0 48L0 448c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-256 0-48 0-16c0-35.3-28.7-64-64-64l-40 0 0-40c0-13.3-10.7-24-24-24s-24 10.7-24 24l0 40L152 64l0-40zM48 192l352 0 0 256c0 8.8-7.2 16-16 16L64 464c-8.8 0-16-7.2-16-16l0-256z"/>
-                                    </svg>
-                                  </button>
-                                </div>
-                              </div>
-                            </fieldset>
-                          </div>
-                        </div>
-                      </div>
-                    </fieldset>
-                  </div>
-                </div>
-              </div>
-              <!-- STATUS -->
-              <div class="govuk-accordion__section">
-                <div class="govuk-accordion__section-header">
-                  <h2 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                      Status
-                    </span>
-                  </h2>
-                </div>
-                <div id="filter-group-status" class="govuk-accordion__section-content">
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
-                        <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                          Future
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
-                        <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                          Open
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
-                        <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                          Extended
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
-                        <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                          Closed
-                        </label>
-                      </div>
-                    </div>
-                </div>
-              </div>
-              <!-- INCLUDE REMOVED ORGANISATIONS -->
-              <div class="govuk-accordion__section">
-                <div class="govuk-accordion__section-header">
-                  <h2 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                      Removed organisations
-                    </span>
-                  </h2>
-                </div>
-                <div id="filter-group-status" class="govuk-accordion__section-content">
-                    <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="includeRemoved" name="includeRemoved" type="checkbox" value="includeRemoved">
-                        <label class="govuk-label govuk-checkboxes__label" for="includeRemoved">
-                          Include removed organisations
-                        </label>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <div class="govuk-button-group">
-              <button class="govuk-button">Apply filters</button>
-              <a href="#" class="govuk-link" title="Clear all active filters">Clear filters</a>
-              <a href="#" class="govuk-link" title="Reset filters to their state when the page first loaded">Reset filters</a>
-            </div>
-          </div>
-        </div>
-      <!-- FILTERS END ============= -->
-      <!-- table data here -->
-      <div id="delta-results-data">
-        <!-- result count, filter toggle (inc. active filter count) quick search,  -->
-        <div class="delta-results-data-header">
-          <div class="delta-results-table-filter-summary delta-flex-horizontal">
-            <div>
-              <p class="govuk-!-margin-bottom-0">Displaying 1 to 10 of 24 <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">1 active filter</strong></p>
-            </div>
-            <div>
-                <button class="govuk-button govuk-button--inverse" id="toggleFiltersPanel" onclick="toggleButtonText()"><img src="/public/images/icon-search.svg" alt="icon search" class="delta-icon"> <span id="filterBtnText">Show filters</span></button>
-            </div>
-          </div>
-        </div>
-
-        <!-- data table -->
-        <div class="delta-scrollable-pane" id="delta-scrollable-pane">
-          <table class="govuk-table govuk-table--small-text-until-tablet" id="resultTable">
-            <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections MI report</caption>
-            <thead class="govuk-table__head">
-              <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Channel <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Fields <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Form <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Excel <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Bulk <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Organisations<img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Records<img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Errors<img src="/public/images/sort.svg"></a></th>
-              </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Urban Hedgehog Census 2023</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">29 July 2025</td>
-                <td class="govuk-table__cell">Stats</td>
-                <td class="govuk-table__cell">20</td>
-                <td class="govuk-table__cell">30%</td>
-                <td class="govuk-table__cell">70%</td>
-                <td class="govuk-table__cell">n/a</td>
-                <td class="govuk-table__cell"><a href="#">100</a></td>
-                <td class="govuk-table__cell"><a href="#">1,000 <small>(av. 100)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">60%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Rural Badger Survey</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Pending</strong></td>
-                <td class="govuk-table__cell">15 May 2025</td>
-                <td class="govuk-table__cell">Online</td>
-                <td class="govuk-table__cell">15</td>
-                <td class="govuk-table__cell">40%</td>
-                <td class="govuk-table__cell">50%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">75</a></td>
-                <td class="govuk-table__cell"><a href="#">800 <small>(av. 80)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">45%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Wildflower Distribution</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">1 June 2025</td>
-                <td class="govuk-table__cell">Survey</td>
-                <td class="govuk-table__cell">30</td>
-                <td class="govuk-table__cell">50%</td>
-                <td class="govuk-table__cell">40%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">60</a></td>
-                <td class="govuk-table__cell"><a href="#">900 <small>(av. 90)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">30%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Coastal Bird Count</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
-                <td class="govuk-table__cell">12 Feb 2024</td>
-                <td class="govuk-table__cell">Online</td>
-                <td class="govuk-table__cell">25</td>
-                <td class="govuk-table__cell">60%</td>
-                <td class="govuk-table__cell">30%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">50</a></td>
-                <td class="govuk-table__cell"><a href="#">750 <small>(av. 75)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">25%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Urban Tree Mapping</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">20 Oct 2025</td>
-                <td class="govuk-table__cell">Survey</td>
-                <td class="govuk-table__cell">18</td>
-                <td class="govuk-table__cell">35%</td>
-                <td class="govuk-table__cell">55%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">90</a></td>
-                <td class="govuk-table__cell"><a href="#">1,200 <small>(av. 120)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">40%</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <!-- Pagination -->
-        <nav class="govuk-pagination" aria-label="Pagination">
-          <div class="govuk-pagination__prev">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-              </svg>
-              <span class="govuk-pagination__link-title">
-                Previous<span class="govuk-visually-hidden"> page</span>
-              </span>
-            </a>
-          </div>
-          <ul class="govuk-pagination__list">
-            <li class="govuk-pagination__item govuk-pagination__item--current">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-                1
-              </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-                2
-              </a>
-            </li>
-            <li class="govuk-pagination__item">
-              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-                3
-              </a>
-            </li>
-          </ul>
-          <div class="govuk-pagination__next">
-            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-              <span class="govuk-pagination__link-title">
-                Next<span class="govuk-visually-hidden"> page</span>
-              </span>
-              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-              </svg>
-            </a>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- table results end -->
-
-    <h2 class="govuk-heading-m govuk-!-static-margin-top-8">Discuss</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><strong><del>Better name for type or channel</strong>: The grouping of collections should be based on their division, for example, Funding Service.</del></li>
-      <li><strong>No start date</strong>: There is not enough space to display the start date.</li>
-      <li><strong>Links in table data</strong>: Add links to the collection entity, submission report, and record store.</li>
-      <li><strong>Collection group in table</strong>: This would allow users to filter and compare historic collections, particularly error rates.</li>
-      <li><strong>Detailed error report</strong>: A collection activity log is needed to track errors in more detail.</li>
-      <li><strong>Error rates</strong>: Errors should be categorised into types, such as "system" and "validation".</li>
-      <li><strong>Access groups</strong>: A new user privilege is needed: "Can see all collections and associated data but cannot edit or take action."</li>
-    </ul>
-  </div>
-
-  <div class="panel">
+  <div class="panel" id="whatCouldGoodLookLike">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-l">What good could look like</h3>
