@@ -157,48 +157,51 @@
 </div>
 
 <h3 class="govuk-heading-l govuk-!-margin-top-9" id="overview">Overview</h3>    
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Help with labels and removed organisations
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-    
-    <ul class="govuk-list govuk-list--spaced">
-      <li><strong>Labels:</strong>
-     :   <ul class="govuk-list govuk-list--spaced">
-          <li><strong>Organisations</strong>: The number of organisations that have been asked to submit a return for this collection.</li>
-          <li><strong>Extended</strong>: Flags whether the submission deadline for this return has been extended beyond the original collection window.</li>
-          <li><strong>Not started</strong>: The number of organisations that have not created a record.</li>
-          <li><strong>In draft</strong>: The number of organisations that have started at least one record and saved it in draft format.</li>
-          <li><strong>Awaiting certification</strong>: The number of organisations with a return that has records needing certification.</li>
-          <li><strong>Completed</strong>: The number of organisations that have submitted and certified a return. [OR for uncertifiable returns] The number of organisations that have submitted a return.</li>      
-        </ul>
-      </li>
-      <li><strong>Include removed organisations:</strong> This option includes organisations that have submitted a return but were later removed from the collection group. These organisations will be included in the report counts, such as the organisation count.</li>
-    </ul>
-
-
-  </div>
-</details>
-
-<div class="govuk-form-group">
-  <fieldset class="govuk-fieldset" aria-describedby=includeRemoved">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h1 class="govuk-fieldset__heading">
-        Removed organisations
-      </h1>
-    </legend>
-    <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="includeRemoved" name="includeRemoved" type="checkbox" value="includeRemoved">
-        <label class="govuk-label govuk-checkboxes__label" for="includeRemoved">
-          Include removed organisations
-        </label>
-      </div>
+<div class="govuk-visually-hidden">
+  <!-- 25/02/2025 ditched -->
+  <details class="govuk-details">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Help with labels and removed organisations
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+      
+      <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Labels:</strong>
+       :   <ul class="govuk-list govuk-list--spaced">
+            <li><strong>Organisations</strong>: The number of organisations that have been asked to submit a return for this collection.</li>
+            <li><strong>Extended</strong>: Flags whether the submission deadline for this return has been extended beyond the original collection window.</li>
+            <li><strong>Not started</strong>: The number of organisations that have not created a record.</li>
+            <li><strong>In draft</strong>: The number of organisations that have started at least one record and saved it in draft format.</li>
+            <li><strong>Awaiting certification</strong>: The number of organisations with a return that has records needing certification.</li>
+            <li><strong>Completed</strong>: The number of organisations that have submitted and certified a return. [OR for uncertifiable returns] The number of organisations that have submitted a return.</li>      
+          </ul>
+        </li>
+        <li><strong>Include removed organisations:</strong> This option includes organisations that have submitted a return but were later removed from the collection group. These organisations will be included in the report counts, such as the organisation count.</li>
+      </ul>
+  
+  
     </div>
-  </fieldset>
+  </details>
+  
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby=includeRemoved">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+        <h1 class="govuk-fieldset__heading">
+          Removed organisations
+        </h1>
+      </legend>
+      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="includeRemoved" name="includeRemoved" type="checkbox" value="includeRemoved">
+          <label class="govuk-label govuk-checkboxes__label" for="includeRemoved">
+            Include removed organisations
+          </label>
+        </div>
+      </div>
+    </fieldset>
+  </div>
 </div>
 
 
