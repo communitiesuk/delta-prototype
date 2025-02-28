@@ -7,33 +7,39 @@
 
   <!-- ================= UX Design notes ================= -->
   <div class="designNote govuk-!-margin-bottom-4">
-    <h2 class="govuk-heading-s">Design notes</h2>
+    <h2 class="govuk-heading-l">Design notes</h2>
 
-    <p>We are are separating 'bulk uploads' into 'Excel uploads' and 'Bulk uploads' - the latter covering XML and API methods.</p>
+    <p><strong>We are proposing separating 'bulk uploads' into 'Excel uploads' and 'Bulk uploads' - the latter covering XML and API methods.</strong></p>
 
-    <p><a href="/MI-report-vision" target="_blank">MI Report vision (in draft)</a></p>
-
-    <p><a href="https://dluhcdigital.atlassian.net/browse/DT-1290" target="_blank">DT-1290</a></p>
     <ul class="govuk-list govuk-list--bullet">    
-      <li><a href="/deltaDashboard">Original concept dashboard</a></li>
+      
     </ul>
     <h2 class="govuk-heading-s">Design objectives / challenges</h2>
     <ul class="govuk-list govuk-list--bullet">    
-      <li>Audience: internal Delta users - primarily SLT</li>
+      <li>Audience: internal Delta users - primarily SLT — who will be Delta savvy</li>
       <li>At a glance insight into current activity on Delta. Data not burried away in hard to reach systems</li>
       <li>Not a replacement for Submission Dashboard or Record Store</li>
       <li>NEW: One-click access to all collection entity pages (signpost)</li>
       <li>High level data on: submission method options, submission method uptake (usage), collection complexity, error rates (indicative)</li>
-      <li>Facilitate better form design and timely (proactive) intention</li>
+      <li>Facilitate better form design and timely (proactive) intention (when errors encountered)</li>
     </ul>    
 
     <h2 class="govuk-heading-s">To do / discuss</h2>
     <ul class="govuk-list govuk-list--bullet">    
+      <li>This is hard - enough but not too much.</li>
       <li>What do we mean by 'error rates'? Validation errors.</li>    
       <li>What are these error rates supposed to highlight /result in?</li>
       <li>Are we comfortable for error (validation) rates being for Excel uploads only?</li>
       <li>Validation error 'report'.</li>
     </ul>
+
+    <h2 class="govuk-heading-s">Useful links</h2>
+    <ul class="govuk-list govuk-list--bullet">    
+      <li><a href="/MI-report-vision" target="_blank">MI Report vision (in draft)</a></li>
+      <li><a href="/deltaDashboard">Original concept dashboard</a></li>
+      <li>Original ticket <a href="https://dluhcdigital.atlassian.net/browse/DT-1290" target="_blank">DT-1290</a></li>
+    </ul>    
+
   </div>
 
 {% endblock %}
@@ -169,7 +175,7 @@
           Help with table labels
         </span>
       </summary>
-      <div class="govuk-details__text">
+      <div class="govuk-details__text delta-reading-width">
 
       <ul class="govuk-list govuk-list--spaced">
         <li><strong>Collection name</strong>: The last date any organisation can submit a return. This includes extensions.</li>
@@ -177,13 +183,12 @@
           <ul>
             <li><strong>Future</strong>: The collection is currently closed and will open in the future.</li>
             <li><strong>Open</strong>: The collection is open, and there are no extensions.</li>
-            <li><strong>Extended</strong>: The collection is open and there is an extension for one or more organisations.</li>
             <li><strong>Closed</strong>: The collection is closed, and returns cannot be submitted.</li>
           </ul>
         </li>        
         <li><strong>Deadline</strong>: The last date any organisation can submit a return. This includes extensions.</li>
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
-        <li><strong>Fields</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
+        <li><strong>Complexity</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
         <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method. '—' means that submission method is not supported for this collection.</li>
         <li><strong>Return (Returns vs orgs invited)</strong>: the number of unique organisations that have submitted a return vs the number of organisation asked. A percentage is displayed for ease of comparing collections.</li>
         <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission. Click to view in Record Store.</li>
