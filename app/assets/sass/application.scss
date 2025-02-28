@@ -603,6 +603,36 @@ html {
 }
 
 
+// Delta-summary-blocks ===============
+
+.delta-summary-blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    .govuk-summary-card {
+        display: block;
+        width: 100%;
+
+        .govuk-summary-card__title-wrapper {
+            background-color: $delta-info;
+            
+           .govuk-summary-card__title {
+            color: #fff;
+           } 
+
+        }
+
+        .delta-summary-block--value {
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+    }
+
+}
+
+
 // Notification banners ===============
 
 .delta-notification-banner--success {

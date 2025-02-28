@@ -8,9 +8,27 @@
   <!-- ================= UX Design notes ================= -->
   <div class="designNote govuk-!-margin-bottom-4">
     <h2 class="govuk-heading-s">Design notes</h2>
+
+    <p>We are are separating 'bulk uploads' into 'Excel uploads' and 'Bulk uploads' - the latter covering XML and API methods.</p>
+
     <p><a href="https://dluhcdigital.atlassian.net/browse/DT-1290" target="_blank">DT-1290</a></p>
     <ul class="govuk-list govuk-list--bullet">    
       <li><a href="/deltaDashboard">Original concept dashboard</a></li>
+    </ul>
+    <h2 class="govuk-heading-s">Design objectives / challenges</h2>
+    <ul class="govuk-list govuk-list--bullet">    
+      <li>Audience: internal Delta users - primarily SLT</li>
+      <li>At a glance insight into current activity on Delta. Data not burried away in hard to reach systems</li>
+      <li>Not a replacement for Submission Dashboard or Record Store</li>
+      <li>NEW: One-click access to all collection entity pages (signpost)</li>
+      <li>High level data on: submission method options, submission method uptake (usage), collection complexity, error rates (indicative)</li>
+      <li>Facilitate better form design and timely (proactive) intention</li>
+    </ul>    
+
+    <h2 class="govuk-heading-s">To do / discuss</h2>
+    <ul class="govuk-list govuk-list--bullet">    
+      <li>What do we mean by 'error rates'?</li>    
+      <li>What are these error rates supposed to highlight?</li>
     </ul>
   </div>
 
@@ -19,42 +37,127 @@
 
 {% block content %}
 
-
-<div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-        <h1 class="govuk-heading-xl">MI report [concept]</h1>            
- 
-        
-        <h2 class="govuk-heading-l">What are we talking about?</h2>
-
-        <h2 class="govuk-heading-l">What evidence is there it's needed?</h2>
-
-        <h2 class="govuk-heading-l">Who needs to be looped in?</h2>
-
-        <h2 class="govuk-heading-l">What it is and what it isn't</h2>
-
-        <h3 class="govuk-heading-m">What problems does this solve?</h3>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><strong>Accessible to all*</strong>: <em>For the first time ever</em> one-click access to a global list of all collections with powerful filtering and real-time insights.</li>
-          <li><strong>Public-facing collections</strong>: One-click access to view the public-facing collection entity page.</li>
-          <li><strong>Form complexity</strong>: A high-level overview of the form's complexity, based on the amount of data requested.</li>
-          <li><strong>Collection channel and data upload options</strong>: Ability to view and filter by collection channel (for example, Funding Service) and supported data upload options.</li>
-          <li><strong>Submission data</strong>: High-level submission data with links to the submission report.</li>
-          <li><strong>Record store view</strong>: One-click access to a filtered record store view for the collection.</li>
-          <li><strong>Errors</strong>:  Error rates provide insights to support collection improvements and enable timely, targeted support from the relevant collection manager.</li>
-        </ul>        
-
-
-
-    </div>
-</div>    
-
-
     
-<div class="panel">
+<div class="xpanel">
 
-    <h2 class="govuk-heading-l govuk-!-static-margin-top-8">Collection MI report</h3>
+    <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
+      Collections</h1>
+
+      <!-- QUICK FILTERS START -->
+      <form>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <!-- Channels start -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Channels
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-1" name="channel" type="checkbox" value="channel-1" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-1">
+                      Statistics
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-2" name="channel" type="checkbox" value="channel-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-2">
+                      Grants
+                    </label>
+                  </div>  
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-3" name="channel" type="checkbox" value="channel-3" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-3">
+                      Funding Service
+                    </label>
+                  </div>                    
+                </div>
+              </fieldset>
+            </div>    
+            <!-- Channels end -->
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Collection status start -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Collection status
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-1">
+                      Future
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
+                      Open
+                    </label>
+                  </div>  
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-3" name="collection-status" type="checkbox" value="collection-status-3">
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-3">
+                      Closed
+                    </label>
+                  </div>                    
+                </div>
+              </fieldset>
+            </div>    
+            <!-- Collection status end -->
+          </div>
+        </div>
+      </form>
+      <!-- QUICK FILTERS END -->
+
+      <div class="delta-summary-blocks">
+
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Collections</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">120</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Organisations</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">360</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->    
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Returns</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">310,000</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->          
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title govuk-bod">Records</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">123,234,245</p>
+        </div>
+      </div>       
+    </div><!-- close delta-summary-blocks -->
 
     <details class="govuk-details">
       <summary class="govuk-details__summary">
@@ -77,10 +180,10 @@
         <li><strong>Deadline</strong>: The last date any organisation can submit a return. This includes extensions.</li>
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
         <li><strong>Fields</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
-        <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method.</li>
+        <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method. 'n/a' means that submission method is not available for this collection.</li>
         <li><strong>Organisations</strong>: the number of unique organisations who have a return (with any status).</li>
         <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission.</li>
-        <li><strong>Errors</strong>: the percentage of organisations who when submitting a return and experienced one or more validation errors.</li>
+        <li><strong>Excel error rate</strong>: the percentage of organisations that when submitting a return and experienced one or more validation errors.</li>
       </ul>
 
 
@@ -368,10 +471,10 @@
         <div class="delta-results-data-header">
           <div class="delta-results-table-filter-summary delta-flex-horizontal">
             <div>
-              <p class="govuk-!-margin-bottom-0">Displaying 1 to 10 of 24 <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">1 active filter</strong></p>
+              <!-- <p class="govuk-!-margin-bottom-0">Displaying 1 to 10 of 24 <strong class="govuk-tag delta-tag-pill delta-tag-pill--inverse">1 active filter</strong></p> -->
             </div>
             <div>
-                <button class="govuk-button govuk-button--inverse" id="toggleFiltersPanel" onclick="toggleButtonText()"><img src="/public/images/icon-search.svg" alt="icon search" class="delta-icon"> <span id="filterBtnText">Show filters</span></button>
+                <button class="govuk-button govuk-button--inverse" id="toggleFiltersPanel" onclick="toggleButtonText()"><img src="/public/images/icon-search.svg" alt="icon search" class="delta-icon"> <span id="filterBtnText">Show advanced filters</span></button>
             </div>
           </div>
         </div>
@@ -382,17 +485,26 @@
             <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections MI report</caption>
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header"><a href="#">Collection name <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Status <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Deadline <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Channel <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Fields <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Form <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Excel <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Bulk <img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Organisations<img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Records<img src="/public/images/sort.svg"></a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Errors<img src="/public/images/sort.svg"></a></th>
+                <th scope="col" colspan="1" class="govuk-table__header">Collection</th>
+                <th scope="col" colspan="4" class="govuk-table__header">Collection overview</th>
+                <th scope="col" colspan="3" class="govuk-table__header">Submission options</th>
+                <th scope="col" colspan="2" class="govuk-table__header">Return</th>
+                <th scope="col" colspan="1" class="govuk-table__header">Errors</th>
+              </tr>
+
+
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"><a href="#">Collection</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Status</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Deadline</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Channel</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Complexity</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Form</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Excel</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Bulk</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Returns vs orgs invited</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Records</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Excel</a></th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -400,67 +512,28 @@
                 <th class="govuk-table__header"><a href="#">Urban Hedgehog Census 2023</a></th>
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
                 <td class="govuk-table__cell">29 July 2025</td>
-                <td class="govuk-table__cell">Stats</td>
+                <td class="govuk-table__cell">Statistics</td>
                 <td class="govuk-table__cell">20</td>
                 <td class="govuk-table__cell">30%</td>
                 <td class="govuk-table__cell">70%</td>
                 <td class="govuk-table__cell">n/a</td>
-                <td class="govuk-table__cell"><a href="#">100</a></td>
-                <td class="govuk-table__cell"><a href="#">1,000 <small>(av. 100)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">60%</a></td>
-              </tr>
+                <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">200</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (56%)</td>
+                <td class="govuk-table__cell"><a href="#" title="View in record store">23,230</a></td>
+                <td class="govuk-table__cell"><a href="#" title="View validation report">20%</a></td>
+              </tr>    
               <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Rural Badger Survey</a></th>
+                <th class="govuk-table__header"><a href="#">Brighter Bandstands Fund</a></th>
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">28 July 2025</td>
-                <td class="govuk-table__cell">Online</td>
-                <td class="govuk-table__cell">15</td>
-                <td class="govuk-table__cell">40%</td>
-                <td class="govuk-table__cell">50%</td>
+                <td class="govuk-table__cell">29 June 2025</td>
+                <td class="govuk-table__cell">Funding Service</td>
+                <td class="govuk-table__cell">300</td>
                 <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">75</a></td>
-                <td class="govuk-table__cell"><a href="#">800 <small>(av. 80)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">45%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Wildflower Distribution</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">1 June 2025</td>
-                <td class="govuk-table__cell">Survey</td>
-                <td class="govuk-table__cell">30</td>
-                <td class="govuk-table__cell">50%</td>
-                <td class="govuk-table__cell">40%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">60</a></td>
-                <td class="govuk-table__cell"><a href="#">900 <small>(av. 90)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">30%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Coastal Bird Count</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Closed</strong></td>
-                <td class="govuk-table__cell">12 Feb 2024</td>
-                <td class="govuk-table__cell">Online</td>
-                <td class="govuk-table__cell">25</td>
-                <td class="govuk-table__cell">60%</td>
-                <td class="govuk-table__cell">30%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">50</a></td>
-                <td class="govuk-table__cell"><a href="#">750 <small>(av. 75)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">25%</a></td>
-              </tr>
-              <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">Urban Tree Mapping</a></th>
-                <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
-                <td class="govuk-table__cell">20 Oct 2025</td>
-                <td class="govuk-table__cell">Survey</td>
-                <td class="govuk-table__cell">18</td>
-                <td class="govuk-table__cell">35%</td>
-                <td class="govuk-table__cell">55%</td>
-                <td class="govuk-table__cell">10%</td>
-                <td class="govuk-table__cell"><a href="#">90</a></td>
-                <td class="govuk-table__cell"><a href="#">1,200 <small>(av. 120)</small></a></td>
-                <td class="govuk-table__cell"><a href="#">40%</a></td>
-              </tr>
+                <td class="govuk-table__cell">90%</td>
+                <td class="govuk-table__cell">n/a</td>
+                <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">320</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (89%)</td>
+                <td class="govuk-table__cell"><a href="#" title="View in record store">320</a></td>
+                <td class="govuk-table__cell"><a href="#" title="View validation report">60%</a></td>
+              </tr>                           
             </tbody>
           </table>
         </div>
@@ -509,16 +582,6 @@
     </div>
     <!-- table results end -->
 
-    <h2 class="govuk-heading-m govuk-!-static-margin-top-8">Discuss</h2>
-    <ul class="govuk-list govuk-list--bullet">
-      <li><strong><del>Better name for type or channel</strong>: The grouping of collections should be based on their division, for example, Funding Service.</del></li>
-      <li><strong>No start date</strong>: There is not enough space to display the start date.</li>
-      <li><strong>Links in table data</strong>: Add links to the collection entity, submission report, and record store.</li>
-      <li><strong>Collection group in table</strong>: This would allow users to filter and compare historic collections, particularly error rates.</li>
-      <li><strong>Detailed error report</strong>: A collection activity log is needed to track errors in more detail.</li>
-      <li><strong>Error rates</strong>: Errors should be categorised into types, such as "system" and "validation".</li>
-      <li><strong>Access groups</strong>: A new user privilege is needed: "Can see all collections and associated data but cannot edit or take action."</li>
-    </ul>
   </div>
 
 {% endblock %}
