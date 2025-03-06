@@ -190,9 +190,13 @@
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
         <li><strong>Complexity</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
         <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method. '—' means that submission method is not supported for this collection.</li>
-        <li><strong>Return (Returns vs orgs invited)</strong>: the number of unique organisations that have submitted a return vs the number of organisation asked. A percentage is displayed for ease of comparing collections.</li>
-        <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission. Click to view in Record Store.</li>
-        <li><strong>Excel error rate</strong>: the percentage of organisations that when submitting a return and experienced one or more validation errors. Click to view detailed error report. A percentage is displayed for ease of comparing collections.</li>
+        <li><strong>Return</strong>:
+          <ul>
+            <li><strong>Returns vs orgs invited</strong>: the number of unique organisations that have submitted a return vs the number of organisation asked. A percentage is displayed for ease of comparing collections.</li>
+            <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission. Click to view in Record Store.</li>
+            <li><strong>Errors</strong>: the percentage of organisations that when submitting a return and experienced one or more validation errors. Click to view detailed error report. A percentage is displayed for ease of comparing collections.</li>
+          </ul> 
+        </li>
       </ul>
 
 
@@ -497,8 +501,7 @@
                 <th scope="col" colspan="1" class="govuk-table__header">Collection</th>
                 <th scope="col" colspan="4" class="govuk-table__header">Collection overview</th>
                 <th scope="col" colspan="3" class="govuk-table__header">Submission options</th>
-                <th scope="col" colspan="2" class="govuk-table__header">Return</th>
-                <th scope="col" colspan="1" class="govuk-table__header">Errors</th>
+                <th scope="col" colspan="3" class="govuk-table__header">Return</th>
               </tr>
 
 
@@ -513,7 +516,7 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Bulk</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Returns vs orgs invited</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Excel</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Errors</a></th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -528,7 +531,7 @@
                 <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">200</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (56%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">23,230</a></td>
-                <td class="govuk-table__cell"><a href="#" title="View validation report">20%</a></td>
+                <td class="govuk-table__cell"><a href="/MIreport-error" title="View validation report">20%</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="#">Brighter Bandstands Fund</a></th>
@@ -541,7 +544,7 @@
                 <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">320</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (89%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">320</a></td>
-                <td class="govuk-table__cell"><a href="#" title="View validation report">60%</a></td>
+                <td class="govuk-table__cell"><a href="/MIreport-error" title="View validation report">60%</a></td>
               </tr>    
               
               <tr class="govuk-table__row">

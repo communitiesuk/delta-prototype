@@ -1,0 +1,225 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="MI Report - Errors" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-l">Design notes</h2>
+
+    <h2 class="govuk-heading-s">Useful links</h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="/MI-report" target="_blank">MI Report</a></li>
+    </ul>
+
+  </div>
+
+{% endblock %}
+
+
+{% block content %}
+
+    <p><a href="/MIreport" class="govuk-back-link">Back</a></p>
+
+
+    <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report: errors</small><br>
+      Urban Hedgehog Census 2023</h1>
+
+      <div class="govuk-grid-row govuk-!-static-margin-bottom-3">
+        <div class="govuk-grid-column-one-half">
+          <!-- <h4 class="govuk-heading-s">Overview</h4> -->
+          <ul class="govuk-list">
+            <li><strong>Channel</strong>: Statistics</li>
+            <li><strong>Complexity</strong>: 20</li>
+            <li><strong>Deadline</strong>: 29 July 2025</li>
+            <li><strong>Status</strong>: <strong class="govuk-tag delta-tag">Active</strong></li>
+          </ul>      
+        </div>
+        <div class="govuk-grid-column-one-half">
+          <h4 class="govuk-heading-s">Quick links</h4>
+          <ul class="govuk-list">
+            <li><a href="/wayCollectionDataProvider-collectionRecords">Collection</a></li>
+            <li><a href="/waySubmissionsDashboardReport">Submission report</a></li>
+            <li><a href="/wayDataStore">Record store</a></li>
+          </ul>                
+        </div>
+      </div>        
+
+
+
+    <div class="delta-summary-blocks">
+
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Error rate</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">20%</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Organisations affected</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">70</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->    
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Average failed submissions</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">15</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->              
+    </div><!-- close delta-summary-blocks -->      
+
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with table labels
+        </span>
+      </summary>
+      <div class="govuk-details__text delta-reading-width">
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Time</strong>: of the last failed submission.</li>
+        <li><strong>Organisation</strong>: the organisation submitting data.</li>
+        <li><strong>Records</strong>: the number of records in the return.</li>
+        <li><strong>Failed submissions</strong>: the number submissions that failed due to an error.</li>
+        <li><strong>Last error</strong>: the type of the last error.</li>
+        <li><strong>Status</strong>: completed means one or more records successfully submitted.</li>
+      </ul>
+
+
+      </div>
+    </details>
+
+
+
+      <table class="govuk-table govuk-table--small-text-until-tablet" id="resultTable">
+        <caption class="govuk-table__caption govuk-table__caption--m delta-hide">Collections MI report</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"><a href="#">Time</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Organisation</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Records</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Failed submissions</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Last error</a></th>
+            <th scope="col" class="govuk-table__header"><a href="#">Status</a></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Thursday 6 March 2025, 14:15</td>
+            <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport">Arundel Borough Council</a></td>
+            <td class="govuk-table__cell">5</td>
+            <td class="govuk-table__cell">20</td>
+            <td class="govuk-table__cell">Excel validation</td>
+            <td class="govuk-table__cell">Complete</td>
+          </tr> 
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Thursday 6 March 2025, 14:09</td>
+            <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport">Rivendell Borough Council</a></td>
+            <td class="govuk-table__cell">2</td>
+            <td class="govuk-table__cell">10</td>
+            <td class="govuk-table__cell">Excel validation</td>
+            <td class="govuk-table__cell">Draft</td>
+          </tr>           
+        </tbody>
+      </table>
+
+
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+
+            <!-- error log item -->
+            <!--
+            <section>
+              <dl class="govuk-summary-list">
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Time
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    13:59, Tuesday 4 March 2025
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    User
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    Susie Smith
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Organisation
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    <a href="/wayOrganisationInternalReport">Arundel Borough Council</a>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Records with errors
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    1 <span class="delta-text-secondary">(10%)</span>
+                  </dd>
+                </div>
+                <div class="govuk-summary-list__row">
+                  <dt class="govuk-summary-list__key">
+                    Errors (individual)
+                  </dt>
+                  <dd class="govuk-summary-list__value">
+                    4 <span class="delta-text-secondary">(50%)</span>
+                  </dd>
+                </div>                
+              </dl>
+
+              <details class="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Error break down (detail view)
+                  </span>
+                </summary>
+                <div class="govuk-details__text delta-reading-width">
+                  <ul class="govuk-list govuk-list--spaced">
+                    <li><strong>B12</strong>: <strong class="govuk-tag govuk-tag--red">Missing</strong> - the cell requires data.</li>
+                    <li><strong>B29</strong>: <strong class="govuk-tag govuk-tag--red">Out of range</strong> - the cell requires data.</li>
+                    <li><strong>B30</strong>: <strong class="govuk-tag govuk-tag--red">Incorrect data type</strong> - numeric values only.</li>
+                    <li><strong>B31</strong>: <strong class="govuk-tag govuk-tag--red">Incorrect data type</strong> - alpha values only.</li>
+                  </ul>
+                </div>
+              </details>
+
+            </section>
+            -->
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
