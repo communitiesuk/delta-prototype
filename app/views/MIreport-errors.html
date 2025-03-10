@@ -1,4 +1,4 @@
-{% extends "layouts/delta.html" %}
+{% extends "layouts/delta-mi.html" %}
 
 {% set pageName="MI Report - Errors" %}
 
@@ -31,7 +31,7 @@
 
 {% block content %}
 
-    <p><a href="/MIreport" class="govuk-back-link">Back</a></p>
+    <!-- <p><a href="/MIreport" class="govuk-back-link">Back</a></p> -->
 
 
     <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report: Errors</small><br>
@@ -144,89 +144,10 @@
             <td class="govuk-table__cell">2</td>
             <td class="govuk-table__cell">10</td>
             <td class="govuk-table__cell">Excel validation</td>
-            <td class="govuk-table__cell">Draft</td>
+            <td class="govuk-table__cell">Incomplete</td>
           </tr>           
         </tbody>
       </table>
-
-
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-two-thirds">
-
-            <!-- error log item -->
-            <!--
-            <section>
-              <dl class="govuk-summary-list">
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Time
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    13:59, Tuesday 4 March 2025
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    User
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    Susie Smith
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Organisation
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    <a href="/wayOrganisationInternalReport">Arundel Borough Council</a>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Records with errors
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    1 <span class="delta-text-secondary">(10%)</span>
-                  </dd>
-                </div>
-                <div class="govuk-summary-list__row">
-                  <dt class="govuk-summary-list__key">
-                    Errors (individual)
-                  </dt>
-                  <dd class="govuk-summary-list__value">
-                    4 <span class="delta-text-secondary">(50%)</span>
-                  </dd>
-                </div>                
-              </dl>
-
-              <details class="govuk-details">
-                <summary class="govuk-details__summary">
-                  <span class="govuk-details__summary-text">
-                    Error break down (detail view)
-                  </span>
-                </summary>
-                <div class="govuk-details__text delta-reading-width">
-                  <ul class="govuk-list govuk-list--spaced">
-                    <li><strong>B12</strong>: <strong class="govuk-tag govuk-tag--red">Missing</strong> - the cell requires data.</li>
-                    <li><strong>B29</strong>: <strong class="govuk-tag govuk-tag--red">Out of range</strong> - the cell requires data.</li>
-                    <li><strong>B30</strong>: <strong class="govuk-tag govuk-tag--red">Incorrect data type</strong> - numeric values only.</li>
-                    <li><strong>B31</strong>: <strong class="govuk-tag govuk-tag--red">Incorrect data type</strong> - alpha values only.</li>
-                  </ul>
-                </div>
-              </details>
-
-            </section>
-            -->
-
-          </div>
-        </div>
-
-
-
-
-
-
-
 
 
 {% endblock %}

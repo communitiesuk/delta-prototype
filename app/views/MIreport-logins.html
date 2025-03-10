@@ -1,0 +1,265 @@
+{% extends "layouts/delta-mi.html" %}
+
+{% set pageName="MI Report: Logins" %}
+
+
+{% block beforeContent %}
+
+  <!-- ================= UX Design notes ================= -->
+  <div class="designNote govuk-!-margin-bottom-4">
+    <h2 class="govuk-heading-l">Design notes</h2>
+
+      <h3 class="govuk-heading-m">New MI report design concept</h3>
+      
+      <p class="govuk-body">This new MI report focuses on live reporting of who is logging into the Delta platform.</p>
+      
+      <p class="govuk-body">We have kept the design simple to make development feasible in the short term. This is a minimum viable product (MVP).</p>
+      
+      <p class="govuk-body">After launch, we will monitor usage and add features if needed.</p>
+      
+      <p class="govuk-body govuk-!-font-weight-bold">This is not a replacement for Google Analytics.</p>
+      
+      <h2 class="govuk-heading-m">Access and availability</h2>
+      <p class="govuk-body">The report will be available on Delta and just one click away for anyone with access. We expect to make it available to all MHCLG users with Delta access. It will provide real-time insight into platform usage.</p>
+      
+      <p class="govuk-body">We have deliberately kept it high level. Users can only see data for today and yesterday. This helps minimise storage and server load.</p>
+      
+      <h2 class="govuk-heading-m">Filtering options</h2>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>Channel (also known as client)</li>
+          <li>Date (today or yesterday)</li>
+      </ul>
+      
+      <h2 class="govuk-heading-m">What problem does it solve?</h2>
+      <ul class="govuk-list govuk-list--bullet">
+          <li>There is currently no way to see who is using Delta</li>
+          <li>Provides a quick way to see who has logged in and which collections they are working on</li>
+      </ul>    
+
+      <h2 class="govuk-heading-m">To discuss</h2>     
+      <ul class="govuk-list govuk-list--bullet">
+          <li>Offering other date ranges - impact on dev.</li>
+          <li>Results table / Collections: default to showing live collection first, with max 3 displayed.</li>
+      </ul>       
+
+
+  </div>
+
+{% endblock %}
+
+
+{% block content %}
+
+    
+<div class="xpanel">
+
+    <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
+      User logins</h1>
+
+      <!-- QUICK FILTERS START -->
+      <form>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <!-- Channels start -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Channels
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-1" name="channel" type="checkbox" value="channel-1" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-1">
+                      Statistics
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-2" name="channel" type="checkbox" value="channel-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-2">
+                      Grants
+                    </label>
+                  </div>  
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-3" name="channel" type="checkbox" value="channel-3" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-3">
+                      Funding Service
+                    </label>
+                  </div>                    
+                </div>
+              </fieldset>
+            </div>    
+            <!-- Channels end -->
+          </div>       
+          <div class="govuk-grid-column-one-third">
+            <!-- Collection status start -->
+            <div class="govuk-form-group">
+              <label class="govuk-heading-m" for="range">
+                Date range
+              </label>
+              <select class="govuk-select" id="range" name="range">
+                <option value="xxx" selected="selected">Today</option>
+                <option value="xxx" selected="selected">Yesterday</option>
+              </select>
+            </div>    
+            <!-- Collection status end -->
+          </div>            
+        </div>
+      </form>
+      <!-- QUICK FILTERS END -->
+
+    <div class="delta-summary-blocks">
+
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Logins <small>(All)</small></h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">100</p>
+        </div>
+      </div>
+      <!-- BLOCK END -->
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">External users</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">18 <small class="delta-text-secondary">(15%)</small></p>
+        </div>
+      </div>
+      <!-- BLOCK END -->    
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Internal users</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">15 <small class="delta-text-secondary">(15%)</small></p>
+        </div>
+      </div>
+      <!-- BLOCK END -->              
+    </div><!-- close delta-summary-blocks -->      
+
+
+    <details class="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Help with table labels
+        </span>
+      </summary>
+      <div class="govuk-details__text delta-reading-width">
+
+      <ul class="govuk-list govuk-list--spaced">
+        <li><strong>Time</strong>: the time and date this user last logged in.</li>
+        <li><strong>User</strong>: linking through to the user's profile with details of all organisations, roles and collections.</li>
+        <li><strong>Channels</strong>: which channel the user belongs to. Think of channel like clients.</li>
+        <li><strong>Type</strong>: internal or external user.</li>
+        <li><strong>Organisation</strong>: linking to the organisation's profile page</li>
+      </ul>
+
+
+      </div>
+    </details>
+
+    <!-- table results start -->
+    <div class="delta-results">
+      <!-- table data here -->
+      <div id="delta-results-data">
+
+        <!-- data table -->
+        <div class="delta-scrollable-pane" id="delta-scrollable-pane">
+          <table class="govuk-table govuk-table--small-text-until-tablet" id="resultTable">
+            <caption class="govuk-table__caption govuk-table__caption--m delta-hide">MI report: logins</caption>
+            <thead class="govuk-table__head">
+
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header"><a href="#">Time</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">User</a></th>                
+                <th scope="col" class="govuk-table__header"><a href="#">Channel(s)</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Type</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Organisation(s)</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Collection(s)</a></th>
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Monday, 10 March 2025, 10:00</td>                                
+                <th class="govuk-table__header"><a href="#">Susie Smith</a></th>                
+                <td class="govuk-table__cell">Statistics</td>                
+                <td class="govuk-table__cell">External</td>                
+                <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport">Rivendell Borough Council</a></td>
+                <td class="govuk-table__cell"><a href="/wayCollectionDataProvider-collectionRecords">Urban hedgehog census 2023</a></td>                
+              </tr>    
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Monday, 10 March 2025, 9:58</td>                                
+                <th class="govuk-table__header"><a href="#">Peter Jones</a></th>                
+                <td class="govuk-table__cell">Funding Service</td>                
+                <td class="govuk-table__cell">External</td>                
+                <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport">Arundel Borough Council</a></td>
+                <td class="govuk-table__cell"><a href="/wayCollectionDataProvider-collectionRecords">Bandstand Fund</a></td>                
+              </tr>                  
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">Monday, 10 March 2025, 9:56</td>                                
+                <th class="govuk-table__header"><a href="#">Steve Molesworth</a></th>                
+                <td class="govuk-table__cell">n/a</td>                
+                <td class="govuk-table__cell">Internal</td>                
+                <td class="govuk-table__cell"><a href="/wayOrganisationInternalReport">MHCLG</a></td>
+                <td class="govuk-table__cell">n/a</td>                
+              </tr>                 
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pagination -->
+        <nav class="govuk-pagination" aria-label="Pagination">
+          <div class="govuk-pagination__prev">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
+              <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
+              </svg>
+              <span class="govuk-pagination__link-title">
+                Previous<span class="govuk-visually-hidden"> page</span>
+              </span>
+            </a>
+          </div>
+          <ul class="govuk-pagination__list">
+            <li class="govuk-pagination__item govuk-pagination__item--current">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
+                1
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
+                2
+              </a>
+            </li>
+            <li class="govuk-pagination__item">
+              <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
+                3
+              </a>
+            </li>
+          </ul>
+          <div class="govuk-pagination__next">
+            <a class="govuk-link govuk-pagination__link" href="#" rel="next">
+              <span class="govuk-pagination__link-title">
+                Next<span class="govuk-visually-hidden"> page</span>
+              </span>
+              <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
+                <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
+              </svg>
+            </a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!-- table results end -->
+
+  </div>
+
+{% endblock %}
+
+
+

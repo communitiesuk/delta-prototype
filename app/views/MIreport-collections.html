@@ -1,4 +1,4 @@
-{% extends "layouts/delta.html" %}
+{% extends "layouts/delta-mi.html" %}
 
 {% set pageName="MI Report" %}
 
@@ -122,6 +122,21 @@
             </div>    
             <!-- Collection status end -->
           </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Collection status start -->
+            <div class="govuk-form-group">
+              <label class="govuk-heading-m" for="range">
+                Date range
+              </label>
+              <select class="govuk-select" id="range" name="range">
+                <option value="xxx" selected>Month to date (10 days)</option>
+                <option value="xxx">Last 30 days</option>
+                <option value="xxx">Last 90 days</option>
+                <option value="xxx">Last year</option>
+              </select>
+            </div>    
+            <!-- Collection status end -->
+          </div>          
         </div>
       </form>
       <!-- QUICK FILTERS END -->
