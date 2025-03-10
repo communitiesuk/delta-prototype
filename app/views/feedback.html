@@ -1,72 +1,380 @@
 {% extends "layouts/delta.html" %}
 
-{% set pageName="Feedback banner" %}
-{% block beforeContent %}
-
-  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
-
-  {{ govukPhaseBanner({
-    tag: {
-      text: "We are improving Delta"
-    },
-    html: '– <a class="govuk-link" href="#">learn more and get involved</a>.'
-  }) }}
-{% endblock %}
-
-
+{% set pageName="User feedback form [concept]" %}
 
 
 {% block content %}
 
+<div class="panel-nav">
 
-<!-- ================= UX Design notes ================= -->
-<div class="designNote govuk-!-margin-bottom-4">
-  <h2 class="govuk-heading-s">Call to feedback</h2>
-  <p><a href="https://dluhcdigital.atlassian.net/browse/DT-804">https://dluhcdigital.atlassian.net/browse/DT-804</a></p>
-  <p>The idea is this banner would be displayed across Delta inviting users to share their experiences.</p>
-</div>
-
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <div class="ux-reading-width">
-      <h1 class="govuk-heading-xl">
-        Help us improve Delta
-      </h1>
-      <p class="govuk-body-l">We are in the process of improving the experience for all Delta users.</p>
-  
-      <h2 class="govuk-heading-s">What we are focusing on</h2>
-  
-      <p class="govuk-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-
-      <ul class="govuk-list govuk-list--bullet">
-        <li>Product stability</li>
-        <li>Better guidance</li>
-        <li>Ease of use (simpler forms)</li>
-      </ul>   
-
-      <p class="govuk-body">Enhancements will be deployed approximately every 2 weeks. If you'd like to learn more you are welcome to attend our <a href"#>Show and Tell sessions</a>. </p>
-  
-      <h2 class="govuk-heading-s">
-        Share your thoughts
-      </h2>
-  
-      <p class="govuk-body">Any input or ideas on how things could be improved would be greatly appreciated.</p>
-  
-      <p class="govuk-body">Email <a href="mailto:Laurence.Mallows@levellingup.gov.uk?subject=Delta feedback">Laurence.Mallows@levellingup.gov.uk</a> with any thoughts and ideas.</p>
-
-      <p class="govuk-body">Emails with the subject "Delta feedback" will be automatically forwarded to the design team.</p>
-      
-      <p class="govuk-body-s">Last updated: 11 January 2024</p>
-  
-      <h2 class="govuk-heading-s">
-        Support
-      </h2>
-  
-      <p class="govuk-body">For questions or support visit ...</p>
-    </div>
-
-
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
   </div>
+
+
 </div>
+
+
+
+<div class="panel xdelta-text-center">
+
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    User feedback form [concept]
+  </h1>
+
+  <h2 class="govuk-heading-l">Relevant, real-time insight</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+        Updated: 10/03/2025
+      </h4>       
+    </div>
+  </div>    
+
+</div>
+
+
+<div class="panel">
+
+  <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+
+    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+      <div class="govuk-notification-banner__header">
+        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+          Susie, your feedback matters!
+        </h2>
+      </div>
+      <div class="govuk-notification-banner__content">
+          <p class="govuk-heading-s">We're always working to make Delta better, and your insights help us improve. Could you take 2 minutes to answer just 3 quick questions? We’d really appreciate it!</p>
+          <button class="govuk-button">View questions</button>
+          <button class="govuk-button govuk-button--secondary">Don't display this message for 3 months</button>             
+      </div>
+    </div>        
+
+      </div>
+  </div>     
+  
+  
+
+
+
+</div>
+
+<!-- The idea -->
+<div class="panel">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">The idea</h2>
+
+      <p>We display a request for feedback notification banner to a user if:</p>
+
+      <ol class="govuk-list govuk-list--bullet">
+        <li>They have just completed a transaction (task) and... <sup>*</sup></li>
+        <li>Have not submitted a feedback response or asked not to be interrupted in the last 3 months.</li>
+      </ol>
+
+      <p><sup>*</sup> We will need to explore what to do if a task fails.</p>
+
+    </div>
+  </div>
+</div>  
+
+
+<!-- Questionnaire -->
+<div class="panel">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h2 class="govuk-heading-l">Hi Susie,</h2>
+      <p class="govuk-body-l">Our records show that you have not taken part in a Delta user satisfaction survey before. Thank you for your time!</p>
+      <p>We have just three quick questions for you:</p>
+
+      <div class="govuk-form-group">
+        <label class="govuk-heading-m" for="ease-of-use">
+          1. How easy is it to use Delta?
+        </label>
+        <p class="govuk-hint">Please rate how easy or difficult you find using Delta.</p>
+        <select class="govuk-select" id="ease-of-use" name="easeOfUse">
+          <option value="0" selected="selected" disabled>Please select an option</option>
+          <option value="1">Very easy</option>
+          <option value="2">Easy</option>      
+          <option value="3">Neutral</option>      
+          <option value="4">Difficult</option>
+          <option value="5">Very difficult</option>
+        </select>
+      </div>     
+
+      <div class="govuk-form-group">
+        <label class="govuk-heading-m" for="ease-trend">
+          2. Over time, has Delta become easier or harder to use?
+        </label>
+        <p class="govuk-hint">Please tell us if your experience with Delta has improved or worsened.</p>
+        <select class="govuk-select" id="ease-trend" name="easeTrend">
+          <option value="o" selected="selected" disabled>Please select an option</option>          
+          <option value="1">It has become harder</option>
+          <option value="2">No change</option>      
+          <option value="3">It has become easier</option>      
+        </select>
+      </div>       
+
+      <div class="govuk-form-group">
+        <label class="govuk-heading-m" for="comments">
+          3. Do you have any feedback or suggestions?
+        </label>
+        <p class="govuk-hint">Please share any comments or suggestions. Do not confidential information.</p>
+        <textarea class="govuk-textarea" id="comments" name="comments" rows="3" aria-describedby="comments-hint"></textarea>
+      </div>  
+
+      <!-- call back --> 
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="feedbackCallBack-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-heading-m govuk-!-margin-bottom-0">
+              Would you like the Delta team to contact you?
+            </h1>
+            </legend>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="feedbackCallBack" name="feedbackCallBack" type="checkbox" value="feedbackCallBack">
+              <label class="govuk-label govuk-checkboxes__label" for="feedbackCallBack">
+                Yes
+              </label>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+
+      <button class="govuk-button">Submit feedback</button>
+      <button class="govuk-button govuk-button--secondary">Cancel</button>      
+
+    </div>
+  </div>
+
+</div>
+
+<!-- report -->
+<div class="panel">
+
+  <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
+      User feedback</h1>
+
+
+      <!-- QUICK FILTERS START -->
+      <form>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-one-third">
+            <!-- Channels start -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    Channels
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-1" name="channel" type="checkbox" value="channel-1" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-1">
+                      Statistics
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-2" name="channel" type="checkbox" value="channel-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-2">
+                      Grants
+                    </label>
+                  </div>  
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="channel-3" name="channel" type="checkbox" value="channel-3" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="channel-3">
+                      Funding Service
+                    </label>
+                  </div>                    
+                </div>
+              </fieldset>
+            </div>    
+            <!-- Channels end -->
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Collection status start -->
+            <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                  <h1 class="govuk-fieldset__heading">
+                    User type 
+                  </h1>
+                </legend>
+                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-1">
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-1">
+                      Internal
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
+                      External
+                    </label>
+                  </div>                     
+                </div>
+              </fieldset>
+            </div>    
+            <!-- Collection status end -->
+          </div>
+          <div class="govuk-grid-column-one-third">
+            <!-- Collection status start -->
+            <div class="govuk-form-group">
+              <label class="govuk-heading-m" for="range">
+                Date range
+              </label>
+              <select class="govuk-select" id="range" name="range">
+                <option value="xxx" selected="selected">This quarter (to today)</option>
+                <option value="xxx">Last quarter</option>
+                <option value="xxx">Year to date</option>
+                <option value="xxx">Last year</option>
+              </select>
+            </div>    
+            <!-- Collection status end -->
+          </div>          
+        </div>
+      </form>
+      <!-- QUICK FILTERS END -->
+
+      <div class="delta-summary-blocks">
+
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Responses <small>(External vs Internal)</small></h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">100 <small class="delta-text-secondary">(90 / 10)</small></p>
+        </div>
+      </div>
+      <!-- BLOCK END -->
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Easy of use</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">3.5 <small class="delta-text-secondary">(Neutral / Easy)</small></p>
+        </div>
+      </div>
+      <!-- BLOCK END -->    
+      <!-- BLOCK START -->
+      <div class="govuk-summary-card">
+        <div class="govuk-summary-card__title-wrapper">
+          <h2 class="govuk-summary-card__title">Easier or harder?</h2>
+        </div>
+        <div class="govuk-summary-card__content">
+          <p class="delta-summary-block--value">3.0 <small class="delta-text-secondary">(No change)</small></p>
+        </div>
+      </div>
+      <!-- BLOCK END -->               
+    </div><!-- close delta-summary-blocks -->      
+
+    <!-- Responses -->
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+        <h4 class="govuk-heading-l">Susie Smith<br>
+          <small class="delta-text-secondary">Rivendell Borough Council</small class="delta-text-secondary"></h4>
+        <ul class="govuk-list">
+          <li><strong>Date</strong>: Monday, 10 March 2025, 12:54</li>            
+          <li><strong>User type</strong>: Internal user</li>            
+        </ul>
+      </div>
+      <div class="govuk-grid-column-two-thirds">
+        <ul class="govuk-list">
+          <li><strong>Easy of use:</strong> Easy</li>
+          <li><strong>Easier or harder?</strong> Easier</li>
+          <li><strong>Feedback:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio nobis iusto! Maiores doloremque adipisci rem dolor numquam, temporibus alias! Tempora aut nostrum odit voluptates nam! Neque, ipsum sint! Labore?</li>
+          <li><strong>Call back request:</strong> Yes</li>
+        </ul>
+      </div>     
+    </div>            
+
+
+
+
+    <hr>
+
+
+</div>  
+
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
 
 {% endblock %}
+
+
+
+
+
