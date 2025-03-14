@@ -40,19 +40,6 @@
       <li>Original ticket <a href="https://dluhcdigital.atlassian.net/browse/DT-1290" target="_blank">DT-1290</a></li>
     </ul>    
 
-    <h2 class="govuk-heading-s">Change Log</h2>
-    <ul class="govuk-list govuk-list--bullet">    
-      <li>14/03/2025 – Post-Jeremy demo</li>    
-      <li>Filters: Added a provisional option for saved but not yet approved collections.</li>
-      <li>Filters: Introduced the concept of tags (#financeForm). However, the mechanism for managing tags (finding, adding, and removing) requires further investigation.</li>
-      <li>Warning: The 'quick' filters section is expanding. We may consider moving this into the table filters, but doing so would remove the simplicity of the current one-click options.</li>
-      <li>Table: Renamed "Complexity" to "Size".</li>
-      <li>Table: Moved "Bulk" to dedicated columns for XML and API.</li>
-      <li>Table: Removed the error column (help information updated).</li>
-      <li>Added a download button.</li>
-    </ul>
-
-
   </div>
 
 {% endblock %}
@@ -101,41 +88,29 @@
               </fieldset>
             </div>    
             <!-- Channels end -->
-            <!-- Tags start -->
-            <h4 class="govuk-heading-s">
-              Tags
-            </h4>
-            <p><a>#financeform</a></p>             
-            <!-- Tags end -->
           </div>
           <div class="govuk-grid-column-one-third">
             <!-- Collection status start -->
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h4 class="govuk-fieldset__heading">
+                  <h1 class="govuk-fieldset__heading">
                     Collection status
-                  </h4>
-                </legend>                
+                  </h1>
+                </legend>
                 <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
-                      Open
-                    </label>
-                  </div>                    
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-0">
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-0">
-                      Provisional
-                    </label>
-                  </div>                  
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-1">
                     <label class="govuk-label govuk-checkboxes__label" for="collection-status-1">
                       Future
                     </label>
                   </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
+                      Open
+                    </label>
+                  </div>  
                   <div class="govuk-checkboxes__item">
                     <input class="govuk-checkboxes__input" id="collection-status-3" name="collection-status" type="checkbox" value="collection-status-3">
                     <label class="govuk-label govuk-checkboxes__label" for="collection-status-3">
@@ -146,8 +121,6 @@
               </fieldset>
             </div>    
             <!-- Collection status end -->
-            
-
           </div>
           <div class="govuk-grid-column-one-third">
             <!-- Collection status start -->
@@ -230,12 +203,13 @@
         </li>        
         <li><strong>Deadline</strong>: The last date any organisation can submit a return. This includes extensions.</li>
         <li><strong>Channel</strong>: the type of collection, such as statistics, grants, fund, or other (to be confirmed).</li>
-        <li><strong>Size</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
+        <li><strong>Complexity</strong>: the number of fields in the form, used as an indication of collection complexity.</li>
         <li><strong>Form, Excel and Bulk</strong>: The number of returns broken down by submission method. '—' means that submission method is not supported for this collection.</li>
         <li><strong>Return</strong>:
           <ul>
             <li><strong>Returns vs orgs invited</strong>: the number of unique organisations that have submitted a return vs the number of organisation asked. A percentage is displayed for ease of comparing collections.</li>
             <li><strong>Records</strong>: the total number of records across all submissions, including the average number of records per submission. Click to view in Record Store.</li>
+            <li><strong>Errors</strong>: the percentage of organisations that when submitting a return and experienced one or more validation errors. Click to view detailed error report. A percentage is displayed for ease of comparing collections.</li>
           </ul> 
         </li>
       </ul>
@@ -464,31 +438,25 @@
                 <div id="filter-group-status" class="govuk-accordion__section-content">
                     <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="provisional">
-                        <label class="govuk-label govuk-checkboxes__label" for="Status-2">
-                          Provisional
-                        </label>
-                      </div>                      
-                      <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="future">
+                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                         <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                           Future
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="open">
+                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                         <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                           Open
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="extended">
+                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                         <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                           Extended
                         </label>
                       </div>
                       <div class="govuk-checkboxes__item">
-                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="closed">
+                        <input class="govuk-checkboxes__input" id="Status-2" name="Status" type="checkbox" value="mines">
                         <label class="govuk-label govuk-checkboxes__label" for="Status-2">
                           Closed
                         </label>
@@ -546,9 +514,9 @@
             <thead class="govuk-table__head">
               <tr class="govuk-table__row">
                 <th scope="col" colspan="1" class="govuk-table__header">Collection</th>
-                <th scope="col" colspan="4" class="govuk-table__header">Overview</th>
-                <th scope="col" colspan="4" class="govuk-table__header">Submission options</th>
-                <th scope="col" colspan="2" class="govuk-table__header">Return</th>
+                <th scope="col" colspan="4" class="govuk-table__header">Collection overview</th>
+                <th scope="col" colspan="3" class="govuk-table__header">Submission options</th>
+                <th scope="col" colspan="3" class="govuk-table__header">Return</th>
               </tr>
 
 
@@ -557,13 +525,13 @@
                 <th scope="col" class="govuk-table__header"><a href="#">Status</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Deadline</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Channel</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">Size</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Complexity</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Form</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Excel</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">XML</a></th>
-                <th scope="col" class="govuk-table__header"><a href="#">API</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Bulk</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Returns vs orgs invited</a></th>
                 <th scope="col" class="govuk-table__header"><a href="#">Records</a></th>
+                <th scope="col" class="govuk-table__header"><a href="#">Errors</a></th>
               </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -576,9 +544,9 @@
                 <td class="govuk-table__cell">30%</td>
                 <td class="govuk-table__cell">70%</td>
                 <td class="govuk-table__cell">—</td>
-                <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">200</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (56%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">23,230</a></td>
+                <td class="govuk-table__cell"><a href="/MIreport-errors" title="View validation report">20%</a></td>
               </tr>    
               <tr class="govuk-table__row">
                 <th class="govuk-table__header"><a href="#">Brighter Bandstands Fund</a></th>
@@ -589,23 +557,23 @@
                 <td class="govuk-table__cell">10%</td>
                 <td class="govuk-table__cell">90%</td>
                 <td class="govuk-table__cell">—</td>
-                <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">320</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (89%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">320</a></td>
+                <td class="govuk-table__cell"><a href="/MIreport-errors" title="View validation report">60%</a></td>
               </tr>    
               
               <tr class="govuk-table__row">
-                <th class="govuk-table__header"><a href="#">XML collection</a></th>
+                <th class="govuk-table__header"><a href="#">A grant collection</a></th>
                 <td class="govuk-table__cell"><strong class="govuk-tag delta-tag">Active</strong></td>
                 <td class="govuk-table__cell">28 June 2025</td>
                 <td class="govuk-table__cell">Grant</td>
-                <td class="govuk-table__cell">4,800</td>
-                <td class="govuk-table__cell"></td>
-                <td class="govuk-table__cell">—</td>
+                <td class="govuk-table__cell">150</td>
                 <td class="govuk-table__cell">100%</td>
-                <td class="govuk-table__cell">—</td>                
+                <td class="govuk-table__cell">—</td>
+                <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">320</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (89%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">320</a></td>
+                <td class="govuk-table__cell">—</td>
               </tr>        
               
               <tr class="govuk-table__row">
@@ -616,10 +584,10 @@
                 <td class="govuk-table__cell">90</td>
                 <td class="govuk-table__cell">—</td>
                 <td class="govuk-table__cell">—</td>
-                <td class="govuk-table__cell">—</td>                
                 <td class="govuk-table__cell">100%</td>
                 <td class="govuk-table__cell"><a href="#" title="View all orgs in submission report">320</a> / <a href="#" title="View all orgs that have submitted a return in submission report">360</a> (89%)</td>
                 <td class="govuk-table__cell"><a href="#" title="View in record store">100,000</a></td>
+                <td class="govuk-table__cell">—</td>
               </tr>                  
 
             </tbody>
@@ -668,9 +636,6 @@
         </nav>
       </div>
     </div>
-
-    <button class="govuk-button">Download (.csv)</button>
-
     <!-- table results end -->
 
   </div>
