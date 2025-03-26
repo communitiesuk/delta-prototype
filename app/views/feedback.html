@@ -10,97 +10,158 @@
 </div>
 <div class="panel xdelta-text-center">
   <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-    User feedback form [concept]
+    Delta user feedback form
   </h1>
   <h2 class="govuk-heading-l">Relevant, real-time insight</h2>
+  <h2 class="govuk-heading-s">"In the kingdom of the blind the one-eye man is king."</h2>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
-        Updated: 10/03/2025
+        Updated: 26/03/2025
       </h4>
     </div>
   </div>
 </div>
 <!-- The idea -->
 <div class="panel">
+  <h2 class="govuk-heading-l">The idea: less talking, more doing</h2>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">The idea</h2>
-      <p>We display a request for feedback notification banner to a user if:</p>
       <ol class="govuk-list govuk-list--bullet">
-        <li>They have just completed a transaction (task) and... <sup>*</sup></li>
-        <li>Have not submitted a feedback response or asked not to be interrupted in the last 3 months.</li>
+        <li>We are taking a Lean approach to gathering user feedback and building a mailing list of key stakeholders.</li>
+        <li>We aim to have this live within 4 weeks. After launch, we will monitor usage and make improvements based on real-world testing.</li>
+        <li>We want to support continuous learning and provide a real-time, high-level customer satisfaction score.</li>        
+        <li>We show a feedback request banner to users if they have not given feedback or snoozed the request in the last 3 months.</li>
+        <li>Both internal and external users will be asked for feedback. We will be able to identify whether a user is internal or external.</li>
+        <li>For external users, we will also identify their 'channel' (such as statistics, grants, or the funding service).</li>
+        <li>Funding service-specific questions will be shown in the Orbeon form. These are outside the scope of this work.</li>
       </ol>
-      <p><sup>*</sup> We will need to explore what to do if a task fails.</p>
     </div>
-  </div>
-</div>
-<div class="panel">
-  <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Tell us what you think about using Delta
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-          <p class="govuk-heading-s">Were always working to improve Delta and other funding services. Your feedback helps us make them easier to use and better meet your needs.</p>
-          <p class="govuk-heading-s">This short survey takes around 3 minutes to complete.</p>
-          <button class="govuk-button">Take survey</button>
-          <button class="govuk-button govuk-button--secondary">Snooze this message for 3 months</button>
+    <div class="govuk-grid-column-one-third">
+      <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+        <div class="govuk-notification-banner__header">
+          <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+            Tell us what you think about using Delta
+          </h2>
+        </div>
+        <div class="govuk-notification-banner__content">
+            <p class="govuk-heading-s">We're always working to improve Delta and other funding services. Your feedback helps us make them easier to use and better suited to your needs.</p>
+            <p class="govuk-heading-s">The survey takes about 3 minutes to complete.</p>
+            <button class="govuk-button">Take survey</button>
+            <button class="govuk-button govuk-button--secondary">Snooze this message for 3 months</button>
+        </div>
       </div>
     </div>
-      </div>
   </div>
 </div>
 <!-- Questionnaire -->
 <div class="panel">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">Hi Susie,</h2>
-      <p class="govuk-body-l">Our records show that you have not taken part in a Delta user satisfaction survey before. Thank you for your time!</p>
-      <p>We have just three quick questions for you:</p>
+      <h2 class="govuk-heading-l">Your experience of using Delta</h2>
+      <p class="govuk-body-l">We have 4 questions for you.</p>
       <div class="govuk-form-group">
-        <label class="govuk-heading-m" for="ease-of-use">
-          1. How easy is it to use Delta?
-        </label>
-        <p class="govuk-hint">Please rate how easy or difficult you find using Delta.</p>
-        <select class="govuk-select" id="ease-of-use" name="easeOfUse">
-          <option value="0" selected="selected" disabled>Please select an option</option>
-          <option value="1">Very easy</option>
-          <option value="2">Easy</option>
-          <option value="3">Neutral</option>
-          <option value="4">Difficult</option>
-          <option value="5">Very difficult</option>
-        </select>
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              1. How easy was it to use Delta?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse" name="howEasyToUse" type="radio" value="very-easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse">
+                Very easy
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-2" name="howEasyToUse" type="radio" value="easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-2">
+                Easy
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-3" name="howEasyToUse" type="radio" value="neither">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-3">
+                Neither easy nor difficult
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                Difficult
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="very-difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                Very difficult
+              </label>
+            </div>            
+          </div>
+        </fieldset>
       </div>
+
+<div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              2. Over time, has Delta become easier or harder to use?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime" name="changeOverTime" type="radio" value="easier">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime">
+                It has become easier
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-2" name="changeOverTime" type="radio" value="noChange">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-2">
+                No change
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-3" name="changeOverTime" type="radio" value="harder">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-3">
+                It has become harder
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
+                Not applicable / I have't used Delta before
+              </label>
+            </div>          
+          </div>
+        </fieldset>
+      </div>      
+
+
       <div class="govuk-form-group">
-        <label class="govuk-heading-m" for="ease-trend">
-          2. Over time, has Delta become easier or harder to use?
-        </label>
-        <p class="govuk-hint">Please tell us if your experience with Delta has improved or worsened.</p>
-        <select class="govuk-select" id="ease-trend" name="easeTrend">
-          <option value="o" selected="selected" disabled>Please select an option</option>
-          <option value="1">It has become harder</option>
-          <option value="2">No change</option>
-          <option value="3">It has become easier</option>
-        </select>
-      </div>
-      <div class="govuk-form-group">
-        <label class="govuk-heading-m" for="comments">
-          3. Do you have any feedback or suggestions?
+        <label class="govuk-heading-m" for="whyScore">
+          3. Tell us why you gave that score (optional)
         </label>
         <p class="govuk-hint">Please share any comments or suggestions. Do not confidential information.</p>
-        <textarea class="govuk-textarea" id="comments" name="comments" rows="3" aria-describedby="comments-hint"></textarea>
+        <textarea class="govuk-textarea" id="whyScore" name="whyScore" rows="3" aria-describedby="whyScore-hint"></textarea>
+      </div>
+      <!-- call back -->
+      <div class="govuk-form-group">
+        <label class="govuk-heading-m" for="feedback">
+          4. Do you have any feedback of suggestions
+        </label>
+        <p class="govuk-hint">Please share any comments or suggestions. Do not confidential information.</p>
+        <textarea class="govuk-textarea" id="feedback" name="feedback" rows="3" aria-describedby="feedback-hint"></textarea>
       </div>
       <!-- call back -->
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="feedbackCallBack-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-heading-m govuk-!-margin-bottom-0">
-              Would you like the Delta team to contact you?
+              May we contact you in the future?
             </h1>
+            <p class="govuk-hint">Would you be happy for the Delta design team to contact you in the future to share your thoughts on proposed improvements to the platform?</p>
             </legend>
           <div class="govuk-checkboxes" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
@@ -112,6 +173,7 @@
             </div>
         </fieldset>
       </div>
+
       <button class="govuk-button">Submit feedback</button>
       <button class="govuk-button govuk-button--secondary">Cancel</button>
     </div>
