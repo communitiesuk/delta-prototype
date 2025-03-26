@@ -8,6 +8,15 @@
     <button id="nextBtn" class="govuk-button" disabled>Next</button>
   </div>
 </div>
+
+<div class="panel">
+  <!-- Test chart -->
+
+    
+
+</div>
+
+
 <div class="panel xdelta-text-center">
   <h1 class="govuk-heading-xl govuk-!-margin-top-9">
     Delta user feedback form
@@ -102,7 +111,7 @@
         </fieldset>
       </div>
 
-<div class="govuk-form-group">
+      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
@@ -180,6 +189,8 @@
   </div>
 </div>
 <!-- report -->
+
+
 <div class="panel">
   <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
       User feedback</h1>
@@ -281,7 +292,47 @@
           <h2 class="govuk-summary-card__title">Easy of use</h2>
         </div>
         <div class="govuk-summary-card__content">
-          <p class="delta-summary-block--value">3.5 <small class="delta-text-secondary">(Neutral / Easy)</small></p>
+
+          <!-- Ease of use chart here ======== -->
+          <div style="display: block; width: 300px;">
+            <canvas id="chartEaseOfUse"></canvas>
+          </div>
+          
+          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+          <!-- Colour values taken from: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/ -->
+          
+          <script>
+            const ctxEase = document.getElementById('chartEaseOfUse');
+          
+            new Chart(ctxEase, {
+                type: 'pie',
+                data: {
+                    labels: ['Very easy', 'Easy', 'Neither easy nor difficult', 'Difficult', 'Very difficult'],
+                    datasets: [{
+                        data: [60, 20, 10, 5, 5],
+                        backgroundColor: ['#85994b', '#00703c', '#5694ca', '#f47738', '#d4351c'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            enabled: true
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });      
+
+          </script>
+
+
         </div>
       </div>
       <!-- BLOCK END -->
@@ -291,7 +342,45 @@
           <h2 class="govuk-summary-card__title">Easier or harder?</h2>
         </div>
         <div class="govuk-summary-card__content">
-          <p class="delta-summary-block--value">3.0 <small class="delta-text-secondary">(No change)</small></p>
+          
+         <!-- change chart here ======== -->
+          <div style="display: block; width: 300px;">
+            <canvas id="chartChange"></canvas>
+          </div>
+          
+          <!-- Colour values taken from: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/ -->
+          
+          <script>
+            const ctxChange = document.getElementById('chartChange');
+          
+            new Chart(ctxChange, {
+                type: 'pie',
+                data: {
+                    labels: ['Easier', 'No change', 'Harder'],
+                    datasets: [{
+                        data: [60, 20, 5],
+                        backgroundColor: ['#85994b', '#5694ca', '#d4351c'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    plugins: {
+                        legend: {
+                            display: true,
+                            position: 'bottom'
+                        },
+                        tooltip: {
+                            enabled: true
+                        }
+                    },
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });      
+
+          </script> 
+
+
         </div>
       </div>
       <!-- BLOCK END -->
