@@ -26,7 +26,7 @@
 <div class="panel">
   <h2 class="govuk-heading-l">The idea: less talking, more doing</h2>
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-one-half">
       <ol class="govuk-list govuk-list--bullet">
         <li>We are taking a Lean approach to gathering user feedback and building a mailing list of key stakeholders.</li>
         <li>We aim to have this live within 4 weeks. After launch, we will monitor usage and make improvements based on real-world testing.</li>
@@ -37,7 +37,7 @@
         <li>Funding service-specific questions will be shown in the Orbeon form. These are outside the scope of this work.</li>
       </ol>
     </div>
-    <div class="govuk-grid-column-one-third">
+    <div class="govuk-grid-column-one-half">
       <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
         <div class="govuk-notification-banner__header">
           <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
@@ -111,6 +111,12 @@
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
             <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
+                Not applicable / I have't used Delta before
+              </label>
+            </div>                
+            <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changeOverTime" name="changeOverTime" type="radio" value="easier">
               <label class="govuk-label govuk-radios__label" for="changeOverTime">
                 It has become easier
@@ -127,13 +133,7 @@
               <label class="govuk-label govuk-radios__label" for="changeOverTime-3">
                 It has become harder
               </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
-              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
-                Not applicable / I have't used Delta before
-              </label>
-            </div>          
+            </div>      
           </div>
         </fieldset>
       </div>      
