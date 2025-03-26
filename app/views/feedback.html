@@ -179,7 +179,7 @@
 <!-- report -->
 
 
-<div class="panel">
+<div class="panel" id="report">
   <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
       User feedback</h1>
       <!-- QUICK FILTERS START -->
@@ -292,7 +292,7 @@
           
           <script>
             const ctxEase = document.getElementById('chartEaseOfUse');
-          
+        
             new Chart(ctxEase, {
                 type: 'pie',
                 data: {
@@ -310,15 +310,32 @@
                             position: 'bottom'
                         },
                         tooltip: {
-                            enabled: true
+                            enabled: true,
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    let dataset = tooltipItem.dataset;
+                                    let total = dataset.data.reduce((a, b) => a + b, 0);
+                                    let currentValue = dataset.data[tooltipItem.dataIndex];
+                                    let percentage = ((currentValue / total) * 100).toFixed(1) + "%";
+                                    return `${tooltipItem.label}: ${percentage}`;
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            formatter: function (value, context) {
+                                let total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                let percentage = ((value / total) * 100).toFixed(1) + "%";
+                                return percentage;
+                            }
                         }
                     },
                     responsive: true,
                     maintainAspectRatio: false
                 }
-            });      
-
-          </script>
+            });
+        </script>
+        
 
 
         </div>
@@ -380,13 +397,13 @@
           <small class="delta-text-secondary">Rivendell Borough Council</small class="delta-text-secondary"></h4>
         <ul class="govuk-list">
           <li><strong>Date</strong>: Monday, 10 March 2025, 12:54</li>
-          <li><strong>User type</strong>: Internal user</li>
+          <li><strong>User type</strong>: External user</li>
         </ul>
       </div>
       <div class="govuk-grid-column-two-thirds">
         <ul class="govuk-list">
-          <li><strong>Easy of use:</strong> Easy</li>
-          <li><strong>Easier or harder?</strong> Easier</li>
+          <li><strong>Easy of use:</strong> Very easy</li>
+          <li><strong>Easier or harder?</strong> It has become easier</li>
           <li><strong>Feedback:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio nobis iusto! Maiores doloremque adipisci rem dolor numquam, temporibus alias! Tempora aut nostrum odit voluptates nam! Neque, ipsum sint! Labore?</li>
           <li><strong>Call back request:</strong> Yes</li>
         </ul>
