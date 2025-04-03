@@ -12,52 +12,83 @@
 
 <div class="panel xdelta-text-center">
   <h1 class="govuk-heading-xl govuk-!-margin-top-9">
-    Delta user feedback form
+    Delta user feedback
   </h1>
-  <h2 class="govuk-heading-l">Actionable, real-time insight</h2>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
-        Updated: 31/03/2025
+        Updated: Thursday, 3 April 2025
       </h4>
     </div>
   </div>
 </div>
-<!-- The idea -->
-<div class="panel" id="appoach">
-  <h2 class="govuk-heading-l">The idea: less talking, more doing</h2>
+
+
+<!-- Why -->
+<div class="panel" id="why">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-one-half">
-      <ol class="govuk-list govuk-list--bullet">
-        <li>We are taking a Lean approach to gathering user feedback and building a mailing list of key stakeholders.</li>
-        <li>We aim to have this live within 4 weeks. After launch, we will monitor usage and make improvements based on real-world testing.</li>
-        <li>We want to support continuous learning and provide a real-time, high-level customer satisfaction score.</li>        
-        <li><del>We show a feedback request banner to users if they have not given feedback or snoozed the request in the last 3 months.</del></li>
-        <li><strong>The banner will be displayed at end of a submission: record submitted or record certified.</strong></li>
-        <li>A less prominent link to the banner (call to action) might also be added to the landing page and in the user account area. TBC</li>
-        <li>Both internal and external users will be asked for feedback. We will be able to identify whether a user is internal or external.</li>
-        <li>For external users, we will also identify their 'channel' (such as statistics, grants, or the funding service).</li>
-        <li>Funding service-specific questions will be shown in the Orbeon form. These are outside the scope of this work.</li>
-      </ol>
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Why</h2>
     </div>
-    <div class="govuk-grid-column-one-half">
-      <!-- The banner -->
-      <div id="banner">
+  </div>
 
-        <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-          <div class="govuk-notification-banner__header">
-            <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-              Feedback
-            </h2>
-          </div>
-          <div class="govuk-notification-banner__content">
-            <p class="govuk-notification-banner__heading">
-              Please help us improve this service by <a class="govuk-link" href="#" class="govuk-notification-banner__link">giving us your feedback</a>.
-            </p>
-          </div>
-        </div>
+  <ul class="govuk-list govuk-list--number govuk-body-l">
+    <li>Better, faster and cheaper than annual survey</li>
+    <li>Support continuous learning and the solving real problems</li>   
+    <li>Evidence impact (quantitative) - including direction of travel</li>
+    <li>Build co-design capability</li>   
+  </ul>
+</div>
 
-      </div>      
+<!-- What -->
+<div class="panel" id="why">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Is</h2>
+      <ul class="govuk-list govuk-list--number govuk-body-l">
+        <li><strong>Users</strong> basing asked for feedback - internal and external users</li>
+        <li><strong>Results</strong> - sliceable by 'channel'</li>
+        <li><strong>Banner</strong> - displayed throughout Delta</li>   
+        <li><strong>CTA</strong> - at end of key workflows (initially submissions)</li>
+        <li><strong>Survey</strong> - 3question</li>
+        <li><strong>Report</strong> - real-time results accessible to all internal users</li>
+      </ul>      
+      
+      <h2 class="govuk-heading-l">Isn't</h2>
+      <ul class="govuk-list govuk-list--number govuk-body-l">
+        <li>Replacement for detailed Funding Service research [questions].</li>
+      </ul>          
+
+    </div>
+  </div>
+
+
+</div>
+
+<!-- What -->
+<div class="panel" id="why">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Draft designs...</h2>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- The banner -->
+<div class="panel" id="banner">
+  <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Feedback
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        Please help us improve this service by <a class="govuk-link" href="#" class="govuk-notification-banner__link">giving us your feedback</a>.
+      </p>
     </div>
   </div>
 </div>
@@ -66,13 +97,12 @@
 <div class="panel" id="survey">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">Your experience of using the service</h2>
-      <p>This 3 question survey takes about 3 minutes to complete. All questions are optional.</p>
-      <div class="govuk-form-group">
+      <h2 class="govuk-heading-xl">Give feedback on your experience</h2>
+      <div class="govuk-form-group govuk-!-margin-bottom-9">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              1. How easy was it to use the service?
+              How easy was it to use the service?
             </h1>
           </legend>
           <div class="govuk-radios" data-module="govuk-radios">
@@ -110,20 +140,14 @@
         </fieldset>
       </div>
 
-      <div class="govuk-form-group">
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-fieldset__heading">
-              2. Over time, has the service become easier or harder to use?
+            Has the service become easier or harder to use?
             </h1>
           </legend>
-          <div class="govuk-radios" data-module="govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
-              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
-                Not applicable / I have't used the service before
-              </label>
-            </div>                
+          <div class="govuk-radios" data-module="govuk-radios">             
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="changeOverTime" name="changeOverTime" type="radio" value="easier">
               <label class="govuk-label govuk-radios__label" for="changeOverTime">
@@ -141,356 +165,70 @@
               <label class="govuk-label govuk-radios__label" for="changeOverTime-3">
                 It has become harder
               </label>
-            </div>      
+            </div>
+            <div class="govuk-radios__divider">or</div>  
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
+                Not applicable / I have't used the service before
+              </label>
+            </div>               
           </div>
         </fieldset>
       </div>      
 
 
       <!-- feedback -->
-      <div class="govuk-form-group">
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
         <label class="govuk-heading-m" for="feedback">
-          3. Tell us more about your answers
+          Tell us more about your answers
         </label>
         <p class="govuk-hint">What made you choose those options? Is there anything we could do better? Please don’t include personal or confidential information.</p>
         <textarea class="govuk-textarea" id="feedback" name="feedback" rows="3" aria-describedby="feedback-hint"></textarea>
+        <!-- <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You have 1,250 characters remaining
+        </div> -->
       </div>
       <!-- call back -->
-      <div class="govuk-form-group">
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
         <fieldset class="govuk-fieldset" aria-describedby="feedbackCallBack-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
             <h1 class="govuk-heading-m govuk-!-margin-bottom-0">
-              May we contact you in the future?
+              Research
             </h1>
-            <p class="govuk-hint">Can we contact you to take part in future research to help us improve?</p>
+            <!-- <p class="govuk-hint">Can we contact you to take part in future research to help us improve?</p> -->
             </legend>
-          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="feedbackCallBack" name="feedbackCallBack" type="checkbox" value="feedbackCallBack">
               <label class="govuk-label govuk-checkboxes__label" for="feedbackCallBack">
-                Yes
+                I consent to being contacted by email to take part in research relating to the MHCLG, to assist in the development of Delta and related services.
               </label>
               </div>
             </div>
         </fieldset>
       </div>
 
-      <p>We'll store your information securely. You can ask us to stop contacting you at any time. For more information, read our <a href="#">privacy notice.</a></p>
+      <!-- <p>We'll store your information securely. You can ask us to stop contacting you at any time. For more information, read our <a href="#">privacy notice.</a></p> -->
 
-      <button class="govuk-button">Submit feedback</button>
+      <button class="govuk-button">Send feedback</button>
       <button class="govuk-button govuk-button--secondary">Cancel</button>
     </div>
   </div>
 </div>
-<!-- report -->
 
-
-<div class="panel" id="report">
-  <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
-      User feedback</h1>
-      <!-- QUICK FILTERS START -->
-      <form>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third">
-            <!-- Channels start -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    Channels
-                  </h1>
-                </legend>
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-1" name="channel" type="checkbox" value="channel-1" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-1">
-                      Statistics
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-2" name="channel" type="checkbox" value="channel-2" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-2">
-                      Grants
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-3" name="channel" type="checkbox" value="channel-3" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-3">
-                      Funding Service
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <!-- Channels end -->
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <!-- Collection status start -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    User type
-                  </h1>
-                </legend>
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-1">
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-1">
-                      Internal
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
-                      External
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
-            <!-- Collection status end -->
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <!-- Collection status start -->
-            <div class="govuk-form-group">
-              <label class="govuk-heading-m" for="range">
-                Date range
-              </label>
-              <select class="govuk-select" id="range" name="range">
-                <option value="xxx" selected="selected">This quarter (to today)</option>
-                <option value="xxx">Last quarter</option>
-                <option value="xxx">Year to date</option>
-                <option value="xxx">Last year</option>
-              </select>
-            </div>
-            <!-- Collection status end -->
-          </div>
-        </div>
-      </form>
-      <!-- QUICK FILTERS END -->
-      <div class="delta-summary-blocks">
-      <!-- BLOCK START -->
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Responses <small>(External vs Internal)</small></h2>
-        </div>
-        <div class="govuk-summary-card__content">
-          <p class="delta-summary-block--value">100 <small class="delta-text-secondary">(90 / 10)</small></p>
-        </div>
-      </div>
-      <!-- BLOCK END -->
-      <!-- BLOCK START -->
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Easy of use</h2>
-        </div>
-        <div class="govuk-summary-card__content">
-
-          <!-- Ease of use chart here ======== -->
-          <div style="display: block; width: 300px;">
-            <canvas id="chartEaseOfUse"></canvas>
-          </div>
-          
-          <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-          <!-- Colour values taken from: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/ -->
-          
-          <script>
-            const ctxEase = document.getElementById('chartEaseOfUse');
-        
-            new Chart(ctxEase, {
-                type: 'pie',
-                data: {
-                    labels: ['Very easy', 'Easy', 'Neither easy nor difficult', 'Difficult', 'Very difficult'],
-                    datasets: [{
-                        data: [60, 20, 10, 5, 5],
-                        backgroundColor: ['#85994b', '#00703c', '#5694ca', '#f47738', '#d4351c'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'bottom'
-                        },
-                        tooltip: {
-                            enabled: true,
-                            callbacks: {
-                                label: function (tooltipItem) {
-                                    let dataset = tooltipItem.dataset;
-                                    let total = dataset.data.reduce((a, b) => a + b, 0);
-                                    let currentValue = dataset.data[tooltipItem.dataIndex];
-                                    let percentage = ((currentValue / total) * 100).toFixed(1) + "%";
-                                    return `${tooltipItem.label}: ${percentage}`;
-                                }
-                            }
-                        },
-                        datalabels: {
-                            color: '#fff',
-                            formatter: function (value, context) {
-                                let total = context.dataset.data.reduce((a, b) => a + b, 0);
-                                let percentage = ((value / total) * 100).toFixed(1) + "%";
-                                return percentage;
-                            }
-                        }
-                    },
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });
-        </script>
-        
-
-
-        </div>
-      </div>
-      <!-- BLOCK END -->
-      <!-- BLOCK START -->
-      <div class="govuk-summary-card">
-        <div class="govuk-summary-card__title-wrapper">
-          <h2 class="govuk-summary-card__title">Easier or harder?</h2>
-        </div>
-        <div class="govuk-summary-card__content">
-          
-         <!-- change chart here ======== -->
-          <div style="display: block; width: 300px;">
-            <canvas id="chartChange"></canvas>
-          </div>
-          
-          <!-- Colour values taken from: https://analysisfunction.civilservice.gov.uk/policy-store/data-visualisation-colours-in-charts/ -->
-          
-          <script>
-            const ctxChange = document.getElementById('chartChange');
-          
-            new Chart(ctxChange, {
-                type: 'pie',
-                data: {
-                    labels: ['Easier', 'No change', 'Harder'],
-                    datasets: [{
-                        data: [60, 20, 5],
-                        backgroundColor: ['#85994b', '#5694ca', '#d4351c'],
-                        borderWidth: 0
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: true,
-                            position: 'bottom'
-                        },
-                        tooltip: {
-                            enabled: true
-                        }
-                    },
-                    responsive: true,
-                    maintainAspectRatio: false
-                }
-            });      
-
-          </script> 
-
-
-        </div>
-      </div>
-      <!-- BLOCK END -->
-    </div><!-- close delta-summary-blocks -->
-    <!-- Responses -->
-
-    <h2 class="govuk-heading-l govuk-!-static-margin-top-8">Responses</h2>
-    <!-- User's response ===== -->
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">     
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Susie Smith<br>
-          <small class="delta-text-secondary"><a href="/wayOrganisationInternalReport">Rivendell Borough Council</a></small></h3>
-        <ul class="govuk-list">
-          <li><strong>Date</strong>: Monday, 10 March 2025, 12:54</li>
-          <li><strong>User type</strong>: External user</li>
-        </ul>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <ul class="govuk-list">
-          <li><strong>Easy of use:</strong> Very easy</li>
-          <li><strong>Easier or harder?</strong> It has become easier</li>
-          <li><strong>Feedback:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio nobis iusto! Maiores doloremque adipisci rem dolor numquam, temporibus alias! Tempora aut nostrum odit voluptates nam! Neque, ipsum sint! Labore?</li>
-          <li><strong>Call back request:</strong> Yes</li>
-        </ul>
-        <h4 class="govuk-heading-s">Related collection</h4>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="/wayCollectionDataProvider-collectionSummaryFuture">Urban hedgehog census 2024</a></li>
-          <!-- <li><a href="/wayCollectionDataProvider-collectionSummaryFuture">English dragonfly census 2024</a></li> -->
-        </ul>
-      </div>
-    </div>
-    <!-- User's response ===== -->
-    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <h3 class="govuk-heading-m">Bon Jones<br>
-          <small class="delta-text-secondary"><a href="/wayOrganisationInternalReport">Arundel Borough Council</a></small></h3>
-        <ul class="govuk-list">
-          <li><strong>Date</strong>: Monday, 10 March 2025, 11:05</li>
-          <li><strong>User type</strong>: External user</li>
-        </ul>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <ul class="govuk-list">
-          <li><strong>Easy of use:</strong> Neither easy nor difficult</li>
-          <li><strong>Easier or harder?</strong> No change</li>
-          <li><strong>Feedback:</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum odio nobis iusto! Maiores doloremque adipisci rem dolor numquam, temporibus alias! Tempora aut nostrum odit voluptates nam! Neque, ipsum sint! Labore?</li>
-          <li><strong>Call back request:</strong>  No</li>
-        </ul>
-        <h4 class="govuk-heading-s">Related collection</h4>
-        <ul class="govuk-list govuk-list--bullet">
-          <li><a href="/wayCollectionDataProvider-collectionSummaryFuture">English dragonfly census 2024</a></li>
-        </ul>
-      </div>
-    </div>    
-
-  <!-- Pagination -->
-  <nav class="govuk-pagination" aria-label="Pagination">
-    <div class="govuk-pagination__prev">
-      <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-        <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-          <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-        </svg>
-        <span class="govuk-pagination__link-title">
-          Previous<span class="govuk-visually-hidden"> page</span>
-        </span>
-      </a>
-    </div>
-    <ul class="govuk-pagination__list">
-      <li class="govuk-pagination__item govuk-pagination__item--current">
-        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-          1
-        </a>
-      </li>
-      <li class="govuk-pagination__item">
-        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-          2
-        </a>
-      </li>
-      <li class="govuk-pagination__item">
-        <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-          3
-        </a>
-      </li>
-    </ul>
-    <div class="govuk-pagination__next">
-      <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-        <span class="govuk-pagination__link-title">
-          Next<span class="govuk-visually-hidden"> page</span>
-        </span>
-        <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-          <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-        </svg>
-      </a>
-    </div>
-  </nav>    
-    
+<!-- Inspiration -->
+<div class="panel" id="references">
+  <h2 class="govuk-heading-xl">References</h2>
+  <ul>
+    <li><a href="public/images/grab-dvla-feedback.png">DVLA feedback form</a></li>
+    <li><a href="public/images/grab-MOT-research.png">DVLA research opt-in</a></li>    
+  </ul>
 </div>
+
+
+
+
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       // Hide header and footer in prootyping kit
