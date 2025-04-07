@@ -235,6 +235,56 @@
 </div>
 
 
+<!-- collection classification  -->
+<div class="panel" id="collectiontype">
+  <h2 class="govuk-heading-xl">Collection classification</h2>
+  <div class="govuk-inset-text">
+    Admins and collection managers will have to classify a collection at it's point of creation. These classifications will allow MI report to be filter by channel (aka client).
+  </div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="collection-type-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h1 class="govuk-fieldset__heading">
+              Which channel does this collection belong to?
+            </h1>
+          </legend>
+          <div id="collection-type-hint" class="govuk-hint">
+            Select all that apply
+          </div>
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="collection-type" name="collection-type" type="checkbox" value="stats">
+              <label class="govuk-label govuk-checkboxes__label" for="collection-type">
+                Statistics
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="collection-type-2" name="collection-type" type="checkbox" value="fundingservice">
+              <label class="govuk-label govuk-checkboxes__label" for="collection-type-2">
+                Funding Service
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="collection-type-3" name="collection-type" type="checkbox" value="farm">
+              <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                Grants
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
 
 
   <script>
