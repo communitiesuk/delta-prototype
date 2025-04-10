@@ -67,102 +67,6 @@
     <h1 class="govuk-heading-xl"><small class="delta-text-secondary govuk-!-font-size-27">MI Report</small><br>
       Collections</h1>
 
-      <!-- QUICK FILTERS START -->
-      <form>
-        <div class="govuk-grid-row">
-          <div class="govuk-grid-column-one-third">
-            <!-- Client start -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h1 class="govuk-fieldset__heading">
-                    Client
-                  </h1>
-                </legend>
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-1" name="channel" type="checkbox" value="channel-1" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-1">
-                      Statistics
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-2" name="channel" type="checkbox" value="channel-2" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-2">
-                      Grants
-                    </label>
-                  </div>  
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="channel-3" name="channel" type="checkbox" value="channel-3" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="channel-3">
-                      Funding Service
-                    </label>
-                  </div>                    
-                </div>
-              </fieldset>
-            </div>    
-            <!-- Client end -->
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <!-- Collection status start -->
-            <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                  <h4 class="govuk-fieldset__heading">
-                    Collection status
-                  </h4>
-                </legend>                
-                <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-2" name="collection-status" type="checkbox" value="collection-status-2" checked>
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-2">
-                      Open
-                    </label>
-                  </div>                    
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-0">
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-0">
-                      Provisional
-                    </label>
-                  </div>                  
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-1" name="collection-status" type="checkbox" value="collection-status-1">
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-1">
-                      Future
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="collection-status-3" name="collection-status" type="checkbox" value="collection-status-3">
-                    <label class="govuk-label govuk-checkboxes__label" for="collection-status-3">
-                      Closed
-                    </label>
-                  </div>                    
-                </div>
-              </fieldset>
-            </div>    
-            <!-- Collection status end -->
-            
-
-          </div>
-          <div class="govuk-grid-column-one-third">
-            <!-- Collection status start -->
-            <div class="govuk-form-group">
-              <label class="govuk-heading-m" for="range">
-                Date range
-              </label>
-              <select class="govuk-select" id="range" name="range">
-                <option value="xxx" selected>Month to date (10 days)</option>
-                <option value="xxx">Last 30 days</option>
-                <option value="xxx">Last 90 days</option>
-                <option value="xxx">Last year</option>
-              </select>
-            </div>    
-            <!-- Collection status end -->
-          </div>          
-        </div>
-      </form>
-      <!-- QUICK FILTERS END -->
-
       <div class="delta-summary-blocks">
 
       <!-- BLOCK START -->
@@ -283,19 +187,19 @@
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Client001" name="Client" type="checkbox" value="statistics" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="Client001">
-                        Open
+                        Statistics
                       </label>
                     </div>
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Client002" name="Client" type="checkbox" value="grants" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="Client002">
-                        Future
+                        Grants
                       </label>
                     </div>                
                     <div class="govuk-checkboxes__item">
                       <input class="govuk-checkboxes__input" id="Client003" name="Client" type="checkbox" value="fundingService" checked>
                       <label class="govuk-label govuk-checkboxes__label" for="Client003">
-                        Closed
+                        Funding Service
                       </label>
                     </div>
                   </div>
@@ -338,7 +242,52 @@
                     </div>                    
                   </div>
               </div>
-            </div>              
+            </div>   
+            <!-- Date range-->
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                    Date range
+                  </span>
+                </h2>
+              </div>
+              <div id="filter-group-date-range" class="govuk-accordion__section-content">
+
+                <div class="govuk-form-group">
+                  <fieldset class="govuk-fieldset">
+                    <div class="govuk-radios" data-module="govuk-radios">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="date-range" name="date-range" type="radio" value="monthToDate">
+                        <label class="govuk-label govuk-radios__label" for="date-range">
+                          Month to date (10 days)
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="date-range-2" name="date-range" type="radio" value="last30">
+                        <label class="govuk-label govuk-radios__label" for="date-range-2">
+                          Last 30 days
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="date-range-3" name="date-range" type="radio" value="last90">
+                        <label class="govuk-label govuk-radios__label" for="date-range-3">
+                          Last 90 days
+                        </label>
+                      </div>
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="date-range-4" name="date-range" type="radio" value="all" checked="checked">
+                        <label class="govuk-label govuk-radios__label" for="date-range-4" >
+                          All
+                        </label>
+                      </div>
+                    </div>
+                  </fieldset>
+                </div>                
+
+
+              </div>
+            </div>                          
           </div>
           <div class="govuk-button-group">
             <button class="govuk-button">Apply filters</button>
