@@ -1,0 +1,85 @@
+{% extends "layouts/delta-wayfinding.html" %}
+{% set pageName="Reports" %}
+{% block beforeContent %}
+  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "/wayLandingDataProviderAndCertifierAll"
+      }
+    ]
+  }) }}
+{% endblock %}
+{% block content %}
+
+
+
+
+<div class="designNote">
+
+  <h3 class="govuk-heading-l">Design notes <small>(toggle visibility with keyboard shortcut 'n')</small></h3>
+
+  <h3 class="govuk-heading-m">Changes</h3>
+  <ul class="govuk-list govuk-list--bullet">
+  </ul>
+
+</div>
+
+
+<h1 class="govuk-heading-xl">
+  Reports
+</h1>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+
+
+    <nav>
+      <ul class="govuk-list">
+        <li><a href="#financialReports">Financial reports</a></li>
+        <li><a href="#MIReports">MI Reports</a></li>
+      </ul>
+    </nav>
+
+  </div>
+  <div class="govuk-grid-column-two-thirds">
+
+    <h2 class="govuk-heading-l" id="financialReports">
+      Financial reports
+    </h2>
+
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">BRRS and RSG Schedule of Payments</a></li>
+      <li><a href="#">Debtor Receivers Report</a></li>
+      <li><a href="#">Debtor Receivers Report for Multi-hereditaments</a></li>
+      <li><a href="#">DELTA Active Users Report</a></li>
+      <li><a href="#">DELTA Grants Service Summary Report</a></li>
+      <li><a href="#">Manage Transactions Activity Report</a></li>
+      <li><a href="#">Schedule of Payments</a></li>
+      <li><a href="#">Treasury Report</a></li>
+    </ul>
+
+    <h2 class="govuk-heading-l" id="MIReports">
+      MI reports
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">
+      <li><a href="#">Collections</a></li>
+      <li>Collection error reporting (coming soon)</li>
+      <li>Logins (coming soon)</li>
+    </ul>
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock %}
+
+
+{% block pageScripts %}  
+<!-- Need to add for any pages with results tables with filtering -->
+  <script src="/public/javascripts/resultsTable.js"></script>
+{% endblock %}
