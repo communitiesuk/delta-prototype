@@ -157,13 +157,16 @@
 
     <!-- table results start -->
     <div class="delta-results">
+
       <!-- filters -->
-      <div id="delta-results-filters" class="hidden">
+      <div id="delta-results-filters" class="">
         <div class="govuk-!-padding-4" style="background-color: #f3f2f1;">
           <h1 class="govuk-heading-l">
             Filters <strong class="govuk-tag">1 active</strong>
           </h1>
         </div>
+
+        
         <div class="delta-results-filters-filters">
           <!-- Quick search -->
           <div>
@@ -264,7 +267,7 @@
                       <div class="govuk-radios__item">
                         <input class="govuk-radios__input" id="date-range" name="date-range" type="radio" value="monthToDate">
                         <label class="govuk-label govuk-radios__label" for="date-range">
-                          Month to date (10 days)
+                          Month to date
                         </label>
                       </div>
                       <div class="govuk-radios__item">
@@ -291,7 +294,35 @@
 
 
               </div>
-            </div>                          
+            </div>  
+            <!-- Collection type (NEW) -->
+            <div class="govuk-accordion__section">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                    Collection type (new)
+                  </span>
+                </h2>
+              </div>
+              <div id="filter-group-date-range" class="govuk-accordion__section-content">
+                <div id="filter-group-collectionType" class="govuk-accordion__section-content">
+                  <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="collectionType001" name="collectionType" type="checkbox" value="statistics" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="collectionType001">
+                        Certification required
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="collectionType002" name="collectionType" type="checkbox" value="grants" checked>
+                      <label class="govuk-label govuk-checkboxes__label" for="collectionType002">
+                        Contains personal or sensitive information
+                      </label>
+                    </div>  
+                  </div>                  
+                </div>
+              </div>
+            </div>                                             
           </div>
           <div class="govuk-button-group">
             <button class="govuk-button">Apply filters</button>
