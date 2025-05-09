@@ -17,7 +17,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
-        Updated: Friday, 9 May 2025
+        Updated: Friday, 4 April 2025
       </h4>
     </div>
   </div>
@@ -33,10 +33,37 @@
   </div>
 
   <ul class="govuk-list govuk-list--number govuk-body-l">
-    <li>Incorporates Delta and FS synchronization</li>   
+    <li>Better, faster and cheaper than annual survey</li>
+    <li>Support continuous learning and the solving real problems</li>   
+    <li>Evidence impact (quantitative) - including direction of travel</li>
+    <li>Build co-design capability</li>   
   </ul>
 </div>
 
+<!-- What -->
+<div class="panel" id="why">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">Is</h2>
+      <ul class="govuk-list govuk-list--number govuk-body-l">
+        <li><strong>Users</strong> being asked for feedback - internal and external users</li>
+        <li><strong>Results</strong> - sliceable by 'channel'</li>
+        <li><strong>Banner</strong> - displayed throughout Delta</li>   
+        <li><strong>CTA</strong> - at end of key workflows (initially submissions)</li>
+        <li><strong>Survey</strong> - 3 questions</li>
+        <li><strong>Report</strong> - real-time results accessible to all internal users</li>
+      </ul>      
+      
+      <h2 class="govuk-heading-l">Isn't</h2>
+      <ul class="govuk-list govuk-list--number govuk-body-l">
+        <li>Replacement for detailed Funding Service research [questions].</li>
+      </ul>          
+
+    </div>
+  </div>
+
+
+</div>
 
 <!-- What -->
 <div class="panel" id="draft">
@@ -50,49 +77,34 @@
 
 
 
+<!-- The banner -->
+<div class="panel" id="banner">
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <span class="govuk-phase-banner__text">
+        Help us make this service better. Give us  your <a class="govuk-link" href="#">feedback</a>.
+      </span>
+    </p>
+  </div>
+  <!-- <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+    <div class="govuk-notification-banner__header">
+      <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+        Feedback
+      </h2>
+    </div>
+    <div class="govuk-notification-banner__content">
+      <p class="govuk-notification-banner__heading">
+        Please help us improve this service by <a class="govuk-link" href="#" class="govuk-notification-banner__link">giving us your feedback</a>.
+      </p>
+    </div>
+  </div> -->
+</div>
+
 <!-- Survey -->
-<div class="panel" id="designs">
-
-  <!-- Existing page content -->
-
-  {% from "govuk/components/breadcrumbs/macro.njk" import govukBreadcrumbs %}
-  {{ govukBreadcrumbs({
-    items: [
-      {
-        text: "Home",
-        href: "/wayLandingDataProviderAndCertifierAll"
-      },    
-      {
-        text: "Collection groups",
-        href: "/Collections groups"
-      },
-            {
-        text: "Urban Hedgehog Monitorings",
-        href: "wayCollectionGroup"
-      },
-      {
-        text: "Urban hedgehog census 2023",
-        href: "/wayCollectionDataProvider-collectionRecords"
-      }
-    ]
-  }) }}
-
-  <div class="govuk-grid-row govuk-!-margin-top-6">
+<div class="panel" id="survey">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
-        <h1 class="govuk-panel__title">
-          Data submitted
-        </h1>
-      </div>
-      <h2 class="govuk-heading-l govuk-!-margin-top-4">What happens next</h2>
-
-      <p>We have sent you a confirmation email.</p>
-      <p>You can view the submitted data in the <a href="#">Data Store</a>.</p>
-
-      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
-
-      <!-- Feedback questions -->      
-      <h2 class="govuk-heading-l govuk-!-margin-top-6">Give feedback on your experience</h2>
+      <h2 class="govuk-heading-xl">Give feedback on your experience</h2>
       <div class="govuk-form-group govuk-!-margin-bottom-9">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -134,6 +146,44 @@
           </div>
         </fieldset>
       </div>
+
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+            Has Delta become easier or harder to use over the last 6 months?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">             
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime" name="changeOverTime" type="radio" value="easier">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime">
+                It has become easier
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-2" name="changeOverTime" type="radio" value="noChange">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-2">
+                No change
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-3" name="changeOverTime" type="radio" value="harder">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-3">
+                It has become harder
+              </label>
+            </div>
+            <div class="govuk-radios__divider">or</div>  
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changeOverTime-4" name="changeOverTime" type="radio" value="notApplicable">
+              <label class="govuk-label govuk-radios__label" for="changeOverTime-4">
+                Not applicable / I haven't used the service before
+              </label>
+            </div>               
+          </div>
+        </fieldset>
+      </div>      
+
 
       <!-- feedback -->
       <div class="govuk-form-group  govuk-!-margin-bottom-9">
