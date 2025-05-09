@@ -1,13 +1,6 @@
 {% extends "layouts/delta.html" %}
 {% set pageName="User feedback form [concept]" %}
 {% block content %}
-<div class="panel-nav">
-  <div class="controls">
-    <button id="startBtn" class="govuk-button">Start</button>
-    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
-    <button id="nextBtn" class="govuk-button" disabled>Next</button>
-  </div>
-</div>
 
 
 <div class="panel xdelta-text-center">
@@ -19,6 +12,11 @@
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
         Updated: Friday, 9 May 2025
       </h4>
+
+      <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
+        <li><a href="#designs">Designs</a></li>      
+        <li><a href="#references">Reference materials</a></li>      
+      </ul>
     </div>
   </div>
 </div>
@@ -36,18 +34,6 @@
     <li>Incorporates Delta and FS synchronization</li>
   </ul>
 </div>
-
-
-<!-- What -->
-<div class="panel" id="draft">
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l">Draft designs...</h2>
-    </div>
-  </div>
-</div>
-
-
 
 
 <!-- Survey -->
@@ -201,7 +187,7 @@
     <li><a href="public/images/grab-MOT-research.png">DVLA research opt-in text</a></li>
   </ul>
 
-    <h2 class="govuk-heading-xl">Screen grabs (existing</h2>
+    <h2 class="govuk-heading-xl">Screen grabs (existing)</h2>
   <ul class="govuk-list govuk-list--number govuk-body-l">
     <li><a href="public/images/feedbackSubmission001.png">Submission001</a></li>
     <li><a href="public/images/feedbackSubmission002.png">Submission002</a> 👈</li>
@@ -226,39 +212,6 @@
       if (header) {
           header.style.display = 'none';
       }
-      // Panel stuff =================================================================================================================
-      const panels = document.querySelectorAll('.panel');
-      const prevBtn = document.getElementById('prevBtn');
-      const nextBtn = document.getElementById('nextBtn');
-      const startBtn = document.getElementById('startBtn');
-      let currentPanel = -1; // Before start button is clicked, no panel is active
-      // Function to update the button states
-      function updateButtons() {
-        startBtn.disabled = currentPanel <= 0;
-        prevBtn.disabled = currentPanel <= 0;
-        nextBtn.disabled = currentPanel === panels.length - 1;
-      }
-      // Function to scroll to a specific panel
-      function scrollToPanel(index) {
-        if (index >= 0 && index < panels.length) {
-          currentPanel = index;
-          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
-          updateButtons();
-        }
-      }
-      // Event listener for the Start button
-      startBtn.addEventListener('click', function () {
-        scrollToPanel(0);  // Scroll to the first panel
-      });
-      // Event listeners for the Next and Previous buttons
-      prevBtn.addEventListener('click', function () {
-        scrollToPanel(currentPanel - 1);
-      });
-      nextBtn.addEventListener('click', function () {
-        scrollToPanel(currentPanel + 1);
-      });
-      // Initial check to ensure buttons are in the right state
-      updateButtons();
     });
   </script>
 {% endblock %}
