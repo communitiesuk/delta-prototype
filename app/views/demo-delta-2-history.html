@@ -1,0 +1,250 @@
+{% extends "layouts/delta.html" %}
+
+{% set pageName="Design demo: Delta 2.0 design history ()" %}
+
+
+{% block content %}
+
+<div class="panel-nav">
+
+  <div class="controls">
+    <button id="startBtn" class="govuk-button">Start</button>
+    <button id="prevBtn" class="govuk-button" disabled>Previous</button>
+    <button id="nextBtn" class="govuk-button" disabled>Next</button>
+  </div>
+
+
+</div>
+
+
+
+<div class="panel xdelta-text-center">
+  <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
+  <h1 class="govuk-heading-xl govuk-!-margin-top-9">
+    <small class="delta-text-secondary govuk-body govuk-!-font-size-27">Delta 2.0</small><br>
+    Design history
+  </h1>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <!-- <p class="govuk-body-l xdelta-reading-width">Show and tell.</p> -->
+      <h4 class="govuk-heading-s govuk-!-margin-top-3">
+        Thursday, 29 May 2025
+      </h4>       
+
+      <!-- <h2 class="govuk-heading-l">Running order</h2> -->
+
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><a href="#deltaOverview">Delta overview (stats and capabilities)</a></li>    
+        <li><a href="objectives">Objectives (design, development and progress)</a></li>
+        <li><a href="#research">Research refresher</a></li>
+        <li><a href="#heroku">Heroku (designs and links)</a></li>    
+        <li><a href="#delta2-0">Delta 2.0 designs</a>
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>UI</li>
+            <li>Wayfinding / IA</li>
+            <li>Publishing / delight</li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </div>    
+
+</div>
+
+<div class="panel" id="deltaOverview">
+  <h2 class="govuk-heading-l">Delta overview</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+      <p>Delta is a platform developed by MHCLG to handle large-scale data collection, primarily from local authorities, for policy development. It also plays a critical role in administering grants and supporting funding initiatives. As a crucial component of the UK's critical infrastructure, the platform manages a substantial volume of transactions every month and caters to a wide range of diverse use cases.</p>
+      <h3 class="govuk-heading-m">Key capabilities</h3>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>CRM (orgs, individuals, roles)</li>
+        <li>Publishing platform</li>
+        <li>Asset management (documents)</li>        
+        <li>Data capture (form, Excel upload, API/XML)</li>
+        <li>Data hand-off (CDS)</li>        
+        <li>Reporting</li>
+        <li>Payments (in and out, SAP integration)</li>
+      </ul>      
+      
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <h3 class="govuk-heading-m">Typical monthly figures (2024)</h3>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>5,500 users (96% external, primarily Local Authorities)</li>
+        <li>55 collections</li>
+        <li>250,000 records</li>
+        <li><strong>£5,000,000,000 in payments</strong></li>
+      </ul>   
+
+      <h3 class="govuk-heading-m">Useful links</h3>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li><a href="/deltaDashboard">Delta Dashboard (usage reporting)</a> 24/06/2024</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel" id="objectives">
+  <h2 class="govuk-heading-l">Objectives</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h3 class="govuk-heading-m">OKRs / design objectives</h3>      
+       <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Provide a reliable service. #accessibility</li>        
+          <li>Meet the needs of data collectors and providers. #usability</li>
+          <li>Save money #efficiency #versatility</li>
+        </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-m">Infrastructure (Dev) </h3>
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>Upgrades (performance, security and cost savings)</li>
+        <li>Login and timeout</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="panel" id="research">
+  <h2 class="govuk-heading-l">Research</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <p>Q2 2024 user research:</p>
+      <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
+        <li>~800 responses (80 external vs 20 internal)</li>
+        <li>Delta (1.0) one of the better tools used by local authorities</li>
+        <li>Questions about data being requested</li>
+        <li>Deadlines often missed</li>
+        <li>Stability issues (inc. Excel upload)</li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <h3 class="govuk-heading-m">Useful links</h3>
+      <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
+        <li><a href="https://mhclgdigital.atlassian.net/wiki/spaces/DT/pages/79235615/UX+and+User+Research+findings+documentation" target="_blank">MHCLG Confluence UX area</a> (research assets)</li>
+        <li><a href="https://dluhcdigital.atlassian.net/wiki/spaces/DT/pages/70320719/UX+and+User+Research" target="_blank">DLUCH Confluence UX area</a> (research assets)</li>      
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel" id="heroku">
+  <h2 class="govuk-heading-l">Heroku</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+       <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+          <li>We adopted a Lean approach in the design of Delta 2.0, favouring prototyping, frequent user testing sessions, and rapid iteration to deliver the new designs.</li>   
+          <li>All relevant assets can be found on the <a href="/index">Delta 2.0 Heroku board.</a></li>
+        </ul>
+    </div>
+    <div class="govuk-grid-column-one-third">
+      <img src="/public/images/delta_prototype_qr.png" alt="Delta wireframe QR code" class="delta-responsive-image" style="max-width: 200px;">
+      <p class="govuk-body-s">QR link to Delta 20 Heroky.</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="panel" id="delta2-0">
+  <h2 class="govuk-heading-l">Delta 2.0 designs</h2>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+      <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+        <li>UI (Accessibility)</li>
+        <li>Wayfinding / IA (Efficiency)
+          <ul class="govuk-list govuk-list--bullet govuk-list--spaced">
+            <li>Tapping not typing</li>
+            <li>New labels</li>
+            <li>Hierarchy (Parent > Child > Grandchild — Collection group / Collection / Return / Record</li>
+            <li>Intelligent / informed design</li>
+          </ul>
+        </li>
+        <li>Publishing / delight (Versatility)</li>
+      </ul>
+    </div>
+    <div class="govuk-grid-column-one-half">
+      <p><a href="/wayStart" class="govuk-button" target="_blank">Launch Delta 2.0 prototype</a></p>
+    </div>
+  </div>
+</div>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+      // Hide header and footer in prootyping kit
+      var header = document.querySelector('.govuk-header');
+      var footer = document.querySelector('.govuk-footer');
+
+      if (footer) {
+          footer.style.display = 'none';
+      }
+      if (header) {
+          header.style.display = 'none';
+      }
+
+
+      // Panel stuff =================================================================================================================
+      const panels = document.querySelectorAll('.panel');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const startBtn = document.getElementById('startBtn');
+      
+      let currentPanel = -1; // Before start button is clicked, no panel is active
+
+      // Function to update the button states
+      function updateButtons() {
+        startBtn.disabled = currentPanel <= 0;
+        prevBtn.disabled = currentPanel <= 0;
+        nextBtn.disabled = currentPanel === panels.length - 1;
+      }
+
+      // Function to scroll to a specific panel
+      function scrollToPanel(index) {
+        if (index >= 0 && index < panels.length) {
+          currentPanel = index;
+          panels[currentPanel].scrollIntoView({ behavior: 'smooth' });
+          updateButtons();
+        }
+      }
+
+      // Event listener for the Start button
+      startBtn.addEventListener('click', function () {
+        scrollToPanel(0);  // Scroll to the first panel
+      });
+
+      // Event listeners for the Next and Previous buttons
+      prevBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel - 1);
+      });
+
+      nextBtn.addEventListener('click', function () {
+        scrollToPanel(currentPanel + 1);
+      });
+
+      // Initial check to ensure buttons are in the right state
+      updateButtons();
+
+    });
+  </script>
+
+{% endblock %}
+
+
+
+
+
