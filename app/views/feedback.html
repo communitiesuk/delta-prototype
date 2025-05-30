@@ -19,6 +19,8 @@
 
       <ul class="govuk-list govuk-list--spaced govuk-list--bullet">
         <li><a href="#designs">Designs</a></li>      
+        <li><a href="#form001">Form v1 (Delta)</a></li>      
+        <li><a href="#form002">Form v2 (FS)</a></li>      
         <li><a href="#references">Reference materials</a></li>      
       </ul>
     </div>
@@ -55,7 +57,9 @@
     ]
   }) }}
 
-  <div class="govuk-grid-row govuk-!-margin-top-6">
+  <!-- Delta's preferred questions -->
+
+<div class="govuk-grid-row govuk-!-margin-top-6" id="form001">
     <div class="govuk-grid-column-two-thirds">
       <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
         <h1 class="govuk-panel__title">
@@ -124,6 +128,154 @@
           You have 1,250 characters remaining
         </div> -->
       </div>
+      <!-- call back -->
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
+        <fieldset class="govuk-fieldset" aria-describedby="feedbackCallBack-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-heading-m">
+              Take part in research (optional)
+            </h1>
+            <p  class="govuk-hint">Tick this box if you're happy to be contacted by email to take part in research to help improve Delta and other funding services from the Ministry of Housing, Communities and Local Government.</p>
+            <!-- <p class="govuk-hint">Can we contact you to take part in future research to help us improve?</p> -->
+            </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="feedbackCallBack" name="feedbackCallBack" type="checkbox" value="feedbackCallBack">
+              <label class="govuk-label govuk-checkboxes__label" for="feedbackCallBack">
+                Yes, I'm happy to be contacted.
+              </label>
+              </div>
+            </div>
+        </fieldset>
+      </div>
+
+      <!-- <p>We'll store your information securely. You can ask us to stop contacting you at any time. For more information, read our <a href="#">privacy notice.</a></p> -->
+
+      <button class="govuk-button">Send feedback</button>
+      <button class="govuk-button govuk-button--secondary">Skip</button>
+    </div>
+  </div>
+</div>
+
+
+  <hr>
+
+  <!-- Funding Service / agreed questions -->
+
+  <div class="govuk-grid-row govuk-!-margin-top-6" id="form002">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-panel govuk-panel--confirmation govuk-!-margin-top-6">
+        <h1 class="govuk-panel__title">
+          Data submitted
+        </h1>
+      </div>
+      <h2 class="govuk-heading-l govuk-!-margin-top-4">What happens next</h2>
+
+      <p>We have sent you a confirmation email.</p>
+      <p>You can view the submitted data in the <a href="#">Data Store</a>.</p>
+
+      <hr class="govuk-section-break govuk-section-break--visible govuk-section-break--xl">
+
+      <!-- Feedback questions -->
+      <h2 class="govuk-heading-l govuk-!-margin-top-6">Give feedback on your experience</h2>
+      <div class="govuk-form-group govuk-!-margin-bottom-9">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              How was your overall experience of using this service?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse" name="howEasyToUse" type="radio" value="very-easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse">
+                Very good
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-2" name="howEasyToUse" type="radio" value="easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-2">
+                Good
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-3" name="howEasyToUse" type="radio" value="neither">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-3">
+                Average
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                Poor
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="very-difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                Very poor
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- free text -->
+      <div class="govuk-form-group  govuk-!-margin-bottom-9">
+        <label class="govuk-heading-m" for="feedback">
+          How could we improve this service?
+        </label>
+        <p class="govuk-hint">What made you choose those options? Is there anything we could do better? Please don't include personal or confidential information.</p>
+        <textarea class="govuk-textarea" id="feedback" name="feedback" rows="3" aria-describedby="feedback-hint"></textarea>
+        <!-- <div id="with-hint-info" class="govuk-hint govuk-character-count__message">
+          You have 1,250 characters remaining
+        </div> -->
+      </div>
+
+      <!-- time to complete -->
+      <div class="govuk-form-group govuk-!-margin-bottom-9">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              On average, how much time did you and your team spend completing the form (including collating and providing the information)?
+            </h1>
+          </legend>
+          <div class="govuk-radios" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse" name="howEasyToUse" type="radio" value="very-easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse">
+                Up to 3 hours
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-2" name="howEasyToUse" type="radio" value="easy">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-2">
+                4 to 6 hours
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-3" name="howEasyToUse" type="radio" value="neither">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-3">
+                7 to 9 hours
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                10 to 12 hours
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="howEasyToUse-4" name="howEasyToUse" type="radio" value="very-difficult">
+              <label class="govuk-label govuk-radios__label" for="howEasyToUse-4">
+                More than 12 hours
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>      
+
+
       <!-- call back -->
       <div class="govuk-form-group  govuk-!-margin-bottom-9">
         <fieldset class="govuk-fieldset" aria-describedby="feedbackCallBack-hint">
