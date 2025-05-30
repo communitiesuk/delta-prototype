@@ -5,15 +5,6 @@
 
 {% block content %}
 
-  <div class="panel-nav">
-
-    <div class="controls">
-      <button class="govuk-button" id="startBtn">Start</button>
-      <button class="govuk-button" id="backBtn">Back</button>
-      <button class="govuk-button" id="forwardBtn">Forward</button>
-    </div>
-
-  </div>
 
 
 <div class="container">
@@ -21,165 +12,68 @@
   <div class="panel xdelta-text-center">
     <!-- <img src="/public/images/logo.png" alt="MHCLG logo" class="delta-responsive-image" style="width: 240px;"> -->
     <h1 class="govuk-heading-xl govuk-!-margin-top-9 govuk-!-margin-bottom-3">
-      Delta 2.0 bulk uploads
+      Improving Excel Upload Experience
     </h1>
-    <h1 class="govuk-heading-l ">
-      Design exploration
-    </h1>    
 
       <h4 class="govuk-heading-s govuk-!-margin-top-3">
-      Updated: Monday 24 February 2025
+      Friday, 30 May 2025
     </h4>
 
 
     <div class="govuk-grid-row  govuk-!-margin-top-6">
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Index</h2>
-        <ul class="govuk-list govuk-list--number govuk-body-l govuk-list--spaced">
-            <li><a href="#whatDoWeMean">What do we mean by bulk uploads? And a better name?</a></li>
-            <li><a href="#whatIsTheProblem">The scale of the problem</a></li>
-            <li><a href="#collectionCreationProcess">Existing collection creation process and Excel upload journey</a></li>            
-            <li><a href="#validationIssuesAndFixes">Validation issues</a></li>
-            <li><a href="#whatCouldGoodLookLike">What good could look like (design concepts)</a></li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
 
 
-  <div class="panel" id="whatDoWeMean">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">What do we mean by bulk uploads?</h2>
-        <p class="govuk-body-l">In this context, 'bulk uploads' refers to entering data into Delta by uploading an Excel document.</p>
-        <p>Other methods for bulk uploading data are via XML or through an API, but these are out of scope for this investigation.</p>
+        <h2 class="govuk-heading-l">Hypothesis</h2>
+        <p class="govuk-body">
+          The current method for uploading data via Excel provides such a poor user experience that data providers rarely choose it as their preferred submission method. Instead, they often opt for the more time-consuming, form-based submission process.
+        </p>
 
-        <h2 class="govuk-heading-m">Bulk uploads - a better name?</h2>      
-        <p>To date, the uploading of data via an Excel template has been referred to as 'bulk uploads'. As a label we feel it is confusing, not representative of how users see the task and we also believe it constrains creative thinking about new ways Delta could be utilised.</p>            
-        <p>It is worth noting that upload single records (i.e. not bulk records) via Excel often provides a better UX (especially for complex returns).</p>      
-        <p><strong>We propose renaming 'Bulk uploads' to 'Excel uploads'.</strong></p>       
-        
-
-      </div>
-    </div>
-  </div>  
-
-  <div class="panel" id="whatIsTheProblem">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">What is the scale of the problem?</h2>
-        <p>We know that organisations collecting complex data, such as local authorities, often prefer to work in Excel because it fits their existing,internal processes.</p>
-        <p>Feedback from data providers indicates that the bulk upload process is complex and prone to errors. As a result, many users opt to enter returns manually, one at a time, using the standard Orbeon forms.</p>
-        <p>Analysis of 27 collections by Delta's BA team suggest 20 of them required manual intervention to get the data into a valid format for submission.</p>
-        <p><strong>This represents a failure rate of 75% to get [bulk uploaded] data right first time.</strong></p>
-        
-        <h3 class="govuk-heading-m">Are things improving or getting worse?</h3>
-        <p>To date there is little easily accessible insight into bulk upload errors; no reports exist. Extracting and analysing raw data is too time-consuming and not feasible for ongoing monitoring.</p>
-
-        <h3 class="govuk-heading-m">The need for data</h3>
-
-      <img src="/public/images/MIconcept.png" alt="MI Collection Report concept" class="govuk-!-static-margin-bottom-3" style="max-width: 100%;">
-
-        <p>We recommend creating a Management Information (MI) Collection Report to provide real-time, quantified insight. This will:</p>
-
+        <h2 class="govuk-heading-l">Why is the Excel upload experience so poor?</h2>
         <ul class="govuk-list govuk-list--bullet">
-          <li>Establish a baseline of the current experience</li>
-          <li>Track improvements with quantifiable evidence</li>
-          <li>Enable ongoing monitoring to support timely interventions when needed</li>
+          <li>The Excel template—especially when auto-generated by Orbeon—is confusing and difficult to use.</li>
+          <li>Inline validation rules within the template are either inconsistent or entirely absent. This allows incorrect data to be entered, which ultimately results in the upload being rejected.</li>
+          <li>There is no meaningful error or validation feedback during the upload process. Users receive no clear indication of what went wrong or how to correct it.</li>
+          <li>In many cases, data providers would prefer to submit via Excel, as they already prepare their data outside Delta in Excel.</li>
+          <li>For more complex data collections, providers find Excel easier to work with because it displays all required fields and guidance in one view. This enables them to input data in any order, without being forced to follow a linear submission path.</li>
+          <li>Excel can be a far more efficient method for submitting multi-record returns, especially when large volumes of data are involved.</li>
         </ul>
 
-        <p>There are many other benefits of investing in the creation of an MI Collection Report, but these will be addressed separating on on the dedicated <a href="/MIreport">MI Collections Report prototype</a> page.</p>
-
-      </div>
-    </div>
-  </div>   
-
-  <div class="panel" id="collectionCreationProcess">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Collection creation process and Excel upload journey</h2>
-        <ul class="govuk-list govuk-list--number">
-          <li>Collection manager: creates collection (form) in Orbeon, including validation rules.</li>
-          <li>Collection manager: Excel template is exported from Orbeon.<sup>*</sup></li>
-          <li>Data provider: downloads Excel template.</li>
-          <li>Data provider: inputs data.</li>
-          <li>Excel: if inline validation present they correct data in Excel until now warnings.</li>
-          <li>Data provider: uploads Excel document.</li>
-          <li>Orbeon: processes uploaded file creating a record for each row in the Excel document.</li>
-          <li>Orbeon: if there are validation errors the user (data provider) is provided with no details on where the validation errors are or how to address them.</li>
-          <li>Data provider: either contacts support for assistance, or abandons process and uploads data one record at a time via the Orbeon form interface.</li>
-        </ul>
-
-        <p><strong><sup>*</sup> Need to observe this process and undertand if validation rules are added inline into the Excel template.</strong></p>
-
-      </div>
-    </div>
-  </div>
-  
-  <div class="panel" id="validationIssuesAndFixes">
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-l">Validation issues</h2>
-        <ul class="govuk-list govuk-list--number">
-          <li>Users download the Excel template</li>
-          <li>Not all Excel templates have 'inline validation. And the ones that do often have a discrepancy between the in Excel (inline) validation rules and the validation rules applied by Orbeon (at point of upload).</li>
-        </ul>
-
-        
-        <h2 class="govuk-heading-l">Suggested fixes</h2>
-        <ul class="govuk-list govuk-list--number">
-          <li>Ensure Excel templates contain inline validation rules</li>
-          <li>Ensure validation rules in Excel match and operate in the same way as the validation rules in Orbeon (applied at point of upload)</li>
-          <li>Create a validation error report that:
-            <ul class="govuk-list govuk-list--number">
-              <li>Clearly directs the data provider to the specific cells that contain invalid data</li>
-              <li>Provide clear guidance on the error and how to fix it.</li>
+        <h2 class="govuk-heading-l">Suggested next steps</h2>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>
+            Use the Collections MI Report to analyse:
+            <ul class="govuk-list govuk-list--bullet">
+              <li>What percentage of collections currently offer Excel as a method of data submission?</li>
+              <li>Of those that do, what percentage of returns are actually submitted via Excel?</li>
             </ul>
           </li>
-          <li>Inform collections managers if a data provider is repeatedly encountering validation errors on upload.</li>
-          <li>Inform collections managers if a data provider abandons a submission made by Excel and instead opts to manually upload the date, via a form.</li>
+          <li>
+            Conduct heuristic evaluations of all Excel templates—whether auto-generated by Orbeon or manually created by collections managers. Assess their accessibility and usability, and evaluate the clarity of guidance provided, as well as the presence and consistency of inline validation rules.
+          </li>
         </ul>
-      </div>
-    </div>
-  </div>     
 
-
-  <div class="panel" id="whatCouldGoodLookLike">
-    <h2 class="govuk-heading-l">What good could look like</h2>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">
-        <!-- Overview -->
-        <h2 class="govuk-heading-l">Step X</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sint aperiam, inventore repudiandae atque totam ea natus cumque. Esse consectetur numquam dolor ea. Magnam eos inventore sapiente ut ea nesciunt.</p>
-      </div>
-      <div class="govuk-grid-column-two-thirds">
-        <!-- Design concept -->
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="file-upload-1">
-          Upload a file
-        </label>
-          <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-        </div>         
-
-      </div>
-    </div>
-  </div>
-
-  <div class="panel" id="toDO">
-    <h2 class="govuk-heading-l">Action items (Steve)</h2>
-    <div class="govuk-grid-row">
-      <div class="govuk-grid-column-one-third">          
+        <h2 class="govuk-heading-l">Reality check</h2>
+        <p class="govuk-body">
+          Significantly improving the user experience of submitting data to Delta via Excel upload will only be achievable if:
+        </p>
         <ul class="govuk-list govuk-list--bullet">
-          <li>Validation report mock-ups</li>
-          <li>Think what 'errors' we walk to count in the MI report.</li>
-          <li>Think about feasibility of getting error reporting</li>
-          <li>Observe Excel template creation process (export from Orbeon)</li>
-          <li>Screen grab or screen recording Orbeon validation report UX.</li>
-        </ul> 
+          <li>Excel templates can be (and are) designed to be accessible, intuitive, and aligned with Orbeon's validation rules. The validation logic must be fully mirrored in the Excel template to prevent avoidable rejections.</li>
+          <li>The current validation feedback in Orbeon is completely overhauled. A redesigned report must clearly indicate where errors exist and provide actionable guidance for correcting them. However, as the validation functionality resides within Orbeon, it may lie outside the immediate control of the development team.</li>
+        </ul>
+
+        <h2 class="govuk-heading-l">Stretch goal</h2>
+        <p class="govuk-body">
+          Julius and Steve attended a presentation at Service Week 2025 showcasing a flexible approach to importing data via Excel. A key highlight was the system’s ability to accept data in various formats from different users, intelligently identify the structure, and normalise it into a consistent internal format. Exploring a similar approach for Delta could significantly enhance flexibility and adoption.
+        </p>        
+
+
       </div>
     </div>
+
   </div>
+
+
 
 
 </div>
